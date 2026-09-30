@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(139, 99, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(224, 100, 183, 0.13),
+            transparent 30%
+        ),
+        #080912;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #f5f4ff;
+}
+
+.admin-page {
+    width: 100%;
+    padding: 25px;
+}
+
+
+/* ================= ADMIN CARD ================= */
+
+.admin-card {
+    max-width: 450px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 29, 48, 0.96),
+            rgba(14, 15, 28, 0.96)
+        );
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.55),
+        inset 0 1px rgba(255,255,255,0.04);
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* ================= ICON ================= */
+
+.admin-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(155,124,255,0.18),
+            rgba(237,130,197,0.12)
+        );
+
+    border: 1px solid rgba(155,124,255,0.2);
+
+    box-shadow:
+        0 15px 35px rgba(100,70,200,0.15);
+}
+
+
+/* ================= BADGE ================= */
+
+.admin-badge {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(155,124,255,0.1);
+
+    border: 1px solid rgba(155,124,255,0.16);
+
+    color: #b8a6ff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ================= HEADING ================= */
+
+h1 {
+    margin-top: 13px;
+
+    font-family: "Playfair Display", serif;
+
+    color: #f5f3ff;
+
+    font-size: 32px;
+}
+
+.admin-card > p {
+    color: #85899c;
+
+    margin: 9px 0 28px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================= INPUT ================= */
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c2bfd0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+
+    height: 51px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background: rgba(255,255,255,0.045);
+
+    color: #f4f3fa;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #656979;
+}
+
+.input-group input:focus {
+    border-color: rgba(155,124,255,0.65);
+
+    background: rgba(155,124,255,0.055);
+
+    box-shadow:
+        0 0 0 4px rgba(155,124,255,0.09);
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+    width: 100%;
+
+    height: 53px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8066dc,
+            #c36bab
+        );
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(128,102,220,0.22);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 35px rgba(128,102,220,0.32);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ================= MESSAGE ================= */
+
+#adminMessage {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.success {
+    color: #6edbb1;
+}
+
+.error {
+    color: #ed769d;
+}
+
+
+/* ================= DEMO INFO ================= */
+
+.demo-info {
+    margin-top: 22px;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    font-size: 11px;
+
+    color: #777b8c;
+}
+
+.demo-info strong {
+    color: #ad9aff;
+}
+
+
+/* ================= STUDENT LINK ================= */
+
+.student-link {
+    display: block;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 13px;
+
+    background: rgba(155,124,255,0.08);
+
+    border: 1px solid rgba(155,124,255,0.12);
+
+    color: #a997f3;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.student-link:hover {
+    background: rgba(155,124,255,0.14);
+
+    color: #c2b5ff;
+}
+
+
+/* ================= BACK LINK ================= */
+
+.back-link {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #696d7d;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #aaa5ba;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 520px) {
+
+    .admin-page {
+        padding: 18px;
+    }
+
+    .admin-card {
+        padding: 30px 22px;
+
+        border-radius: 23px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .admin-icon {
+        width: 70px;
+        height: 70px;
+
+        font-size: 34px;
+    }
+}

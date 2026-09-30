@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | College StudyHub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    color:white;
+
+    background:
+    radial-gradient(circle at top left,#312e81,transparent 35%),
+    radial-gradient(circle at bottom right,#831843,transparent 35%),
+    #080b18;
+
+    padding:40px;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+    gap:20px;
+}
+
+.brand h1{
+    color:#c084fc;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.brand p{
+    color:#94a3b8;
+}
+
+.logout{
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#7c3aed,#db2777);
+    font-weight:bold;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    padding:28px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.07);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(15px);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#a855f7;
+}
+
+.icon{
+    font-size:20px;
+    font-weight:bold;
+    color:#c084fc;
+    margin-bottom:18px;
+}
+
+.card h2{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#94a3b8;
+    margin-bottom:18px;
+}
+
+.count{
+    font-size:32px;
+    font-weight:bold;
+    color:#c084fc;
+    margin-bottom:18px;
+}
+
+.view-btn{
+    color:#c084fc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.status{
+    margin-top:35px;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(34,197,94,0.08);
+    border:1px solid rgba(34,197,94,0.2);
+    color:#86efac;
+}
+
+.error{
+    color:#fca5a5;
+}
+
+@media(max-width:800px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+    <div class="brand">
+
+        <h1>StudyHub Admin</h1>
+
+        <p>
+            Manage and monitor College StudyHub
+        </p>
+
+    </div>
+
+    <a href="logout.jsp" class="logout">
+        Logout
+    </a>
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- STUDENTS -->
+
+<div class="card">
+
+    <div class="icon">
+        STUDENTS
+    </div>
+
+    <h2>
+        Students
+    </h2>
+
+    <p>
+        Registered students
+    </p>
+
+    <div class="count" id="studentsCount">
+        Loading...
+    </div>
+
+    <a href="admin-students.jsp"
+       class="view-btn">
+
+        View Students →
+
+    </a>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">
+        NOTES
+    </div>
+
+    <h2>
+        Notes
+    </h2>
+
+    <p>
+        Study notes available
+    </p>
+
+    <div class="count" id="notesCount">
+        Loading...
+    </div>
+
+    <a href="admin-notes.jsp"
+       class="view-btn">
+
+        View Notes →
+
+    </a>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">
+        HANDWRITTEN
+    </div>
+
+    <h2>
+        Handwritten Notes
+    </h2>
+
+    <p>
+        Student uploaded notes
+    </p>
+
+    <div class="count" id="handwrittenCount">
+        Loading...
+    </div>
+
+    <a href="admin-handwritten.jsp"
+       class="view-btn">
+
+        View Uploads →
+
+    </a>
+
+</div>
+
+
+
+
+<div class="card">
+
+    <div class="icon">
+        PYQS
+    </div>
+
+    <h2>
+        PYQs
+    </h2>
+
+    <p>
+        Previous year papers
+    </p>
+
+    <div class="count" id="pyqsCount">
+        Loading...
+    </div>
+
+    <a href="admin-pyqs.jsp"
+       class="view-btn">
+
+        View PYQs →
+
+    </a>
+
+</div>
+
+<div class="card">
+
+    <div class="icon">
+        FEEDBACK
+    </div>
+
+    <h2>
+        Feedback
+    </h2>
+
+    <p>
+        Student reviews
+    </p>
+
+    <div class="count" id="feedbackCount">
+        Loading...
+    </div>
+
+    <a href="admin-feedback.jsp"
+       class="view-btn">
+
+        View Feedback →
+
+    </a>
+
+</div>
+
+
+
+
+<div class="card">
+
+    <div class="icon">
+        DATABASE
+    </div>
+
+    <h2>
+        Database
+    </h2>
+
+    <p>
+        StudyHub database statistics
+    </p>
+
+    <br>
+
+    <a href="admin-stats.jsp"
+       class="view-btn">
+
+        View Statistics →
+
+    </a>
+
+</div>
+
+</div>
+
+
+<div class="status" id="databaseStatus">
+
+    ● Connecting to StudyHub Database...
+
+</div>
+
+
+</div>
+
+
+<script>
+
+async function loadAdminStats(){
+
+    try{
+
+        const response =
+            await fetch("admin-stats.jsp");
+
+        if(!response.ok){
+
+            throw new Error(
+                "Statistics request failed"
+            );
+
+        }
+
+        const html =
+            await response.text();
+
+
+        
+
+
+        document.getElementById(
+            "databaseStatus"
+        ).innerHTML =
+            "● Database Connected Successfully";
+
+
+        document.getElementById(
+            "databaseStatus"
+        ).classList.remove("error");
+
+
+        /*
+         * Open statistics page data
+         * is available through the
+         * View Statistics button.
+         */
+
+        loadCountsFromPage(html);
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Admin Statistics Error:",
+            error
+        );
+
+        document.getElementById(
+            "databaseStatus"
+        ).innerHTML =
+            "● Database Connection Error";
+
+        document.getElementById(
+            "databaseStatus"
+        ).classList.add("error");
+
+    }
+
+}
+
+
+function loadCountsFromPage(html){
+
+    /*
+     * Extract numbers from the
+     * statistics page.
+     */
+
+    const temp =
+        document.createElement("div");
+
+    temp.innerHTML = html;
+
+
+    const text =
+        temp.innerText;
+
+
+    const students =
+        text.match(
+            /Registered Students:\s*(\d+)/i
+        );
+
+    const notes =
+        text.match(
+            /Study Notes:\s*(\d+)/i
+        );
+
+    const handwritten =
+        text.match(
+            /Handwritten Notes:\s*(\d+)/i
+        );
+
+    const pyqs =
+        text.match(
+            /PYQs:\s*(\d+)/i
+        );
+
+    const feedback =
+        text.match(
+            /Feedback:\s*(\d+)/i
+        );
+
+
+    if(students){
+
+        document.getElementById(
+            "studentsCount"
+        ).textContent =
+            students[1];
+
+    }
+
+
+    if(notes){
+
+        document.getElementById(
+            "notesCount"
+        ).textContent =
+            notes[1];
+
+    }
+
+
+    if(handwritten){
+
+        document.getElementById(
+            "handwrittenCount"
+        ).textContent =
+            handwritten[1];
+
+    }
+
+
+    if(pyqs){
+
+        document.getElementById(
+            "pyqsCount"
+        ).textContent =
+            pyqs[1];
+
+    }
+
+
+    if(feedback){
+
+        document.getElementById(
+            "feedbackCount"
+        ).textContent =
+            feedback[1];
+
+    }
+
+}
+
+
+loadAdminStats();
+
+</script>
+
+</body>
+
+</html>

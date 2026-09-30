@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DBMS - Unit 4</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0;line-height:1.6;color:#222}
+.container{max-width:1000px;margin:30px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px #ddd}
+h1{text-align:center;color:#4f46e5}h2{color:#3730a3;border-bottom:2px solid #eee;padding-bottom:6px}
+h3{color:#4f46e5}.box{background:#f8f9ff;padding:15px;border-left:4px solid #4f46e5;margin:15px 0}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px}th{background:#eef0ff}
+.revision{background:#f0fdf4;padding:15px;border-left:4px solid green}
+.back{background:#4f46e5;color:white;padding:9px 15px;text-decoration:none;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+<h1>Database Management System</h1>
+<h2>Unit 4 - Normalization and Transaction Processing</h2>
+
+<h2>1. Functional Dependency</h2>
+<div class="box">
+A functional dependency describes a relationship where one attribute
+determines another attribute.
+</div>
+
+<p><b>Example:</b> Student_ID → Student_Name</p>
+
+<h2>2. Normalization</h2>
+<p>
+Normalization is the process of organizing database tables to reduce
+redundancy and avoid data anomalies.
+</p>
+
+<h3>First Normal Form (1NF)</h3>
+<p>
+A table is in 1NF when each field contains atomic values and there are
+no repeating groups.
+</p>
+
+<h3>Second Normal Form (2NF)</h3>
+<p>
+A table in 2NF is in 1NF and has no partial dependency on a composite key.
+</p>
+
+<h3>Third Normal Form (3NF)</h3>
+<p>
+A table in 3NF is in 2NF and has no transitive dependency.
+</p>
+
+<h3>BCNF</h3>
+<p>
+Boyce-Codd Normal Form is a stronger form of normalization where every
+determinant is a candidate key.
+</p>
+
+<h2>3. Inclusion Dependency</h2>
+<p>
+An inclusion dependency specifies that values of one attribute or set
+of attributes must also occur in another relation.
+</p>
+
+<h2>4. Lossless Join Decomposition</h2>
+<p>
+A decomposition is lossless when joining the decomposed tables produces
+the original information without losing data.
+</p>
+
+<h2>5. FD, MVD and JD</h2>
+<ul>
+<li><b>FD:</b> Functional Dependency</li>
+<li><b>MVD:</b> Multivalued Dependency</li>
+<li><b>JD:</b> Join Dependency</li>
+</ul>
+
+<h2>6. Transaction Processing</h2>
+
+<div class="box">
+<b>Transaction:</b> A transaction is a sequence of database operations
+treated as one logical unit of work.
+</div>
+
+<h3>Example</h3>
+<p>
+Bank transfer: Debit money from one account and credit it to another.
+Both operations should be completed correctly.
+</p>
+
+<h2>7. Serializability</h2>
+<p>
+Serializability checks whether the result of concurrent transactions is
+equivalent to some serial execution.
+</p>
+
+<h3>Conflict Serializable Schedule</h3>
+<p>
+A schedule is conflict serializable if it can be transformed into a
+serial schedule by swapping non-conflicting operations.
+</p>
+
+<h3>View Serializable Schedule</h3>
+<p>
+A schedule is view serializable when it is view-equivalent to a serial
+schedule.
+</p>
+
+<h2>8. Recoverability</h2>
+<p>
+A schedule is recoverable when transactions commit only after the
+transactions whose data they have read have committed.
+</p>
+
+<h2>9. Recovery from Transaction Failure</h2>
+<p>
+Recovery techniques restore the database to a consistent state after
+transaction failures.
+</p>
+
+<h2>10. Log-Based Recovery</h2>
+<p>
+A log records database operations. It can be used to undo or redo
+operations during recovery.
+</p>
+
+<h2>11. Checkpoints</h2>
+<p>
+A checkpoint saves a known consistent point in the database system and
+helps reduce recovery time.
+</p>
+
+<h2>12. Deadlock Handling</h2>
+<p>
+Deadlock occurs when transactions wait for each other indefinitely.
+DBMS can use prevention, avoidance or detection/recovery techniques.
+</p>
+
+<div class="revision">
+<b>Quick Revision:</b>
+<ul>
+<li>Normalization reduces redundancy.</li>
+<li>1NF → atomic values.</li>
+<li>2NF → removes partial dependency.</li>
+<li>3NF → removes transitive dependency.</li>
+<li>BCNF → stronger normal form.</li>
+<li>Transaction = logical unit of work.</li>
+<li>Serializability ensures correct concurrent execution.</li>
+<li>Logs and checkpoints help recovery.</li>
+</ul>
+</div>
+
+<h2>Exam / Viva</h2>
+<ol>
+<li>What is functional dependency?</li>
+<li>What is normalization?</li>
+<li>Explain 1NF, 2NF and 3NF.</li>
+<li>What is BCNF?</li>
+<li>What is a transaction?</li>
+<li>What is serializability?</li>
+<li>What is a recoverable schedule?</li>
+<li>What is log-based recovery?</li>
+<li>What is a checkpoint?</li>
+<li>What is deadlock?</li>
+</ol>
+
+</div>
+</body>
+</html>

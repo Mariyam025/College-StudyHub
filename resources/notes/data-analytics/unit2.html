@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #374151;
+        }
+
+        .definition {
+            background: #eef4ff;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            padding: 15px;
+            border-left: 5px solid #16a34a;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #fff7ed;
+            padding: 15px;
+            border-left: 5px solid #f97316;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e5edff;
+        }
+
+        .formula {
+            background: #f3f4f6;
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Data Analytics - Unit 2</h1>
+
+<h2>1. Data Exploration</h2>
+
+<div class="definition">
+    <b>Data Exploration</b> is the process of examining a dataset to understand
+    its structure, characteristics, patterns, relationships and problems before
+    performing detailed analysis.
+</div>
+
+<p>
+Data exploration helps an analyst understand what the data contains and whether
+it is suitable for analysis.
+</p>
+
+<h2>2. Data Profiling</h2>
+
+<div class="definition">
+    <b>Data Profiling</b> is the process of examining data to understand its
+    structure, content, quality, completeness and relationships.
+</div>
+
+<h3>Objectives of Data Profiling</h3>
+
+<ul>
+    <li>Understand the structure of data.</li>
+    <li>Find missing values.</li>
+    <li>Find duplicate records.</li>
+    <li>Identify incorrect values.</li>
+    <li>Find unusual values.</li>
+    <li>Understand data distributions.</li>
+    <li>Check data quality.</li>
+</ul>
+
+<h3>Types of Data Profiling</h3>
+
+<ul>
+    <li><b>Structure Discovery:</b> Understand columns, data types and formats.</li>
+    <li><b>Content Discovery:</b> Examine actual values and their distributions.</li>
+    <li><b>Relationship Discovery:</b> Identify relationships between fields or tables.</li>
+</ul>
+
+<h2>3. Analysing Target Data</h2>
+
+<div class="definition">
+    <b>Target Data</b> refers to the data or target variable that an analysis or
+    predictive model is mainly trying to explain or predict.
+</div>
+
+<div class="example">
+    <b>Example:</b><br>
+    If we want to predict whether a student will pass or fail, then
+    <b>Pass/Fail</b> can be the target variable.
+</div>
+
+<h3>Steps for Analysing Target Data</h3>
+
+<ol>
+    <li>Identify the target variable.</li>
+    <li>Check its data type.</li>
+    <li>Check missing values.</li>
+    <li>Check unusual values.</li>
+    <li>Study its distribution.</li>
+    <li>Study relationships with other variables.</li>
+</ol>
+
+<h2>4. Statistics</h2>
+
+<div class="definition">
+    <b>Statistics</b> is the science of collecting, organizing, analyzing,
+    interpreting and presenting data.
+</div>
+
+<h2>5. Population and Sample</h2>
+
+<h3>Population</h3>
+
+<p>
+Population means the complete group of individuals or observations being studied.
+</p>
+
+<div class="example">
+    Example: All students of a college.
+</div>
+
+<h3>Sample</h3>
+
+<p>
+A sample is a smaller part selected from the population.
+</p>
+
+<div class="example">
+    Example: 100 students selected from the college.
+</div>
+
+<table>
+<tr>
+    <th>Population</th>
+    <th>Sample</th>
+</tr>
+<tr>
+    <td>Entire group</td>
+    <td>Part of the group</td>
+</tr>
+<tr>
+    <td>Usually larger</td>
+    <td>Usually smaller</td>
+</tr>
+<tr>
+    <td>More difficult to study</td>
+    <td>Easy and less expensive to study</td>
+</tr>
+</table>
+
+<h2>6. Random Sample</h2>
+
+<p>
+A random sample is selected in such a way that each member of the population
+has a known chance of being selected.
+</p>
+
+<div class="example">
+    Example: Randomly selecting 50 students from a list of 500 students.
+</div>
+
+<h2>7. Mean</h2>
+
+<div class="definition">
+    Mean is the arithmetic average of a set of values.
+</div>
+
+<div class="formula">
+    Mean = Sum of all values / Number of values
+</div>
+
+<div class="example">
+    Data: 10, 20, 30<br>
+    Mean = (10 + 20 + 30) / 3 = 20
+</div>
+
+<h2>8. Median</h2>
+
+<p>
+Median is the middle value when data is arranged in ascending or descending order.
+</p>
+
+<div class="example">
+    Data: 10, 20, 30, 40, 50<br>
+    Median = 30
+</div>
+
+<p>
+For an even number of observations, median is the average of the two middle values.
+</p>
+
+<div class="example">
+    Data: 10, 20, 30, 40<br>
+    Median = (20 + 30) / 2 = 25
+</div>
+
+<h2>9. Mode</h2>
+
+<p>
+Mode is the value that occurs most frequently in a dataset.
+</p>
+
+<div class="example">
+    Data: 2, 3, 3, 4, 5<br>
+    Mode = 3
+</div>
+
+<h2>10. Range</h2>
+
+<p>
+Range represents the difference between the maximum and minimum values.
+</p>
+
+<div class="formula">
+    Range = Maximum Value - Minimum Value
+</div>
+
+<div class="example">
+    Data: 10, 20, 40, 50<br>
+    Range = 50 - 10 = 40
+</div>
+
+<h2>11. Variance</h2>
+
+<p>
+Variance measures how far the values in a dataset are spread from the mean.
+</p>
+
+<div class="formula">
+    Population Variance = Σ(x - μ)² / N
+</div>
+
+<p>
+Where:
+</p>
+
+<ul>
+    <li>x = individual value</li>
+    <li>μ = population mean</li>
+    <li>N = number of observations</li>
+</ul>
+
+<h2>12. Standard Deviation</h2>
+
+<p>
+Standard deviation measures the amount of variation or dispersion in a dataset.
+It is the square root of variance.
+</p>
+
+<div class="formula">
+    Standard Deviation = √Variance
+</div>
+
+<p>
+A small standard deviation means values are close to the mean.
+A large standard deviation means values are more spread out.
+</p>
+
+<h2>13. Probability</h2>
+
+<div class="definition">
+    <b>Probability</b> is a measure of how likely an event is to occur.
+</div>
+
+<p>
+Probability lies between 0 and 1.
+</p>
+
+<ul>
+    <li>0 = Impossible event</li>
+    <li>1 = Certain event</li>
+    <li>Between 0 and 1 = Possible event</li>
+</ul>
+
+<div class="formula">
+    P(E) = Number of favourable outcomes / Total number of possible outcomes
+</div>
+
+<h2>14. Experiment</h2>
+
+<p>
+An experiment is a process that produces an outcome.
+</p>
+
+<div class="example">
+    Example: Tossing a coin.
+</div>
+
+<h2>15. Sample Space</h2>
+
+<p>
+Sample space is the set of all possible outcomes of an experiment.
+</p>
+
+<div class="example">
+    Tossing a coin:<br>
+    S = {Head, Tail}
+</div>
+
+<h2>16. Event</h2>
+
+<p>
+An event is a particular outcome or group of outcomes from the sample space.
+</p>
+
+<div class="example">
+    Rolling a die and getting an even number:<br>
+    E = {2, 4, 6}
+</div>
+
+<h2>17. Types of Events</h2>
+
+<ul>
+    <li><b>Simple Event:</b> Contains one outcome.</li>
+    <li><b>Compound Event:</b> Contains more than one outcome.</li>
+    <li><b>Independent Events:</b> One event does not affect another.</li>
+    <li><b>Dependent Events:</b> One event affects another.</li>
+    <li><b>Mutually Exclusive Events:</b> Events cannot happen together.</li>
+</ul>
+
+<h2>18. Conditional Probability</h2>
+
+<div class="definition">
+    Conditional probability is the probability of an event occurring when
+    another event is already known to have occurred.
+</div>
+
+<div class="formula">
+    P(A | B) = P(A ∩ B) / P(B)
+</div>
+
+<p>
+Here, P(A | B) means probability of A given B.
+</p>
+
+<div class="example">
+    Example: If we know that a randomly selected student is a girl,
+    what is the probability that she is from BCA?
+</div>
+
+<h2>19. Bayes' Theorem</h2>
+
+<p>
+Bayes' theorem is used to calculate the probability of an event based on
+previous knowledge or evidence.
+</p>
+
+<div class="formula">
+    P(A | B) = [P(B | A) × P(A)] / P(B)
+</div>
+
+<p>Where:</p>
+
+<ul>
+    <li>P(A) = Prior probability</li>
+    <li>P(B | A) = Likelihood</li>
+    <li>P(A | B) = Posterior probability</li>
+    <li>P(B) = Evidence</li>
+</ul>
+
+<h3>Applications of Bayes' Theorem</h3>
+
+<ul>
+    <li>Medical diagnosis</li>
+    <li>Spam email detection</li>
+    <li>Fraud detection</li>
+    <li>Machine learning</li>
+    <li>Risk analysis</li>
+</ul>
+
+<h2>20. Discrete Distribution</h2>
+
+<p>
+A discrete probability distribution deals with countable values.
+</p>
+
+<div class="example">
+    Examples: Number of students, number of calls, number of defective products.
+</div>
+
+<h2>21. Continuous Distribution</h2>
+
+<p>
+A continuous probability distribution deals with measurable values that can
+take any value within a range.
+</p>
+
+<div class="example">
+    Examples: Height, weight, temperature and time.
+</div>
+
+<table>
+<tr>
+    <th>Discrete</th>
+    <th>Continuous</th>
+</tr>
+<tr>
+    <td>Countable values</td>
+    <td>Measurable values</td>
+</tr>
+<tr>
+    <td>Number of students</td>
+    <td>Student height</td>
+</tr>
+<tr>
+    <td>Number of calls</td>
+    <td>Call duration</td>
+</tr>
+</table>
+
+<h2>22. Normal Distribution</h2>
+
+<div class="definition">
+    Normal distribution is a continuous probability distribution with a
+    characteristic bell-shaped curve.
+</div>
+
+<h3>Characteristics</h3>
+
+<ul>
+    <li>Bell-shaped curve.</li>
+    <li>Symmetrical distribution.</li>
+    <li>Mean, median and mode are equal.</li>
+    <li>Total area under the curve is 1.</li>
+    <li>Most observations are near the mean.</li>
+</ul>
+
+<h2>23. 68-95-99.7 Rule</h2>
+
+<p>
+For a normal distribution:
+</p>
+
+<ul>
+    <li>Approximately 68% values lie within 1 standard deviation.</li>
+    <li>Approximately 95% values lie within 2 standard deviations.</li>
+    <li>Approximately 99.7% values lie within 3 standard deviations.</li>
+</ul>
+
+<div class="important">
+    <b>Easy Trick:</b><br>
+    1 SD → 68%<br>
+    2 SD → 95%<br>
+    3 SD → 99.7%
+</div>
+
+<h2>24. Covariance</h2>
+
+<p>
+Covariance indicates whether two variables tend to increase or decrease together.
+</p>
+
+<ul>
+    <li>Positive covariance → variables generally move in the same direction.</li>
+    <li>Negative covariance → variables generally move in opposite directions.</li>
+    <li>Near-zero covariance → weak linear relationship.</li>
+</ul>
+
+<h2>25. Correlation</h2>
+
+<p>
+Correlation measures the strength and direction of the relationship between
+two variables.
+</p>
+
+<p>
+The correlation coefficient generally ranges from -1 to +1.
+</p>
+
+<table>
+<tr>
+    <th>Value</th>
+    <th>Meaning</th>
+</tr>
+<tr>
+    <td>+1</td>
+    <td>Perfect positive correlation</td>
+</tr>
+<tr>
+    <td>0</td>
+    <td>No linear correlation</td>
+</tr>
+<tr>
+    <td>-1</td>
+    <td>Perfect negative correlation</td>
+</tr>
+</table>
+
+<div class="important">
+    <b>Important:</b> Correlation does not automatically mean causation.
+</div>
+
+<h2>26. Descriptive and Inferential Statistics</h2>
+
+<h3>Descriptive Statistics</h3>
+
+<p>
+Descriptive statistics summarizes and describes the available data.
+</p>
+
+<p>
+Examples: Mean, median, mode, range and standard deviation.
+</p>
+
+<h3>Inferential Statistics</h3>
+
+<p>
+Inferential statistics uses sample data to make conclusions about a larger population.
+</p>
+
+<div class="example">
+    Example: Surveying 500 voters and using the results to understand the larger
+    population.
+</div>
+
+<h2>27. Importance of Statistics in Data Analytics</h2>
+
+<ul>
+    <li>Summarizes large datasets.</li>
+    <li>Helps identify patterns.</li>
+    <li>Supports decision-making.</li>
+    <li>Helps compare datasets.</li>
+    <li>Supports prediction.</li>
+    <li>Helps measure uncertainty.</li>
+    <li>Supports model evaluation.</li>
+</ul>
+
+<h2>28. Quick Revision</h2>
+
+<ul>
+    <li>Data profiling examines the quality and structure of data.</li>
+    <li>Target data is the main variable being analyzed or predicted.</li>
+    <li>Mean = average.</li>
+    <li>Median = middle value.</li>
+    <li>Mode = most frequent value.</li>
+    <li>Range = maximum - minimum.</li>
+    <li>Variance measures dispersion.</li>
+    <li>Standard deviation = square root of variance.</li>
+    <li>Probability measures likelihood.</li>
+    <li>Conditional probability uses known information.</li>
+    <li>Bayes' theorem updates probability using evidence.</li>
+    <li>Normal distribution is bell-shaped and symmetrical.</li>
+    <li>Correlation measures relationship between variables.</li>
+</ul>
+
+<h2>Important Exam Questions</h2>
+
+<ol>
+    <li>What is Data Profiling? Explain its importance.</li>
+    <li>Explain analysing target data.</li>
+    <li>Define population and sample.</li>
+    <li>Explain mean, median and mode with examples.</li>
+    <li>What is variance and standard deviation?</li>
+    <li>Define probability and sample space.</li>
+    <li>Explain conditional probability with formula.</li>
+    <li>Explain Bayes' theorem.</li>
+    <li>Differentiate discrete and continuous distributions.</li>
+    <li>Explain normal distribution and its characteristics.</li>
+    <li>What is correlation?</li>
+    <li>Differentiate covariance and correlation.</li>
+    <li>Explain descriptive and inferential statistics.</li>
+</ol>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating System - Unit 2</title>
+<style>
+body{font-family:Arial;background:#f4f7fb;padding:20px}.container{max-width:900px;margin:auto;background:white;padding:25px;border-radius:12px}
+h1{color:#263b80}h2{color:#3155a6}.box{background:#eef3ff;padding:12px;border-left:5px solid #3155a6}
+li{margin:7px 0}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ccc;padding:10px}th{background:#eef3ff}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html">← Back to Subjects</a>
+<h1>Operating System - Unit 2</h1>
+<p><b>Paper:</b> NBCA-203 – Operating System</p>
+
+<h2>1. Process Concept</h2>
+<div class="box"><b>Definition:</b> A process is a program that is currently in execution.</div>
+
+<p><b>Example:</b> When a music application is running, it becomes a process.</p>
+
+<h3>Process States</h3>
+<ul>
+<li>New</li>
+<li>Ready</li>
+<li>Running</li>
+<li>Waiting/Blocked</li>
+<li>Terminated</li>
+</ul>
+
+<div class="box">New → Ready → Running → Terminated<br>
+Running → Waiting → Ready</div>
+
+<h2>2. Process Scheduling</h2>
+<p>Process scheduling is the method used by the operating system to select a process for CPU execution.</p>
+
+<h2>3. CPU Scheduling</h2>
+<p>CPU scheduling decides which ready process gets the CPU next.</p>
+
+<h2>4. CPU Scheduling Criteria</h2>
+<ul>
+<li><b>CPU Utilization:</b> Keep CPU busy.</li>
+<li><b>Throughput:</b> Number of completed processes.</li>
+<li><b>Turnaround Time:</b> Completion time - Arrival time.</li>
+<li><b>Waiting Time:</b> Time spent waiting in ready queue.</li>
+<li><b>Response Time:</b> Time until first response.</li>
+</ul>
+
+<h2>5. Scheduling Algorithms</h2>
+
+<h3>FCFS</h3>
+<p>First Come First Serve executes processes in the order they arrive.</p>
+<p><b>Example:</b> P1, P2, P3 → P1 executes first.</p>
+
+<h3>SJF</h3>
+<p>Shortest Job First selects the process with the smallest CPU burst time.</p>
+
+<h3>Priority Scheduling</h3>
+<p>The process with the highest priority is selected first.</p>
+
+<h3>Round Robin</h3>
+<p>Each process gets a fixed time called a time quantum.</p>
+<div class="box">Example: Time quantum = 2 ms → P1 → P2 → P3 → P1 ...</div>
+
+<h2>6. Cooperating Processes</h2>
+<p>Cooperating processes can affect or share data with other processes.</p>
+<p><b>Example:</b> Producer and Consumer processes.</p>
+
+<h2>7. Threads</h2>
+<div class="box"><b>Definition:</b> A thread is the smallest unit of CPU execution within a process.</div>
+
+<h3>Advantages</h3>
+<ul>
+<li>Better responsiveness</li>
+<li>Resource sharing</li>
+<li>Lower overhead</li>
+<li>Improved parallelism</li>
+</ul>
+
+<h2>8. Inter-Process Communication (IPC)</h2>
+<p>IPC allows processes to communicate and exchange data.</p>
+
+<h3>Methods of IPC</h3>
+<ul>
+<li>Shared Memory</li>
+<li>Message Passing</li>
+</ul>
+
+<h2>Quick Revision</h2>
+<div class="box">
+Process = program in execution.<br>
+FCFS = First Come First Serve.<br>
+SJF = Shortest Job First.<br>
+Round Robin uses time quantum.<br>
+Thread = smallest execution unit.<br>
+IPC allows processes to communicate.
+</div>
+
+<h2>Exam/Viva Questions</h2>
+<ol>
+<li>Define process.</li>
+<li>Explain process states.</li>
+<li>What is CPU scheduling?</li>
+<li>Explain FCFS.</li>
+<li>Explain SJF.</li>
+<li>What is Round Robin?</li>
+<li>What is a thread?</li>
+<li>What are cooperating processes?</li>
+<li>What is IPC?</li>
+<li>Explain shared memory and message passing.</li>
+</ol>
+
+</div>
+</body>
+</html>

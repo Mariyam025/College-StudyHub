@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics - Unit 5</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #4b6584;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #f0ad4e;
+            margin: 10px 0;
+        }
+
+        .example {
+            background: #eaf7ea;
+            padding: 15px;
+            border-left: 5px solid #28a745;
+            margin: 15px 0;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mathematics - Unit 5</h1>
+
+    <div class="box">
+        <strong>Statistics</strong>
+
+        <ul>
+            <li>Moments</li>
+            <li>Moment Generating Functions</li>
+            <li>Skewness</li>
+            <li>Kurtosis</li>
+            <li>Correlation and Regression Analysis</li>
+        </ul>
+    </div>
+
+
+    <h2>1. Moments</h2>
+
+    <p>
+        Moments are numerical values used to describe important
+        characteristics of a distribution such as central tendency,
+        variation, skewness and kurtosis.
+    </p>
+
+    <div class="formula">
+        r-th raw moment:
+        <br><br>
+        μ'<sub>r</sub> = Σfx<sup>r</sup> / Σf
+    </div>
+
+    <div class="formula">
+        r-th central moment:
+        <br><br>
+        μ<sub>r</sub> = Σf(x - x̄)<sup>r</sup> / Σf
+    </div>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        If the values are 1, 2, 3, then moments can be calculated
+        using their deviations from the mean.
+    </div>
+
+
+    <h2>2. Important Moments</h2>
+
+    <table>
+        <tr>
+            <th>Moment</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>First Moment</td>
+            <td>Related to mean</td>
+        </tr>
+
+        <tr>
+            <td>Second Moment</td>
+            <td>Related to variance</td>
+        </tr>
+
+        <tr>
+            <td>Third Moment</td>
+            <td>Used for skewness</td>
+        </tr>
+
+        <tr>
+            <td>Fourth Moment</td>
+            <td>Used for kurtosis</td>
+        </tr>
+    </table>
+
+
+    <h2>3. Moment Generating Function</h2>
+
+    <p>
+        A Moment Generating Function (MGF) is a function used to
+        generate moments of a probability distribution.
+    </p>
+
+    <div class="formula">
+        M<sub>X</sub>(t) = E(e<sup>tX</sup>)
+    </div>
+
+    <p>
+        The r-th moment can be obtained by differentiating the MGF
+        r times and putting t = 0.
+    </p>
+
+    <div class="formula">
+        μ'<sub>r</sub> = M<sup>(r)</sup>(0)
+    </div>
+
+    <div class="example">
+        <strong>Simple idea:</strong><br><br>
+
+        First differentiate the MGF.<br>
+        Then put t = 0.<br>
+        The result gives the required moment.
+    </div>
+
+
+    <h2>4. Skewness</h2>
+
+    <p>
+        Skewness measures the degree of asymmetry of a distribution
+        around its mean.
+    </p>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>Positive Skewness</td>
+            <td>Tail is longer towards the right</td>
+        </tr>
+
+        <tr>
+            <td>Negative Skewness</td>
+            <td>Tail is longer towards the left</td>
+        </tr>
+
+        <tr>
+            <td>Zero Skewness</td>
+            <td>Distribution is approximately symmetric</td>
+        </tr>
+    </table>
+
+    <div class="formula">
+        Moment coefficient of skewness:
+        <br><br>
+        β<sub>1</sub> = μ<sub>3</sub><sup>2</sup> / μ<sub>2</sub><sup>3</sup>
+    </div>
+
+
+    <h2>5. Kurtosis</h2>
+
+    <p>
+        Kurtosis measures the degree of peakedness or flatness
+        of a distribution.
+    </p>
+
+    <div class="formula">
+        β<sub>2</sub> = μ<sub>4</sub> / μ<sub>2</sub><sup>2</sup>
+    </div>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Condition</th>
+        </tr>
+
+        <tr>
+            <td>Mesokurtic</td>
+            <td>β₂ = 3</td>
+        </tr>
+
+        <tr>
+            <td>Leptokurtic</td>
+            <td>β₂ &gt; 3</td>
+        </tr>
+
+        <tr>
+            <td>Platykurtic</td>
+            <td>β₂ &lt; 3</td>
+        </tr>
+    </table>
+
+
+    <h2>6. Correlation</h2>
+
+    <p>
+        Correlation measures the degree and direction of relationship
+        between two variables.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        Study time and examination marks may have a positive
+        relationship: generally, as study time increases,
+        marks may also increase.
+    </div>
+
+
+    <h2>7. Types of Correlation</h2>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>Positive Correlation</td>
+            <td>Both variables move in the same direction</td>
+        </tr>
+
+        <tr>
+            <td>Negative Correlation</td>
+            <td>Variables move in opposite directions</td>
+        </tr>
+
+        <tr>
+            <td>Zero Correlation</td>
+            <td>No linear relationship</td>
+        </tr>
+    </table>
+
+
+    <h2>8. Karl Pearson's Correlation Coefficient</h2>
+
+    <p>
+        Karl Pearson's coefficient measures the linear relationship
+        between two variables.
+    </p>
+
+    <div class="formula">
+        r =
+        Σ(x - x̄)(y - ȳ)
+        /
+        √[Σ(x - x̄)² × Σ(y - ȳ)²]
+    </div>
+
+    <p>
+        The value of r lies between -1 and +1.
+    </p>
+
+    <div class="formula">
+        -1 ≤ r ≤ +1
+    </div>
+
+
+    <h2>9. Regression Analysis</h2>
+
+    <p>
+        Regression analysis is used to study the relationship between
+        variables and to estimate the value of one variable from
+        another variable.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        If we know the advertising expenditure, regression can be
+        used to estimate expected sales.
+    </div>
+
+
+    <h2>10. Regression Lines</h2>
+
+    <p>
+        There are two regression lines:
+    </p>
+
+    <ul>
+        <li>Regression of Y on X</li>
+        <li>Regression of X on Y</li>
+    </ul>
+
+    <div class="formula">
+        Regression equation of Y on X:
+        <br><br>
+
+        Y - ȳ = b<sub>yx</sub>(X - x̄)
+    </div>
+
+    <div class="formula">
+        Regression equation of X on Y:
+        <br><br>
+
+        X - x̄ = b<sub>xy</sub>(Y - ȳ)
+    </div>
+
+
+    <h2>11. Correlation vs Regression</h2>
+
+    <table>
+        <tr>
+            <th>Correlation</th>
+            <th>Regression</th>
+        </tr>
+
+        <tr>
+            <td>Measures relationship</td>
+            <td>Used for estimation/prediction</td>
+        </tr>
+
+        <tr>
+            <td>Symmetric relationship</td>
+            <td>Distinguishes dependent and independent variables</td>
+        </tr>
+
+        <tr>
+            <td>Coefficient is r</td>
+            <td>Uses regression coefficients</td>
+        </tr>
+    </table>
+
+
+    <h2>Quick Revision</h2>
+
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Important Point</th>
+        </tr>
+
+        <tr>
+            <td>Moments</td>
+            <td>Describe characteristics of a distribution</td>
+        </tr>
+
+        <tr>
+            <td>MGF</td>
+            <td>M<sub>X</sub>(t) = E(e<sup>tX</sup>)</td>
+        </tr>
+
+        <tr>
+            <td>Skewness</td>
+            <td>Measures asymmetry</td>
+        </tr>
+
+        <tr>
+            <td>Kurtosis</td>
+            <td>Measures peakedness/flatness</td>
+        </tr>
+
+        <tr>
+            <td>Correlation</td>
+            <td>Measures relationship between variables</td>
+        </tr>
+
+        <tr>
+            <td>Regression</td>
+            <td>Used for estimation and prediction</td>
+        </tr>
+    </table>
+
+
+    <h2>Important Exam Questions</h2>
+
+    <div class="question">
+        1. Define moments and explain different moments.
+    </div>
+
+    <div class="question">
+        2. Explain Moment Generating Function.
+    </div>
+
+    <div class="question">
+        3. Define skewness and explain its types.
+    </div>
+
+    <div class="question">
+        4. Define kurtosis and explain its types.
+    </div>
+
+    <div class="question">
+        5. Define correlation and explain its types.
+    </div>
+
+    <div class="question">
+        6. Find Karl Pearson's correlation coefficient.
+    </div>
+
+    <div class="question">
+        7. Explain regression analysis and regression lines.
+    </div>
+
+
+    <h2>Viva Questions</h2>
+
+    <div class="question">
+        <strong>Q1.</strong> What is skewness?<br>
+        <strong>Ans:</strong> It measures the asymmetry of a distribution.
+    </div>
+
+    <div class="question">
+        <strong>Q2.</strong> What is kurtosis?<br>
+        <strong>Ans:</strong> It measures the peakedness or flatness of a distribution.
+    </div>
+
+    <div class="question">
+        <strong>Q3.</strong> What is the range of correlation coefficient?<br>
+        <strong>Ans:</strong> -1 to +1.
+    </div>
+
+    <div class="question">
+        <strong>Q4.</strong> What is regression used for?<br>
+        <strong>Ans:</strong> It is used for estimation and prediction.
+    </div>
+
+    <div class="question">
+        <strong>Q5.</strong> What are the two regression lines?<br>
+        <strong>Ans:</strong> Regression of Y on X and regression of X on Y.
+    </div>
+
+</div>
+
+</body>
+</html>

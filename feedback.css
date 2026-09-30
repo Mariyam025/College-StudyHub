@@ -1,0 +1,553 @@
+:root {
+    --bg: #070711;
+    --card: #11111f;
+    --card-soft: #171728;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 15%, rgba(236, 72, 153, 0.10), transparent 30%),
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(7, 7, 17, 0.88);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* ================= MAIN ================= */
+
+.container {
+    width: min(1050px, 90%);
+    margin: auto;
+
+    padding: 75px 0 100px;
+}
+
+
+/* ================= HEADING ================= */
+
+.heading {
+    text-align: center;
+
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.small-title {
+    color: #a78bfa;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 14px;
+}
+
+.heading h1 {
+    font-size: clamp(2.3rem, 5vw, 3.6rem);
+
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #c4b5fd,
+        #f9a8d4
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading > p:last-child {
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+}
+
+
+/* ================= FEEDBACK CARD ================= */
+
+.feedback-card {
+    max-width: 760px;
+    margin: auto;
+
+    padding: 45px;
+
+    background: rgba(17, 17, 31, 0.9);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+/* CARD HEADING */
+
+.card-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 38px;
+}
+
+.card-heading > span {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(139, 92, 246, 0.12);
+
+    font-size: 1.5rem;
+}
+
+.card-heading h2 {
+    font-size: 1.45rem;
+    margin-bottom: 6px;
+}
+
+.card-heading p {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+
+/* ================= FORM ================= */
+
+.feedback-card > label {
+    display: block;
+
+    margin: 25px 0 10px;
+
+    color: #dbe4f0;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.feedback-card input,
+.feedback-card select,
+.feedback-card textarea {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    transition: 0.25s;
+}
+
+.feedback-card input::placeholder,
+.feedback-card textarea::placeholder {
+    color: #64748b;
+}
+
+.feedback-card input:focus,
+.feedback-card select:focus,
+.feedback-card textarea:focus {
+    border-color: var(--purple);
+
+    background: rgba(139, 92, 246, 0.06);
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.10);
+}
+
+.feedback-card select option {
+    background: #151525;
+    color: white;
+}
+
+.feedback-card textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* ================= STARS ================= */
+
+.stars {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 4px;
+}
+
+.stars button {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #475569;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.stars button:hover {
+    color: #fbbf24;
+
+    border-color: rgba(251, 191, 36, 0.3);
+
+    transform: translateY(-2px);
+}
+
+.stars button.active {
+    color: #fbbf24;
+
+    background: rgba(251, 191, 36, 0.08);
+
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.rating-text {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 0.82rem;
+}
+
+
+/* ================= SUBMIT ================= */
+
+.submit-btn {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        var(--pink)
+    );
+
+    color: white;
+
+    font-size: 0.98rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(139, 92, 246, 0.25);
+}
+
+
+/* ================= REVIEWS ================= */
+
+.reviews-section {
+    margin-top: 100px;
+}
+
+.section-title {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+
+    margin-top: 7px;
+}
+
+.average-rating {
+    padding: 13px 20px;
+
+    border-radius: 14px;
+
+    background: var(--card-soft);
+
+    border: 1px solid var(--border);
+
+    color: #fbbf24;
+
+    font-weight: bold;
+}
+
+
+/* ================= REVIEW LIST ================= */
+
+.feedback-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.feedback-item {
+    padding: 28px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition: 0.25s;
+}
+
+.feedback-item:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(139, 92, 246, 0.25);
+}
+
+.feedback-item h3 {
+    margin-bottom: 8px;
+}
+
+.feedback-item p {
+    color: #cbd5e1;
+
+    line-height: 1.7;
+
+    font-size: 0.9rem;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-top: 1px solid var(--border);
+
+    background: rgba(5, 5, 12, 0.8);
+}
+
+.footer-logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    margin-top: 7px;
+}
+
+footer .copyright {
+    font-size: 0.75rem;
+
+    margin-top: 16px;
+
+    color: #64748b;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .feedback-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links a {
+        display: none;
+    }
+
+    .container {
+        width: 92%;
+
+        padding-top: 55px;
+    }
+
+    .heading {
+        margin-bottom: 45px;
+    }
+
+    .feedback-card {
+        padding: 28px 22px;
+
+        border-radius: 20px;
+    }
+
+    .card-heading {
+        margin-bottom: 28px;
+    }
+
+    .stars button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .section-title {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .reviews-section {
+        margin-top: 70px;
+    }
+    .review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-top h3 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.review-top small {
+    color: #94a3b8;
+}
+
+.review-date {
+    color: #64748b;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.review-stars {
+    color: #fbbf24;
+    font-size: 1rem;
+    letter-spacing: 2px;s
+    margin-bottom: 12px;
+}
+}

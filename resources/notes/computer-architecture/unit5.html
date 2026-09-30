@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Architecture - Unit 5</title>
+
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fb;color:#222;line-height:1.6}
+header{background:#00838f;color:white;text-align:center;padding:25px}
+.container{width:90%;max-width:1000px;margin:25px auto}
+.back{display:inline-block;background:#00838f;color:white;text-decoration:none;padding:10px 18px;border-radius:6px;margin-bottom:20px}
+.topic{background:white;padding:22px;margin-bottom:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+h2{color:#00838f}
+h3{color:#0097a7}
+.important{background:#e0f7fa;border-left:5px solid #00838f;padding:12px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #999;padding:10px}
+th{background:#00838f;color:white}
+footer{background:#00838f;color:white;text-align:center;padding:15px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Computer Architecture</h1>
+<p>Unit 5 – Input/Output Organization and Parallel Processing</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. Input/Output Organization</h2>
+<p>
+Input/Output organization deals with communication between the
+computer system and external devices.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. I/O Devices</h2>
+
+<h3>Input Devices</h3>
+<ul>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Scanner</li>
+<li>Microphone</li>
+</ul>
+
+<h3>Output Devices</h3>
+<ul>
+<li>Monitor</li>
+<li>Printer</li>
+<li>Speaker</li>
+<li>Projector</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>3. I/O Interface</h2>
+<p>
+An I/O interface provides communication between the CPU/memory system
+and peripheral devices.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. Programmed I/O</h2>
+<p>
+In programmed I/O, the CPU actively checks the status of an I/O device
+and performs the transfer.
+</p>
+
+<div class="important">
+The CPU remains involved in controlling the transfer.
+</div>
+</div>
+
+<div class="topic">
+<h2>5. Interrupt-Driven I/O</h2>
+<p>
+In interrupt-driven I/O, an I/O device signals the CPU when it needs
+attention or when an operation is ready.
+</p>
+</div>
+
+<div class="topic">
+<h2>6. Direct Memory Access</h2>
+<p>
+DMA allows data to be transferred between an I/O device and main memory
+with limited CPU involvement during the actual transfer.
+</p>
+
+<div class="important">
+DMA is useful for high-speed data transfers.
+</div>
+</div>
+
+<div class="topic">
+<h2>7. Interrupt</h2>
+<p>
+An interrupt is a signal that temporarily requests the processor's
+attention so that it can handle an event.
+</p>
+
+<h3>Types:</h3>
+<ul>
+<li>Hardware Interrupt</li>
+<li>Software Interrupt</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>8. Parallel Processing</h2>
+<p>
+Parallel processing is the use of multiple processing elements to
+perform tasks concurrently.
+</p>
+
+<h3>Benefits:</h3>
+<ul>
+<li>Higher performance</li>
+<li>Reduced execution time for suitable workloads</li>
+<li>Better utilization of computing resources</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. Multiprocessor System</h2>
+<p>
+A multiprocessor system contains two or more processors that work
+together within a computer system.
+</p>
+</div>
+
+<div class="topic">
+<h2>10. Multicore Processor</h2>
+<p>
+A multicore processor contains multiple processing cores on a single
+processor chip.
+</p>
+
+<p>
+Examples include dual-core, quad-core and octa-core processors.
+</p>
+</div>
+
+<div class="topic">
+<h2>11. Flynn's Classification</h2>
+<p>
+Flynn's taxonomy classifies computer architectures based on the number
+of instruction streams and data streams.
+</p>
+
+<ul>
+<li>SISD – Single Instruction Single Data</li>
+<li>SIMD – Single Instruction Multiple Data</li>
+<li>MISD – Multiple Instruction Single Data</li>
+<li>MIMD – Multiple Instruction Multiple Data</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>12. SISD</h2>
+<p>
+SISD represents a system with a single instruction stream operating
+on a single data stream.
+</p>
+</div>
+
+<div class="topic">
+<h2>13. SIMD</h2>
+<p>
+SIMD performs the same instruction on multiple data elements
+simultaneously.
+</p>
+
+<p>
+It is useful for tasks such as image and multimedia processing.
+</p>
+</div>
+
+<div class="topic">
+<h2>14. MIMD</h2>
+<p>
+MIMD systems allow multiple processors or processing units to execute
+different instructions on different data.
+</p>
+</div>
+
+<div class="topic">
+<h2>15. Important Questions</h2>
+
+<ol>
+<li>What is I/O organization?</li>
+<li>Explain I/O devices.</li>
+<li>What is programmed I/O?</li>
+<li>Explain interrupt-driven I/O.</li>
+<li>What is DMA?</li>
+<li>What is an interrupt?</li>
+<li>Explain parallel processing.</li>
+<li>What is a multiprocessor system?</li>
+<li>What is a multicore processor?</li>
+<li>Explain Flynn's classification.</li>
+<li>What are SISD, SIMD, MISD and MIMD?</li>
+</ol>
+
+</div>
+
+</div>
+
+<footer>
+<p>College StudyHub | Computer Architecture – Unit 5</p>
+</footer>
+
+</body>
+</html>

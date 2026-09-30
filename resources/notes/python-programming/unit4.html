@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Programming - Unit 4</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fb;line-height:1.6}
+header,footer{background:#00838f;color:white;text-align:center;padding:22px}
+.container{width:90%;max-width:1000px;margin:25px auto}
+.back{display:inline-block;background:#00838f;color:white;padding:10px 18px;text-decoration:none;border-radius:6px;margin-bottom:20px}
+.topic{background:white;padding:20px;margin-bottom:18px;border-radius:10px;box-shadow:0 2px 8px #ddd}
+h2{color:#00838f}
+pre{background:#222;color:white;padding:15px;border-radius:8px;overflow:auto}
+</style>
+</head>
+<body>
+
+<header><h1>Python Programming</h1><p>Unit 4 – File Handling and Exception Handling</p></header>
+
+<div class="container">
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. File Handling</h2>
+<p>File handling allows Python programs to create, read, write and modify files.</p>
+</div>
+
+<div class="topic">
+<h2>2. Opening a File</h2>
+<pre>
+file = open("data.txt","r")
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. File Modes</h2>
+<ul>
+<li>r – Read</li>
+<li>w – Write</li>
+<li>a – Append</li>
+<li>x – Create</li>
+<li>b – Binary</li>
+<li>t – Text</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>4. Reading a File</h2>
+<pre>
+file = open("data.txt","r")
+
+data = file.read()
+
+print(data)
+
+file.close()
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Writing to a File</h2>
+<pre>
+file = open("data.txt","w")
+
+file.write("Hello Python")
+
+file.close()
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. Append Mode</h2>
+<pre>
+file = open("data.txt","a")
+
+file.write("\nNew Line")
+
+file.close()
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. with Statement</h2>
+<pre>
+with open("data.txt","r") as file:
+    print(file.read())
+</pre>
+<p>The <b>with</b> statement automatically handles closing the file.</p>
+</div>
+
+<div class="topic">
+<h2>8. Errors</h2>
+<p>An error is a problem that prevents a program from working correctly.</p>
+<ul>
+<li>Syntax Error</li>
+<li>Runtime Error</li>
+<li>Logical Error</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. Exception</h2>
+<p>An exception is an event that occurs during program execution and can interrupt normal program flow.</p>
+</div>
+
+<div class="topic">
+<h2>10. try-except</h2>
+<pre>
+try:
+    a = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. finally</h2>
+<pre>
+try:
+    print("Hello")
+except:
+    print("Error")
+finally:
+    print("Program completed")
+</pre>
+</div>
+
+<div class="topic">
+<h2>12. Multiple Exceptions</h2>
+<pre>
+try:
+    num = int(input("Enter number: "))
+    result = 10 / num
+except ValueError:
+    print("Invalid input")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+</pre>
+</div>
+
+<div class="topic">
+<h2>13. raise Statement</h2>
+<pre>
+age = 15
+
+if age < 18:
+    raise Exception("Not eligible")
+</pre>
+</div>
+
+<div class="topic">
+<h2>Important Questions</h2>
+<ol>
+<li>What is file handling?</li>
+<li>Explain file modes.</li>
+<li>How do you read a file?</li>
+<li>How do you write to a file?</li>
+<li>What is exception handling?</li>
+<li>Explain try and except.</li>
+<li>Explain finally.</li>
+<li>Differentiate syntax and runtime errors.</li>
+</ol>
+</div>
+
+</div>
+
+<footer>College StudyHub | Python Programming – Unit 4</footer>
+</body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OOP Using Java - Unit 3</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4a148c;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back {
+            display: inline-block;
+            text-decoration: none;
+            background: #4a148c;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .topic {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #4a148c;
+        }
+
+        h3 {
+            color: #6a1b9a;
+        }
+
+        pre {
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        .important {
+            background: #f3e5f5;
+            padding: 12px;
+            border-left: 5px solid #4a148c;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+            width: 100%;
+        }
+
+        th {
+            background: #4a148c;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            background: #4a148c;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>OOP Using Java</h1>
+    <p>Unit 3 – Inheritance, Polymorphism and Packages</p>
+</header>
+
+<div class="container">
+
+    <a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+    <!-- Inheritance -->
+    <div class="topic">
+        <h2>1. Inheritance</h2>
+
+        <p>
+            Inheritance is an important feature of Object Oriented
+            Programming. It allows one class to acquire the properties
+            and methods of another class.
+        </p>
+
+        <p>
+            The class which inherits another class is called the
+            <b>child/subclass</b>.
+        </p>
+
+        <p>
+            The class whose properties are inherited is called the
+            <b>parent/superclass</b>.
+        </p>
+
+        <div class="important">
+            <b>Main advantage:</b> Code reusability.
+        </div>
+    </div>
+
+    <!-- extends -->
+    <div class="topic">
+        <h2>2. extends Keyword</h2>
+
+        <p>
+            The <code>extends</code> keyword is used to inherit a class
+            in Java.
+        </p>
+
+<pre>
+class Animal {
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog barks");
+    }
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.eat();
+        d.bark();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Animal eats
+Dog barks
+</pre>
+    </div>
+
+    <!-- Types -->
+    <div class="topic">
+        <h2>3. Types of Inheritance</h2>
+
+        <p>
+            Java supports inheritance in different forms.
+        </p>
+
+        <ul>
+            <li>Single Inheritance</li>
+            <li>Multilevel Inheritance</li>
+            <li>Hierarchical Inheritance</li>
+        </ul>
+
+        <p>
+            Multiple inheritance through classes is not supported directly
+            in Java. Similar behavior can be achieved using interfaces.
+        </p>
+    </div>
+
+    <!-- Single -->
+    <div class="topic">
+        <h2>4. Single Inheritance</h2>
+
+        <p>
+            When one child class inherits from one parent class,
+            it is called single inheritance.
+        </p>
+
+<pre>
+class Animal {
+
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+</pre>
+
+        <p>
+            Here, <code>Dog</code> inherits from <code>Animal</code>.
+        </p>
+    </div>
+
+    <!-- Multilevel -->
+    <div class="topic">
+        <h2>5. Multilevel Inheritance</h2>
+
+        <p>
+            When a class inherits from another derived class,
+            it is called multilevel inheritance.
+        </p>
+
+<pre>
+class Animal {
+
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+
+class Puppy extends Dog {
+
+    void play() {
+        System.out.println("Playing");
+    }
+}
+</pre>
+
+        <p>
+            Here:
+        </p>
+
+        <ul>
+            <li>Dog inherits Animal.</li>
+            <li>Puppy inherits Dog.</li>
+            <li>Puppy can access inherited members available to it.</li>
+        </ul>
+    </div>
+
+    <!-- Hierarchical -->
+    <div class="topic">
+        <h2>6. Hierarchical Inheritance</h2>
+
+        <p>
+            When multiple child classes inherit from one parent class,
+            it is called hierarchical inheritance.
+        </p>
+
+<pre>
+class Animal {
+
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+
+class Cat extends Animal {
+
+    void meow() {
+        System.out.println("Meowing");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Super -->
+    <div class="topic">
+        <h2>7. super Keyword</h2>
+
+        <p>
+            The <code>super</code> keyword is used to refer to the
+            immediate parent class object.
+        </p>
+
+        <h3>Uses of super:</h3>
+
+        <ul>
+            <li>Access parent class variable.</li>
+            <li>Call parent class method.</li>
+            <li>Call parent class constructor.</li>
+        </ul>
+
+<pre>
+class Animal {
+
+    String name = "Animal";
+}
+
+class Dog extends Animal {
+
+    String name = "Dog";
+
+    void display() {
+
+        System.out.println(name);
+        System.out.println(super.name);
+    }
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.display();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Dog
+Animal
+</pre>
+    </div>
+
+    <!-- Method Overriding -->
+    <div class="topic">
+        <h2>8. Method Overriding</h2>
+
+        <p>
+            When a child class provides its own implementation of a
+            method already defined in the parent class, it is called
+            method overriding.
+        </p>
+
+<pre>
+class Animal {
+
+    void sound() {
+
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+
+        System.out.println("Dog barks");
+    }
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.sound();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Dog barks
+</pre>
+    </div>
+
+    <!-- Polymorphism -->
+    <div class="topic">
+        <h2>9. Polymorphism</h2>
+
+        <p>
+            Polymorphism means <b>one name, many forms</b>.
+        </p>
+
+        <p>
+            It allows the same method or reference to behave differently
+            in different situations.
+        </p>
+
+        <h3>Types:</h3>
+
+        <ul>
+            <li>Compile-time Polymorphism</li>
+            <li>Run-time Polymorphism</li>
+        </ul>
+    </div>
+
+    <!-- Compile Time -->
+    <div class="topic">
+        <h2>10. Compile-Time Polymorphism</h2>
+
+        <p>
+            Compile-time polymorphism is mainly achieved through
+            <b>method overloading</b>.
+        </p>
+
+<pre>
+class Calculator {
+
+    int add(int a, int b) {
+
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+
+        return a + b + c;
+    }
+}
+</pre>
+
+        <p>
+            The compiler decides which method should be called based
+            on the arguments.
+        </p>
+    </div>
+
+    <!-- Runtime -->
+    <div class="topic">
+        <h2>11. Run-Time Polymorphism</h2>
+
+        <p>
+            Run-time polymorphism is achieved through
+            <b>method overriding</b>.
+        </p>
+
+<pre>
+class Animal {
+
+    void sound() {
+
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+
+        System.out.println("Dog barks");
+    }
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+
+        a.sound();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Dog barks
+</pre>
+
+        <div class="important">
+            The method that executes is determined at runtime.
+        </div>
+    </div>
+
+    <!-- Dynamic Method Dispatch -->
+    <div class="topic">
+        <h2>12. Dynamic Method Dispatch</h2>
+
+        <p>
+            Dynamic method dispatch is the mechanism by which an overridden
+            method is called through a parent class reference pointing
+            to a child class object.
+        </p>
+
+<pre>
+Animal a = new Dog();
+
+a.sound();
+</pre>
+
+        <p>
+            Here, <code>a</code> is an Animal reference but it refers
+            to a Dog object.
+        </p>
+    </div>
+
+    <!-- Final -->
+    <div class="topic">
+        <h2>13. final Keyword</h2>
+
+        <p>
+            The <code>final</code> keyword is used to restrict modification.
+        </p>
+
+        <h3>Final Variable</h3>
+
+<pre>
+final int MAX = 100;
+</pre>
+
+        <p>
+            The value of a final variable cannot be changed after
+            initialization.
+        </p>
+
+        <h3>Final Method</h3>
+
+<pre>
+final void display() {
+
+    System.out.println("Hello");
+}
+</pre>
+
+        <p>
+            A final method cannot be overridden.
+        </p>
+
+        <h3>Final Class</h3>
+
+<pre>
+final class Vehicle {
+
+}
+</pre>
+
+        <p>
+            A final class cannot be inherited.
+        </p>
+    </div>
+
+    <!-- Abstract Class -->
+    <div class="topic">
+        <h2>14. Abstract Class</h2>
+
+        <p>
+            An abstract class is a class declared using the
+            <code>abstract</code> keyword.
+        </p>
+
+        <p>
+            It may contain abstract as well as non-abstract methods.
+        </p>
+
+<pre>
+abstract class Animal {
+
+    abstract void sound();
+
+    void eat() {
+
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+
+        System.out.println("Dog barks");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Packages -->
+    <div class="topic">
+        <h2>15. Package in Java</h2>
+
+        <p>
+            A package is a collection of related classes, interfaces
+            and other Java components.
+        </p>
+
+        <p>
+            Packages help in:
+        </p>
+
+        <ul>
+            <li>Organizing classes</li>
+            <li>Avoiding name conflicts</li>
+            <li>Providing access control</li>
+            <li>Making code easier to maintain</li>
+        </ul>
+    </div>
+
+    <!-- Built-in packages -->
+    <div class="topic">
+        <h2>16. Common Java Packages</h2>
+
+        <table>
+            <tr>
+                <th>Package</th>
+                <th>Use</th>
+            </tr>
+
+            <tr>
+                <td>java.lang</td>
+                <td>Basic Java classes</td>
+            </tr>
+
+            <tr>
+                <td>java.util</td>
+                <td>Utility and collection classes</td>
+            </tr>
+
+            <tr>
+                <td>java.io</td>
+                <td>Input and output operations</td>
+            </tr>
+
+            <tr>
+                <td>java.sql</td>
+                <td>Database connectivity</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Creating Package -->
+    <div class="topic">
+        <h2>17. Creating a Package</h2>
+
+        <p>
+            The <code>package</code> keyword is used to declare a package.
+        </p>
+
+<pre>
+package mypackage;
+
+class Student {
+
+    void display() {
+
+        System.out.println("Hello Student");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Import -->
+    <div class="topic">
+        <h2>18. import Keyword</h2>
+
+        <p>
+            The <code>import</code> keyword is used to access classes
+            from another package.
+        </p>
+
+<pre>
+import java.util.Scanner;
+</pre>
+
+        <p>
+            After importing Scanner, we can use it in our program.
+        </p>
+    </div>
+
+    <!-- Inheritance Difference -->
+    <div class="topic">
+        <h2>19. Overloading vs Overriding</h2>
+
+        <table>
+            <tr>
+                <th>Method Overloading</th>
+                <th>Method Overriding</th>
+            </tr>
+
+            <tr>
+                <td>Same method name</td>
+                <td>Same method name</td>
+            </tr>
+
+            <tr>
+                <td>Parameters must be different</td>
+                <td>Same method signature in subclass</td>
+            </tr>
+
+            <tr>
+                <td>Compile-time polymorphism</td>
+                <td>Run-time polymorphism</td>
+            </tr>
+
+            <tr>
+                <td>Usually occurs within a class</td>
+                <td>Requires inheritance</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Important Questions -->
+    <div class="topic">
+        <h2>20. Important Exam Questions</h2>
+
+        <ol>
+            <li>What is inheritance?</li>
+            <li>Explain types of inheritance in Java.</li>
+            <li>What is the use of extends keyword?</li>
+            <li>Explain single inheritance with example.</li>
+            <li>Explain multilevel inheritance with example.</li>
+            <li>Explain hierarchical inheritance.</li>
+            <li>What is the use of super keyword?</li>
+            <li>What is method overriding?</li>
+            <li>What is polymorphism?</li>
+            <li>Explain compile-time polymorphism.</li>
+            <li>Explain run-time polymorphism.</li>
+            <li>What is dynamic method dispatch?</li>
+            <li>Explain final keyword.</li>
+            <li>What is an abstract class?</li>
+            <li>What is a package?</li>
+            <li>Explain import keyword.</li>
+            <li>Differentiate between method overloading and overriding.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>College StudyHub | OOP Using Java – Unit 3</p>
+</footer>
+
+</body>
+</html>

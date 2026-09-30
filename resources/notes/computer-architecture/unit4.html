@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Architecture - Unit 4</title>
+
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fb;color:#222;line-height:1.6}
+header{background:#00838f;color:white;text-align:center;padding:25px}
+.container{width:90%;max-width:1000px;margin:25px auto}
+.back{display:inline-block;background:#00838f;color:white;text-decoration:none;padding:10px 18px;border-radius:6px;margin-bottom:20px}
+.topic{background:white;padding:22px;margin-bottom:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+h2{color:#00838f}
+h3{color:#0097a7}
+.important{background:#e0f7fa;border-left:5px solid #00838f;padding:12px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #999;padding:10px}
+th{background:#00838f;color:white}
+footer{background:#00838f;color:white;text-align:center;padding:15px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Computer Architecture</h1>
+<p>Unit 4 – CPU Organization</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. CPU Organization</h2>
+<p>
+CPU organization describes the internal arrangement and operation of
+the processor components.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. Register Organization</h2>
+<p>
+Registers are high-speed storage elements used to hold data,
+instructions and addresses during CPU operations.
+</p>
+
+<ul>
+<li>General Purpose Registers</li>
+<li>Accumulator</li>
+<li>Program Counter</li>
+<li>Instruction Register</li>
+<li>Stack Pointer</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>3. Program Counter</h2>
+<p>
+The Program Counter (PC) stores the address of the next instruction
+to be fetched from memory.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. Instruction Register</h2>
+<p>
+The Instruction Register (IR) holds the instruction currently being
+decoded or executed.
+</p>
+</div>
+
+<div class="topic">
+<h2>5. Stack Pointer</h2>
+<p>
+The Stack Pointer stores information used to identify the current
+top of the stack.
+</p>
+</div>
+
+<div class="topic">
+<h2>6. Instruction Format</h2>
+<p>
+An instruction generally contains an operation code and information
+about operands.
+</p>
+
+<table>
+<tr>
+<th>Part</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td>Opcode</td>
+<td>Specifies the operation.</td>
+</tr>
+<tr>
+<td>Operand</td>
+<td>Specifies data or its location.</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>7. Instruction Types</h2>
+
+<ul>
+<li>Data Transfer Instructions</li>
+<li>Arithmetic Instructions</li>
+<li>Logical Instructions</li>
+<li>Control Transfer Instructions</li>
+<li>Input/Output Instructions</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>8. Addressing Modes</h2>
+<p>
+Addressing mode specifies how the operand of an instruction is
+located.
+</p>
+
+<ul>
+<li>Immediate Addressing</li>
+<li>Direct Addressing</li>
+<li>Indirect Addressing</li>
+<li>Register Addressing</li>
+<li>Indexed Addressing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. Immediate Addressing</h2>
+<p>
+The operand value is directly included in the instruction.
+</p>
+
+<p><b>Example:</b> MOV R1, #10</p>
+</div>
+
+<div class="topic">
+<h2>10. Direct Addressing</h2>
+<p>
+The instruction contains the memory address of the operand.
+</p>
+</div>
+
+<div class="topic">
+<h2>11. Indirect Addressing</h2>
+<p>
+The instruction specifies a location that contains the address
+of the actual operand.
+</p>
+</div>
+
+<div class="topic">
+<h2>12. RISC</h2>
+<p>
+RISC stands for Reduced Instruction Set Computer.
+It uses a relatively small and simple instruction set.
+</p>
+
+<ul>
+<li>Simple instructions</li>
+<li>Fast execution</li>
+<li>Load/store architecture is common</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>13. CISC</h2>
+<p>
+CISC stands for Complex Instruction Set Computer.
+It supports a large and relatively complex instruction set.
+</p>
+</div>
+
+<div class="topic">
+<h2>14. RISC vs CISC</h2>
+
+<table>
+<tr>
+<th>RISC</th>
+<th>CISC</th>
+</tr>
+<tr>
+<td>Smaller instruction set</td>
+<td>Larger instruction set</td>
+</tr>
+<tr>
+<td>Instructions are generally simpler</td>
+<td>Instructions can be more complex</td>
+</tr>
+<tr>
+<td>Often emphasizes simple, fast instructions</td>
+<td>May provide complex operations in fewer instructions</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>15. Important Questions</h2>
+<ol>
+<li>What is CPU organization?</li>
+<li>Explain register organization.</li>
+<li>What is Program Counter?</li>
+<li>What is Instruction Register?</li>
+<li>Explain instruction format.</li>
+<li>What are addressing modes?</li>
+<li>Explain immediate addressing.</li>
+<li>Explain direct and indirect addressing.</li>
+<li>What is RISC?</li>
+<li>What is CISC?</li>
+<li>Differentiate RISC and CISC.</li>
+</ol>
+</div>
+
+</div>
+
+<footer>
+<p>College StudyHub | Computer Architecture – Unit 4</p>
+</footer>
+
+</body>
+</html>

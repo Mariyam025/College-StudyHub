@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C Programming - Unit 2 Notes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 28px 8%;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header p {
+            margin: 5px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: white;
+            color: #4f46e5;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        h2 {
+            color: #4f46e5;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            margin-top: 22px;
+        }
+
+        .highlight {
+            background: #eef2ff;
+            padding: 14px;
+            border-left: 5px solid #4f46e5;
+            border-radius: 6px;
+        }
+
+        .output {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .exam {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #eef2ff;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Programming in C</h1>
+        <p>Unit 2 – Components, I/O, Operators & Storage Classes</p>
+        <p>College StudyHub</p>
+    </div>
+
+    <div class="container">
+
+        <a href="../../../subjects.html" class="back-btn">
+            ← Back to Subjects
+        </a>
+
+
+        <!-- UNIT TOPICS -->
+
+        <div class="section">
+
+            <h2>📚 Unit 2 Topics</h2>
+
+            <ul>
+                <li>Components of C Language</li>
+                <li>Structure of a C Program</li>
+                <li>Writing and Executing C Programs</li>
+                <li>Standard Input and Output in C</li>
+                <li>Operator Precedence and Associativity</li>
+                <li>Storage Classes</li>
+                <li>Automatic Storage Class</li>
+                <li>Register Storage Class</li>
+                <li>Static Storage Class</li>
+                <li>Extern Storage Class</li>
+            </ul>
+
+        </div>
+
+
+        <!-- COMPONENTS -->
+
+        <div class="section">
+
+            <h2>1. Components of C Language</h2>
+
+            <p>
+                Components of C language are the basic elements used to
+                write a C program.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Component</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td>Keywords</td>
+                    <td>Reserved words</td>
+                    <td>int, if, return</td>
+                </tr>
+
+                <tr>
+                    <td>Identifiers</td>
+                    <td>Names given to variables, functions etc.</td>
+                    <td>age, marks</td>
+                </tr>
+
+                <tr>
+                    <td>Constants</td>
+                    <td>Fixed values</td>
+                    <td>10, 3.14</td>
+                </tr>
+
+                <tr>
+                    <td>Operators</td>
+                    <td>Perform operations</td>
+                    <td>+, -, *</td>
+                </tr>
+
+                <tr>
+                    <td>Special Symbols</td>
+                    <td>Symbols used in program syntax</td>
+                    <td>; , { } ( )</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- STRUCTURE -->
+
+        <div class="section">
+
+            <h2>2. Structure of a C Program</h2>
+
+            <p>
+                A C program follows a particular structure. A simple program
+                generally contains header files, the main function,
+                statements and a return statement.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}</pre>
+
+            <h3>Main Parts</h3>
+
+            <table>
+
+                <tr>
+                    <th>Part</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>#include &lt;stdio.h&gt;</td>
+                    <td>Includes the standard input/output header.</td>
+                </tr>
+
+                <tr>
+                    <td>main()</td>
+                    <td>Starting function of the program.</td>
+                </tr>
+
+                <tr>
+                    <td>printf()</td>
+                    <td>Displays output.</td>
+                </tr>
+
+                <tr>
+                    <td>return 0;</td>
+                    <td>Returns control from main.</td>
+                </tr>
+
+            </table>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                Hello World
+            </div>
+
+        </div>
+
+
+        <!-- WRITING EXECUTING -->
+
+        <div class="section">
+
+            <h2>3. Writing and Executing a C Program</h2>
+
+            <p>
+                A C program is written in a source file and then compiled
+                and executed.
+            </p>
+
+            <h3>Basic Steps</h3>
+
+            <ol>
+                <li>Write the C program.</li>
+                <li>Save the file with <code>.c</code> extension.</li>
+                <li>Compile the program.</li>
+                <li>Correct errors if present.</li>
+                <li>Run the program.</li>
+                <li>Check the output.</li>
+            </ol>
+
+            <div class="highlight">
+                <strong>Example:</strong>
+
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("College StudyHub");
+
+    return 0;
+}</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                College StudyHub
+            </div>
+
+        </div>
+
+
+        <!-- STANDARD IO -->
+
+        <div class="section">
+
+            <h2>4. Standard Input and Output in C</h2>
+
+            <p>
+                Standard I/O functions are used to take input from the user
+                and display output.
+            </p>
+
+            <h3>printf()</h3>
+
+            <p>
+                <code>printf()</code> is used to display output.
+            </p>
+
+            <pre>
+printf("Hello");</pre>
+
+
+            <h3>scanf()</h3>
+
+            <p>
+                <code>scanf()</code> is used to take input from the user.
+            </p>
+
+            <h3>Example Program</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &amp;age);
+
+    printf("Your age is %d", age);
+
+    return 0;
+}</pre>
+
+            <div class="output">
+                <strong>Sample Output:</strong><br>
+                Enter your age: 19<br>
+                Your age is 19
+            </div>
+
+
+            <h3>Common Format Specifiers</h3>
+
+            <table>
+
+                <tr>
+                    <th>Specifier</th>
+                    <th>Used For</th>
+                </tr>
+
+                <tr>
+                    <td>%d</td>
+                    <td>Integer</td>
+                </tr>
+
+                <tr>
+                    <td>%f</td>
+                    <td>Floating-point value</td>
+                </tr>
+
+                <tr>
+                    <td>%c</td>
+                    <td>Character</td>
+                </tr>
+
+                <tr>
+                    <td>%s</td>
+                    <td>String</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- PRECEDENCE -->
+
+        <div class="section">
+
+            <h2>5. Operator Precedence and Associativity</h2>
+
+            <p>
+                <strong>Operator precedence</strong> determines which
+                operator is evaluated first in an expression.
+            </p>
+
+            <p>
+                <strong>Associativity</strong> determines the direction
+                in which operators having the same precedence are evaluated.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre>
+int result;
+
+result = 10 + 5 * 2;</pre>
+
+            <p>
+                Multiplication has higher precedence than addition.
+                Therefore, multiplication is performed first.
+            </p>
+
+            <pre>
+5 * 2 = 10
+
+10 + 10 = 20</pre>
+
+            <div class="output">
+                <strong>Result:</strong> 20
+            </div>
+
+
+            <h3>Simple Precedence Table</h3>
+
+            <table>
+
+                <tr>
+                    <th>Operators</th>
+                    <th>Priority</th>
+                </tr>
+
+                <tr>
+                    <td>()</td>
+                    <td>Higher</td>
+                </tr>
+
+                <tr>
+                    <td>*, /, %</td>
+                    <td>High</td>
+                </tr>
+
+                <tr>
+                    <td>+, -</td>
+                    <td>Medium</td>
+                </tr>
+
+                <tr>
+                    <td>=</td>
+                    <td>Lower</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- STORAGE CLASSES -->
+
+        <div class="section">
+
+            <h2>6. Storage Classes</h2>
+
+            <p>
+                Storage classes define important properties of variables,
+                such as their scope, lifetime and storage behavior.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Storage Class</th>
+                    <th>Keyword</th>
+                </tr>
+
+                <tr>
+                    <td>Automatic</td>
+                    <td>auto</td>
+                </tr>
+
+                <tr>
+                    <td>Register</td>
+                    <td>register</td>
+                </tr>
+
+                <tr>
+                    <td>Static</td>
+                    <td>static</td>
+                </tr>
+
+                <tr>
+                    <td>External</td>
+                    <td>extern</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- AUTO -->
+
+        <div class="section">
+
+            <h2>7. Automatic Storage Class</h2>
+
+            <p>
+                The <code>auto</code> storage class is used for local
+                variables. Local variables are automatic by default.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    auto int x = 10;
+
+    printf("%d", x);
+
+    return 0;
+}</pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                10
+            </div>
+
+        </div>
+
+
+        <!-- REGISTER -->
+
+        <div class="section">
+
+            <h2>8. Register Storage Class</h2>
+
+            <p>
+                The <code>register</code> keyword can be used to request
+                that a frequently used variable be stored in a CPU register
+                when possible.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    register int i;
+
+    for(i = 1; i &lt;= 5; i++)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}</pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                1 2 3 4 5
+            </div>
+
+        </div>
+
+
+        <!-- STATIC -->
+
+        <div class="section">
+
+            <h2>9. Static Storage Class</h2>
+
+            <p>
+                A <code>static</code> local variable retains its stored
+                value between function calls.
+            </p>
+
+            <h3>Example Program</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+void count()
+{
+    static int x = 0;
+
+    x++;
+
+    printf("%d ", x);
+}
+
+int main()
+{
+    count();
+    count();
+    count();
+
+    return 0;
+}</pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                1 2 3
+            </div>
+
+            <p>
+                The value of <code>x</code> is retained between calls
+                because it is declared as static.
+            </p>
+
+        </div>
+
+
+        <!-- EXTERN -->
+
+        <div class="section">
+
+            <h2>10. Extern Storage Class</h2>
+
+            <p>
+                The <code>extern</code> keyword is used to declare a
+                variable that is defined elsewhere, allowing it to be
+                referred to from another scope or source file.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int number = 50;
+
+int main()
+{
+    extern int number;
+
+    printf("%d", number);
+
+    return 0;
+}</pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                50
+            </div>
+
+        </div>
+
+
+        <!-- QUICK REVISION -->
+
+        <div class="section">
+
+            <h2>⚡ Quick Revision</h2>
+
+            <table>
+
+                <tr>
+                    <th>Topic</th>
+                    <th>Remember</th>
+                </tr>
+
+                <tr>
+                    <td>Components</td>
+                    <td>Basic elements used to write C programs.</td>
+                </tr>
+
+                <tr>
+                    <td>main()</td>
+                    <td>Entry point of a normal C program.</td>
+                </tr>
+
+                <tr>
+                    <td>printf()</td>
+                    <td>Used for output.</td>
+                </tr>
+
+                <tr>
+                    <td>scanf()</td>
+                    <td>Used for input.</td>
+                </tr>
+
+                <tr>
+                    <td>Precedence</td>
+                    <td>Determines operator priority.</td>
+                </tr>
+
+                <tr>
+                    <td>Associativity</td>
+                    <td>Determines evaluation direction for operators of equal precedence.</td>
+                </tr>
+
+                <tr>
+                    <td>auto</td>
+                    <td>Automatic local variable.</td>
+                </tr>
+
+                <tr>
+                    <td>register</td>
+                    <td>Requests register storage when possible.</td>
+                </tr>
+
+                <tr>
+                    <td>static</td>
+                    <td>Retains value between function calls.</td>
+                </tr>
+
+                <tr>
+                    <td>extern</td>
+                    <td>Refers to a variable defined elsewhere.</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- QUESTIONS -->
+
+        <div class="section">
+
+            <h2>📝 Important Exam Questions</h2>
+
+            <div class="exam">
+
+                <h3>Short Questions</h3>
+
+                <ol>
+                    <li>What are the components of C language?</li>
+                    <li>What is the structure of a C program?</li>
+                    <li>What is the use of printf()?</li>
+                    <li>What is the use of scanf()?</li>
+                    <li>What is operator precedence?</li>
+                    <li>What is associativity?</li>
+                    <li>What is a storage class?</li>
+                    <li>What is the use of static?</li>
+                    <li>What is the use of extern?</li>
+                </ol>
+
+                <h3>Long Questions</h3>
+
+                <ol>
+                    <li>Explain the structure of a C program with an example.</li>
+                    <li>Explain standard input and output functions in C.</li>
+                    <li>Explain operator precedence and associativity.</li>
+                    <li>Explain the storage classes in C with examples.</li>
+                </ol>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIVA -->
+
+        <div class="section">
+
+            <h2>🎤 Viva Questions</h2>
+
+            <ul>
+                <li>Where does execution normally start in a C program?</li>
+                <li>Which function is used to display output?</li>
+                <li>Which function is used to take input?</li>
+                <li>What is the purpose of #include?</li>
+                <li>What is operator precedence?</li>
+                <li>What is associativity?</li>
+                <li>What does static do?</li>
+                <li>What is extern used for?</li>
+                <li>What is the difference between auto and static?</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p>College StudyHub | Programming in C | Unit 2</p>
+    </div>
+
+</body>
+
+</html>

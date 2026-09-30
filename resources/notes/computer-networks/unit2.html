@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Networks - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fb;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: #1f3c88;
+            text-align: center;
+        }
+
+        h2 {
+            color: #274c77;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #356859;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #1769aa;
+            font-weight: bold;
+        }
+
+        .box {
+            background: #f0f5ff;
+            padding: 15px;
+            border-left: 5px solid #356859;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8eef8;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        .layer {
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            background: #f3f3f3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Computer Networks - Unit 2</h1>
+
+<h2>1. Network Models</h2>
+
+<p>
+Network models provide a standard way to understand how communication takes
+place between computers and network devices.
+</p>
+
+<p>
+Two important networking models are:
+</p>
+
+<ul>
+    <li>OSI Model</li>
+    <li>TCP/IP Model</li>
+</ul>
+
+<h2>2. OSI Model</h2>
+
+<p>
+OSI stands for <b>Open Systems Interconnection</b>.
+It is a reference model developed to standardize network communication.
+</p>
+
+<p>
+The OSI model has <b>seven layers</b>.
+</p>
+
+<h2>3. Seven Layers of OSI Model</h2>
+
+<table>
+<tr>
+    <th>Layer</th>
+    <th>Name</th>
+    <th>Main Function</th>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>Application</td>
+    <td>Provides network services to applications</td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Presentation</td>
+    <td>Translation, encryption and compression</td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>Session</td>
+    <td>Establishes and manages sessions</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Transport</td>
+    <td>End-to-end delivery and reliability</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Network</td>
+    <td>Routing and logical addressing</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Data Link</td>
+    <td>Framing and error detection</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Physical</td>
+    <td>Transmission of raw bits</td>
+</tr>
+</table>
+
+<h2>4. Physical Layer</h2>
+
+<p>
+The physical layer is the first layer of the OSI model.
+It is responsible for transmitting raw bits over a physical medium.
+</p>
+
+<h3>Functions</h3>
+
+<ul>
+    <li>Bit transmission</li>
+    <li>Transmission rate</li>
+    <li>Physical topology</li>
+    <li>Encoding</li>
+    <li>Transmission media</li>
+</ul>
+
+<h2>5. Data Link Layer</h2>
+
+<p>
+The data link layer provides reliable communication between directly
+connected nodes.
+</p>
+
+<h3>Functions</h3>
+
+<ul>
+    <li>Framing</li>
+    <li>Physical addressing</li>
+    <li>Error detection</li>
+    <li>Flow control</li>
+    <li>Access control</li>
+</ul>
+
+<h2>6. Network Layer</h2>
+
+<p>
+The network layer is responsible for logical addressing and routing packets
+from source to destination across different networks.
+</p>
+
+<h3>Functions</h3>
+
+<ul>
+    <li>Logical addressing</li>
+    <li>Routing</li>
+    <li>Packet forwarding</li>
+    <li>Internetworking</li>
+</ul>
+
+<div class="box">
+<b>Important:</b> IP works at the Network Layer of the OSI model.
+</div>
+
+<h2>7. Transport Layer</h2>
+
+<p>
+The transport layer provides end-to-end communication between processes
+running on different devices.
+</p>
+
+<h3>Functions</h3>
+
+<ul>
+    <li>Segmentation</li>
+    <li>Reassembly</li>
+    <li>Flow control</li>
+    <li>Error control</li>
+    <li>Reliable delivery</li>
+</ul>
+
+<p>
+Important transport layer protocols include TCP and UDP.
+</p>
+
+<h2>8. Session Layer</h2>
+
+<p>
+The session layer establishes, manages and terminates communication sessions
+between applications.
+</p>
+
+<h2>9. Presentation Layer</h2>
+
+<p>
+The presentation layer is responsible for the format and representation of
+data.
+</p>
+
+<h3>Functions</h3>
+
+<ul>
+    <li>Data translation</li>
+    <li>Encryption</li>
+    <li>Decryption</li>
+    <li>Compression</li>
+</ul>
+
+<h2>10. Application Layer</h2>
+
+<p>
+The application layer provides network services directly to user
+applications.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+    <li>HTTP</li>
+    <li>HTTPS</li>
+    <li>FTP</li>
+    <li>SMTP</li>
+    <li>DNS</li>
+</ul>
+
+<h2>11. Easy Trick to Remember OSI Layers</h2>
+
+<div class="box">
+<b>Top to Bottom:</b><br>
+All People Seem To Need Data Processing
+</div>
+
+<p>
+A = Application<br>
+P = Presentation<br>
+S = Session<br>
+T = Transport<br>
+N = Network<br>
+D = Data Link<br>
+P = Physical
+</p>
+
+<h2>12. Encapsulation</h2>
+
+<p>
+Encapsulation is the process of adding protocol information such as headers
+to data as it moves down through the network layers.
+</p>
+
+<p>
+At the receiving side, the process is reversed and is called
+<b>decapsulation</b>.
+</p>
+
+<h2>13. TCP/IP Model</h2>
+
+<p>
+TCP/IP stands for Transmission Control Protocol/Internet Protocol.
+It is the protocol architecture used for communication over the Internet.
+</p>
+
+<h2>14. Layers of TCP/IP Model</h2>
+
+<table>
+<tr>
+    <th>TCP/IP Layer</th>
+    <th>Main Function</th>
+</tr>
+
+<tr>
+    <td>Application</td>
+    <td>Network services for applications</td>
+</tr>
+
+<tr>
+    <td>Transport</td>
+    <td>End-to-end communication</td>
+</tr>
+
+<tr>
+    <td>Internet</td>
+    <td>Logical addressing and routing</td>
+</tr>
+
+<tr>
+    <td>Network Access</td>
+    <td>Physical transmission and link communication</td>
+</tr>
+</table>
+
+<h2>15. OSI vs TCP/IP</h2>
+
+<table>
+<tr>
+    <th>Feature</th>
+    <th>OSI</th>
+    <th>TCP/IP</th>
+</tr>
+
+<tr>
+    <td>Number of Layers</td>
+    <td>7</td>
+    <td>4 commonly described layers</td>
+</tr>
+
+<tr>
+    <td>Nature</td>
+    <td>Reference model</td>
+    <td>Protocol suite/model</td>
+</tr>
+
+<tr>
+    <td>Development</td>
+    <td>ISO</td>
+    <td>Internet protocol development community</td>
+</tr>
+
+<tr>
+    <td>Use</td>
+    <td>Conceptual/reference framework</td>
+    <td>Widely used for Internet communication</td>
+</tr>
+</table>
+
+<h2>16. IP Address</h2>
+
+<p>
+An IP address is a logical address assigned to a device/interface on an IP
+network.
+</p>
+
+<h2>17. IPv4</h2>
+
+<p>
+IPv4 uses a 32-bit address.
+</p>
+
+<p>
+Example:
+</p>
+
+<div class="box">
+192.168.1.10
+</div>
+
+<p>
+IPv4 addresses are generally written as four decimal numbers separated by
+dots.
+</p>
+
+<h2>18. IPv6</h2>
+
+<p>
+IPv6 uses a 128-bit address and was developed to provide a much larger
+address space than IPv4.
+</p>
+
+<p>
+Example:
+</p>
+
+<div class="box">
+2001:db8::1
+</div>
+
+<h2>19. IPv4 vs IPv6</h2>
+
+<table>
+<tr>
+    <th>Feature</th>
+    <th>IPv4</th>
+    <th>IPv6</th>
+</tr>
+
+<tr>
+    <td>Address Size</td>
+    <td>32-bit</td>
+    <td>128-bit</td>
+</tr>
+
+<tr>
+    <td>Notation</td>
+    <td>Decimal</td>
+    <td>Hexadecimal</td>
+</tr>
+
+<tr>
+    <td>Example</td>
+    <td>192.168.1.1</td>
+    <td>2001:db8::1</td>
+</tr>
+
+<tr>
+    <td>Address Space</td>
+    <td>Smaller</td>
+    <td>Much larger</td>
+</tr>
+</table>
+
+<h2>20. MAC Address</h2>
+
+<p>
+A MAC address is a hardware/link-layer address associated with a network
+interface.
+</p>
+
+<p>
+It is commonly represented as a sequence of hexadecimal values.
+</p>
+
+<h2>21. Port Number</h2>
+
+<p>
+A port number identifies a logical communication endpoint associated with a
+network service or process.
+</p>
+
+<p>
+Examples of commonly used ports include:
+</p>
+
+<table>
+<tr>
+    <th>Service</th>
+    <th>Common Port</th>
+</tr>
+
+<tr>
+    <td>HTTP</td>
+    <td>80</td>
+</tr>
+
+<tr>
+    <td>HTTPS</td>
+    <td>443</td>
+</tr>
+
+<tr>
+    <td>FTP Control</td>
+    <td>21</td>
+</tr>
+
+<tr>
+    <td>DNS</td>
+    <td>53</td>
+</tr>
+
+<tr>
+    <td>SMTP</td>
+    <td>25</td>
+</tr>
+</table>
+
+<h2>22. TCP</h2>
+
+<p>
+TCP stands for Transmission Control Protocol.
+It is a connection-oriented transport protocol that provides reliable,
+ordered delivery of data.
+</p>
+
+<h3>Features of TCP</h3>
+
+<ul>
+    <li>Connection-oriented</li>
+    <li>Reliable delivery</li>
+    <li>Ordered data delivery</li>
+    <li>Error detection</li>
+    <li>Flow control</li>
+    <li>Congestion control</li>
+</ul>
+
+<h2>23. UDP</h2>
+
+<p>
+UDP stands for User Datagram Protocol.
+It is a connectionless transport protocol that provides a lightweight method
+of sending datagrams without TCP-style delivery guarantees.
+</p>
+
+<h3>Features of UDP</h3>
+
+<ul>
+    <li>Connectionless</li>
+    <li>Low protocol overhead</li>
+    <li>No guaranteed delivery</li>
+    <li>No guaranteed ordering</li>
+    <li>Useful for time-sensitive applications</li>
+</ul>
+
+<h2>24. TCP vs UDP</h2>
+
+<table>
+<tr>
+    <th>Feature</th>
+    <th>TCP</th>
+    <th>UDP</th>
+</tr>
+
+<tr>
+    <td>Connection</td>
+    <td>Connection-oriented</td>
+    <td>Connectionless</td>
+</tr>
+
+<tr>
+    <td>Reliability</td>
+    <td>Reliable delivery mechanisms</td>
+    <td>No delivery guarantee</td>
+</tr>
+
+<tr>
+    <td>Ordering</td>
+    <td>Ordered</td>
+    <td>No ordering guarantee</td>
+</tr>
+
+<tr>
+    <td>Overhead</td>
+    <td>Higher</td>
+    <td>Lower</td>
+</tr>
+
+<tr>
+    <td>Common Uses</td>
+    <td>Web, file transfer, email</td>
+    <td>Streaming, DNS, real-time applications</td>
+</tr>
+</table>
+
+<h2>25. Common Network Protocols</h2>
+
+<h3>HTTP</h3>
+<p>
+HTTP is used for communication between web clients and web servers.
+</p>
+
+<h3>HTTPS</h3>
+<p>
+HTTPS is HTTP protected using TLS to provide encrypted communication.
+</p>
+
+<h3>FTP</h3>
+<p>
+FTP is used for transferring files between systems.
+</p>
+
+<h3>SMTP</h3>
+<p>
+SMTP is used for sending email between mail systems.
+</p>
+
+<h3>DNS</h3>
+<p>
+DNS translates domain names into IP addresses and supports other
+name-resolution functions.
+</p>
+
+<h2>26. Client-Server Model</h2>
+
+<p>
+In the client-server model, a client requests a service and a server
+provides that service.
+</p>
+
+<div class="box">
+<b>Example:</b> A web browser acts as a client and requests a web page from
+a web server.
+</div>
+
+<h2>27. Peer-to-Peer Network</h2>
+
+<p>
+In a peer-to-peer network, devices can communicate directly and may act as
+both clients and servers.
+</p>
+
+<h2>28. Client-Server vs Peer-to-Peer</h2>
+
+<table>
+<tr>
+    <th>Feature</th>
+    <th>Client-Server</th>
+    <th>Peer-to-Peer</th>
+</tr>
+
+<tr>
+    <td>Architecture</td>
+    <td>Centralized</td>
+    <td>Distributed</td>
+</tr>
+
+<tr>
+    <td>Server</td>
+    <td>Dedicated server generally exists</td>
+    <td>No dedicated server is required</td>
+</tr>
+
+<tr>
+    <td>Management</td>
+    <td>Centralized</td>
+    <td>More distributed</td>
+</tr>
+</table>
+
+<h2>29. Network Security Basics</h2>
+
+<p>
+Network security protects network devices, communication and data from
+unauthorized access and attacks.
+</p>
+
+<h3>Common Security Threats</h3>
+
+<ul>
+    <li>Malware</li>
+    <li>Phishing</li>
+    <li>Unauthorized access</li>
+    <li>Denial-of-Service attacks</li>
+    <li>Data interception</li>
+</ul>
+
+<h3>Basic Security Measures</h3>
+
+<ul>
+    <li>Strong passwords</li>
+    <li>Encryption</li>
+    <li>Firewalls</li>
+    <li>Authentication</li>
+    <li>Regular software updates</li>
+    <li>Antivirus/endpoint protection</li>
+</ul>
+
+<h2>30. Unit 2 Quick Revision</h2>
+
+<ul>
+    <li>OSI model has seven layers.</li>
+    <li>Physical layer transmits bits.</li>
+    <li>Data Link layer handles frames.</li>
+    <li>Network layer handles routing and logical addressing.</li>
+    <li>Transport layer provides end-to-end communication.</li>
+    <li>TCP provides reliable, ordered delivery.</li>
+    <li>UDP is connectionless with lower overhead.</li>
+    <li>IPv4 uses 32-bit addresses.</li>
+    <li>IPv6 uses 128-bit addresses.</li>
+    <li>DNS performs domain-name resolution.</li>
+    <li>HTTP is used for web communication.</li>
+</ul>
+
+<h2>31. Important Exam Questions</h2>
+
+<ol>
+    <li>Explain the OSI reference model.</li>
+    <li>Explain all seven layers of the OSI model.</li>
+    <li>What is the TCP/IP model?</li>
+    <li>Differentiate OSI and TCP/IP models.</li>
+    <li>Explain the functions of the Network Layer.</li>
+    <li>Explain TCP and its features.</li>
+    <li>Explain UDP and its features.</li>
+    <li>Differentiate TCP and UDP.</li>
+    <li>What is an IP address?</li>
+    <li>Differentiate IPv4 and IPv6.</li>
+    <li>What is a MAC address?</li>
+    <li>What is DNS?</li>
+    <li>Explain HTTP and HTTPS.</li>
+    <li>Explain client-server architecture.</li>
+    <li>Explain basic network security threats.</li>
+</ol>
+
+</div>
+
+</body>
+</html>

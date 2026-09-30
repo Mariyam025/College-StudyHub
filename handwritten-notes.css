@@ -1,0 +1,258 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #f8fafc;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.22), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(236, 72, 153, 0.18), transparent 35%),
+        linear-gradient(135deg, #070b17, #11152b 55%, #090d1c);
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 72px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(10, 14, 30, 0.82);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(18px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #ec4899
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 70px 0;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.small-title {
+    color: #c084fc;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.heading h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #c4b5fd,
+        #f9a8d4
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heading p:last-child {
+    color: #94a3b8;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+<section class="upload-card">
+
+    <div class="upload-top">
+        <div class="upload-icon">✍️</div>
+
+        <div>
+            <span class="upload-label">STUDENT CONTRIBUTION</span>
+
+            <h2>Upload Your Handwritten Notes</h2>
+
+            <p>
+                Share your handwritten notes with fellow students
+                and earn <strong>+25 XP</strong>.
+            </p>
+        </div>
+    </div>
+
+
+    <form
+        action="/CollegeStudyHub/UploadHandwrittenServlet"
+        method="POST"
+        enctype="multipart/form-data">
+
+
+        <!-- NOTE TITLE -->
+
+        <div class="form-group">
+
+            <label for="noteTitle">
+                📝 Note Title
+            </label>
+
+            <input
+                type="text"
+                id="noteTitle"
+                name="title"
+                placeholder="Example: Unit 1 Important Questions"
+                required>
+
+        </div>
+
+
+        <!-- SUBJECT -->
+
+        <div class="form-group">
+
+            <label for="subject">
+                📚 Subject
+            </label>
+
+            <select
+                id="subject"
+                name="subject"
+                required>
+
+                <option value="">
+                    Select Subject
+                </option>
+
+                <option>Fundamental of Computers</option>
+                <option>C Programming</option>
+                <option>Mathematics</option>
+                <option>Basic of Information System</option>
+                <option>Soft Skills</option>
+                <option>Data Structure</option>
+                <option>DBMS</option>
+                <option>Digital Electronics</option>
+                <option>Discrete Mathematics</option>
+                <option>OOPs using Java</option>
+                <option>Operating Systems</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- FILE -->
+
+        <div class="form-group">
+
+            <label for="noteFile">
+                📎 Handwritten Note
+            </label>
+
+            <div class="file-upload-box">
+
+                <div class="file-icon">
+                    📄
+                </div>
+
+                <div class="file-text">
+                    <strong>Select your notes</strong>
+                    <span>PDF, JPG, JPEG or PNG • Maximum 10 MB</span>
+                </div>
+
+                <input
+                    type="file"
+                    id="noteFile"
+                    name="file"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    required>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button type="submit">
+
+            📤 Upload Handwritten Note
+
+            <span class="xp-badge">
+                +25 XP
+            </span>
+
+        </button>
+
+    </form>
+
+
+    <div class="upload-info">
+
+        💡 <span>
+            <strong>Help your classmates learn!</strong><br>
+            Upload clear and readable handwritten notes.
+            Your contribution will be available to other students
+            and you'll receive 25 XP.
+        </span>
+
+    </div>
+
+</section>
+

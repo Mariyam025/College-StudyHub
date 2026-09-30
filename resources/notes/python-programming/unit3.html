@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Programming - Unit 3</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fb;line-height:1.6}
+header,footer{background:#00838f;color:white;text-align:center;padding:22px}
+.container{width:90%;max-width:1000px;margin:25px auto}
+.back{display:inline-block;background:#00838f;color:white;padding:10px 18px;text-decoration:none;border-radius:6px;margin-bottom:20px}
+.topic{background:white;padding:20px;margin-bottom:18px;border-radius:10px;box-shadow:0 2px 8px #ddd}
+h2{color:#00838f}
+pre{background:#222;color:white;padding:15px;border-radius:8px;overflow:auto}
+</style>
+</head>
+<body>
+
+<header><h1>Python Programming</h1><p>Unit 3 – Lists, Tuples, Sets and Dictionaries</p></header>
+
+<div class="container">
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. List</h2>
+<p>A list is an ordered and mutable collection of elements.</p>
+<pre>
+numbers = [10,20,30,40]
+print(numbers)
+</pre>
+</div>
+
+<div class="topic">
+<h2>2. List Operations</h2>
+<pre>
+a = [1,2,3]
+
+a.append(4)
+a.insert(1,10)
+a.remove(2)
+
+print(a)
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. List Slicing</h2>
+<pre>
+numbers = [10,20,30,40,50]
+
+print(numbers[1:4])
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Nested List</h2>
+<pre>
+students = [
+    ["Aman",20],
+    ["Riya",21]
+]
+
+print(students[0])
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Tuple</h2>
+<p>A tuple is an ordered and immutable collection.</p>
+<pre>
+data = (10,20,30)
+print(data)
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. Tuple Operations</h2>
+<pre>
+t = (10,20,30,20)
+
+print(t.count(20))
+print(t.index(30))
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Set</h2>
+<p>A set is an unordered collection of unique elements.</p>
+<pre>
+numbers = {1,2,3,3}
+print(numbers)
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. Set Operations</h2>
+<pre>
+a = {1,2,3}
+b = {3,4,5}
+
+print(a | b)
+print(a & b)
+print(a - b)
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. Dictionary</h2>
+<p>A dictionary stores data in key-value pairs.</p>
+<pre>
+student = {
+    "name":"Riya",
+    "age":20,
+    "course":"BCA"
+}
+
+print(student["name"])
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. Dictionary Methods</h2>
+<pre>
+student = {"name":"Riya","age":20}
+
+print(student.keys())
+print(student.values())
+print(student.items())
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. Stack Using List</h2>
+<pre>
+stack = []
+
+stack.append(10)
+stack.append(20)
+stack.append(30)
+
+print(stack.pop())
+</pre>
+</div>
+
+<div class="topic">
+<h2>12. Queue Using List</h2>
+<pre>
+queue = []
+
+queue.append(10)
+queue.append(20)
+
+print(queue.pop(0))
+</pre>
+</div>
+
+<div class="topic">
+<h2>Important Questions</h2>
+<ol>
+<li>What is a list?</li>
+<li>Explain list operations.</li>
+<li>What is a tuple?</li>
+<li>Differentiate list and tuple.</li>
+<li>What is a set?</li>
+<li>Explain set operations.</li>
+<li>What is dictionary?</li>
+<li>Explain dictionary methods.</li>
+<li>Explain stack using list.</li>
+<li>Explain queue using list.</li>
+</ol>
+</div>
+
+</div>
+
+<footer>College StudyHub | Python Programming – Unit 3</footer>
+</body>
+</html>

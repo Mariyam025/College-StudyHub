@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAA - Unit 4</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Design and Analysis of Algorithm - Unit 4</h1>
+
+<div class="topic">
+<h2>1. Sorting</h2>
+
+<p>
+Sorting means arranging data in a particular order, usually ascending
+or descending.
+</p>
+
+<p>Common sorting algorithms:</p>
+
+<ul>
+<li>Bubble Sort</li>
+<li>Selection Sort</li>
+<li>Insertion Sort</li>
+<li>Merge Sort</li>
+<li>Quick Sort</li>
+<li>Heap Sort</li>
+<li>Counting Sort</li>
+<li>Radix Sort</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Bubble Sort</h2>
+
+<p>
+Bubble Sort repeatedly compares adjacent elements and swaps them
+if they are in the wrong order.
+</p>
+
+<p><b>Time Complexity:</b> O(n²)</p>
+
+<pre>
+for i = 0 to n-1:
+
+    for j = 0 to n-i-2:
+
+        if A[j] > A[j+1]:
+            swap A[j] and A[j+1]
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Selection Sort</h2>
+
+<p>
+Selection Sort repeatedly selects the smallest element from the
+unsorted portion and places it at the correct position.
+</p>
+
+<p><b>Time Complexity:</b> O(n²)</p>
+</div>
+
+<div class="topic">
+<h2>4. Insertion Sort</h2>
+
+<p>
+Insertion Sort builds the sorted array one element at a time.
+</p>
+
+<p><b>Time Complexity:</b> O(n²) in the average/worst case.</p>
+
+<p>
+It performs well for small or nearly sorted datasets.
+</p>
+</div>
+
+<div class="topic">
+<h2>5. Heap Sort</h2>
+
+<p>
+Heap Sort uses a heap data structure to sort elements.
+</p>
+
+<p><b>Time Complexity:</b> O(n log n)</p>
+
+<p>
+It is based on the binary heap concept.
+</p>
+</div>
+
+<div class="topic">
+<h2>6. Counting Sort</h2>
+
+<p>
+Counting Sort counts occurrences of elements and uses these counts
+to produce the sorted output.
+</p>
+
+<p>
+It is useful when the range of integer values is relatively small.
+</p>
+</div>
+
+<div class="topic">
+<h2>7. Radix Sort</h2>
+
+<p>
+Radix Sort sorts numbers digit by digit.
+It commonly processes digits from the least significant digit
+to the most significant digit.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Searching</h2>
+
+<p>
+Searching means finding a required element from a collection of data.
+</p>
+
+<ul>
+<li>Linear Search</li>
+<li>Binary Search</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. Comparison of Sorting Algorithms</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Algorithm</th>
+<th>Average Time</th>
+</tr>
+
+<tr>
+<td>Bubble Sort</td>
+<td>O(n²)</td>
+</tr>
+
+<tr>
+<td>Selection Sort</td>
+<td>O(n²)</td>
+</tr>
+
+<tr>
+<td>Insertion Sort</td>
+<td>O(n²)</td>
+</tr>
+
+<tr>
+<td>Merge Sort</td>
+<td>O(n log n)</td>
+</tr>
+
+<tr>
+<td>Quick Sort</td>
+<td>O(n log n)</td>
+</tr>
+
+<tr>
+<td>Heap Sort</td>
+<td>O(n log n)</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>10. Order Statistics</h2>
+
+<p>
+Order statistics are values arranged according to their position
+in sorted order.
+</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Median</li>
+<li>k-th smallest element</li>
+<li>k-th largest element</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

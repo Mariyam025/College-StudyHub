@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming - Unit 4 Notes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 28px 8%;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: white;
+            color: #4f46e5;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #4f46e5;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            margin-top: 22px;
+        }
+
+        .highlight {
+            background: #eef2ff;
+            padding: 14px;
+            border-left: 5px solid #4f46e5;
+            border-radius: 6px;
+        }
+
+        .output {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .exam {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #eef2ff;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Programming in C</h1>
+    <p>Unit 4 – Functions, Arrays & Sparse Matrices</p>
+    <p>College StudyHub</p>
+</div>
+
+<div class="container">
+
+    <a href="../../../subjects.html" class="back-btn">
+        ← Back to Subjects
+    </a>
+
+
+    <!-- TOPICS -->
+
+    <div class="section">
+
+        <h2>📚 Unit 4 Topics</h2>
+
+        <ul>
+            <li>Functions</li>
+            <li>Types of Functions</li>
+            <li>Passing Values to Functions</li>
+            <li>Recursive Functions</li>
+            <li>Arrays</li>
+            <li>Multidimensional Arrays</li>
+            <li>Sparse Matrices and Representation</li>
+        </ul>
+
+    </div>
+
+
+    <!-- FUNCTIONS -->
+
+    <div class="section">
+
+        <h2>1. Functions</h2>
+
+        <p>
+            A function is a block of statements that performs a particular
+            task.
+        </p>
+
+        <div class="highlight">
+            <strong>Example:</strong>
+            <p>
+                A function can be created to calculate the sum of two numbers.
+            </p>
+        </div>
+
+        <h3>Basic Syntax</h3>
+
+        <pre>
+return_type function_name(parameters)
+{
+    statements;
+}</pre>
+
+    </div>
+
+
+    <!-- TYPES -->
+
+    <div class="section">
+
+        <h2>2. Types of Functions</h2>
+
+        <p>
+            Functions in C can broadly be divided into two types.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Type</th>
+                <th>Meaning</th>
+            </tr>
+
+            <tr>
+                <td>Library Function</td>
+                <td>Provided by the C library.</td>
+            </tr>
+
+            <tr>
+                <td>User-defined Function</td>
+                <td>Created by the programmer.</td>
+            </tr>
+
+        </table>
+
+        <h3>Library Function Example</h3>
+
+        <pre>
+printf("Hello");</pre>
+
+        <p>
+            <code>printf()</code> is a commonly used library function.
+        </p>
+
+
+        <h3>User-defined Function Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+void greet()
+{
+    printf("Welcome to College StudyHub");
+}
+
+int main()
+{
+    greet();
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Welcome to College StudyHub
+        </div>
+
+    </div>
+
+
+    <!-- PASSING VALUES -->
+
+    <div class="section">
+
+        <h2>3. Passing Values to Functions</h2>
+
+        <p>
+            Values can be passed to a function through parameters.
+            In C, arguments are commonly passed by value.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+void add(int a, int b)
+{
+    printf("Sum = %d", a + b);
+}
+
+int main()
+{
+    add(10, 20);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Sum = 30
+        </div>
+
+    </div>
+
+
+    <!-- RECURSION -->
+
+    <div class="section">
+
+        <h2>4. Recursive Functions</h2>
+
+        <p>
+            A recursive function is a function that calls itself.
+        </p>
+
+        <h3>Example: Factorial</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int factorial(int n)
+{
+    if(n == 0)
+    {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}
+
+int main()
+{
+    int result;
+
+    result = factorial(5);
+
+    printf("Factorial = %d", result);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Factorial = 120
+        </div>
+
+    </div>
+
+
+    <!-- ARRAYS -->
+
+    <div class="section">
+
+        <h2>5. Arrays</h2>
+
+        <p>
+            An array is a collection of elements of the same data type
+            stored under one name.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+data_type array_name[size];</pre>
+
+        <h3>Example</h3>
+
+        <pre>
+int marks[5];</pre>
+
+        <p>
+            Here <code>marks</code> can store five integer values.
+        </p>
+
+
+        <h3>Array Initialization</h3>
+
+        <pre>
+int marks[5] = {80, 75, 90, 85, 70};</pre>
+
+
+        <h3>Accessing Array Elements</h3>
+
+        <p>
+            Array indexing starts from <strong>0</strong>.
+        </p>
+
+        <pre>
+marks[0]
+marks[1]
+marks[2]</pre>
+
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks[5] = {80, 75, 90, 85, 70};
+    int i;
+
+    for(i = 0; i &lt; 5; i++)
+    {
+        printf("%d ", marks[i]);
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            80 75 90 85 70
+        </div>
+
+    </div>
+
+
+    <!-- ARRAY SUM -->
+
+    <div class="section">
+
+        <h2>6. Program: Sum of Array Elements</h2>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int i;
+    int sum = 0;
+
+    for(i = 0; i &lt; 5; i++)
+    {
+        sum = sum + a[i];
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Sum = 150
+        </div>
+
+    </div>
+
+
+    <!-- MULTIDIMENSIONAL -->
+
+    <div class="section">
+
+        <h2>7. Multidimensional Arrays</h2>
+
+        <p>
+            A multidimensional array contains data in more than one
+            dimension. A two-dimensional array is commonly represented
+            in rows and columns.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+data_type array_name[rows][columns];</pre>
+
+        <h3>Example</h3>
+
+        <pre>
+int matrix[2][2] = {
+    {1, 2},
+    {3, 4}
+};</pre>
+
+
+        <h3>Program to Display a 2D Array</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int matrix[2][2] = {
+        {1, 2},
+        {3, 4}
+    };
+
+    int i, j;
+
+    for(i = 0; i &lt; 2; i++)
+    {
+        for(j = 0; j &lt; 2; j++)
+        {
+            printf("%d ", matrix[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            1 2<br>
+            3 4
+        </div>
+
+    </div>
+
+
+    <!-- SPARSE MATRIX -->
+
+    <div class="section">
+
+        <h2>8. Sparse Matrix</h2>
+
+        <p>
+            A sparse matrix is a matrix in which most of the elements
+            are zero.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+0  0  5
+0  0  0
+7  0  0</pre>
+
+        <p>
+            In this matrix, most elements are zero, so it is a sparse
+            matrix.
+        </p>
+
+
+        <h3>Representation of Sparse Matrix</h3>
+
+        <p>
+            One common representation stores only the non-zero elements
+            along with their row and column positions.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Row</th>
+                <th>Column</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>2</td>
+                <td>5</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>7</td>
+            </tr>
+
+        </table>
+
+        <div class="highlight">
+            <strong>Important:</strong>
+            Sparse representation can save storage by avoiding storage
+            of many zero values.
+        </div>
+
+    </div>
+
+
+    <!-- QUICK REVISION -->
+
+    <div class="section">
+
+        <h2>⚡ Quick Revision</h2>
+
+        <ul>
+            <li><strong>Function:</strong> Block of statements performing a task.</li>
+            <li><strong>Library Function:</strong> Function provided by C libraries.</li>
+            <li><strong>User-defined Function:</strong> Function created by programmer.</li>
+            <li><strong>Recursion:</strong> Function calling itself.</li>
+            <li><strong>Array:</strong> Collection of same-type elements.</li>
+            <li><strong>2D Array:</strong> Array arranged in rows and columns.</li>
+            <li><strong>Sparse Matrix:</strong> Matrix containing mostly zero elements.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- EXAM -->
+
+    <div class="section">
+
+        <h2>📝 Important Exam Questions</h2>
+
+        <div class="exam">
+
+            <h3>Short Questions</h3>
+
+            <ol>
+                <li>What is a function?</li>
+                <li>What are library functions?</li>
+                <li>What are user-defined functions?</li>
+                <li>What is recursion?</li>
+                <li>What is an array?</li>
+                <li>What is a multidimensional array?</li>
+                <li>What is a sparse matrix?</li>
+            </ol>
+
+            <h3>Programming Questions</h3>
+
+            <ol>
+                <li>Write a program using a user-defined function.</li>
+                <li>Write a program to calculate factorial using recursion.</li>
+                <li>Write a program to display array elements.</li>
+                <li>Write a program to find the sum of array elements.</li>
+                <li>Write a program to display a two-dimensional array.</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIVA -->
+
+    <div class="section">
+
+        <h2>🎤 Viva Questions</h2>
+
+        <ul>
+            <li>What is a function?</li>
+            <li>What is the difference between library and user-defined functions?</li>
+            <li>What is recursion?</li>
+            <li>From which index does an array start?</li>
+            <li>What is a multidimensional array?</li>
+            <li>What is a sparse matrix?</li>
+            <li>Why is sparse matrix representation useful?</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>College StudyHub | Programming in C | Unit 4</p>
+</div>
+
+</body>
+</html>

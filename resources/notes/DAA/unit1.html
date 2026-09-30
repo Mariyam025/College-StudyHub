@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAA - Unit 1</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Design and Analysis of Algorithm - Unit 1</h1>
+
+<div class="topic">
+<h2>1. Introduction to Algorithm</h2>
+
+<p>
+An algorithm is a finite sequence of well-defined steps used to solve a problem.
+</p>
+
+<h3>Characteristics of an Algorithm</h3>
+
+<ul>
+<li>Input</li>
+<li>Output</li>
+<li>Definiteness</li>
+<li>Finiteness</li>
+<li>Effectiveness</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Algorithm Design</h2>
+
+<p>
+Algorithm design is the process of developing a step-by-step solution
+for a particular problem.
+</p>
+
+<p>Basic steps:</p>
+
+<ol>
+<li>Understand the problem</li>
+<li>Identify input and output</li>
+<li>Design the algorithm</li>
+<li>Analyze the algorithm</li>
+<li>Implement the solution</li>
+<li>Test the solution</li>
+</ol>
+</div>
+
+<div class="topic">
+<h2>3. Pseudocode</h2>
+
+<p>
+Pseudocode is an informal way of writing the steps of an algorithm
+using simple English-like statements.
+</p>
+
+<pre>
+START
+Input A and B
+SUM = A + B
+Display SUM
+STOP
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Time Complexity</h2>
+
+<p>
+Time complexity describes how the running time of an algorithm
+changes as the input size increases.
+</p>
+
+<p>Common complexities:</p>
+
+<ul>
+<li>O(1) - Constant</li>
+<li>O(log n) - Logarithmic</li>
+<li>O(n) - Linear</li>
+<li>O(n log n) - Linearithmic</li>
+<li>O(n²) - Quadratic</li>
+<li>O(2ⁿ) - Exponential</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>5. Space Complexity</h2>
+
+<p>
+Space complexity represents the amount of memory required by an algorithm.
+</p>
+
+<p>
+It includes memory required for variables, data structures and
+additional temporary storage.
+</p>
+</div>
+
+<div class="topic">
+<h2>6. Asymptotic Notations</h2>
+
+<p>
+Asymptotic notation is used to describe the growth rate of an algorithm.
+</p>
+
+<h3>Big O - O()</h3>
+<p>
+Represents an upper bound of growth.
+</p>
+
+<h3>Omega - Ω()</h3>
+<p>
+Represents a lower bound of growth.
+</p>
+
+<h3>Theta - Θ()</h3>
+<p>
+Represents a tight bound.
+</p>
+</div>
+
+<div class="topic">
+<h2>7. Best, Average and Worst Case</h2>
+
+<ul>
+<li><b>Best Case:</b> Minimum time required.</li>
+<li><b>Average Case:</b> Expected time for normal input.</li>
+<li><b>Worst Case:</b> Maximum time required.</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>8. Linear Search</h2>
+
+<p>
+Linear search checks each element one by one until the required element
+is found.
+</p>
+
+<p><b>Time Complexity:</b> O(n)</p>
+
+<pre>
+for each element:
+    if element == key:
+        return position
+return -1
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. Binary Search</h2>
+
+<p>
+Binary search works on a sorted array.
+It repeatedly divides the search area into two halves.
+</p>
+
+<p><b>Time Complexity:</b> O(log n)</p>
+
+<pre>
+low = 0
+high = n - 1
+
+while low <= high:
+    mid = (low + high) / 2
+
+    if array[mid] == key:
+        return mid
+
+    else if key < array[mid]:
+        high = mid - 1
+
+    else:
+        low = mid + 1
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. Algorithm Analysis Example</h2>
+
+<pre>
+for(i = 0; i < n; i++)
+{
+    System.out.println(i);
+}
+</pre>
+
+<p>
+The loop executes n times.
+Therefore, its time complexity is <b>O(n)</b>.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

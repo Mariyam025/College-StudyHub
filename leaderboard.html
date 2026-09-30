@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leaderboard | College StudyHub</title>
+
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="brand">
+        🎓 <span>StudyHub</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="subjects.html">
+            Subjects
+        </a>
+
+        <a href="quiz.html">
+            Quiz
+        </a>
+
+        <a href="pyqs.html">
+            PYQs
+        </a>
+
+    </div>
+
+    <div class="nav-right">
+
+        <button
+            id="darkModeBtn"
+            class="dark-btn">
+            🌙
+        </button>
+
+        <div
+            class="user-avatar"
+            id="userAvatar">
+            S
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="leaderboard-container">
+
+
+    <!-- HERO -->
+
+    <section class="leaderboard-hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                🏆 STUDYHUB LEADERBOARD
+            </span>
+
+            <h1>
+                Learn More.<br>
+                <span>Earn More XP.</span>
+            </h1>
+
+            <p>
+                Complete quizzes, share notes and
+                keep learning to earn XP and badges.
+            </p>
+
+        </div>
+
+        <div class="hero-trophy">
+            🏆
+        </div>
+
+    </section>
+
+
+    <!-- ================= MY STATS ================= -->
+
+    <section class="my-stats">
+
+        <div class="my-title">
+
+            <span>
+                ✨ YOUR ACHIEVEMENT
+            </span>
+
+            <h2>
+                My Progress
+            </h2>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⚡
+                </div>
+
+                <div>
+                    <small>
+                        XP
+                    </small>
+
+                    <h3 id="myXP">
+                        0
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⭐
+                </div>
+
+                <div>
+                    <small>
+                        Points
+                    </small>
+
+                    <h3 id="myPoints">
+                        0
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔥
+                </div>
+
+                <div>
+                    <small>
+                        Streak
+                    </small>
+
+                    <h3>
+                        <span id="myStreak">
+                            0
+                        </span>
+                        <small>days</small>
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏅
+                </div>
+
+                <div>
+                    <small>
+                        Badges
+                    </small>
+
+                    <h3 id="myBadges">
+                        0
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LEADERBOARD ================= -->
+
+    <section class="leaderboard-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span>
+                    🏆 TOP STUDENTS
+                </span>
+
+                <h2>
+                    Leaderboard
+                </h2>
+
+            </div>
+
+
+            <select id="leaderboardFilter">
+
+                <option value="xp">
+                    ⚡ XP
+                </option>
+
+                <option value="points">
+                    ⭐ Points
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- TOP THREE -->
+
+        <div class="top-three">
+
+            <!-- SECOND -->
+
+            <div class="top-user second">
+
+                <div class="rank">
+                    2
+                </div>
+
+                <div class="leader-avatar">
+                    A
+                </div>
+
+                <h3>
+                    Aarav
+                </h3>
+
+                <p>
+                    850 XP
+                </p>
+
+                <div class="medal">
+                    🥈
+                </div>
+
+            </div>
+
+
+            <!-- FIRST -->
+
+            <div class="top-user first">
+
+                <div class="rank">
+                    1
+                </div>
+
+                <div class="leader-avatar">
+                    R
+                </div>
+
+                <h3>
+                    Riya
+                </h3>
+
+                <p>
+                    1200 XP
+                </p>
+
+                <div class="medal">
+                    🥇
+                </div>
+
+            </div>
+
+
+            <!-- THIRD -->
+
+            <div class="top-user third">
+
+                <div class="rank">
+                    3
+                </div>
+
+                <div class="leader-avatar">
+                    K
+                </div>
+
+                <h3>
+                    Karan
+                </h3>
+
+                <p>
+                    720 XP
+                </p>
+
+                <div class="medal">
+                    🥉
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OTHER STUDENTS -->
+
+        <div
+            id="leaderboardList"
+            class="leaderboard-list">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BADGES ================= -->
+
+    <section class="badges-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span>
+                    🎖️ ACHIEVEMENTS
+                </span>
+
+                <h2>
+                    XP & Badges
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="badges-grid">
+
+
+            <div class="badge-box unlocked">
+
+                <div class="badge-circle">
+                    🌱
+                </div>
+
+                <h3>
+                    First Step
+                </h3>
+
+                <p>
+                    Complete your first quiz
+                </p>
+
+                <span>
+                    +10 XP
+                </span>
+
+            </div>
+
+
+            <div class="badge-box">
+
+                <div class="badge-circle">
+                    🧠
+                </div>
+
+                <h3>
+                    Quiz Master
+                </h3>
+
+                <p>
+                    Complete 10 quizzes
+                </p>
+
+                <span>
+                    +100 XP
+                </span>
+
+            </div>
+
+
+            <div class="badge-box">
+
+                <div class="badge-circle">
+                    🔥
+                </div>
+
+                <h3>
+                    7 Day Streak
+                </h3>
+
+                <p>
+                    Study for 7 consecutive days
+                </p>
+
+                <span>
+                    +70 XP
+                </span>
+
+            </div>
+
+
+            <div class="badge-box">
+
+                <div class="badge-circle">
+                    📚
+                </div>
+
+                <h3>
+                    Note Sharer
+                </h3>
+
+                <p>
+                    Upload your first notes
+                </p>
+
+                <span>
+                    +25 XP
+                </span>
+
+            </div>
+
+
+            <div class="badge-box">
+
+                <div class="badge-circle">
+                    🏆
+                </div>
+
+                <h3>
+                    Knowledge Seeker
+                </h3>
+
+                <p>
+                    Earn 500 XP
+                </p>
+
+                <span>
+                    +150 XP
+                </span>
+
+            </div>
+
+
+            <div class="badge-box">
+
+                <div class="badge-circle">
+                    👑
+                </div>
+
+                <h3>
+                    Study Champion
+                </h3>
+
+                <p>
+                    Earn 1000 XP
+                </p>
+
+                <span>
+                    +250 XP
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MOTIVATION ================= -->
+
+    <section class="motivation">
+
+        <div class="motivation-icon">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>
+                Keep going!
+            </h2>
+
+            <p>
+                Every quiz and every study session
+                brings you closer to your next badge.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    🎓 <strong>College StudyHub</strong>
+
+    <p>
+        Learn • Practice • Achieve
+    </p>
+
+</footer>
+
+
+<script src="leaderboard.js"></script>
+
+</body>
+
+</html>

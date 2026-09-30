@@ -1,0 +1,514 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #f8fafc;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(124, 58, 237, 0.20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(236, 72, 153, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(56, 189, 248, 0.10),
+            transparent 35%
+        ),
+        #080b18;
+
+    background-attachment: fixed;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 18px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(8, 11, 24, 0.78);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(16px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #ec4899,
+            #38bdf8
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+.nav-links a.active {
+    color: #ffffff;
+    font-weight: bold;
+
+    text-shadow:
+        0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 45px auto;
+}
+
+
+/* =========================================
+   QUIZ HEADER
+   ========================================= */
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.quiz-header .small-title {
+    color: #c084fc;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.quiz-header h1 {
+    font-size: 46px;
+    margin-bottom: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #ec4899,
+            #38bdf8
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quiz-header p {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   FILTER / SELECT AREA
+   ========================================= */
+
+.quiz-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.quiz-controls select,
+.quiz-controls input {
+    min-width: 210px;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.quiz-controls select:focus,
+.quiz-controls input:focus {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 0 3px rgba(168, 85, 247, 0.12);
+}
+
+.quiz-controls option {
+    background: #111827;
+    color: white;
+}
+
+
+/* =========================================
+   QUIZ CARD
+   ========================================= */
+
+.quiz-card {
+    padding: 35px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(18px);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.progress-wrapper {
+    margin-bottom: 25px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #ec4899,
+            #38bdf8
+        );
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   QUESTION
+   ========================================= */
+
+.question-number {
+    color: #c084fc;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.question {
+    font-size: 23px;
+    line-height: 1.5;
+
+    color: #f8fafc;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   OPTIONS
+   ========================================= */
+
+.options {
+    display: grid;
+    gap: 14px;
+}
+
+.option {
+    width: 100%;
+
+    padding: 17px 20px;
+
+    border-radius: 14px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    color: #e2e8f0;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.option:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(168, 85, 247, 0.65);
+
+    background:
+        rgba(168, 85, 247, 0.10);
+}
+
+.option.selected {
+    border-color: #a855f7;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(139, 92, 246, 0.18),
+            rgba(236, 72, 153, 0.10)
+        );
+
+    box-shadow:
+        0 0 20px rgba(139, 92, 246, 0.12);
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.quiz-btn,
+.next-btn,
+.submit-btn {
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #ec4899
+        );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 8px 25px rgba(139, 92, 246, 0.20);
+}
+
+.quiz-btn:hover,
+.next-btn:hover,
+.submit-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(236, 72, 153, 0.25);
+}
+
+
+/* =========================================
+   SCORE / RESULT
+   ========================================= */
+
+.result-card {
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(18px);
+}
+
+.result-card h2 {
+    font-size: 34px;
+
+    margin-bottom: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #ec4899,
+            #38bdf8
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.result-score {
+    font-size: 55px;
+
+    font-weight: bold;
+
+    color: #c084fc;
+
+    margin: 20px 0;
+}
+
+.result-card p {
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .quiz-header h1 {
+        font-size: 36px;
+    }
+
+    .quiz-card {
+        padding: 25px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .quiz-header h1 {
+        font-size: 30px;
+    }
+
+    .quiz-controls {
+        flex-direction: column;
+    }
+
+    .quiz-controls select,
+    .quiz-controls input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .quiz-card {
+        padding: 20px;
+    }
+
+}

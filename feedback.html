@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback & Rating | StudyHub</title>
+
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎓 <span>StudyHub</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="handwritten-notes.html">Handwritten Notes</a>
+            <a href="pyqs.html">PYQs</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+    <main class="container">
+
+        <section class="heading">
+
+            <p class="small-title">✨ YOUR FEEDBACK MATTERS</p>
+
+            <h1>Feedback & Rating</h1>
+
+            <p>
+                Tell us what you think about StudyHub and help us
+                make the learning experience better.
+            </p>
+
+        </section>
+
+
+        <!-- FEEDBACK CARD -->
+        <section class="feedback-card">
+
+            <div class="card-heading">
+                <span>💜</span>
+
+                <div>
+                    <h2>Share Your Experience</h2>
+                    <p>Your feedback helps us improve StudyHub.</p>
+                </div>
+            </div>
+
+
+            <!-- NAME -->
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name"
+            >
+
+
+            <!-- SUBJECT -->
+            <label>What are you reviewing?</label>
+
+            <select id="reviewType">
+
+                <option value="">Select</option>
+
+                <option>Study Notes</option>
+
+                <option>Handwritten Notes</option>
+
+                <option>PYQs</option>
+
+                <option>Quiz</option>
+
+                <option>StudyHub Website</option>
+
+            </select>
+
+
+            <!-- RATING -->
+            <label>Give Your Rating</label>
+
+            <div class="stars" id="stars">
+
+                <button onclick="setRating(1)">★</button>
+                <button onclick="setRating(2)">★</button>
+                <button onclick="setRating(3)">★</button>
+                <button onclick="setRating(4)">★</button>
+                <button onclick="setRating(5)">★</button>
+
+            </div>
+
+            <p class="rating-text" id="ratingText">
+                Select a rating
+            </p>
+
+
+            <!-- MESSAGE -->
+            <label>Your Feedback</label>
+
+            <textarea
+                id="feedbackText"
+                rows="6"
+                placeholder="Write your feedback here..."
+            ></textarea>
+
+
+            <button
+    type="button"
+    class="submit-btn">
+
+    ⭐ Submit Feedback
+
+</button>
+
+        </section>
+
+
+        <!-- FEEDBACK DISPLAY -->
+        <section class="reviews-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="small-title">COMMUNITY FEEDBACK</p>
+
+                    <h2>What Students Say</h2>
+                </div>
+
+                <div class="average-rating">
+                    ⭐ <span id="averageRating">0.0</span>
+                </div>
+
+            </div>
+
+
+            <div id="feedbackList" class="feedback-list">
+
+                <!-- Feedback will appear here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🎓 StudyHub
+        </div>
+
+        <p>
+            Study Smarter. Learn Better. ✨
+        </p>
+
+        <p class="copyright">
+            © 2026 College StudyHub
+        </p>
+
+    </footer>
+
+
+    <script src="feedback.js"></script>
+
+</body>
+</html>

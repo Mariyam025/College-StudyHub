@@ -1,0 +1,840 @@
+/* =========================================================
+   COLLEGE STUDYHUB - NOTES PAGE
+   PREMIUM DARK THEME
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(124, 58, 237, 0.14),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(236, 72, 153, 0.09),
+            transparent 25%
+        ),
+        #070b18;
+
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   DASHBOARD LAYOUT
+========================================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 250px;
+
+    min-height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15, 23, 42, 0.98),
+            rgba(7, 11, 24, 0.98)
+        );
+
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    padding: 8px 12px 30px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    margin-bottom: 22px;
+}
+
+.brand h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    color: #ffffff;
+
+    margin-bottom: 6px;
+}
+
+.brand p {
+    color: #77839a;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+========================================================= */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.sidebar nav a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 14px;
+
+    border-radius: 12px;
+
+    color: #98a4b9;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+
+    border: 1px solid transparent;
+}
+
+.sidebar nav a:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border-color: rgba(255, 255, 255, 0.06);
+
+    transform: translateX(3px);
+}
+
+.sidebar nav a.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.25),
+            rgba(236, 72, 153, 0.13)
+        );
+
+    border-color: rgba(139, 92, 246, 0.25);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-btn {
+    margin-top: auto;
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid rgba(248, 113, 113, 0.18);
+
+    border-radius: 12px;
+
+    background: rgba(239, 68, 68, 0.08);
+
+    color: #fca5a5;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(239, 68, 68, 0.15);
+
+    border-color: rgba(248, 113, 113, 0.30);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 32px 42px 60px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    margin-bottom: 38px;
+}
+
+.topbar h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+
+    color: #ffffff;
+
+    margin-bottom: 6px;
+}
+
+.topbar p {
+    color: #7f8ba2;
+
+    font-size: 14px;
+}
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 23px;
+
+    color: #f8fafc;
+
+    margin-bottom: 7px;
+}
+
+.section-title p {
+    color: #7f8ba2;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   NOTES CARDS CONTAINER
+========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================================
+   DYNAMIC NOTE / UNIT CARDS
+========================================================= */
+
+.cards > div,
+.cards > article,
+.cards .card,
+.cards .note-card,
+.cards .unit-card {
+    position: relative;
+
+    padding: 24px;
+
+    min-height: 170px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 25, 45, 0.95),
+            rgba(10, 15, 29, 0.95)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.cards > div::before,
+.cards > article::before,
+.cards .card::before,
+.cards .note-card::before,
+.cards .unit-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    top: -65px;
+    right: -65px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, 0.11);
+
+    filter: blur(18px);
+
+    pointer-events: none;
+}
+
+.cards > div:hover,
+.cards > article:hover,
+.cards .card:hover,
+.cards .note-card:hover,
+.cards .unit-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(139, 92, 246, 0.30);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        0 0 30px rgba(124, 58, 237, 0.07);
+}
+
+
+/* =========================================================
+   COMMON CARD TEXT
+========================================================= */
+
+.cards h3 {
+    position: relative;
+
+    color: #f8fafc;
+
+    font-size: 18px;
+
+    margin-bottom: 9px;
+}
+
+.cards p {
+    position: relative;
+
+    color: #8995aa;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   COMMON CARD BUTTONS / LINKS
+========================================================= */
+
+.cards a,
+.cards button {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 15px;
+
+    border-radius: 9px;
+
+    border: 1px solid rgba(139, 92, 246, 0.22);
+
+    background: rgba(124, 58, 237, 0.10);
+
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.22s ease;
+}
+
+.cards a:hover,
+.cards button:hover {
+    color: #ffffff;
+
+    background: rgba(124, 58, 237, 0.22);
+
+    border-color: rgba(139, 92, 246, 0.40);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HANDWRITTEN NOTES SECTION
+========================================================= */
+
+.notes-card {
+    position: relative;
+
+    max-width: 620px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 25, 45, 0.96),
+            rgba(10, 15, 29, 0.96)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.notes-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(236, 72, 153, 0.10);
+
+    filter: blur(25px);
+
+    pointer-events: none;
+}
+
+.notes-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(236, 72, 153, 0.25);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   NOTES ICON
+========================================================= */
+
+.notes-icon {
+    position: relative;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.20),
+            rgba(236, 72, 153, 0.14)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 25px;
+}
+
+.notes-card h3 {
+    position: relative;
+
+    font-size: 20px;
+
+    margin-bottom: 9px;
+
+    color: #ffffff;
+}
+
+.notes-card p {
+    position: relative;
+
+    max-width: 500px;
+
+    color: #8995aa;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   NOTES BUTTON
+========================================================= */
+
+.notes-btn {
+    position: relative;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #ec4899
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(124, 58, 237, 0.22);
+
+    transition: 0.25s ease;
+}
+
+.notes-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 32px rgba(124, 58, 237, 0.35);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.cards:empty::before {
+    content: "📚 Notes will appear here";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 170px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px dashed rgba(255, 255, 255, 0.10);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: #69758a;
+
+    font-size: 14px;
+
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #070b18;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30384d;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4b556f;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+
+        width: calc(100% - 220px);
+
+        padding: 30px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 18px 16px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .brand {
+        padding: 5px 8px 18px;
+
+        margin-bottom: 15px;
+    }
+
+    .brand h2 {
+        font-size: 22px;
+    }
+
+    .sidebar nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 7px;
+    }
+
+    .sidebar nav a {
+        padding: 11px;
+
+        font-size: 12px;
+    }
+
+    .logout-btn {
+        margin-top: 15px;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 25px 18px 45px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 30px;
+    }
+
+    .topbar h2 {
+        font-size: 27px;
+    }
+
+    .profile {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .notes-card {
+        max-width: 100%;
+
+        padding: 24px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .sidebar nav {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar nav a {
+        justify-content: flex-start;
+    }
+
+    .main-content {
+        padding: 22px 14px 40px;
+    }
+
+    .topbar h2 {
+        font-size: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .cards > div,
+    .cards > article,
+    .cards .card,
+    .cards .note-card,
+    .cards .unit-card {
+        padding: 20px;
+    }
+
+    .notes-card h3 {
+        font-size: 18px;
+    }
+}

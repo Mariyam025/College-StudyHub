@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Graphics - Unit 2</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Computer Graphics - Unit 2</h1>
+
+<div class="topic">
+<h2>1. Graphics Primitives</h2>
+
+<p>
+Graphics primitives are basic shapes used to construct graphical objects.
+</p>
+
+<ul>
+<li>Point</li>
+<li>Line</li>
+<li>Circle</li>
+<li>Ellipse</li>
+<li>Polygon</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Line Drawing</h2>
+
+<p>
+Line drawing algorithms are used to determine which pixels should be
+displayed to represent a line.
+</p>
+
+<p>Important algorithms:</p>
+
+<ul>
+<li>DDA Algorithm</li>
+<li>Bresenham's Line Algorithm</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>3. DDA Algorithm</h2>
+
+<p>
+DDA stands for <b>Digital Differential Analyzer</b>.
+It is an incremental line drawing algorithm.
+</p>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Calculate dx and dy.</li>
+<li>Find the number of steps.</li>
+<li>Calculate x increment.</li>
+<li>Calculate y increment.</li>
+<li>Plot the points.</li>
+</ol>
+
+<pre>
+dx = x2 - x1
+dy = y2 - y1
+
+steps = max(|dx|, |dy|)
+
+xIncrement = dx / steps
+yIncrement = dy / steps
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Bresenham's Line Algorithm</h2>
+
+<p>
+Bresenham's algorithm uses integer calculations to draw a line
+efficiently on a raster display.
+</p>
+
+<p>
+It is generally more efficient than DDA because it avoids
+floating-point calculations in the basic algorithm.
+</p>
+</div>
+
+<div class="topic">
+<h2>5. Circle Drawing</h2>
+
+<p>
+Circle drawing algorithms determine the pixels needed to represent
+a circle.
+</p>
+
+<p>Important algorithm:</p>
+
+<ul>
+<li>Midpoint Circle Algorithm</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. Midpoint Circle Algorithm</h2>
+
+<p>
+The midpoint circle algorithm uses a decision parameter to determine
+which pixel should be selected while drawing a circle.
+</p>
+
+<p>
+It uses the symmetry of a circle to reduce calculations.
+</p>
+
+<pre>
+Start from the top point.
+
+Calculate decision parameter.
+
+Choose the next pixel.
+
+Use symmetry to generate
+the remaining points.
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Ellipse Drawing</h2>
+
+<p>
+An ellipse is a closed curve having two different radii:
+major radius and minor radius.
+</p>
+
+<p>
+Midpoint methods can also be used for ellipse generation.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Polygon</h2>
+
+<p>
+A polygon is a closed graphical object made up of connected line
+segments.
+</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>Triangle</li>
+<li>Rectangle</li>
+<li>Pentagon</li>
+<li>Hexagon</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. Polygon Filling</h2>
+
+<p>
+Polygon filling means filling the interior region of a polygon
+with a color or pattern.
+</p>
+
+<p>Common methods:</p>
+
+<ul>
+<li>Scan Line Fill</li>
+<li>Boundary Fill</li>
+<li>Flood Fill</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. Boundary Fill</h2>
+
+<p>
+Boundary Fill fills an area until a specified boundary color
+is encountered.
+</p>
+</div>
+
+<div class="topic">
+<h2>11. Flood Fill</h2>
+
+<p>
+Flood Fill replaces a connected region having the same old color
+with a new color.
+</p>
+
+<p>
+It is commonly used in paint applications.
+</p>
+</div>
+
+<div class="topic">
+<h2>12. Scan Line Fill</h2>
+
+<p>
+Scan Line Fill processes horizontal lines across a polygon and
+fills the pixels lying between polygon intersections.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

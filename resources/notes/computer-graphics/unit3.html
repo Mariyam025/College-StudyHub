@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Graphics - Unit 3</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Computer Graphics - Unit 3</h1>
+
+<div class="topic">
+<h2>1. 2D Geometric Transformations</h2>
+
+<p>
+Geometric transformations are used to change the position,
+size or orientation of graphical objects.
+</p>
+
+<p>Main transformations:</p>
+
+<ul>
+<li>Translation</li>
+<li>Rotation</li>
+<li>Scaling</li>
+<li>Reflection</li>
+<li>Shearing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Translation</h2>
+
+<p>
+Translation moves an object from one position to another without
+changing its size or shape.
+</p>
+
+<pre>
+x' = x + Tx
+y' = y + Ty
+</pre>
+
+<p>
+Tx and Ty are translation distances.
+</p>
+</div>
+
+<div class="topic">
+<h2>3. Scaling</h2>
+
+<p>
+Scaling changes the size of an object.
+</p>
+
+<pre>
+x' = x × Sx
+y' = y × Sy
+</pre>
+
+<p>
+Sx and Sy are scaling factors.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. Rotation</h2>
+
+<p>
+Rotation turns an object around a fixed point.
+</p>
+
+<p>
+For rotation by angle θ about the origin:</p>
+
+<pre>
+x' = x cosθ - y sinθ
+
+y' = x sinθ + y cosθ
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Reflection</h2>
+
+<p>
+Reflection produces a mirror image of an object.
+</p>
+
+<p>Common types:</p>
+
+<ul>
+<li>Reflection about X-axis</li>
+<li>Reflection about Y-axis</li>
+<li>Reflection about origin</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. Shearing</h2>
+
+<p>
+Shearing changes the shape of an object by shifting its coordinates
+in a particular direction.
+</p>
+
+<h3>X-Shear</h3>
+
+<pre>
+x' = x + Shx × y
+y' = y
+</pre>
+
+<h3>Y-Shear</h3>
+
+<pre>
+x' = x
+y' = y + Shy × x
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Homogeneous Coordinates</h2>
+
+<p>
+Homogeneous coordinates allow geometric transformations to be
+represented using matrix operations.
+</p>
+
+<p>
+A 2D point can be represented as:</p>
+
+<pre>
+(x, y, 1)
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. Transformation Matrix</h2>
+
+<p>For a 2D point:</p>
+
+<pre>
+| x' |   | a b c | | x |
+| y' | = | d e f | | y |
+| 1  |   | 0 0 1 | | 1 |
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. Composite Transformation</h2>
+
+<p>
+When two or more transformations are applied one after another,
+the process is called composite transformation.
+</p>
+
+<p>
+Example:</p>
+
+<pre>
+Translation
+     ↓
+Rotation
+     ↓
+Scaling
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. 3D Transformation</h2>
+
+<p>
+Three-dimensional transformations operate on x, y and z coordinates.
+</p>
+
+<p>Common 3D transformations:</p>
+
+<ul>
+<li>3D Translation</li>
+<li>3D Rotation</li>
+<li>3D Scaling</li>
+<li>3D Reflection</li>
+<li>3D Shearing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>11. Window and Viewport</h2>
+
+<p>
+A window defines the selected area of the world coordinate system.
+A viewport defines the area on the display where the selected scene
+is shown.
+</p>
+
+<pre>
+World Coordinates
+       ↓
+     Window
+       ↓
+Transformation
+       ↓
+    Viewport
+       ↓
+Screen
+</pre>
+</div>
+
+</div>
+
+</body>
+</html>

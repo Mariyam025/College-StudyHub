@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Graphics - Unit 4</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Computer Graphics - Unit 4</h1>
+
+<div class="topic">
+<h2>1. 2D Viewing</h2>
+
+<p>
+Viewing determines which portion of a graphical scene will be
+displayed on the screen.
+</p>
+
+<p>
+The viewing process converts objects from world coordinates into
+screen coordinates.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. Viewing Pipeline</h2>
+
+<pre>
+World Coordinates
+       ↓
+Viewing Transformation
+       ↓
+Clipping
+       ↓
+Window to Viewport
+       ↓
+Screen Coordinates
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Clipping</h2>
+
+<p>
+Clipping removes portions of graphical objects that lie outside
+the selected viewing region.
+</p>
+
+<p>
+It improves efficiency because only visible portions need to be displayed.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. Point Clipping</h2>
+
+<p>
+A point is displayed if it lies inside the clipping window.
+Otherwise, it is rejected.
+</p>
+</div>
+
+<div class="topic">
+<h2>5. Line Clipping</h2>
+
+<p>
+Line clipping determines which portion of a line lies inside
+the viewing window.
+</p>
+
+<p>Important algorithms:</p>
+
+<ul>
+<li>Cohen-Sutherland Algorithm</li>
+<li>Cyrus-Beck Algorithm</li>
+<li>Midpoint Subdivision Algorithm</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. Cohen-Sutherland Algorithm</h2>
+
+<p>
+The Cohen-Sutherland algorithm uses region codes to determine
+whether a line is completely inside, completely outside, or
+partially inside the clipping window.
+</p>
+
+<p>
+The window is divided into regions and each endpoint is assigned
+a code.
+</p>
+
+<pre>
+        TOP
+         |
+LEFT ----+---- RIGHT
+         |
+       BOTTOM
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Cyrus-Beck Algorithm</h2>
+
+<p>
+Cyrus-Beck is a parametric line clipping algorithm.
+It can be used with convex clipping regions.
+</p>
+
+<p>
+It calculates the entering and leaving points of a line with
+respect to the clipping boundaries.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Polygon Clipping</h2>
+
+<p>
+Polygon clipping removes the portions of a polygon outside
+the clipping window.
+</p>
+
+<p>
+An important algorithm is the <b>Sutherland-Hodgman</b> polygon
+clipping algorithm.
+</p>
+</div>
+
+<div class="topic">
+<h2>9. Sutherland-Hodgman Algorithm</h2>
+
+<p>
+The Sutherland-Hodgman algorithm clips a polygon against the
+boundaries of a clipping window one boundary at a time.
+</p>
+
+<pre>
+Polygon
+   ↓
+Left Boundary
+   ↓
+Right Boundary
+   ↓
+Bottom Boundary
+   ↓
+Top Boundary
+   ↓
+Clipped Polygon
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. Curve Clipping</h2>
+
+<p>
+Curve clipping removes the portions of curves that lie outside
+the clipping region.
+</p>
+</div>
+
+<div class="topic">
+<h2>11. Text Clipping</h2>
+
+<p>
+Text clipping determines which portions of text should be displayed
+inside the viewing area.
+</p>
+
+<p>Common approaches include:</p>
+
+<ul>
+<li>All-or-none string clipping</li>
+<li>All-or-none character clipping</li>
+<li>Individual character clipping</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>12. Viewing Transformation</h2>
+
+<p>
+Viewing transformation converts coordinates from the world
+coordinate system into a suitable display coordinate system.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OOP Using Java - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4a148c;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back {
+            display: inline-block;
+            text-decoration: none;
+            background: #4a148c;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .topic {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #4a148c;
+        }
+
+        h3 {
+            color: #6a1b9a;
+        }
+
+        pre {
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        .important {
+            background: #f3e5f5;
+            padding: 12px;
+            border-left: 5px solid #4a148c;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #4a148c;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            background: #4a148c;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>OOP Using Java</h1>
+    <p>Unit 2 – Classes, Objects, Methods and Constructors</p>
+</header>
+
+<div class="container">
+
+    <a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+    <!-- Classes -->
+    <div class="topic">
+        <h2>1. Class in Java</h2>
+
+        <p>
+            A class is a blueprint or template from which objects are created.
+            A class contains data members and methods.
+        </p>
+
+<pre>
+class Student {
+
+    String name;
+    int age;
+
+    void display() {
+        System.out.println(name);
+        System.out.println(age);
+    }
+}
+</pre>
+
+        <p>
+            Here, <code>Student</code> is a class.
+        </p>
+    </div>
+
+    <!-- Object -->
+    <div class="topic">
+        <h2>2. Object in Java</h2>
+
+        <p>
+            An object is an instance of a class.
+            It represents a real-world entity.
+        </p>
+
+<pre>
+class Student {
+
+    String name;
+
+    void display() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.name = "Rahul";
+
+        s1.display();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Rahul
+</pre>
+    </div>
+
+    <!-- Creating Object -->
+    <div class="topic">
+        <h2>3. Creating an Object</h2>
+
+        <p>
+            In Java, an object is generally created using the
+            <code>new</code> keyword.
+        </p>
+
+        <h3>Syntax:</h3>
+
+<pre>
+ClassName objectName = new ClassName();
+</pre>
+
+        <h3>Example:</h3>
+
+<pre>
+Student s1 = new Student();
+</pre>
+    </div>
+
+    <!-- Reference Variable -->
+    <div class="topic">
+        <h2>4. Reference Variable</h2>
+
+        <p>
+            A reference variable stores the reference of an object.
+        </p>
+
+<pre>
+Student s1 = new Student();
+</pre>
+
+        <p>
+            Here <code>s1</code> is a reference variable that refers
+            to the Student object.
+        </p>
+    </div>
+
+    <!-- Methods -->
+    <div class="topic">
+        <h2>5. Methods in Java</h2>
+
+        <p>
+            A method is a block of code that performs a particular task.
+        </p>
+
+        <h3>Syntax:</h3>
+
+<pre>
+returnType methodName(parameters) {
+
+    // statements
+
+}
+</pre>
+
+        <h3>Example:</h3>
+
+<pre>
+class Calculator {
+
+    int add(int a, int b) {
+
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+
+        Calculator c = new Calculator();
+
+        int result = c.add(10, 20);
+
+        System.out.println(result);
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+30
+</pre>
+    </div>
+
+    <!-- Method Parameters -->
+    <div class="topic">
+        <h2>6. Method Parameters</h2>
+
+        <p>
+            Parameters are variables passed to a method.
+        </p>
+
+<pre>
+void display(String name) {
+
+    System.out.println(name);
+}
+</pre>
+
+        <p>
+            Here <code>name</code> is a parameter.
+        </p>
+    </div>
+
+    <!-- Return Type -->
+    <div class="topic">
+        <h2>7. Return Type</h2>
+
+        <p>
+            A method can return a value using the
+            <code>return</code> keyword.
+        </p>
+
+<pre>
+int square(int n) {
+
+    return n * n;
+}
+</pre>
+
+        <p>
+            The return type of this method is <code>int</code>.
+        </p>
+    </div>
+
+    <!-- Constructor -->
+    <div class="topic">
+        <h2>8. Constructor</h2>
+
+        <p>
+            A constructor is a special method-like member used to initialize
+            objects.
+        </p>
+
+        <p>
+            A constructor has the same name as the class and does not have
+            a return type.
+        </p>
+
+<pre>
+class Student {
+
+    String name;
+
+    Student() {
+
+        name = "Rahul";
+    }
+
+    void display() {
+
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.display();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Rahul
+</pre>
+    </div>
+
+    <!-- Constructor Types -->
+    <div class="topic">
+        <h2>9. Types of Constructors</h2>
+
+        <p>Commonly discussed constructors are:</p>
+
+        <ol>
+            <li>Default Constructor</li>
+            <li>Parameterized Constructor</li>
+            <li>Copy Constructor concept</li>
+        </ol>
+    </div>
+
+    <!-- Default Constructor -->
+    <div class="topic">
+        <h2>10. Default Constructor</h2>
+
+        <p>
+            A constructor with no parameters is called a no-argument
+            constructor.
+        </p>
+
+<pre>
+class Student {
+
+    Student() {
+
+        System.out.println("Student object created");
+    }
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+    }
+}
+</pre>
+    </div>
+
+    <!-- Parameterized Constructor -->
+    <div class="topic">
+        <h2>11. Parameterized Constructor</h2>
+
+        <p>
+            A constructor that accepts parameters is called a
+            parameterized constructor.
+        </p>
+
+<pre>
+class Student {
+
+    String name;
+    int age;
+
+    Student(String n, int a) {
+
+        name = n;
+        age = a;
+    }
+
+    void display() {
+
+        System.out.println(name);
+        System.out.println(age);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student("Rahul", 20);
+
+        s1.display();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Rahul
+20
+</pre>
+    </div>
+
+    <!-- this keyword -->
+    <div class="topic">
+        <h2>12. this Keyword</h2>
+
+        <p>
+            The <code>this</code> keyword refers to the current object.
+        </p>
+
+<pre>
+class Student {
+
+    String name;
+
+    Student(String name) {
+
+        this.name = name;
+    }
+
+    void display() {
+
+        System.out.println(this.name);
+    }
+}
+</pre>
+
+        <div class="important">
+            <b>Remember:</b>
+            <code>this</code> refers to the current object.
+        </div>
+    </div>
+
+    <!-- Static -->
+    <div class="topic">
+        <h2>13. static Keyword</h2>
+
+        <p>
+            The <code>static</code> keyword is used for members that belong
+            to the class rather than a particular object.
+        </p>
+
+<pre>
+class Student {
+
+    static String college = "ABC College";
+
+    String name;
+
+    Student(String name) {
+
+        this.name = name;
+    }
+
+    void display() {
+
+        System.out.println(name);
+        System.out.println(college);
+    }
+}
+</pre>
+    </div>
+
+    <!-- Access Modifiers -->
+    <div class="topic">
+        <h2>14. Access Modifiers</h2>
+
+        <p>
+            Access modifiers control the accessibility of classes,
+            variables and methods.
+        </p>
+
+        <table width="100%">
+            <tr>
+                <th>Modifier</th>
+                <th>Accessibility</th>
+            </tr>
+
+            <tr>
+                <td>private</td>
+                <td>Only within the same class</td>
+            </tr>
+
+            <tr>
+                <td>default</td>
+                <td>Within the same package</td>
+            </tr>
+
+            <tr>
+                <td>protected</td>
+                <td>Same package and subclasses</td>
+            </tr>
+
+            <tr>
+                <td>public</td>
+                <td>Accessible from anywhere</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Encapsulation -->
+    <div class="topic">
+        <h2>15. Encapsulation using Getter and Setter</h2>
+
+        <p>
+            Private variables can be accessed through public getter and
+            setter methods.
+        </p>
+
+<pre>
+class Student {
+
+    private int marks;
+
+    public void setMarks(int marks) {
+
+        this.marks = marks;
+    }
+
+    public int getMarks() {
+
+        return marks;
+    }
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.setMarks(85);
+
+        System.out.println(s.getMarks());
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+85
+</pre>
+    </div>
+
+    <!-- Method Overloading -->
+    <div class="topic">
+        <h2>16. Method Overloading</h2>
+
+        <p>
+            When multiple methods have the same name but different
+            parameters, it is called method overloading.
+        </p>
+
+<pre>
+class Calculator {
+
+    int add(int a, int b) {
+
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+
+        Calculator c = new Calculator();
+
+        System.out.println(c.add(10, 20));
+
+        System.out.println(c.add(10, 20, 30));
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+30
+60
+</pre>
+    </div>
+
+    <!-- Command Line -->
+    <div class="topic">
+        <h2>17. Command Line Arguments</h2>
+
+        <p>
+            Command line arguments are values passed to a Java program
+            when it is executed.
+        </p>
+
+<pre>
+class Demo {
+
+    public static void main(String[] args) {
+
+        System.out.println(args[0]);
+    }
+}
+</pre>
+
+        <p>
+            The values are stored inside the <code>args</code> array.
+        </p>
+    </div>
+
+    <!-- Important Questions -->
+    <div class="topic">
+        <h2>18. Important Exam Questions</h2>
+
+        <ol>
+            <li>What is a class?</li>
+            <li>What is an object?</li>
+            <li>How is an object created in Java?</li>
+            <li>What is a reference variable?</li>
+            <li>What is a method?</li>
+            <li>Explain method parameters and return type.</li>
+            <li>What is a constructor?</li>
+            <li>Explain types of constructors.</li>
+            <li>What is the use of this keyword?</li>
+            <li>Explain static keyword.</li>
+            <li>What are access modifiers?</li>
+            <li>Explain encapsulation with getter and setter.</li>
+            <li>What is method overloading?</li>
+            <li>Explain command line arguments.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>College StudyHub | OOP Using Java – Unit 2</p>
+</footer>
+
+</body>
+</html>

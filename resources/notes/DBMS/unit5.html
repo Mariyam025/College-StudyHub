@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DBMS - Unit 5</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0;line-height:1.6;color:#222}
+.container{max-width:1000px;margin:30px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px #ddd}
+h1{text-align:center;color:#4f46e5}h2{color:#3730a3;border-bottom:2px solid #eee;padding-bottom:6px}
+h3{color:#4f46e5}.box{background:#f8f9ff;padding:15px;border-left:4px solid #4f46e5;margin:15px 0}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px}th{background:#eef0ff}
+.revision{background:#f0fdf4;padding:15px;border-left:4px solid green}
+.back{background:#4f46e5;color:white;padding:9px 15px;text-decoration:none;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+<h1>Database Management System</h1>
+<h2>Unit 5 - Concurrency Control Techniques</h2>
+
+<h2>1. Concurrency Control</h2>
+
+<div class="box">
+<b>Definition:</b>
+Concurrency control is used to manage simultaneous transactions so that
+database consistency is maintained.
+</div>
+
+<p>
+When many users access a database at the same time, concurrency control
+helps prevent incorrect results and conflicts.
+</p>
+
+<h2>2. Locking Techniques</h2>
+
+<p>
+Locking controls access to database items while transactions are
+executing.
+</p>
+
+<h3>Shared Lock</h3>
+<p>
+A shared lock generally allows reading of a data item by multiple
+transactions.
+</p>
+
+<h3>Exclusive Lock</h3>
+<p>
+An exclusive lock is used when a transaction wants to modify a data item.
+</p>
+
+<table>
+<tr>
+<th>Shared Lock</th>
+<th>Exclusive Lock</th>
+</tr>
+<tr>
+<td>Used for reading</td>
+<td>Used for writing/modification</td>
+</tr>
+<tr>
+<td>Multiple shared locks may coexist</td>
+<td>Conflicts with other locks when required</td>
+</tr>
+</table>
+
+<h2>3. Two-Phase Locking</h2>
+
+<p>
+Two-phase locking divides locking into two phases.
+</p>
+
+<ul>
+<li><b>Growing Phase:</b> Locks can be acquired.</li>
+<li><b>Shrinking Phase:</b> Locks can be released.</li>
+</ul>
+
+<h2>4. Timestamp Protocol</h2>
+
+<div class="box">
+A timestamp protocol assigns each transaction a timestamp and uses it
+to maintain an order of transaction execution.
+</div>
+
+<p>
+Older and newer transactions are ordered using their timestamps and
+operations are allowed according to the protocol rules.
+</p>
+
+<h2>5. Validation-Based Protocol</h2>
+
+<p>
+Validation-based concurrency control allows transactions to execute
+without locking during their initial phase and checks for conflicts
+before committing.
+</p>
+
+<h3>Phases</h3>
+
+<ol>
+<li><b>Read Phase:</b> Transaction reads data and performs calculations.</li>
+<li><b>Validation Phase:</b> System checks for conflicts.</li>
+<li><b>Write Phase:</b> Changes are written if validation succeeds.</li>
+</ol>
+
+<h2>6. Comparison</h2>
+
+<table>
+<tr>
+<th>Technique</th>
+<th>Main Idea</th>
+</tr>
+
+<tr>
+<td>Locking</td>
+<td>Controls access using locks</td>
+</tr>
+
+<tr>
+<td>Timestamp</td>
+<td>Uses transaction timestamps</td>
+</tr>
+
+<tr>
+<td>Validation</td>
+<td>Checks conflicts before writing</td>
+</tr>
+</table>
+
+<h2>7. Importance of Concurrency Control</h2>
+
+<ul>
+<li>Maintains database consistency</li>
+<li>Prevents conflicting operations</li>
+<li>Controls simultaneous transactions</li>
+<li>Helps maintain correct transaction execution</li>
+</ul>
+
+<div class="revision">
+<b>Quick Revision:</b>
+<ul>
+<li>Concurrency control manages simultaneous transactions.</li>
+<li>Shared lock is mainly used for reading.</li>
+<li>Exclusive lock is used for modification.</li>
+<li>Timestamp protocol uses transaction timestamps.</li>
+<li>Validation protocol checks conflicts before committing.</li>
+</ul>
+</div>
+
+<h2>Exam / Viva</h2>
+
+<ol>
+<li>What is concurrency control?</li>
+<li>Why is concurrency control required?</li>
+<li>What is a shared lock?</li>
+<li>What is an exclusive lock?</li>
+<li>Explain two-phase locking.</li>
+<li>What is timestamp protocol?</li>
+<li>What is validation-based protocol?</li>
+<li>Differentiate locking and timestamp protocols.</li>
+</ol>
+
+</div>
+</body>
+</html>

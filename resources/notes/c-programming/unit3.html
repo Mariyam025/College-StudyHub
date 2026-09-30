@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming - Unit 3 Notes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 28px 8%;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: white;
+            color: #4f46e5;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #4f46e5;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            margin-top: 22px;
+        }
+
+        .highlight {
+            background: #eef2ff;
+            padding: 14px;
+            border-left: 5px solid #4f46e5;
+            border-radius: 6px;
+        }
+
+        .output {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .exam {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #eef2ff;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Programming in C</h1>
+    <p>Unit 3 – Decision Making and Loops</p>
+    <p>College StudyHub</p>
+</div>
+
+<div class="container">
+
+    <a href="../../../subjects.html" class="back-btn">
+        ← Back to Subjects
+    </a>
+
+
+    <!-- TOPICS -->
+
+    <div class="section">
+
+        <h2>📚 Unit 3 Topics</h2>
+
+        <ul>
+            <li>if Statement</li>
+            <li>if-else Statement</li>
+            <li>Nested if</li>
+            <li>else-if Ladder</li>
+            <li>switch Statement</li>
+            <li>break Statement</li>
+            <li>continue Statement</li>
+            <li>while Loop</li>
+            <li>do-while Loop</li>
+            <li>for Loop</li>
+            <li>Nested Loops</li>
+        </ul>
+
+    </div>
+
+
+    <!-- IF -->
+
+    <div class="section">
+
+        <h2>1. if Statement</h2>
+
+        <p>
+            The <code>if</code> statement is used to execute a block of
+            code when a condition is true.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+if(condition)
+{
+    statement;
+}</pre>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+
+    if(age &gt;= 18)
+    {
+        printf("Eligible");
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Eligible
+        </div>
+
+    </div>
+
+
+    <!-- IF ELSE -->
+
+    <div class="section">
+
+        <h2>2. if-else Statement</h2>
+
+        <p>
+            The <code>if-else</code> statement executes one block when
+            the condition is true and another block when it is false.
+        </p>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int number = 7;
+
+    if(number % 2 == 0)
+    {
+        printf("Even");
+    }
+    else
+    {
+        printf("Odd");
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Odd
+        </div>
+
+    </div>
+
+
+    <!-- NESTED IF -->
+
+    <div class="section">
+
+        <h2>3. Nested if</h2>
+
+        <p>
+            A nested <code>if</code> means an <code>if</code> statement
+            placed inside another <code>if</code> statement.
+        </p>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 20;
+    int id = 1;
+
+    if(age &gt;= 18)
+    {
+        if(id == 1)
+        {
+            printf("Allowed");
+        }
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Allowed
+        </div>
+
+    </div>
+
+
+    <!-- ELSE IF -->
+
+    <div class="section">
+
+        <h2>4. else-if Ladder</h2>
+
+        <p>
+            An else-if ladder is used when there are multiple conditions
+            to check.
+        </p>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks = 75;
+
+    if(marks &gt;= 90)
+    {
+        printf("A+");
+    }
+    else if(marks &gt;= 75)
+    {
+        printf("A");
+    }
+    else if(marks &gt;= 60)
+    {
+        printf("B");
+    }
+    else
+    {
+        printf("C");
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            A
+        </div>
+
+    </div>
+
+
+    <!-- SWITCH -->
+
+    <div class="section">
+
+        <h2>5. switch Statement</h2>
+
+        <p>
+            The <code>switch</code> statement is used to select one
+            block from multiple choices based on an expression.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+switch(expression)
+{
+    case value1:
+        statement;
+        break;
+
+    case value2:
+        statement;
+        break;
+
+    default:
+        statement;
+}</pre>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int choice = 2;
+
+    switch(choice)
+    {
+        case 1:
+            printf("Java");
+            break;
+
+        case 2:
+            printf("C Programming");
+            break;
+
+        case 3:
+            printf("Python");
+            break;
+
+        default:
+            printf("Invalid choice");
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            C Programming
+        </div>
+
+    </div>
+
+
+    <!-- BREAK -->
+
+    <div class="section">
+
+        <h2>6. break Statement</h2>
+
+        <p>
+            The <code>break</code> statement terminates the nearest
+            loop or switch statement immediately.
+        </p>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i &lt;= 5; i++)
+    {
+        if(i == 3)
+        {
+            break;
+        }
+
+        printf("%d ", i);
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            1 2
+        </div>
+
+    </div>
+
+
+    <!-- CONTINUE -->
+
+    <div class="section">
+
+        <h2>7. continue Statement</h2>
+
+        <p>
+            The <code>continue</code> statement skips the remaining
+            statements of the current loop iteration and continues
+            with the next iteration.
+        </p>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i &lt;= 5; i++)
+    {
+        if(i == 3)
+        {
+            continue;
+        }
+
+        printf("%d ", i);
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            1 2 4 5
+        </div>
+
+    </div>
+
+
+    <!-- WHILE -->
+
+    <div class="section">
+
+        <h2>8. while Loop</h2>
+
+        <p>
+            A <code>while</code> loop repeatedly executes a block while
+            its condition remains true.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+while(condition)
+{
+    statement;
+}</pre>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 1;
+
+    while(i &lt;= 5)
+    {
+        printf("%d ", i);
+        i++;
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            1 2 3 4 5
+        </div>
+
+    </div>
+
+
+    <!-- DO WHILE -->
+
+    <div class="section">
+
+        <h2>9. do-while Loop</h2>
+
+        <p>
+            A <code>do-while</code> loop executes its body first and
+            checks the condition afterwards.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+do
+{
+    statement;
+}
+while(condition);</pre>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i = 1;
+
+    do
+    {
+        printf("%d ", i);
+        i++;
+    }
+    while(i &lt;= 5);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            1 2 3 4 5
+        </div>
+
+    </div>
+
+
+    <!-- FOR -->
+
+    <div class="section">
+
+        <h2>10. for Loop</h2>
+
+        <p>
+            A <code>for</code> loop is used when the initialization,
+            condition and update can be written together.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+for(initialization; condition; update)
+{
+    statement;
+}</pre>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i &lt;= 5; i++)
+    {
+        printf("%d ", i);
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            1 2 3 4 5
+        </div>
+
+    </div>
+
+
+    <!-- NESTED LOOP -->
+
+    <div class="section">
+
+        <h2>11. Nested Loops</h2>
+
+        <p>
+            A nested loop is a loop inside another loop.
+        </p>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i &lt;= 3; i++)
+    {
+        for(j = 1; j &lt;= 3; j++)
+        {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            * * *<br>
+            * * *<br>
+            * * *
+        </div>
+
+    </div>
+
+
+    <!-- DIFFERENCE -->
+
+    <div class="section">
+
+        <h2>🔍 Loop Comparison</h2>
+
+        <table>
+
+            <tr>
+                <th>Loop</th>
+                <th>Important Point</th>
+            </tr>
+
+            <tr>
+                <td>while</td>
+                <td>Condition is checked before the loop body.</td>
+            </tr>
+
+            <tr>
+                <td>do-while</td>
+                <td>Body executes before the condition is checked.</td>
+            </tr>
+
+            <tr>
+                <td>for</td>
+                <td>Initialization, condition and update are written together.</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- QUICK REVISION -->
+
+    <div class="section">
+
+        <h2>⚡ Quick Revision</h2>
+
+        <ul>
+            <li><strong>if:</strong> Checks a condition.</li>
+            <li><strong>if-else:</strong> Chooses between two blocks.</li>
+            <li><strong>Nested if:</strong> if inside another if.</li>
+            <li><strong>else-if ladder:</strong> Checks multiple conditions.</li>
+            <li><strong>switch:</strong> Selects from multiple cases.</li>
+            <li><strong>break:</strong> Terminates loop/switch.</li>
+            <li><strong>continue:</strong> Skips current iteration.</li>
+            <li><strong>while:</strong> Entry-controlled loop.</li>
+            <li><strong>do-while:</strong> Executes body before checking condition.</li>
+            <li><strong>for:</strong> Common loop with initialization, condition and update.</li>
+            <li><strong>Nested loop:</strong> Loop inside another loop.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- QUESTIONS -->
+
+    <div class="section">
+
+        <h2>📝 Important Exam Questions</h2>
+
+        <div class="exam">
+
+            <h3>Short Questions</h3>
+
+            <ol>
+                <li>What is an if statement?</li>
+                <li>What is an if-else statement?</li>
+                <li>What is nested if?</li>
+                <li>What is an else-if ladder?</li>
+                <li>What is a switch statement?</li>
+                <li>What is the use of break?</li>
+                <li>What is the use of continue?</li>
+                <li>What is a while loop?</li>
+                <li>What is a do-while loop?</li>
+                <li>What is a for loop?</li>
+                <li>What is a nested loop?</li>
+            </ol>
+
+            <h3>Programming Questions</h3>
+
+            <ol>
+                <li>Write a C program to check whether a number is even or odd.</li>
+                <li>Write a C program to find the largest of two numbers.</li>
+                <li>Write a program using switch statement.</li>
+                <li>Write a program to print numbers from 1 to 10 using a loop.</li>
+                <li>Write a program to print a simple pattern using nested loops.</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIVA -->
+
+    <div class="section">
+
+        <h2>🎤 Viva Questions</h2>
+
+        <ul>
+            <li>What is decision making?</li>
+            <li>What is the difference between if and if-else?</li>
+            <li>What is nested if?</li>
+            <li>Why is break used?</li>
+            <li>Why is continue used?</li>
+            <li>Which loop executes at least once?</li>
+            <li>What is the difference between while and do-while?</li>
+            <li>What is a nested loop?</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>College StudyHub | Programming in C | Unit 3</p>
+</div>
+
+</body>
+</html>

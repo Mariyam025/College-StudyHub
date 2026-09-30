@@ -1,0 +1,805 @@
+/* =========================================================
+   COLLEGE STUDYHUB - SUBJECTS PAGE
+   PREMIUM DARK THEME
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.15), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(236, 72, 153, 0.10), transparent 25%),
+        radial-gradient(circle at 50% 90%, rgba(59, 130, 246, 0.08), transparent 30%),
+        #070b18;
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(7, 11, 24, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-container {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.35);
+
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav-links a {
+    color: #aeb7ca;
+    text-decoration: none;
+
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+    color: white !important;
+
+    padding: 10px 18px !important;
+    border-radius: 10px !important;
+
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.38);
+}
+
+
+/* =========================================================
+   SUBJECT HERO
+========================================================= */
+
+.subjects-hero {
+    text-align: center;
+
+    padding: 85px 20px 55px;
+
+    position: relative;
+}
+
+.subjects-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    background: rgba(124, 58, 237, 0.15);
+    filter: blur(90px);
+
+    border-radius: 50%;
+
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+.subjects-hero h1 {
+    position: relative;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.subjects-hero h1 span {
+    background: linear-gradient(135deg, #a78bfa, #f472b6, #60a5fa);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.subjects-hero p {
+    position: relative;
+
+    max-width: 650px;
+    margin: auto;
+
+    color: #98a4ba;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(167, 139, 250, 0.25);
+
+    border-radius: 50px;
+
+    background: rgba(124, 58, 237, 0.10);
+
+    color: #c4b5fd;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+    width: min(680px, 100%);
+
+    margin: 35px auto 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px;
+
+    border-radius: 16px;
+
+    background: rgba(15, 23, 42, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        inset 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.search-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 14px 16px;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.search-box input::placeholder {
+    color: #68748b;
+}
+
+.search-box button {
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    padding: 13px 21px;
+
+    border-radius: 11px;
+
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+
+    color: white;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(124, 58, 237, 0.35);
+}
+
+
+/* =========================================================
+   SEMESTER SECTION
+========================================================= */
+
+.semester-heading {
+    margin-top: 70px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.semester-heading h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.semester-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
+}
+
+
+/* =========================================================
+   SUBJECT GRID
+========================================================= */
+
+.subject-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   SUBJECT CARD
+========================================================= */
+
+.subject-card {
+    position: relative;
+
+    padding: 26px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 25, 45, 0.95),
+            rgba(10, 15, 29, 0.95)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.subject-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    top: -70px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, 0.10);
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+.subject-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(139, 92, 246, 0.35);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30),
+        0 0 35px rgba(124, 58, 237, 0.08);
+}
+
+
+/* =========================================================
+   SUBJECT NUMBER
+========================================================= */
+
+.subject-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    background: rgba(124, 58, 237, 0.14);
+
+    border: 1px solid rgba(139, 92, 246, 0.20);
+
+    color: #c4b5fd;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SUBJECT ICON
+========================================================= */
+
+.subject-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(124, 58, 237, 0.18),
+        rgba(236, 72, 153, 0.12)
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 24px;
+}
+
+
+/* Different icon glow */
+
+.subject-card:nth-child(3n + 1) .subject-icon {
+    background: rgba(124, 58, 237, 0.14);
+}
+
+.subject-card:nth-child(3n + 2) .subject-icon {
+    background: rgba(236, 72, 153, 0.12);
+}
+
+.subject-card:nth-child(3n + 3) .subject-icon {
+    background: rgba(59, 130, 246, 0.12);
+}
+
+
+/* =========================================================
+   SUBJECT TEXT
+========================================================= */
+
+.subject-card h3 {
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    margin-bottom: 8px;
+
+    color: #f8fafc;
+}
+
+.subject-card p {
+    color: #8793a9;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   UNIT TITLE
+========================================================= */
+
+.unit-title {
+    color: #cbd5e1;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   UNIT BUTTONS
+========================================================= */
+
+.unit-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.unit-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.unit-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 58px;
+
+    padding: 8px 11px;
+
+    border-radius: 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #aeb7ca;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.22s ease;
+}
+
+.unit-btn:hover {
+    color: white;
+
+    background: rgba(124, 58, 237, 0.15);
+
+    border-color: rgba(139, 92, 246, 0.35);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BOOKMARK BUTTON
+========================================================= */
+
+.unit-bookmark-btn {
+    width: 30px;
+    height: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #718096;
+
+    cursor: pointer;
+
+    transition: 0.22s ease;
+}
+
+.unit-bookmark-btn:hover {
+    color: #f472b6;
+
+    border-color: rgba(236, 72, 153, 0.35);
+
+    background: rgba(236, 72, 153, 0.10);
+}
+
+.unit-bookmark-btn.saved {
+    color: #f472b6;
+
+    background: rgba(236, 72, 153, 0.13);
+
+    border-color: rgba(236, 72, 153, 0.30);
+}
+
+
+/* =========================================================
+   NO RESULT
+========================================================= */
+
+.no-result {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #8b96aa;
+}
+
+.no-result h3 {
+    color: #e2e8f0;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    margin-top: 100px;
+
+    padding: 45px 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+    text-align: center;
+
+    background: rgba(5, 8, 18, 0.45);
+}
+
+.footer p {
+    color: #6f7b90;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 9px 9px;
+
+        font-size: 12px;
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .logo-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 17px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .subjects-hero {
+        padding: 60px 10px 35px;
+    }
+
+    .subjects-hero h1 {
+        font-size: 40px;
+    }
+
+    .subjects-hero p {
+        font-size: 14px;
+    }
+
+    .search-box {
+        margin-top: 28px;
+    }
+
+    .search-box input {
+        padding: 13px 10px;
+
+        font-size: 14px;
+    }
+
+    .search-box button {
+        padding: 12px 15px;
+
+        font-size: 13px;
+    }
+
+    .semester-heading {
+        margin-top: 50px;
+    }
+
+    .semester-heading h2 {
+        font-size: 21px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .subject-card {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .subjects-hero h1 {
+        font-size: 34px;
+    }
+
+    .badge {
+        font-size: 11px;
+
+        padding: 7px 12px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-box button {
+        padding: 11px 12px;
+    }
+
+    .subject-card h3 {
+        font-size: 17px;
+    }
+
+    .unit-buttons {
+        gap: 6px;
+    }
+
+    .unit-btn {
+        min-width: 52px;
+
+        padding: 7px 9px;
+
+        font-size: 11px;
+    }
+}

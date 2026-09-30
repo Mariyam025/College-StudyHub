@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit 1 - Programming in C | College StudyHub</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin-bottom: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #4f46e5;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #3730a3;
+        }
+
+        .topic {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .topic h2 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        .topic h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        .example {
+            background: #f1f5f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #4f46e5;
+            border-radius: 8px;
+        }
+
+        pre {
+            background: #1e293b;
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+
+        .output {
+            background: #ecfdf5;
+            padding: 12px;
+            border-left: 5px solid #10b981;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #eef2ff;
+        }
+
+        .important {
+            background: #fff7ed;
+            padding: 15px;
+            border-left: 5px solid #f97316;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .summary {
+            background: #eef2ff;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <h1>📘 Programming in C</h1>
+
+        <p>Unit 1 – C Language Fundamentals</p>
+
+        <p>BCA (Lucknow University)</p>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <a href="../../../../subjects.html" class="back-btn">
+            ← Back to Subjects
+        </a>
+
+
+        <!-- Introduction -->
+
+        <section class="topic">
+
+            <h2>1. Introduction to C Language</h2>
+
+            <p>
+                C is a general-purpose programming language used to develop
+                system software, application software and many other types
+                of programs.
+            </p>
+
+            <div class="example">
+
+                <strong>Simple Example:</strong>
+
+                <p>
+                    A C program can be used to calculate the sum of two numbers.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Character Set -->
+
+        <section class="topic">
+
+            <h2>2. Character Set</h2>
+
+            <p>
+                A character set is a collection of characters that can be
+                used in a C program.
+            </p>
+
+            <h3>Main types of characters:</h3>
+
+            <ul>
+                <li>Alphabets – A to Z and a to z</li>
+                <li>Digits – 0 to 9</li>
+                <li>Special characters – +, -, *, /, %, =, etc.</li>
+                <li>White space characters – space, tab and newline</li>
+            </ul>
+
+            <div class="example">
+
+                <strong>Example:</strong>
+
+                <p>
+                    In the statement
+                    <b>int age = 19;</b>
+                    the characters used include alphabets, digits and symbols.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Keywords -->
+
+        <section class="topic">
+
+            <h2>3. Keywords</h2>
+
+            <p>
+                Keywords are reserved words of the C language.
+                They have predefined meanings and cannot normally be used
+                as variable names.
+            </p>
+
+            <h3>Examples of keywords:</h3>
+
+            <table>
+
+                <tr>
+                    <th>Keyword</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>int</td>
+                    <td>Declares an integer data type</td>
+                </tr>
+
+                <tr>
+                    <td>float</td>
+                    <td>Declares a floating-point data type</td>
+                </tr>
+
+                <tr>
+                    <td>char</td>
+                    <td>Declares a character data type</td>
+                </tr>
+
+                <tr>
+                    <td>if</td>
+                    <td>Used for decision making</td>
+                </tr>
+
+                <tr>
+                    <td>else</td>
+                    <td>Used with if</td>
+                </tr>
+
+                <tr>
+                    <td>return</td>
+                    <td>Returns a value from a function</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Variables -->
+
+        <section class="topic">
+
+            <h2>4. Variables</h2>
+
+            <p>
+                A variable is a named memory location used to store a value.
+                The value of a variable can change during program execution.
+            </p>
+
+            <h3>Declaration</h3>
+
+            <p>
+                Declaration tells the compiler the name and data type of
+                a variable.
+            </p>
+
+            <pre>
+int age;
+float marks;
+char grade;</pre>
+
+
+            <h3>Initialization</h3>
+
+            <p>
+                Initialization means assigning an initial value to a variable.
+            </p>
+
+            <pre>
+int age = 19;
+float marks = 85.5;
+char grade = 'A';</pre>
+
+
+            <div class="example">
+
+                <strong>Example:</strong>
+
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 19;
+
+    printf("Age = %d", age);
+
+    return 0;
+}</pre>
+
+                <div class="output">
+                    <strong>Output:</strong><br>
+                    Age = 19
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Scope -->
+
+        <section class="topic">
+
+            <h2>5. Scope of Variables</h2>
+
+            <p>
+                Scope means the area of a program where a variable can be
+                accessed or used.
+            </p>
+
+            <h3>Local Variable</h3>
+
+            <p>
+                A variable declared inside a function or block is generally
+                accessible only within that area.
+            </p>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int number = 10;
+
+    printf("%d", number);
+
+    return 0;
+}</pre>
+
+            <h3>Global Variable</h3>
+
+            <p>
+                A variable declared outside all functions is called a
+                global variable and can be accessed by functions according
+                to its visibility.
+            </p>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int number = 10;
+
+int main()
+{
+    printf("%d", number);
+
+    return 0;
+}</pre>
+
+        </section>
+
+
+        <!-- Constants -->
+
+        <section class="topic">
+
+            <h2>6. Constants</h2>
+
+            <p>
+                A constant is a value that does not change during the
+                execution of a program.
+            </p>
+
+            <h3>Types of Constants</h3>
+
+            <table>
+
+                <tr>
+                    <th>Type</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td>Integer constant</td>
+                    <td>10, 25, -5</td>
+                </tr>
+
+                <tr>
+                    <td>Floating constant</td>
+                    <td>10.5, 3.14</td>
+                </tr>
+
+                <tr>
+                    <td>Character constant</td>
+                    <td>'A', 'b', '5'</td>
+                </tr>
+
+                <tr>
+                    <td>String constant</td>
+                    <td>"Hello"</td>
+                </tr>
+
+            </table>
+
+            <h3>Using const</h3>
+
+            <pre>
+const int DAYS = 7;</pre>
+
+            <p>
+                Here, <b>DAYS</b> is intended to remain unchanged through
+                normal assignment.
+            </p>
+
+        </section>
+
+
+        <!-- Data Types -->
+
+        <section class="topic">
+
+            <h2>7. Data Types</h2>
+
+            <p>
+                Data types specify what type of value a variable can store.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Data Type</th>
+                    <th>Example</th>
+                    <th>Use</th>
+                </tr>
+
+                <tr>
+                    <td>int</td>
+                    <td>10</td>
+                    <td>Integer values</td>
+                </tr>
+
+                <tr>
+                    <td>float</td>
+                    <td>10.5</td>
+                    <td>Decimal values</td>
+                </tr>
+
+                <tr>
+                    <td>double</td>
+                    <td>25.6789</td>
+                    <td>More precision for decimal values</td>
+                </tr>
+
+                <tr>
+                    <td>char</td>
+                    <td>'A'</td>
+                    <td>Character values</td>
+                </tr>
+
+            </table>
+
+            <div class="important">
+
+                <strong>Remember:</strong>
+
+                <p>
+                    The exact size and range of C data types can depend on
+                    the compiler and platform.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Operators -->
+
+        <section class="topic">
+
+            <h2>8. Operators</h2>
+
+            <p>
+                Operators are symbols used to perform operations on values
+                and variables.
+            </p>
+
+            <h3>Unary Operator</h3>
+
+            <p>
+                A unary operator works with one operand.
+            </p>
+
+            <pre>
+int a = 5;
+
+a++;</pre>
+
+            <p>
+                Here <b>++</b> is a unary operator.
+            </p>
+
+
+            <h3>Binary Operator</h3>
+
+            <p>
+                A binary operator works with two operands.
+            </p>
+
+            <pre>
+int a = 10;
+int b = 5;
+
+int sum = a + b;</pre>
+
+
+            <h3>Ternary Operator</h3>
+
+            <p>
+                The ternary operator works with three operands.
+                Its basic form is:
+            </p>
+
+            <pre>
+condition ? value1 : value2;</pre>
+
+            <div class="example">
+
+                <strong>Example:</strong>
+
+                <pre>
+int a = 10;
+int b = 20;
+
+int max = (a > b) ? a : b;</pre>
+
+                <div class="output">
+                    <strong>Result:</strong><br>
+                    max = 20
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bitwise -->
+
+        <section class="topic">
+
+            <h2>9. Bitwise Operators</h2>
+
+            <p>
+                Bitwise operators perform operations on the individual bits
+                of integer values.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Name</th>
+                </tr>
+
+                <tr>
+                    <td>&amp;</td>
+                    <td>Bitwise AND</td>
+                </tr>
+
+                <tr>
+                    <td>|</td>
+                    <td>Bitwise OR</td>
+                </tr>
+
+                <tr>
+                    <td>^</td>
+                    <td>Bitwise XOR</td>
+                </tr>
+
+                <tr>
+                    <td>~</td>
+                    <td>Bitwise NOT</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;&lt;</td>
+                    <td>Left Shift</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;&gt;</td>
+                    <td>Right Shift</td>
+                </tr>
+
+            </table>
+
+            <h3>Example</h3>
+
+            <pre>
+int a = 5;
+int b = 3;
+
+printf("%d", a &amp; b);</pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                1
+            </div>
+
+        </section>
+
+
+        <!-- Type Conversion -->
+
+        <section class="topic">
+
+            <h2>10. Type Conversion</h2>
+
+            <p>
+                Type conversion means converting a value from one data type
+                to another data type.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre>
+int a = 10;
+float b;
+
+b = a;</pre>
+
+            <p>
+                Here, the integer value is converted to a floating-point value.
+            </p>
+
+        </section>
+
+
+        <!-- Type Casting -->
+
+        <section class="topic">
+
+            <h2>11. Type Casting</h2>
+
+            <p>
+                Type casting is the explicit conversion of a value into
+                another data type by specifying the required type.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <pre>
+(data_type) value;</pre>
+
+
+            <h3>Example</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 5;
+    int b = 2;
+
+    float result;
+
+    result = (float)a / b;
+
+    printf("%.2f", result);
+
+    return 0;
+}</pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                2.50
+            </div>
+
+            <div class="important">
+
+                <strong>Important Difference:</strong>
+
+                <p>
+                    Type conversion can happen automatically in suitable
+                    expressions, while type casting is explicitly specified
+                    by the programmer.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Revision -->
+
+        <section class="topic">
+
+            <h2>⭐ Quick Revision</h2>
+
+            <div class="summary">
+
+                <ul>
+
+                    <li><b>Character Set:</b> Characters used in C programs.</li>
+
+                    <li><b>Keyword:</b> Reserved word with a predefined meaning.</li>
+
+                    <li><b>Variable:</b> Named memory location used to store a value.</li>
+
+                    <li><b>Scope:</b> Area where a variable can be accessed.</li>
+
+                    <li><b>Constant:</b> A value intended not to change during program execution.</li>
+
+                    <li><b>Data Type:</b> Specifies the kind of value a variable can store.</li>
+
+                    <li><b>Unary:</b> Works with one operand.</li>
+
+                    <li><b>Binary:</b> Works with two operands.</li>
+
+                    <li><b>Ternary:</b> Uses three operands.</li>
+
+                    <li><b>Bitwise Operators:</b> Work at the bit level.</li>
+
+                    <li><b>Type Conversion:</b> Conversion of one data type to another.</li>
+
+                    <li><b>Type Casting:</b> Explicit conversion using a specified data type.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Questions -->
+
+        <section class="topic">
+
+            <h2>📝 Important Questions</h2>
+
+            <ol>
+
+                <li>What is C language?</li>
+
+                <li>Explain character set in C.</li>
+
+                <li>What are keywords? Give examples.</li>
+
+                <li>What is a variable? Explain declaration and initialization.</li>
+
+                <li>Explain scope of variables.</li>
+
+                <li>What are constants? Explain their types.</li>
+
+                <li>Explain data types in C.</li>
+
+                <li>What are unary, binary and ternary operators?</li>
+
+                <li>Explain bitwise operators with examples.</li>
+
+                <li>What is type conversion?</li>
+
+                <li>What is type casting? Give an example.</li>
+
+                <li>Differentiate between type conversion and type casting.</li>
+
+            </ol>
+
+        </section>
+
+
+    </div>
+
+
+    <footer class="footer">
+
+        <p>📚 College StudyHub</p>
+
+        <p>BCA (Lucknow University) | Programming in C | Unit 1</p>
+
+    </footer>
+
+
+</body>
+
+</html>

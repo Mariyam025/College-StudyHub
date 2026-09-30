@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operating System - Unit 3</title>
+<style>
+body{font-family:Arial;background:#f4f7fb;padding:20px}.container{max-width:900px;margin:auto;background:white;padding:25px;border-radius:12px}
+h1{color:#263b80}h2{color:#3155a6}.box{background:#eef3ff;padding:12px;border-left:5px solid #3155a6}
+li{margin:7px 0}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ccc;padding:10px}th{background:#eef3ff}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html">← Back to Subjects</a>
+<h1>Operating System - Unit 3</h1>
+<p><b>Paper:</b> NBCA-203 – Operating System</p>
+
+<h2>1. Process Synchronization</h2>
+<div class="box"><b>Definition:</b> Process synchronization is the coordination of processes so that shared data remains correct and consistent.</div>
+
+<h2>2. Critical Section Problem</h2>
+<p>A critical section is the part of a program where shared data or resources are accessed.</p>
+
+<p>A solution should satisfy:</p>
+<ul>
+<li>Mutual Exclusion</li>
+<li>Progress</li>
+<li>Bounded Waiting</li>
+</ul>
+
+<h2>3. Synchronization Hardware</h2>
+<p>Hardware instructions can help processes safely access shared resources.</p>
+<p><b>Examples:</b> Test-and-Set and Compare-and-Swap.</p>
+
+<h2>4. Semaphores</h2>
+<div class="box"><b>Definition:</b> A semaphore is a synchronization variable used to control access to shared resources.</div>
+
+<h3>Types</h3>
+<ul>
+<li>Binary Semaphore</li>
+<li>Counting Semaphore</li>
+</ul>
+
+<h3>Basic Operations</h3>
+<ul>
+<li><b>wait():</b> Decreases semaphore value.</li>
+<li><b>signal():</b> Increases semaphore value.</li>
+</ul>
+
+<h2>5. Classical Problems of Synchronization</h2>
+<ul>
+<li>Producer-Consumer Problem</li>
+<li>Readers-Writers Problem</li>
+<li>Dining Philosophers Problem</li>
+</ul>
+
+<h2>6. Critical Regions</h2>
+<p>A critical region is a synchronization construct that controls access to shared data.</p>
+
+<h2>7. Deadlock</h2>
+<div class="box"><b>Definition:</b> Deadlock is a situation where a group of processes waits indefinitely because each process is waiting for a resource held by another process.</div>
+
+<h2>8. Deadlock System Model</h2>
+<p>A process may request, use and release resources.</p>
+<div class="box">Request → Use → Release</div>
+
+<h2>9. Characterization of Deadlock</h2>
+<p>Four necessary conditions are:</p>
+<ul>
+<li>Mutual Exclusion</li>
+<li>Hold and Wait</li>
+<li>No Preemption</li>
+<li>Circular Wait</li>
+</ul>
+
+<h2>10. Deadlock Prevention</h2>
+<p>Deadlock prevention ensures that at least one necessary condition for deadlock cannot occur.</p>
+
+<h2>11. Deadlock Avoidance</h2>
+<p>Deadlock avoidance checks resource allocation before granting a request.</p>
+<p><b>Example:</b> Banker's Algorithm.</p>
+
+<h2>12. Deadlock Detection</h2>
+<p>The system checks whether deadlock has occurred by analyzing processes and resources.</p>
+
+<h2>13. Recovery from Deadlock</h2>
+<ul>
+<li>Terminate one or more processes.</li>
+<li>Preempt resources.</li>
+<li>Rollback processes when appropriate.</li>
+</ul>
+
+<h2>Quick Revision</h2>
+<div class="box">
+Critical section accesses shared resources.<br>
+Semaphore is used for synchronization.<br>
+Deadlock means processes wait indefinitely.<br>
+Four deadlock conditions: Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait.<br>
+Banker's Algorithm is used for deadlock avoidance.
+</div>
+
+<h2>Exam/Viva Questions</h2>
+<ol>
+<li>What is process synchronization?</li>
+<li>What is critical section?</li>
+<li>What is semaphore?</li>
+<li>Explain binary and counting semaphore.</li>
+<li>What are classical synchronization problems?</li>
+<li>Define deadlock.</li>
+<li>Write four conditions of deadlock.</li>
+<li>Explain deadlock prevention.</li>
+<li>What is deadlock avoidance?</li>
+<li>What is Banker's Algorithm?</li>
+<li>Explain deadlock detection and recovery.</li>
+</ol>
+
+</div>
+</body>
+</html>

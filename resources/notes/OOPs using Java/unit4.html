@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OOP Using Java - Unit 4</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4a148c;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back {
+            display: inline-block;
+            text-decoration: none;
+            background: #4a148c;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .topic {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #4a148c;
+        }
+
+        h3 {
+            color: #6a1b9a;
+        }
+
+        pre {
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        .important {
+            background: #f3e5f5;
+            padding: 12px;
+            border-left: 5px solid #4a148c;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+            width: 100%;
+        }
+
+        th {
+            background: #4a148c;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            background: #4a148c;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>OOP Using Java</h1>
+    <p>Unit 4 – Interfaces, Exception Handling and Multithreading</p>
+</header>
+
+<div class="container">
+
+    <a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+    <!-- Interface -->
+    <div class="topic">
+        <h2>1. Interface</h2>
+
+        <p>
+            An interface in Java is a blueprint that defines a contract
+            for classes that implement it.
+        </p>
+
+        <p>
+            Interfaces are commonly used to achieve abstraction and
+            multiple inheritance of type in Java.
+        </p>
+
+<pre>
+interface Animal {
+
+    void sound();
+}
+
+class Dog implements Animal {
+
+    public void sound() {
+
+        System.out.println("Dog barks");
+    }
+}
+</pre>
+    </div>
+
+    <!-- implements -->
+    <div class="topic">
+        <h2>2. implements Keyword</h2>
+
+        <p>
+            The <code>implements</code> keyword is used by a class to
+            implement an interface.
+        </p>
+
+<pre>
+interface Vehicle {
+
+    void start();
+}
+
+class Car implements Vehicle {
+
+    public void start() {
+
+        System.out.println("Car starts");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Multiple inheritance -->
+    <div class="topic">
+        <h2>3. Multiple Inheritance using Interfaces</h2>
+
+        <p>
+            Java does not support multiple inheritance through classes,
+            but a class can implement multiple interfaces.
+        </p>
+
+<pre>
+interface A {
+
+    void showA();
+}
+
+interface B {
+
+    void showB();
+}
+
+class Demo implements A, B {
+
+    public void showA() {
+
+        System.out.println("A");
+    }
+
+    public void showB() {
+
+        System.out.println("B");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Default and Static methods -->
+    <div class="topic">
+        <h2>4. Default and Static Methods in Interface</h2>
+
+        <p>
+            Modern Java interfaces can contain default and static methods
+            with implementations.
+        </p>
+
+<pre>
+interface Test {
+
+    default void display() {
+
+        System.out.println("Default method");
+    }
+
+    static void show() {
+
+        System.out.println("Static method");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Exception -->
+    <div class="topic">
+        <h2>5. Exception</h2>
+
+        <p>
+            An exception is an abnormal condition that occurs during
+            program execution and can disrupt the normal flow of the program.
+        </p>
+
+        <h3>Examples:</h3>
+
+        <ul>
+            <li>ArithmeticException</li>
+            <li>NullPointerException</li>
+            <li>ArrayIndexOutOfBoundsException</li>
+            <li>NumberFormatException</li>
+            <li>IOException</li>
+        </ul>
+    </div>
+
+    <!-- Exception Handling -->
+    <div class="topic">
+        <h2>6. Exception Handling</h2>
+
+        <p>
+            Exception handling is used to handle runtime problems so that
+            the program can respond properly instead of terminating unexpectedly.
+        </p>
+
+        <p>
+            Java provides:
+        </p>
+
+        <ul>
+            <li>try</li>
+            <li>catch</li>
+            <li>finally</li>
+            <li>throw</li>
+            <li>throws</li>
+        </ul>
+    </div>
+
+    <!-- try catch -->
+    <div class="topic">
+        <h2>7. try-catch Block</h2>
+
+        <p>
+            The <code>try</code> block contains code that may cause an
+            exception. The <code>catch</code> block handles the exception.
+        </p>
+
+<pre>
+class Demo {
+
+    public static void main(String[] args) {
+
+        try {
+
+            int result = 10 / 0;
+
+            System.out.println(result);
+
+        } catch (ArithmeticException e) {
+
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Cannot divide by zero
+</pre>
+    </div>
+
+    <!-- Multiple Catch -->
+    <div class="topic">
+        <h2>8. Multiple Catch Blocks</h2>
+
+        <p>
+            Multiple catch blocks can be used to handle different types
+            of exceptions.
+        </p>
+
+<pre>
+try {
+
+    int a = 10 / 0;
+
+}
+catch (ArithmeticException e) {
+
+    System.out.println("Arithmetic Error");
+
+}
+catch (Exception e) {
+
+    System.out.println("Other Error");
+}
+</pre>
+    </div>
+
+    <!-- finally -->
+    <div class="topic">
+        <h2>9. finally Block</h2>
+
+        <p>
+            The <code>finally</code> block is used for code that should
+            normally execute after try/catch processing.
+        </p>
+
+<pre>
+try {
+
+    int a = 10 / 2;
+
+    System.out.println(a);
+
+}
+catch (Exception e) {
+
+    System.out.println("Error");
+
+}
+finally {
+
+    System.out.println("Program completed");
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+5
+Program completed
+</pre>
+    </div>
+
+    <!-- throw -->
+    <div class="topic">
+        <h2>10. throw Keyword</h2>
+
+        <p>
+            The <code>throw</code> keyword is used to explicitly throw
+            an exception.
+        </p>
+
+<pre>
+class Demo {
+
+    public static void main(String[] args) {
+
+        int age = 15;
+
+        if (age < 18) {
+
+            throw new ArithmeticException("Not eligible");
+        }
+    }
+}
+</pre>
+    </div>
+
+    <!-- throws -->
+    <div class="topic">
+        <h2>11. throws Keyword</h2>
+
+        <p>
+            The <code>throws</code> keyword is used in a method declaration
+            to indicate exceptions that may be propagated to the caller.
+        </p>
+
+<pre>
+import java.io.*;
+
+class Demo {
+
+    static void readFile() throws IOException {
+
+        FileInputStream f =
+            new FileInputStream("data.txt");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Checked Unchecked -->
+    <div class="topic">
+        <h2>12. Checked and Unchecked Exceptions</h2>
+
+        <table>
+            <tr>
+                <th>Checked Exception</th>
+                <th>Unchecked Exception</th>
+            </tr>
+
+            <tr>
+                <td>Checked by compiler</td>
+                <td>Occurs during runtime</td>
+            </tr>
+
+            <tr>
+                <td>Usually subclasses of Exception other than RuntimeException</td>
+                <td>Usually subclasses of RuntimeException</td>
+            </tr>
+
+            <tr>
+                <td>Example: IOException</td>
+                <td>Example: ArithmeticException</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- User Defined Exception -->
+    <div class="topic">
+        <h2>13. User-Defined Exception</h2>
+
+        <p>
+            A programmer can create a custom exception class by extending
+            an appropriate exception class.
+        </p>
+
+<pre>
+class MyException extends Exception {
+
+    MyException(String message) {
+
+        super(message);
+    }
+}
+
+class Demo {
+
+    public static void main(String[] args) {
+
+        try {
+
+            throw new MyException("Custom Exception");
+
+        }
+        catch (MyException e) {
+
+            System.out.println(e.getMessage());
+        }
+    }
+}
+</pre>
+    </div>
+
+    <!-- Thread -->
+    <div class="topic">
+        <h2>14. Multithreading</h2>
+
+        <p>
+            Multithreading is the process of executing multiple threads
+            concurrently within a program.
+        </p>
+
+        <p>
+            A thread is a lightweight unit of execution.
+        </p>
+
+        <div class="important">
+            Multithreading can improve responsiveness and allow
+            independent tasks to execute concurrently.
+        </div>
+    </div>
+
+    <!-- Creating Thread -->
+    <div class="topic">
+        <h2>15. Creating a Thread by Extending Thread</h2>
+
+<pre>
+class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println("Thread is running");
+    }
+
+    public static void main(String[] args) {
+
+        MyThread t = new MyThread();
+
+        t.start();
+    }
+}
+</pre>
+    </div>
+
+    <!-- Runnable -->
+    <div class="topic">
+        <h2>16. Creating Thread using Runnable</h2>
+
+        <p>
+            Another common way to create a thread is by implementing
+            the <code>Runnable</code> interface.
+        </p>
+
+<pre>
+class MyTask implements Runnable {
+
+    public void run() {
+
+        System.out.println("Task is running");
+    }
+
+    public static void main(String[] args) {
+
+        MyTask task = new MyTask();
+
+        Thread t = new Thread(task);
+
+        t.start();
+    }
+}
+</pre>
+    </div>
+
+    <!-- Thread Life Cycle -->
+    <div class="topic">
+        <h2>17. Thread Life Cycle</h2>
+
+        <p>
+            A thread passes through different states during its lifetime.
+        </p>
+
+        <ul>
+            <li>New</li>
+            <li>Runnable</li>
+            <li>Running</li>
+            <li>Blocked / Waiting</li>
+            <li>Terminated</li>
+        </ul>
+    </div>
+
+    <!-- Thread Methods -->
+    <div class="topic">
+        <h2>18. Important Thread Methods</h2>
+
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Purpose</th>
+            </tr>
+
+            <tr>
+                <td>start()</td>
+                <td>Starts a new thread</td>
+            </tr>
+
+            <tr>
+                <td>run()</td>
+                <td>Contains the task performed by the thread</td>
+            </tr>
+
+            <tr>
+                <td>sleep()</td>
+                <td>Pauses the current thread for a specified time</td>
+            </tr>
+
+            <tr>
+                <td>join()</td>
+                <td>Waits for another thread to finish</td>
+            </tr>
+
+            <tr>
+                <td>isAlive()</td>
+                <td>Checks whether a thread is alive</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Synchronization -->
+    <div class="topic">
+        <h2>19. Synchronization</h2>
+
+        <p>
+            Synchronization is used to control access to shared resources
+            when multiple threads are executing concurrently.
+        </p>
+
+        <p>
+            It helps prevent inconsistent results caused by simultaneous
+            access to shared data.
+        </p>
+
+<pre>
+class Counter {
+
+    synchronized void increment() {
+
+        System.out.println("Counter updated");
+    }
+}
+</pre>
+    </div>
+
+    <!-- Important Questions -->
+    <div class="topic">
+        <h2>20. Important Exam Questions</h2>
+
+        <ol>
+            <li>What is an interface?</li>
+            <li>Explain the implements keyword.</li>
+            <li>How can multiple inheritance be achieved using interfaces?</li>
+            <li>What is an exception?</li>
+            <li>Explain exception handling in Java.</li>
+            <li>Explain try-catch with example.</li>
+            <li>What is the use of finally?</li>
+            <li>Explain throw and throws.</li>
+            <li>Differentiate between checked and unchecked exceptions.</li>
+            <li>What is a user-defined exception?</li>
+            <li>What is multithreading?</li>
+            <li>Explain different ways of creating a thread.</li>
+            <li>Explain the life cycle of a thread.</li>
+            <li>Write important methods of Thread class.</li>
+            <li>What is synchronization?</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>College StudyHub | OOP Using Java – Unit 4</p>
+</footer>
+
+</body>
+</html>

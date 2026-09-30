@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics - Unit 3</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #4b6584;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #f0ad4e;
+            margin: 10px 0;
+        }
+
+        .example {
+            background: #eaf7ea;
+            padding: 15px;
+            border-left: 5px solid #28a745;
+            margin: 15px 0;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mathematics - Unit 3</h1>
+
+    <div class="box">
+        <strong>Ordinary Differential Equations</strong>
+
+        <ul>
+            <li>Definition and Examples</li>
+            <li>Order and Degree</li>
+            <li>First Order First Degree Differential Equations</li>
+            <li>Variable Separable Equations</li>
+            <li>Equations Reducible to Variable Separable</li>
+            <li>Linear Differential Equations</li>
+            <li>Bernoulli's Differential Equation</li>
+            <li>Linear Differential Equations of nth Order with Constant Coefficients</li>
+            <li>Complementary Function</li>
+            <li>Particular Integral</li>
+        </ul>
+    </div>
+
+
+    <h2>1. Differential Equation</h2>
+
+    <p>
+        A differential equation is an equation which contains
+        derivatives or differentials of a dependent variable with
+        respect to one or more independent variables.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        dy/dx = 2x
+        <br><br>
+
+        This is a differential equation because it contains
+        the derivative dy/dx.
+    </div>
+
+
+    <h2>2. Ordinary Differential Equation</h2>
+
+    <p>
+        An ordinary differential equation (ODE) contains derivatives
+        with respect to only one independent variable.
+    </p>
+
+    <div class="example">
+        Example:
+        <br><br>
+        dy/dx + y = x
+    </div>
+
+
+    <h2>3. Order of Differential Equation</h2>
+
+    <p>
+        The order of a differential equation is the order of the
+        highest derivative present in the equation.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        d²y/dx² + dy/dx + y = 0
+        <br><br>
+
+        Highest derivative = d²y/dx²
+        <br>
+        Therefore, Order = 2.
+    </div>
+
+
+    <h2>4. Degree of Differential Equation</h2>
+
+    <p>
+        The degree is the highest power of the highest order
+        derivative when the differential equation is free from
+        radicals and fractions involving derivatives.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        (d²y/dx²)³ + dy/dx + y = 0
+        <br><br>
+
+        Highest derivative = d²y/dx²
+        <br>
+        Its power = 3
+        <br><br>
+
+        Therefore, Degree = 3.
+    </div>
+
+
+    <h2>5. First Order First Degree Differential Equation</h2>
+
+    <p>
+        A differential equation having order 1 and degree 1 is called
+        a first order first degree differential equation.
+    </p>
+
+    <div class="example">
+        Example:
+        <br><br>
+
+        dy/dx + y = x
+    </div>
+
+
+    <h2>6. Variable Separable Differential Equation</h2>
+
+    <p>
+        A differential equation is called variable separable when
+        variables can be separated so that one variable and its
+        differential are placed on one side and the other variable
+        on the other side.
+    </p>
+
+    <div class="formula">
+        dy/dx = f(x)g(y)
+        <br><br>
+
+        dy/g(y) = f(x) dx
+    </div>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        dy/dx = xy
+        <br><br>
+
+        dy/y = x dx
+        <br><br>
+
+        Integrating:
+        <br><br>
+
+        ∫dy/y = ∫x dx
+        <br><br>
+
+        log|y| = x²/2 + C
+    </div>
+
+
+    <h2>7. Equations Reducible to Variable Separable</h2>
+
+    <p>
+        Some differential equations are not directly separable but
+        can be converted into a separable form by substitution or
+        rearrangement.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        dy/dx = (x + y)/(x - y)
+        <br><br>
+
+        Put:
+        <br>
+        y = vx
+        <br><br>
+
+        Then:
+        <br>
+        dy/dx = v + x dv/dx
+        <br><br>
+
+        The equation can then be reduced to a variable separable form.
+    </div>
+
+
+    <h2>8. Linear Differential Equation</h2>
+
+    <p>
+        A first-order linear differential equation is generally
+        written as:
+    </p>
+
+    <div class="formula">
+        dy/dx + Py = Q
+    </div>
+
+    <p>
+        Here P and Q are functions of x.
+    </p>
+
+    <h3>Integrating Factor</h3>
+
+    <div class="formula">
+        I.F. = e<sup>∫P dx</sup>
+    </div>
+
+    <h3>Solution</h3>
+
+    <div class="formula">
+        y × I.F. = ∫(Q × I.F.)dx + C
+    </div>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        dy/dx + y = x
+        <br><br>
+
+        Here:
+        <br>
+        P = 1
+        <br>
+        Q = x
+        <br><br>
+
+        I.F. = e<sup>∫1dx</sup> = e<sup>x</sup>
+    </div>
+
+
+    <h2>9. Bernoulli's Differential Equation</h2>
+
+    <p>
+        Bernoulli's differential equation is a first-order
+        differential equation of the form:
+    </p>
+
+    <div class="formula">
+        dy/dx + Py = Qy<sup>n</sup>
+    </div>
+
+    <p>
+        It can be converted into a linear differential equation
+        using substitution.
+    </p>
+
+    <div class="formula">
+        Put:
+        <br><br>
+        v = y<sup>1-n</sup>
+    </div>
+
+    <div class="example">
+        <strong>Steps:</strong>
+        <ol>
+            <li>Write the equation in Bernoulli form.</li>
+            <li>Divide by y<sup>n</sup>.</li>
+            <li>Put v = y<sup>1-n</sup>.</li>
+            <li>Convert it into a linear differential equation.</li>
+            <li>Solve using integrating factor.</li>
+        </ol>
+    </div>
+
+
+    <h2>10. Linear Differential Equation of nth Order</h2>
+
+    <p>
+        A linear differential equation of nth order with constant
+        coefficients can be written as:
+    </p>
+
+    <div class="formula">
+        a<sub>n</sub>D<sup>n</sup>y +
+        a<sub>n-1</sub>D<sup>n-1</sup>y + ... +
+        a<sub>1</sub>Dy + a<sub>0</sub>y = X
+    </div>
+
+    <p>
+        Here D represents differentiation with respect to x.
+    </p>
+
+
+    <h2>11. Auxiliary Equation</h2>
+
+    <p>
+        To solve a linear differential equation with constant
+        coefficients, we form an auxiliary equation by replacing
+        D with m.
+    </p>
+
+    <div class="example">
+        For:
+        <br><br>
+
+        (D² - 5D + 6)y = 0
+        <br><br>
+
+        Auxiliary equation:
+        <br><br>
+
+        m² - 5m + 6 = 0
+        <br><br>
+
+        (m - 2)(m - 3) = 0
+        <br><br>
+
+        Therefore:
+        <br>
+        m = 2, 3
+    </div>
+
+
+    <h2>12. Complementary Function (CF)</h2>
+
+    <p>
+        The complementary function is the solution of the
+        corresponding homogeneous differential equation.
+    </p>
+
+    <div class="formula">
+        CF depends on the roots of the auxiliary equation.
+    </div>
+
+    <h3>For Distinct Real Roots</h3>
+
+    <div class="formula">
+        If roots are m₁ and m₂:
+        <br><br>
+
+        CF = C₁e<sup>m₁x</sup> + C₂e<sup>m₂x</sup>
+    </div>
+
+    <div class="example">
+        If roots are 2 and 3:
+        <br><br>
+
+        CF = C₁e<sup>2x</sup> + C₂e<sup>3x</sup>
+    </div>
+
+
+    <h2>13. Particular Integral (PI)</h2>
+
+    <p>
+        Particular Integral is the particular solution of a
+        non-homogeneous differential equation.
+    </p>
+
+    <div class="formula">
+        Complete Solution = CF + PI
+    </div>
+
+    <div class="example">
+        For:
+        <br><br>
+
+        F(D)y = X
+        <br><br>
+
+        General solution:
+        <br><br>
+
+        y = CF + PI
+    </div>
+
+
+    <h2>14. Complete Solution</h2>
+
+    <div class="formula">
+        <strong>Complete Solution = Complementary Function + Particular Integral</strong>
+    </div>
+
+
+    <h2>Quick Revision</h2>
+
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Important Point</th>
+        </tr>
+
+        <tr>
+            <td>Differential Equation</td>
+            <td>Equation containing derivatives</td>
+        </tr>
+
+        <tr>
+            <td>Order</td>
+            <td>Highest order derivative</td>
+        </tr>
+
+        <tr>
+            <td>Degree</td>
+            <td>Power of highest order derivative</td>
+        </tr>
+
+        <tr>
+            <td>Variable Separable</td>
+            <td>Separate variables and integrate</td>
+        </tr>
+
+        <tr>
+            <td>Linear Equation</td>
+            <td>dy/dx + Py = Q</td>
+        </tr>
+
+        <tr>
+            <td>Integrating Factor</td>
+            <td>e<sup>∫Pdx</sup></td>
+        </tr>
+
+        <tr>
+            <td>Bernoulli Equation</td>
+            <td>dy/dx + Py = Qyⁿ</td>
+        </tr>
+
+        <tr>
+            <td>CF</td>
+            <td>Solution of homogeneous equation</td>
+        </tr>
+
+        <tr>
+            <td>PI</td>
+            <td>Particular solution of non-homogeneous equation</td>
+        </tr>
+
+        <tr>
+            <td>Complete Solution</td>
+            <td>CF + PI</td>
+        </tr>
+    </table>
+
+
+    <h2>Important Exam Questions</h2>
+
+    <div class="question">
+        1. Define differential equation with examples.
+    </div>
+
+    <div class="question">
+        2. Find the order and degree of a differential equation.
+    </div>
+
+    <div class="question">
+        3. Solve a differential equation by variable separation.
+    </div>
+
+    <div class="question">
+        4. Solve a first-order linear differential equation.
+    </div>
+
+    <div class="question">
+        5. Explain Bernoulli's differential equation.
+    </div>
+
+    <div class="question">
+        6. Explain the auxiliary equation and complementary function.
+    </div>
+
+    <div class="question">
+        7. Find the complementary function and particular integral.
+    </div>
+
+
+    <h2>Viva Questions</h2>
+
+    <div class="question">
+        <strong>Q1.</strong> What is a differential equation?<br>
+        <strong>Ans:</strong> An equation containing derivatives of a dependent variable.
+    </div>
+
+    <div class="question">
+        <strong>Q2.</strong> What is the order?<br>
+        <strong>Ans:</strong> The order of the highest derivative present in the equation.
+    </div>
+
+    <div class="question">
+        <strong>Q3.</strong> What is the integrating factor of dy/dx + Py = Q?<br>
+        <strong>Ans:</strong> I.F. = e<sup>∫Pdx</sup>.
+    </div>
+
+    <div class="question">
+        <strong>Q4.</strong> What is Bernoulli's equation?<br>
+        <strong>Ans:</strong> dy/dx + Py = Qyⁿ.
+    </div>
+
+    <div class="question">
+        <strong>Q5.</strong> What is the complete solution?<br>
+        <strong>Ans:</strong> Complete Solution = CF + PI.
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PYQs | College StudyHub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="pyqs.css">
+
+
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<div class="logo">
+🎓 StudyHub
+</div>
+
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="subjects.html">
+Subjects
+</a>
+</li>
+
+<li>
+<a href="handwritten-notes.html">
+Handwritten Notes
+</a>
+</li>
+
+<li>
+<a href="pyqs.html">
+PYQs
+</a>
+</li>
+
+<li>
+<a href="quiz.html">
+Quiz
+</a>
+</li>
+
+<li>
+<a href="login.html">
+Login
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<span>
+📄 Previous Year Questions
+</span>
+
+<h1>
+Practice With PYQs
+</h1>
+
+<p>
+
+Prepare smarter by practicing
+previous year question papers
+subject-wise and year-wise.
+
+</p>
+
+</section>
+
+
+
+<!-- ================= FILTERS ================= -->
+
+<div class="filters">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search subject or year..."
+onkeyup="filterPYQs()"
+>
+
+
+<select
+id="semesterFilter"
+onchange="filterPYQs()"
+>
+
+<option value="all">
+All Semesters
+</option>
+
+<option value="1">
+Semester 1
+</option>
+
+<option value="2">
+Semester 2
+</option>
+
+<option value="3">
+Semester 3
+</option>
+
+<option value="4">
+Semester 4
+</option>
+
+<option value="5">
+Semester 5
+</option>
+
+<option value="6">
+Semester 6
+</option>
+
+</select>
+
+
+<select
+id="yearFilter"
+onchange="filterPYQs()"
+>
+
+<option value="all">
+All Years
+</option>
+
+<option value="2026">
+2026
+</option>
+
+<option value="2025">
+2025
+</option>
+
+<option value="2024">
+2024
+</option>
+
+<option value="2023">
+2023
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- ================= PYQ CONTENT ================= -->
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+📚 Question Papers
+</h2>
+
+<p>
+Choose a subject and start practicing.
+</p>
+
+</div>
+
+
+<div
+class="pyq-grid"
+id="pyqGrid"
+>
+
+
+<!-- 1 -->
+
+<div
+class="pyq-card"
+data-semester="1"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Soft Skills
+</span>
+
+<h3>
+Soft Skills PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>1</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Soft Skills')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Soft Skills"
+data-title="Soft Skills PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div
+class="pyq-card"
+data-semester="1"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Fundamental of Computers
+</span>
+
+<h3>
+Fundamental of Computers PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>1</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Fundamental of Computers')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Fundamental of Computers"
+data-title="Fundamental of Computers PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div
+class="pyq-card"
+data-semester="1"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Mathematics
+</span>
+
+<h3>
+Mathematics PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>1</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Mathematics')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Mathematics"
+data-title="Mathematics PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div
+class="pyq-card"
+data-semester="1"
+data-year="2025"
+>
+
+<span class="subject-tag">
+C Programming
+</span>
+
+<h3>
+C Programming PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>1</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('C Programming')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="C Programming"
+data-title="C Programming PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div
+class="pyq-card"
+data-semester="1"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Basics Of Information System
+</span>
+
+<h3>
+Basics Of Information System PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>1</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Basics Of Information System')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Basics Of Information System"
+data-title="Basics Of Information System PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div
+class="pyq-card"
+data-semester="2"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Data Structure
+</span>
+
+<h3>
+Data Structure PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>2</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Data Structure')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Data Structure"
+data-title="Data Structure PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div
+class="pyq-card"
+data-semester="2"
+data-year="2024"
+>
+
+<span class="subject-tag">
+DBMS
+</span>
+
+<h3>
+DBMS PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>2</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('DBMS')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="DBMS"
+data-title="DBMS PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div
+class="pyq-card"
+data-semester="2"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Operating System
+</span>
+
+<h3>
+Operating System PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>2</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Operating System')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Operating System"
+data-title="Operating System PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div
+class="pyq-card"
+data-semester="2"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Discrete Mathematics
+</span>
+
+<h3>
+Discrete Mathematics PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>2</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Discrete Mathematics')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Discrete Mathematics"
+data-title="Discrete Mathematics PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div
+class="pyq-card"
+data-semester="2"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Digital Electronics
+</span>
+
+<h3>
+Digital Electronics PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>2</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Digital Electronics')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Digital Electronics"
+data-title="Digital Electronics PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 11 -->
+
+<div
+class="pyq-card"
+data-semester="3"
+data-year="2025"
+>
+
+<span class="subject-tag">
+OOPs using Java
+</span>
+
+<h3>
+OOPs using Java PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>3</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('OOPs using Java')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="OOPs using Java"
+data-title="OOPs using Java PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 12 -->
+
+<div
+class="pyq-card"
+data-semester="3"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Software Engineering
+</span>
+
+<h3>
+Software Engineering PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>3</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Software Engineering')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Software Engineering"
+data-title="Software Engineering PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 13 -->
+
+<div
+class="pyq-card"
+data-semester="3"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Computer Architecture
+</span>
+
+<h3>
+Computer Architecture PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>3</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Computer Architecture')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Computer Architecture"
+data-title="Computer Architecture PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 14 -->
+
+<div
+class="pyq-card"
+data-semester="3"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Python Programming
+</span>
+
+<h3>
+Python Programming PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>3</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Python Programming')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Python Programming"
+data-title="Python Programming PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 15 -->
+
+<div
+class="pyq-card"
+data-semester="4"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Accounting & Financial Management
+</span>
+
+<h3>
+Accounting & Financial Management PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>4</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Accounting & Financial Management')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Accounting & Financial Management"
+data-title="Accounting & Financial Management PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 16 -->
+
+<div
+class="pyq-card"
+data-semester="4"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Advanced Java
+</span>
+
+<h3>
+Advanced Java PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>4</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Advanced Java')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Advanced Java"
+data-title="Advanced Java PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 17 -->
+
+<div
+class="pyq-card"
+data-semester="4"
+data-year="2025"
+>
+
+<span class="subject-tag">
+DAA
+</span>
+
+<h3>
+Design & Analysis of Algorithms PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>4</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('DAA')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="DAA"
+data-title="Design & Analysis of Algorithms PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 18 -->
+
+<div
+class="pyq-card"
+data-semester="4"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Web Design Concepts
+</span>
+
+<h3>
+Web Design Concepts PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>4</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Web Design Concepts')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Web Design Concepts"
+data-title="Web Design Concepts PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 19 -->
+
+<div
+class="pyq-card"
+data-semester="5"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Computer Graphics
+</span>
+
+<h3>
+Computer Graphics PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>5</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Computer Graphics')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Computer Graphics"
+data-title="Computer Graphics PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 20 -->
+
+<div
+class="pyq-card"
+data-semester="5"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Managerial Economics
+</span>
+
+<h3>
+Managerial Economics PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>5</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Managerial Economics')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Managerial Economics"
+data-title="Managerial Economics PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 21 -->
+
+<div
+class="pyq-card"
+data-semester="5"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Computer Networks
+</span>
+
+<h3>
+Computer Networks PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>5</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Computer Networks')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Computer Networks"
+data-title="Computer Networks PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 22 -->
+
+<div
+class="pyq-card"
+data-semester="5"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Artificial Intelligence
+</span>
+
+<h3>
+Artificial Intelligence PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>5</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Artificial Intelligence')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Artificial Intelligence"
+data-title="Artificial Intelligence PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 23 -->
+
+<div
+class="pyq-card"
+data-semester="6"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Cyber Law
+</span>
+
+<h3>
+Cyber Law PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>6</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Cyber Law')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Cyber Law"
+data-title="Cyber Law PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 24 -->
+
+<div
+class="pyq-card"
+data-semester="6"
+data-year="2024"
+>
+
+<span class="subject-tag">
+Data Analytics
+</span>
+
+<h3>
+Data Analytics PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>6</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2024
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Data Analytics')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Data Analytics"
+data-title="Data Analytics PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- 25 -->
+
+<div
+class="pyq-card"
+data-semester="6"
+data-year="2025"
+>
+
+<span class="subject-tag">
+Software Testing
+</span>
+
+<h3>
+Software Testing PYQ
+</h3>
+
+<div class="details">
+
+🎓 Semester:
+<strong>6</strong>
+
+<br>
+
+📅 Year:
+<span class="year">
+2025
+</span>
+
+<br>
+
+📄 Type:
+University Paper
+
+</div>
+
+<div class="button-row">
+
+<button
+class="view-btn"
+onclick="paperMessage('Software Testing')"
+>
+📖 View Paper
+</button>
+
+<button
+class="bookmark-btn"
+data-subject="Software Testing"
+data-title="Software Testing PYQ"
+title="Save Bookmark"
+onclick="savePYQBookmark(this)"
+>
+🔖
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================= NO RESULT ================= -->
+
+<div
+class="no-result"
+id="noResult"
+>
+
+😕 No PYQ found.
+
+<br><br>
+
+Try another subject,
+semester or year.
+
+</div>
+
+
+
+<!-- ================= UPLOAD ================= -->
+
+<section class="upload-section">
+
+<h2>
+➕ Upload a PYQ
+</h2>
+
+<p>
+Have a previous year paper?
+Share it with other StudyHub students.
+</p>
+
+
+<form
+class="upload-form"
+onsubmit="uploadPYQ(event)"
+>
+
+
+<div class="form-group">
+
+<label>
+👩‍🎓 Student Name
+</label>
+
+<input
+type="text"
+id="studentName"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+📚 Subject
+</label>
+
+<select
+id="subject"
+required
+>
+
+<option value="">
+Select Subject
+</option>
+
+<option>Soft Skills</option>
+
+<option>Fundamental of Computers</option>
+
+<option>Mathematics</option>
+
+<option>C Programming</option>
+
+<option>Basics Of Information System</option>
+
+<option>Data Structure</option>
+
+<option>DBMS</option>
+
+<option>Operating System</option>
+
+<option>Discrete Mathematics</option>
+
+<option>Digital Electronics</option>
+
+<option>OOPs using Java</option>
+
+<option>Software Engineering</option>
+
+<option>Computer Architecture</option>
+
+<option>Python Programming</option>
+
+<option>Accounting & Financial Management</option>
+
+<option>Advanced Java</option>
+
+<option>DAA</option>
+
+<option>Web Design Concepts</option>
+
+<option>Computer Graphics</option>
+
+<option>Managerial Economics</option>
+
+<option>Computer Networks</option>
+
+<option>Artificial Intelligence</option>
+
+<option>Cyber Law</option>
+
+<option>Data Analytics</option>
+
+<option>Software Testing</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+📅 Paper Year
+</label>
+
+<input
+type="number"
+id="paperYear"
+placeholder="Example: 2025"
+min="2000"
+max="2030"
+required
+>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+🎓 Semester
+</label>
+
+<select
+id="paperSemester"
+required
+>
+
+<option value="">
+Select Semester
+</option>
+
+<option value="1">
+Semester 1
+</option>
+
+<option value="2">
+Semester 2
+</option>
+
+<option value="3">
+Semester 3
+</option>
+
+<option value="4">
+Semester 4
+</option>
+
+<option value="5">
+Semester 5
+</option>
+
+<option value="6">
+Semester 6
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group full">
+
+<label>
+📎 Select Question Paper
+</label>
+
+<input
+type="file"
+id="pyqFile"
+accept=".pdf,.jpg,.jpeg,.png"
+required
+>
+
+</div>
+
+
+
+<div
+class="message"
+id="message"
+>
+
+🎉 PYQ uploaded successfully!
+
+</div>
+
+
+
+<button
+type="submit"
+class="upload-btn"
+>
+
+🚀 Upload PYQ
+
+</button>
+
+
+</form>
+
+</section>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+🎓 College StudyHub
+
+<br>
+
+Learn • Practice • Grow Together 💜
+
+</p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================================
+   SEARCH + FILTER
+===================================================== */
+
+function filterPYQs(){
+
+    let search =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase();
+
+    let semester =
+    document
+    .getElementById("semesterFilter")
+    .value;
+
+    let year =
+    document
+    .getElementById("yearFilter")
+    .value;
+
+    let cards =
+    document
+    .querySelectorAll(".pyq-card");
+
+    let found = 0;
+
+    cards.forEach(function(card){
+
+        let text =
+        card.innerText.toLowerCase();
+
+        let cardSemester =
+        card.dataset.semester;
+
+        let cardYear =
+        card.dataset.year;
+
+        let searchMatch =
+        text.includes(search);
+
+        let semesterMatch =
+        semester === "all" ||
+        cardSemester === semester;
+
+        let yearMatch =
+        year === "all" ||
+        cardYear === year;
+
+
+        if(
+            searchMatch &&
+            semesterMatch &&
+            yearMatch
+        ){
+
+            card.style.display="block";
+
+            found++;
+
+        }
+
+        else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+
+    document
+    .getElementById("noResult")
+    .style.display =
+    found === 0
+    ? "block"
+    : "none";
+
+}
+
+
+
+/* =====================================================
+   VIEW PAPER
+===================================================== */
+
+function paperMessage(subject){
+
+    alert(
+        "📄 " +
+        subject +
+        " PYQ will be available here once the actual question paper PDF is added."
+    );
+
+}
+
+
+
+/* =====================================================
+   BOOKMARK SYSTEM
+===================================================== */
+
+function savePYQBookmark(button){
+
+    let currentUser =
+    JSON.parse(
+        localStorage.getItem(
+            "studyHubCurrentUser"
+        )
+    );
+
+
+    /* LOGIN CHECK */
+
+    if(!currentUser){
+
+        alert(
+            "🔐 Please login first to save bookmarks."
+        );
+
+        window.location.href="login.html";
+
+        return;
+
+    }
+
+
+    /* CREATE BOOKMARK ARRAY */
+
+    if(!Array.isArray(currentUser.bookmarks)){
+
+        currentUser.bookmarks=[];
+
+    }
+
+
+    let subject =
+    button.dataset.subject;
+
+    let title =
+    button.dataset.title;
+
+
+    /* UNIQUE URL FOR PYQ */
+
+    let url =
+    "pyqs.html?subject=" +
+    encodeURIComponent(subject);
+
+
+    /* CHECK DUPLICATE */
+
+    let alreadySaved =
+    currentUser.bookmarks.some(function(bookmark){
+
+        return (
+            bookmark.type === "pyq" &&
+            bookmark.subject === subject
+        );
+
+    });
+
+
+    if(alreadySaved){
+
+        alert(
+            "🔖 This PYQ is already bookmarked!"
+        );
+
+        button.classList.add("saved");
+
+        return;
+
+    }
+
+
+    /* CREATE BOOKMARK */
+
+    let newBookmark={
+
+        id:Date.now(),
+
+        title:title,
+
+        subject:subject,
+
+        type:"pyq",
+
+        url:url,
+
+        createdAt:
+        new Date().toISOString()
+
+    };
+
+
+    currentUser.bookmarks.push(
+        newBookmark
+    );
+
+
+    /* SAVE CURRENT USER */
+
+    localStorage.setItem(
+
+        "studyHubCurrentUser",
+
+        JSON.stringify(currentUser)
+
+    );
+
+
+    /* UPDATE ALL USERS */
+
+    let users =
+    JSON.parse(
+        localStorage.getItem(
+            "studyHubUsers"
+        )
+    ) || [];
+
+
+    let userIndex =
+    users.findIndex(function(user){
+
+        return user.email === currentUser.email;
+
+    });
+
+
+    if(userIndex !== -1){
+
+        users[userIndex]=currentUser;
+
+        localStorage.setItem(
+
+            "studyHubUsers",
+
+            JSON.stringify(users)
+
+        );
+
+    }
+
+
+    /* CHANGE BUTTON */
+
+    button.classList.add("saved");
+
+    button.innerHTML="🔖✓";
+
+    button.title="Bookmarked";
+
+
+    alert(
+        "✅ " +
+        subject +
+        " PYQ saved to Bookmarks!"
+    );
+
+}
+
+
+
+/* =====================================================
+   CHECK EXISTING BOOKMARKS
+===================================================== */
+
+function updateBookmarkButtons(){
+
+    let currentUser =
+    JSON.parse(
+        localStorage.getItem(
+            "studyHubCurrentUser"
+        )
+    );
+
+
+    if(!currentUser){
+
+        return;
+
+    }
+
+
+    let bookmarks =
+    currentUser.bookmarks || [];
+
+
+    document
+    .querySelectorAll(".bookmark-btn")
+    .forEach(function(button){
+
+        let subject =
+        button.dataset.subject;
+
+
+        let exists =
+        bookmarks.some(function(bookmark){
+
+            return (
+                bookmark.type === "pyq" &&
+                bookmark.subject === subject
+            );
+
+        });
+
+
+        if(exists){
+
+            button.classList.add("saved");
+
+            button.innerHTML="🔖✓";
+
+            button.title="Bookmarked";
+
+        }
+
+    });
+
+}
+
+
+
+/* =====================================================
+   UPLOAD PYQ
+===================================================== */
+
+function uploadPYQ(event){
+
+    event.preventDefault();
+
+
+    let name =
+    document
+    .getElementById("studentName")
+    .value.trim();
+
+
+    let subject =
+    document
+    .getElementById("subject")
+    .value;
+
+
+    let year =
+    document
+    .getElementById("paperYear")
+    .value;
+
+
+    let semester =
+    document
+    .getElementById("paperSemester")
+    .value;
+
+
+    let file =
+    document
+    .getElementById("pyqFile")
+    .files[0];
+
+
+    if(!file){
+
+        alert(
+            "Please select a PYQ file."
+        );
+
+        return;
+
+    }
+
+
+    let pyq={
+
+        name:name,
+
+        subject:subject,
+
+        year:year,
+
+        semester:semester,
+
+        fileName:file.name
+
+    };
+
+
+    let oldPYQs =
+    JSON.parse(
+        localStorage.getItem(
+            "studyHubPYQs"
+        )
+    ) || [];
+
+
+    oldPYQs.push(pyq);
+
+
+    localStorage.setItem(
+
+        "studyHubPYQs",
+
+        JSON.stringify(oldPYQs)
+
+    );
+
+
+    document
+    .getElementById("message")
+    .style.display="block";
+
+
+    document
+    .querySelector(".upload-form")
+    .reset();
+
+
+    setTimeout(function(){
+
+        document
+        .getElementById("message")
+        .style.display="none";
+
+    },3000);
+
+
+    addUploadedPYQ(pyq);
+
+}
+
+
+
+/* =====================================================
+   ADD UPLOADED PYQ
+===================================================== */
+
+function addUploadedPYQ(pyq){
+
+    let grid =
+    document
+    .getElementById("pyqGrid");
+
+
+    let card =
+    document.createElement("div");
+
+
+    card.className="pyq-card";
+
+
+    card.dataset.semester =
+    pyq.semester;
+
+
+    card.dataset.year =
+    pyq.year;
+
+
+    card.innerHTML=`
+
+        <span class="subject-tag">
+
+            ${escapeHTML(pyq.subject)}
+
+        </span>
+
+
+        <h3>
+
+            Previous Year Question Paper
+
+        </h3>
+
+
+        <div class="details">
+
+            👩‍🎓 Uploaded by:
+
+            <strong>
+                ${escapeHTML(pyq.name)}
+            </strong>
+
+            <br>
+
+            🎓 Semester:
+
+            <strong>
+                ${escapeHTML(pyq.semester)}
+            </strong>
+
+            <br>
+
+            📅 Year:
+
+            <span class="year">
+                ${escapeHTML(pyq.year)}
+            </span>
+
+            <br>
+
+            📎 File:
+
+            ${escapeHTML(pyq.fileName)}
+
+        </div>
+
+
+        <div class="button-row">
+
+            <button
+                class="view-btn"
+                onclick="paperMessage('${safeJS(pyq.subject)}')"
+            >
+
+                📖 View Paper
+
+            </button>
+
+
+            <button
+                class="bookmark-btn"
+                data-subject="${escapeHTML(pyq.subject)}"
+                data-title="Previous Year Question Paper"
+                title="Save Bookmark"
+                onclick="savePYQBookmark(this)"
+            >
+
+                🔖
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    grid.appendChild(card);
+
+}
+
+
+
+/* =====================================================
+   LOAD UPLOADED PYQs
+===================================================== */
+
+function loadUploadedPYQs(){
+
+    let pyqs =
+    JSON.parse(
+        localStorage.getItem(
+            "studyHubPYQs"
+        )
+    ) || [];
+
+
+    pyqs.forEach(function(pyq){
+
+        addUploadedPYQ(pyq);
+
+    });
+
+}
+
+
+
+/* =====================================================
+   HTML ESCAPE
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+function safeJS(value){
+
+    return String(value)
+    .replace(/\\/g,"\\\\")
+    .replace(/'/g,"\\'")
+    .replace(/"/g,'\\"')
+    .replace(/\n/g," ");
+
+}
+
+
+
+/* =====================================================
+   START
+===================================================== */
+
+loadUploadedPYQs();
+
+updateBookmarkButtons();
+
+</script>
+
+
+</body>
+
+</html>

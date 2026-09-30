@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Structure - Unit 5</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0;color:#222;line-height:1.6}
+.container{max-width:1000px;margin:30px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px #ddd}
+h1{text-align:center;color:#4f46e5}h2{color:#3730a3;border-bottom:2px solid #eee;padding-bottom:6px}
+h3{color:#4f46e5}.box{background:#f8f9ff;padding:15px;border-left:4px solid #4f46e5;margin:15px 0}
+pre{background:#f1f3f5;padding:15px;border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px}th{background:#eef0ff}
+.revision{background:#f0fdf4;padding:15px;border-left:4px solid green}
+.back{background:#4f46e5;color:white;padding:9px 15px;text-decoration:none;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+<h1>Data Structure - Unit 5</h1>
+
+<h2>1. Graphs</h2>
+
+<div class="box">
+<b>Definition:</b> A graph is a non-linear data structure consisting
+of vertices and edges connecting them.
+</div>
+
+<h3>Basic Terminology</h3>
+
+<ul>
+<li><b>Vertex:</b> A node of a graph.</li>
+<li><b>Edge:</b> Connection between two vertices.</li>
+<li><b>Degree:</b> Number of edges connected to a vertex.</li>
+<li><b>Path:</b> Sequence of connected vertices.</li>
+<li><b>Connected Graph:</b> A graph where vertices are connected through paths.</li>
+</ul>
+
+<h2>2. Graph Representation</h2>
+
+<h3>Adjacency Matrix</h3>
+
+<p>
+An adjacency matrix represents a graph using a two-dimensional array.
+The values indicate whether an edge exists between vertices.
+</p>
+
+<h3>Adjacency List</h3>
+
+<p>
+An adjacency list stores a list of neighbouring vertices for each
+vertex.
+</p>
+
+<table>
+<tr>
+<th>Adjacency Matrix</th>
+<th>Adjacency List</th>
+</tr>
+
+<tr>
+<td>Uses 2D matrix</td>
+<td>Uses lists</td>
+</tr>
+
+<tr>
+<td>Easy edge checking</td>
+<td>Useful for sparse graphs</td>
+</tr>
+</table>
+
+<h2>3. Graph Traversal</h2>
+
+<h3>Depth First Search (DFS)</h3>
+
+<p>
+DFS explores one path deeply before returning and exploring another path.
+It can use recursion or a stack.
+</p>
+
+<pre>
+DFS(v)
+{
+    Visit v;
+
+    for each unvisited neighbour u
+        DFS(u);
+}
+</pre>
+
+<h3>Breadth First Search (BFS)</h3>
+
+<p>
+BFS visits vertices level by level. It commonly uses a queue.
+</p>
+
+<pre>
+BFS(start)
+{
+    Insert start into queue;
+
+    while(queue is not empty)
+    {
+        Remove a vertex;
+        Visit its unvisited neighbours;
+    }
+}
+</pre>
+
+<table>
+<tr>
+<th>DFS</th>
+<th>BFS</th>
+</tr>
+
+<tr>
+<td>Depth-wise traversal</td>
+<td>Level-wise traversal</td>
+</tr>
+
+<tr>
+<td>Uses stack/recursion</td>
+<td>Uses queue</td>
+</tr>
+</table>
+
+<h2>4. Connected Component</h2>
+
+<div class="box">
+A connected component is a group of vertices in which the vertices
+are reachable from one another within that component.
+</div>
+
+<h2>5. Spanning Tree</h2>
+
+<p>
+A spanning tree is a tree that contains all the vertices of a connected
+graph.
+</p>
+
+<h2>6. Minimum Cost Spanning Tree</h2>
+
+<p>
+A minimum cost spanning tree is a spanning tree whose total edge cost
+is minimum.
+</p>
+
+<h2>7. Prim's Algorithm</h2>
+
+<p>
+Prim's algorithm starts with a vertex and repeatedly selects the
+minimum-cost edge connecting a selected vertex to an unselected vertex.
+</p>
+
+<h3>Basic Steps</h3>
+
+<ol>
+<li>Select a starting vertex.</li>
+<li>Choose the minimum-cost connecting edge.</li>
+<li>Add the new vertex.</li>
+<li>Repeat until all vertices are included.</li>
+</ol>
+
+<h2>8. Kruskal's Algorithm</h2>
+
+<p>
+Kruskal's algorithm sorts edges according to their cost and selects
+the smallest suitable edges without creating a cycle.
+</p>
+
+<h3>Basic Steps</h3>
+
+<ol>
+<li>Sort all edges by increasing cost.</li>
+<li>Select the smallest edge.</li>
+<li>Check that it does not create a cycle.</li>
+<li>Add it to the spanning tree.</li>
+<li>Repeat until the tree is complete.</li>
+</ol>
+
+<div class="box">
+<b>Example:</b> If edge costs are 1, 2, 4 and 5, Kruskal considers
+them from smallest to largest and selects suitable edges without
+forming a cycle.
+</div>
+
+<div class="revision">
+<b>Quick Revision:</b>
+<ul>
+<li>Graph = Vertices + Edges</li>
+<li>Adjacency Matrix = 2D representation</li>
+<li>Adjacency List = List of neighbours</li>
+<li>DFS = Depth-first traversal</li>
+<li>BFS = Breadth-first traversal</li>
+<li>Spanning Tree = Contains all vertices</li>
+<li>Prim and Kruskal = Minimum Cost Spanning Tree algorithms</li>
+</ul>
+</div>
+
+<h2>Exam / Viva Questions</h2>
+
+<ol>
+<li>What is a graph?</li>
+<li>What are vertices and edges?</li>
+<li>Explain adjacency matrix.</li>
+<li>Explain adjacency list.</li>
+<li>What is DFS?</li>
+<li>What is BFS?</li>
+<li>Differentiate DFS and BFS.</li>
+<li>What is a connected component?</li>
+<li>What is a spanning tree?</li>
+<li>Explain Prim's algorithm.</li>
+<li>Explain Kruskal's algorithm.</li>
+</ol>
+
+</div>
+</body>
+</html>

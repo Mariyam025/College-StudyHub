@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Engineering - Unit 4</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
+}
+header{
+    background:#3949ab;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:25px auto;
+}
+.back{
+    display:inline-block;
+    background:#3949ab;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+    margin-bottom:20px;
+}
+.topic{
+    background:white;
+    padding:22px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+h2{color:#3949ab;}
+h3{color:#5c6bc0;}
+.important{
+    background:#e8eaf6;
+    border-left:5px solid #3949ab;
+    padding:12px;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th,td{
+    border:1px solid #999;
+    padding:10px;
+    text-align:left;
+}
+th{
+    background:#3949ab;
+    color:white;
+}
+footer{
+    background:#3949ab;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Software Engineering</h1>
+<p>Unit 4 – Software Testing</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. Software Testing</h2>
+<p>
+Software testing is the process of evaluating software to find defects
+and verify that it satisfies specified requirements.
+</p>
+
+<div class="important">
+Testing helps identify defects before software is delivered to users.
+</div>
+</div>
+
+<div class="topic">
+<h2>2. Objectives of Testing</h2>
+<ul>
+<li>Find defects.</li>
+<li>Verify requirements.</li>
+<li>Improve software quality.</li>
+<li>Check reliability.</li>
+<li>Reduce the risk of failures.</li>
+<li>Ensure expected behavior.</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>3. Verification and Validation</h2>
+
+<table>
+<tr>
+<th>Verification</th>
+<th>Validation</th>
+</tr>
+<tr>
+<td>Checks whether software is being built correctly.</td>
+<td>Checks whether the right software is being built.</td>
+</tr>
+<tr>
+<td>Focuses on documents and development activities.</td>
+<td>Focuses on the actual software and user needs.</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>4. Levels of Testing</h2>
+
+<ol>
+<li>Unit Testing</li>
+<li>Integration Testing</li>
+<li>System Testing</li>
+<li>Acceptance Testing</li>
+</ol>
+</div>
+
+<div class="topic">
+<h2>5. Unit Testing</h2>
+<p>
+Unit testing tests individual modules or components of software
+independently.
+</p>
+
+<p>
+Example: Testing a login function separately.
+</p>
+</div>
+
+<div class="topic">
+<h2>6. Integration Testing</h2>
+<p>
+Integration testing checks whether different modules work correctly
+when combined.
+</p>
+
+<p>
+Example: Checking whether the login module correctly connects with
+the user database.
+</p>
+</div>
+
+<div class="topic">
+<h2>7. System Testing</h2>
+<p>
+System testing evaluates the complete integrated software system
+against its requirements.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Acceptance Testing</h2>
+<p>
+Acceptance testing determines whether the software is acceptable
+to the customer or intended users.
+</p>
+</div>
+
+<div class="topic">
+<h2>9. Black Box Testing</h2>
+<p>
+Black box testing tests software functionality without requiring
+knowledge of its internal implementation.
+</p>
+
+<h3>Examples:</h3>
+<ul>
+<li>Equivalence Partitioning</li>
+<li>Boundary Value Analysis</li>
+<li>Decision Table Testing</li>
+<li>State Transition Testing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. White Box Testing</h2>
+<p>
+White box testing examines internal program logic, structure and
+control flow.
+</p>
+
+<h3>Examples:</h3>
+<ul>
+<li>Statement Coverage</li>
+<li>Branch Coverage</li>
+<li>Path Testing</li>
+<li>Condition Testing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>11. Black Box vs White Box Testing</h2>
+
+<table>
+<tr>
+<th>Black Box</th>
+<th>White Box</th>
+</tr>
+
+<tr>
+<td>Internal code is not required.</td>
+<td>Internal code structure is considered.</td>
+</tr>
+
+<tr>
+<td>Focuses on functionality.</td>
+<td>Focuses on logic and control flow.</td>
+</tr>
+
+<tr>
+<td>Usually based on requirements.</td>
+<td>Usually based on program structure.</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>12. Test Case</h2>
+<p>
+A test case is a documented set of inputs, conditions and expected
+results used to verify a particular software behavior.
+</p>
+
+<h3>Typical fields:</h3>
+<ul>
+<li>Test Case ID</li>
+<li>Test Description</li>
+<li>Input</li>
+<li>Expected Result</li>
+<li>Actual Result</li>
+<li>Status</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>13. Test Plan</h2>
+<p>
+A test plan is a document that describes the testing scope,
+strategy, resources, schedule and activities.
+</p>
+</div>
+
+<div class="topic">
+<h2>14. Debugging</h2>
+<p>
+Debugging is the process of locating, analyzing and fixing defects
+in software.
+</p>
+
+<div class="important">
+Testing identifies failures or defects; debugging investigates and
+fixes the underlying problems.
+</div>
+</div>
+
+<div class="topic">
+<h2>15. Regression Testing</h2>
+<p>
+Regression testing checks that changes or fixes have not introduced
+new problems into previously working functionality.
+</p>
+</div>
+
+<div class="topic">
+<h2>16. Performance Testing</h2>
+<p>
+Performance testing evaluates software behavior under expected
+and specified workloads.
+</p>
+
+<h3>Examples:</h3>
+<ul>
+<li>Load Testing</li>
+<li>Stress Testing</li>
+<li>Scalability Testing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>17. Important Exam Questions</h2>
+<ol>
+<li>What is software testing?</li>
+<li>Explain objectives of software testing.</li>
+<li>Differentiate verification and validation.</li>
+<li>Explain different levels of testing.</li>
+<li>What is unit testing?</li>
+<li>What is integration testing?</li>
+<li>Explain black box testing.</li>
+<li>Explain white box testing.</li>
+<li>Differentiate black box and white box testing.</li>
+<li>What is a test case?</li>
+<li>What is a test plan?</li>
+<li>What is debugging?</li>
+<li>What is regression testing?</li>
+</ol>
+</div>
+
+</div>
+
+<footer>
+<p>College StudyHub | Software Engineering – Unit 4</p>
+</footer>
+
+</body>
+</html>

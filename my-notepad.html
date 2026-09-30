@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>My Notepad | College StudyHub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,sans-serif;
+
+    min-height:100vh;
+
+    color:white;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        #312e81,
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at bottom right,
+        #831843,
+        transparent 35%
+    ),
+    #080b18;
+
+    padding:30px;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.logo{
+
+    color:#c084fc;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+}
+
+.home-btn{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+}
+
+
+/* MAIN */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* HEADER */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    font-size:36px;
+
+    margin-bottom:8px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #c084fc,
+        #f472b6
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.page-header p{
+
+    color:#94a3b8;
+
+}
+
+
+/* CREATE NOTE */
+
+.create-box{
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.create-box h2{
+
+    margin-bottom:20px;
+
+    color:#c084fc;
+
+}
+
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border-radius:10px;
+
+    border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+    background:
+    rgba(0,0,0,0.25);
+
+    color:white;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+select option{
+
+    background:#111827;
+
+    color:white;
+
+}
+
+textarea{
+
+    min-height:150px;
+
+    resize:vertical;
+
+    margin-top:15px;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#a855f7;
+
+}
+
+
+.color-row{
+
+    margin-top:15px;
+
+}
+
+.color-row label{
+
+    display:block;
+
+    color:#cbd5e1;
+
+    margin-bottom:8px;
+
+}
+
+#noteColor{
+
+    height:45px;
+
+    padding:4px;
+
+    cursor:pointer;
+
+}
+
+
+.save-btn{
+
+    margin-top:18px;
+
+    padding:13px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #db2777
+    );
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* SEARCH */
+
+.search-box{
+
+    margin-bottom:25px;
+
+}
+
+.search-box input{
+
+    max-width:500px;
+
+}
+
+
+/* NOTES */
+
+.notes-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.note-card{
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(12px);
+
+    transition:0.3s;
+
+}
+
+.note-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#a855f7;
+
+}
+
+.note-header{
+
+    margin-bottom:15px;
+
+}
+
+.note-header h3{
+
+    margin-bottom:8px;
+
+    color:white;
+
+}
+
+.note-subject{
+
+    display:inline-block;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    color:#ddd6fe;
+
+    background:
+    rgba(139,92,246,0.18);
+
+}
+
+.note-content{
+
+    color:#cbd5e1;
+
+    line-height:1.6;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    min-height:70px;
+
+}
+
+.note-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    padding-top:15px;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,0.08);
+
+}
+
+.note-footer small{
+
+    color:#64748b;
+
+}
+
+.note-footer button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:7px 12px;
+
+    border-radius:8px;
+
+    color:#fecaca;
+
+    background:
+    rgba(239,68,68,0.12);
+
+}
+
+.note-footer button:hover{
+
+    background:
+    rgba(239,68,68,0.25);
+
+}
+
+
+/* EMPTY */
+
+.empty-state{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#94a3b8;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .notes-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .navbar{
+
+        align-items:flex-start;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .notes-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .page-header h1{
+
+        font-size:30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <a href="index.html"
+       class="logo">
+
+        🎓 StudyHub
+
+    </a>
+
+    <a href="dashboard.html"
+       class="home-btn">
+
+        ← Dashboard
+
+    </a>
+
+</nav>
+
+
+<main class="container">
+
+
+<div class="page-header">
+
+    <h1>
+        My Notepad
+    </h1>
+
+    <p>
+        Create and manage your personal study notes.
+    </p>
+
+</div>
+
+
+<!-- CREATE NOTE -->
+
+<section class="create-box">
+
+    <h2>
+        ✨ Create New Note
+    </h2>
+
+
+    <div class="form-grid">
+
+
+        <input
+            type="text"
+            id="noteTitle"
+            placeholder="Note title"
+        >
+
+
+        <select id="noteSubject">
+
+            <option value="">
+                Select Subject
+            </option>
+
+            <option value="Basic of Information System">
+                Basic of Information System
+            </option>
+
+            <option value="C Programming">
+                C Programming
+            </option>
+
+            <option value="Data Structure">
+                Data Structure
+            </option>
+
+            <option value="DBMS">
+                DBMS
+            </option>
+
+            <option value="Digital Electronics">
+                Digital Electronics
+            </option>
+
+            <option value="Discrete Mathematics">
+                Discrete Mathematics
+            </option>
+
+            <option value="Fundamental of Computers">
+                Fundamental of Computers
+            </option>
+
+            <option value="Mathematics">
+                Mathematics
+            </option>
+
+            <option value="OOPs using Java">
+                OOPs using Java
+            </option>
+
+            <option value="Operating Systems">
+                Operating Systems
+            </option>
+
+            <option value="Soft Skills">
+                Soft Skills
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <textarea
+        id="noteContent"
+        placeholder="Write your note here..."
+    ></textarea>
+
+
+    <div class="color-row">
+
+        <label for="noteColor">
+            Choose Note Color
+        </label>
+
+        <input
+            type="color"
+            id="noteColor"
+            value="#a855f7"
+        >
+
+    </div>
+
+
+    <button
+        type="button"
+        id="saveNoteBtn"
+        class="save-btn">
+
+        💾 Save Note
+
+    </button>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchNotes"
+        placeholder="🔍 Search your notes..."
+    >
+
+</div>
+
+
+<!-- NOTES -->
+
+<section>
+
+    <div
+        id="notesContainer"
+        class="notes-grid">
+
+        <div class="empty-state">
+
+            <h3>
+                Loading notes...
+            </h3>
+
+            <p>
+                Please wait.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script src="my-notepad.js"></script>
+
+
+</body>
+
+</html>

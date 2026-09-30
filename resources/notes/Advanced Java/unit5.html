@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Java - Unit 5</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Advanced Java Technology - Unit 5</h1>
+
+<div class="topic">
+<h2>1. Web Application Architecture</h2>
+
+<p>
+A Java web application commonly uses different layers for presentation,
+business logic and database operations.
+</p>
+
+<pre>
+Browser
+   ↓
+JSP / View
+   ↓
+Servlet / Controller
+   ↓
+Java Classes / Model
+   ↓
+JDBC
+   ↓
+MySQL Database
+</pre>
+</div>
+
+<div class="topic">
+<h2>2. CRUD Web Application</h2>
+
+<p>
+CRUD stands for:
+</p>
+
+<ul>
+<li><b>Create</b> - Insert new record</li>
+<li><b>Read</b> - Display records</li>
+<li><b>Update</b> - Modify record</li>
+<li><b>Delete</b> - Remove record</li>
+</ul>
+
+<p>
+A typical Java web application can implement CRUD using JSP, Servlet and JDBC.
+</p>
+</div>
+
+<div class="topic">
+<h2>3. MVC with JSP, Servlet and JDBC</h2>
+
+<pre>
+JSP
+ ↓
+Servlet
+ ↓
+Java Model / DAO
+ ↓
+JDBC
+ ↓
+MySQL
+</pre>
+
+<p>
+This structure makes the application easier to understand and maintain.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. DAO Pattern</h2>
+
+<p>
+DAO stands for <b>Data Access Object</b>.
+It separates database-related code from other application code.
+</p>
+
+<p>
+For example, a StudentDAO class can contain methods such as:
+</p>
+
+<ul>
+<li>addStudent()</li>
+<li>getStudents()</li>
+<li>updateStudent()</li>
+<li>deleteStudent()</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>5. Database Transactions</h2>
+
+<p>
+A transaction is a group of database operations treated as one unit.
+</p>
+
+<p>Important operations:</p>
+
+<ul>
+<li>commit()</li>
+<li>rollback()</li>
+</ul>
+
+<pre>
+con.setAutoCommit(false);
+
+try {
+
+    // database operations
+
+    con.commit();
+
+} catch(Exception e) {
+
+    con.rollback();
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. Connection Pooling</h2>
+
+<p>
+Connection pooling means keeping a group of database connections available
+for reuse instead of creating a new connection for every request.
+</p>
+
+<p>
+It can improve application performance and resource management.
+</p>
+</div>
+
+<div class="topic">
+<h2>7. Deployment on Apache Tomcat</h2>
+
+<p>
+Apache Tomcat can be used to run Java web applications containing Servlets and JSP.
+</p>
+
+<h3>Basic Steps</h3>
+
+<ol>
+<li>Create Dynamic Web Project in Eclipse.</li>
+<li>Add Servlet/JSP files.</li>
+<li>Configure Apache Tomcat.</li>
+<li>Run the project on server.</li>
+<li>Open the application in browser.</li>
+</ol>
+</div>
+
+<div class="topic">
+<h2>8. web.xml</h2>
+
+<p>
+web.xml is called the deployment descriptor.
+It can contain configuration information for a web application.
+</p>
+
+<p>
+Modern Servlet applications can also use annotations for configuration.
+</p>
+
+<pre>
+@WebServlet("/LoginServlet")
+public class LoginServlet
+    extends HttpServlet {
+
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. Common Advanced Java Errors</h2>
+
+<ul>
+<li>Database connection error</li>
+<li>Wrong JDBC URL</li>
+<li>JDBC driver missing</li>
+<li>404 Not Found</li>
+<li>500 Internal Server Error</li>
+<li>Servlet mapping error</li>
+<li>Wrong JSP path</li>
+<li>Tomcat configuration error</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. Complete Web Application Flow</h2>
+
+<pre>
+User
+ ↓
+HTML / JSP Form
+ ↓
+Servlet
+ ↓
+Validation
+ ↓
+DAO
+ ↓
+JDBC
+ ↓
+MySQL
+ ↓
+Result
+ ↓
+Servlet
+ ↓
+JSP
+ ↓
+User
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. Advantages of Advanced Java</h2>
+
+<ul>
+<li>Database connectivity</li>
+<li>Dynamic web applications</li>
+<li>Reusable components</li>
+<li>Session management</li>
+<li>Server-side processing</li>
+<li>Enterprise application development</li>
+<li>Separation of application layers</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

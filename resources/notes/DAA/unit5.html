@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAA - Unit 5</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Design and Analysis of Algorithm - Unit 5</h1>
+
+<div class="topic">
+<h2>1. Graph Algorithms</h2>
+
+<p>
+A graph consists of vertices and edges.
+Graph algorithms are used to solve problems involving connections
+between objects.
+</p>
+
+<p>Applications include:</p>
+
+<ul>
+<li>Computer networks</li>
+<li>Maps and navigation</li>
+<li>Social networks</li>
+<li>Routing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Graph Coloring</h2>
+
+<p>
+Graph coloring assigns colors to vertices so that adjacent vertices
+do not have the same color.
+</p>
+
+<p>
+The minimum number of colors required is called the chromatic number
+of the graph.
+</p>
+</div>
+
+<div class="topic">
+<h2>3. Hamiltonian Cycle</h2>
+
+<p>
+A Hamiltonian cycle is a cycle in a graph that visits every vertex
+exactly once and returns to the starting vertex.
+</p>
+
+<p>
+Backtracking can be used to solve the Hamiltonian cycle problem.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. Travelling Salesman Problem</h2>
+
+<p>
+The Travelling Salesman Problem (TSP) asks for a minimum-cost tour
+that visits every city exactly once and returns to the starting city.
+</p>
+
+<p>
+TSP is a well-known computationally difficult optimization problem.
+</p>
+</div>
+
+<div class="topic">
+<h2>5. Branch and Bound</h2>
+
+<p>
+Branch and Bound divides a problem into smaller subproblems and
+uses bounds to eliminate subproblems that cannot produce a better
+solution.
+</p>
+
+<p>It can be applied to problems such as:</p>
+
+<ul>
+<li>Travelling Salesman Problem</li>
+<li>0/1 Knapsack</li>
+<li>Scheduling problems</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. String Matching</h2>
+
+<p>
+String matching is the process of finding a pattern inside a text.
+</p>
+
+<p>Important algorithms:</p>
+
+<ul>
+<li>Naive String Matching</li>
+<li>Rabin-Karp</li>
+<li>KMP Algorithm</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>7. Naive String Matching</h2>
+
+<p>
+The naive method compares the pattern with every possible position
+in the text.
+</p>
+
+<p>
+It is simple but can require many comparisons.
+</p>
+
+<pre>
+Text:    ABCABC
+Pattern: ABC
+
+Compare pattern
+at each possible position.
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. Rabin-Karp Algorithm</h2>
+
+<p>
+Rabin-Karp uses hashing to compare the pattern with sections of text.
+</p>
+
+<p>
+Instead of directly comparing every character first, hash values
+can be compared.
+</p>
+</div>
+
+<div class="topic">
+<h2>9. KMP Algorithm</h2>
+
+<p>
+KMP stands for <b>Knuth-Morris-Pratt</b>.
+It improves pattern searching by avoiding unnecessary comparisons.
+</p>
+
+<p>
+It uses a preprocessing table commonly called the LPS
+(Longest Proper Prefix which is also Suffix) array.
+</p>
+</div>
+
+<div class="topic">
+<h2>10. NP, NP-Hard and NP-Complete</h2>
+
+<h3>P</h3>
+<p>
+Problems that can be solved in polynomial time by a deterministic algorithm.
+</p>
+
+<h3>NP</h3>
+<p>
+Problems whose solutions can be verified in polynomial time.
+</p>
+
+<h3>NP-Hard</h3>
+<p>
+Problems at least as difficult as the problems in NP, under the
+standard polynomial-time reduction framework.
+</p>
+
+<h3>NP-Complete</h3>
+<p>
+Problems that are both in NP and NP-Hard.
+</p>
+</div>
+
+<div class="topic">
+<h2>11. Approximation Algorithms</h2>
+
+<p>
+Approximation algorithms are designed to find solutions that are
+close to optimal for difficult optimization problems.
+</p>
+</div>
+
+<div class="topic">
+<h2>12. Importance of Algorithm Analysis</h2>
+
+<ul>
+<li>Helps compare algorithms.</li>
+<li>Helps estimate resource requirements.</li>
+<li>Helps select suitable solutions.</li>
+<li>Helps improve program efficiency.</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

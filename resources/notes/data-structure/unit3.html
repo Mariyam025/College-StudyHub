@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Structure - Unit 3</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0;color:#222;line-height:1.6}
+.container{max-width:1000px;margin:30px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px #ddd}
+h1{text-align:center;color:#4f46e5}h2{color:#3730a3;border-bottom:2px solid #eee;padding-bottom:6px}
+h3{color:#4f46e5}.box{background:#f8f9ff;padding:15px;border-left:4px solid #4f46e5;margin:15px 0}
+pre{background:#f1f3f5;padding:15px;border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px}th{background:#eef0ff}
+.revision{background:#f0fdf4;padding:15px;border-left:4px solid green}
+.back{background:#4f46e5;color:white;padding:9px 15px;text-decoration:none;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+<h1>Data Structure - Unit 3</h1>
+
+<h2>1. Trees</h2>
+
+<div class="box">
+<b>Definition:</b> A tree is a non-linear data structure consisting of
+nodes connected by edges in a hierarchical manner.
+</div>
+
+<h3>Basic Terminology</h3>
+<ul>
+<li><b>Root:</b> Topmost node.</li>
+<li><b>Parent:</b> Node having child nodes.</li>
+<li><b>Child:</b> Node below a parent.</li>
+<li><b>Leaf:</b> Node having no child.</li>
+<li><b>Edge:</b> Connection between two nodes.</li>
+<li><b>Degree:</b> Number of children of a node.</li>
+</ul>
+
+<h2>2. Binary Tree</h2>
+
+<div class="box">
+A binary tree is a tree in which every node has at most two children,
+called left child and right child.
+</div>
+
+<h2>3. Binary Tree Representation</h2>
+
+<h3>Array Representation</h3>
+<p>
+Nodes can be stored in an array using index relationships.
+</p>
+
+<h3>Pointer / Linked List Representation</h3>
+
+<pre>
+struct Node
+{
+    int data;
+    struct Node *left;
+    struct Node *right;
+};
+</pre>
+
+<h2>4. Binary Search Tree</h2>
+
+<div class="box">
+<b>Definition:</b> In a Binary Search Tree, smaller values are stored
+in the left subtree and larger values are stored in the right subtree.
+</div>
+
+<p><b>Example:</b> Insert 50, 30 and 70.</p>
+<p>30 → Left of 50</p>
+<p>70 → Right of 50</p>
+
+<h2>5. Strictly Binary Tree</h2>
+
+<p>
+A strictly binary tree is a binary tree in which every node has either
+exactly two children or no children.
+</p>
+
+<h2>6. Complete Binary Tree</h2>
+
+<p>
+A complete binary tree has all levels completely filled except possibly
+the last level. The last level is filled from left to right.
+</p>
+
+<h2>7. Extended Binary Tree</h2>
+
+<p>
+An extended binary tree represents missing children using external
+nodes. Each internal node has two children.
+</p>
+
+<h2>8. Tree Traversals</h2>
+
+<table>
+<tr>
+<th>Traversal</th>
+<th>Order</th>
+</tr>
+
+<tr>
+<td>In-order</td>
+<td>Left → Root → Right</td>
+</tr>
+
+<tr>
+<td>Pre-order</td>
+<td>Root → Left → Right</td>
+</tr>
+
+<tr>
+<td>Post-order</td>
+<td>Left → Right → Root</td>
+</tr>
+</table>
+
+<h3>In-order Traversal Program</h3>
+
+<pre>
+void inorder(struct Node *root)
+{
+    if(root != NULL)
+    {
+        inorder(root-&gt;left);
+        printf("%d ", root-&gt;data);
+        inorder(root-&gt;right);
+    }
+}
+</pre>
+
+<h2>9. Constructing Binary Tree from Traversals</h2>
+
+<p>
+A binary tree can be constructed using suitable traversal sequences.
+For example, inorder with preorder or inorder with postorder can be
+used to construct a binary tree.
+</p>
+
+<h2>10. Insertion in BST</h2>
+
+<p>
+To insert a value, compare it with the current node. If it is smaller,
+move left. If it is larger, move right until an empty position is found.
+</p>
+
+<div class="revision">
+<b>Quick Revision:</b>
+<ul>
+<li>Binary Tree → Maximum two children</li>
+<li>BST → Ordered binary tree</li>
+<li>In-order → Left, Root, Right</li>
+<li>Pre-order → Root, Left, Right</li>
+<li>Post-order → Left, Right, Root</li>
+</ul>
+</div>
+
+<h2>Exam / Viva Questions</h2>
+<ol>
+<li>What is a tree?</li>
+<li>Define binary tree.</li>
+<li>What is a Binary Search Tree?</li>
+<li>What is a strictly binary tree?</li>
+<li>What is a complete binary tree?</li>
+<li>Explain tree traversal.</li>
+<li>Differentiate inorder, preorder and postorder.</li>
+<li>How is insertion performed in BST?</li>
+</ol>
+
+</div>
+</body>
+</html>

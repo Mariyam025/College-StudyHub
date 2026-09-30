@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Java - Unit 3</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Advanced Java Technology - Unit 3</h1>
+
+<div class="topic">
+<h2>1. Introduction to JSP</h2>
+
+<p>
+JSP stands for <b>JavaServer Pages</b>.
+It is a technology used to create dynamic web pages using Java.
+</p>
+
+<p>
+JSP pages normally have the <b>.jsp</b> extension.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. JSP Architecture</h2>
+
+<pre>
+Browser
+   ↓
+Web Server / Tomcat
+   ↓
+JSP Page
+   ↓
+Servlet
+   ↓
+Database / Business Logic
+   ↓
+Response
+   ↓
+Browser
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. JSP Life Cycle</h2>
+
+<ul>
+<li>Translation</li>
+<li>Compilation</li>
+<li>Class Loading</li>
+<li>Instantiation</li>
+<li>Initialization</li>
+<li>Request Processing</li>
+<li>Destruction</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>4. JSP Directives</h2>
+
+<p>Directives provide instructions to the JSP container.</p>
+
+<p>Main directives:</p>
+
+<ul>
+<li>page directive</li>
+<li>include directive</li>
+<li>taglib directive</li>
+</ul>
+
+<pre>
+&lt;%@ page language="java" %&gt;
+
+&lt;%@ include file="header.jsp" %&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. JSP Declaration</h2>
+
+<p>
+Declaration is used to declare variables and methods.
+</p>
+
+<pre>
+&lt;%! 
+int count = 0;
+
+void display() {
+    System.out.println("Hello");
+}
+%&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. JSP Scriptlet</h2>
+
+<p>
+Scriptlet contains Java code executed when the JSP page is processed.
+</p>
+
+<pre>
+&lt;%
+String name = "Rahul";
+out.println(name);
+%&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. JSP Expression</h2>
+
+<p>
+Expression is used to directly print a value.
+</p>
+
+<pre>
+&lt;%= "Hello Student" %&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. JSP Implicit Objects</h2>
+
+<p>
+JSP provides some predefined objects called implicit objects.
+</p>
+
+<ul>
+<li>request</li>
+<li>response</li>
+<li>out</li>
+<li>session</li>
+<li>application</li>
+<li>config</li>
+<li>pageContext</li>
+<li>page</li>
+<li>exception</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. JSP Action Tags</h2>
+
+<p>Common action tags include:</p>
+
+<ul>
+<li>&lt;jsp:include&gt;</li>
+<li>&lt;jsp:forward&gt;</li>
+<li>&lt;jsp:param&gt;</li>
+<li>&lt;jsp:useBean&gt;</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. JSP Expression Language</h2>
+
+<p>
+Expression Language (EL) provides a simple way to access data in JSP.
+</p>
+
+<pre>
+${username}
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. JSP and Servlet Difference</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Servlet</th>
+<th>JSP</th>
+</tr>
+
+<tr>
+<td>Java class</td>
+<td>Web page containing JSP elements</td>
+</tr>
+
+<tr>
+<td>Mainly handles request processing</td>
+<td>Mainly used for presentation</td>
+</tr>
+
+<tr>
+<td>HTML inside Java can be difficult</td>
+<td>HTML is easier to write</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>12. Session in JSP</h2>
+
+<pre>
+&lt;%
+session.setAttribute(
+    "username", "Rahul"
+);
+%&gt;
+</pre>
+
+<p>
+The session object can store information for a particular user.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

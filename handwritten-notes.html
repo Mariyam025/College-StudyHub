@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Handwritten Notes | College StudyHub</title>
+
+    <link
+        rel="stylesheet"
+        href="handwritten-notes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎓 <span>StudyHub</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="subjects.html">
+                Subjects
+            </a>
+
+            <a href="handwritten-notes.html"
+               class="active">
+                Handwritten Notes
+            </a>
+
+            <a href="pyqs.html">
+                PYQs
+            </a>
+
+            <a href="quiz.html">
+                Quiz
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- HEADING -->
+
+        <section class="heading">
+
+            <div class="small-title">
+                ✨ STUDENT COMMUNITY
+            </div>
+
+            <h1>
+                Handwritten Notes
+            </h1>
+
+            <p>
+                Share, discover and learn from handwritten
+                notes contributed by fellow college students.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             UPLOAD CARD
+        ========================== -->
+
+        <section class="upload-card">
+
+
+            <!-- HEADER -->
+
+            <div class="upload-top">
+
+                <div class="upload-icon">
+                    ✍️
+                </div>
+
+
+                <div>
+
+                    <span class="upload-label">
+                        STUDENT CONTRIBUTION
+                    </span>
+
+                    <h2>
+                        Upload Your Handwritten Notes
+                    </h2>
+
+                    <p>
+                        Share your handwritten notes with fellow
+                        students and earn
+                        <strong>+25 XP</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form
+                action="/CollegeStudyHub/UploadHandwrittenServlet"
+                method="POST"
+                enctype="multipart/form-data">
+
+
+                <!-- TITLE -->
+
+                <div class="form-group">
+
+                    <label for="noteTitle">
+                        📝 Note Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="noteTitle"
+                        name="title"
+                        placeholder="Example: Unit 1 Important Questions"
+                        required>
+
+                </div>
+
+
+
+                <!-- SUBJECT -->
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        📚 Subject
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        required>
+
+                        <option value="">
+                            Select Subject
+                        </option>
+
+                        <option value="Fundamental of Computers">
+                            Fundamental of Computers
+                        </option>
+
+                        <option value="C Programming">
+                            C Programming
+                        </option>
+
+                        <option value="Mathematics">
+                            Mathematics
+                        </option>
+
+                        <option value="Basic of Information System">
+                            Basic of Information System
+                        </option>
+
+                        <option value="Soft Skills">
+                            Soft Skills
+                        </option>
+
+                        <option value="Data Structure">
+                            Data Structure
+                        </option>
+
+                        <option value="DBMS">
+                            DBMS
+                        </option>
+
+                        <option value="Digital Electronics">
+                            Digital Electronics
+                        </option>
+
+                        <option value="Discrete Mathematics">
+                            Discrete Mathematics
+                        </option>
+
+                        <option value="OOPs using Java">
+                            OOPs using Java
+                        </option>
+
+                        <option value="Operating Systems">
+                            Operating Systems
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- FILE -->
+
+                <div class="form-group">
+
+                    <label for="noteFile">
+                        📎 Handwritten Note
+                    </label>
+
+
+                    <div class="file-upload-box">
+
+
+                        <div class="file-icon">
+                            📄
+                        </div>
+
+
+                        <div class="file-text">
+
+                            <strong>
+                                Choose PDF or Image
+                            </strong>
+
+                            <span>
+                                PDF, JPG, JPEG or PNG
+                                • Maximum 10 MB
+                            </span>
+
+                        </div>
+
+
+                        <input
+                            type="file"
+                            id="noteFile"
+                            name="file"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="upload-main-btn">
+
+                    <span>
+                        📤
+                    </span>
+
+                    <span>
+                        Upload Handwritten Note
+                    </span>
+
+                    <span class="xp-badge">
+                        +25 XP
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- INFO -->
+
+            <div class="upload-info">
+
+                <span class="info-icon">
+                    💡
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        Help your classmates learn!
+                    </strong>
+
+                    <p>
+                        Upload clear and readable handwritten
+                        notes. Your contribution will be available
+                        to other students and you'll receive
+                        25 XP.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 College StudyHub
+            • Learn • Share • Grow
+        </p>
+
+    </footer>
+
+
+
+</body>
+
+</html>

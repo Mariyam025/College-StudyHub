@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure - Unit 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            margin: 0;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4f46e5;
+        }
+
+        h2 {
+            color: #3730a3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 6px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #4f46e5;
+        }
+
+        .box {
+            background-color: #f8f9ff;
+            padding: 15px;
+            border-left: 4px solid #4f46e5;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        pre {
+            background-color: #f1f3f5;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eef0ff;
+        }
+
+        .revision {
+            background-color: #f0fdf4;
+            padding: 15px;
+            border-left: 4px solid green;
+            border-radius: 8px;
+        }
+
+        .back {
+            display: inline-block;
+            background-color: #4f46e5;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+    <h1>Data Structure</h1>
+
+    <p><b>Paper:</b> NBCA-201 – Data Structure</p>
+
+    <h2>Unit 1</h2>
+
+    <h2>1. Introduction</h2>
+
+    <div class="box">
+        <b>Definition:</b>
+        A data structure is a way of organizing and storing data so that
+        it can be accessed and processed efficiently.
+    </div>
+
+    <h3>Basic Terminology</h3>
+
+    <ul>
+        <li><b>Data:</b> Raw facts or values.</li>
+
+        <li><b>Data Item:</b> A single unit of data.</li>
+
+        <li><b>Record:</b> A collection of related data items.</li>
+
+        <li><b>File:</b> A collection of related records.</li>
+
+        <li><b>Node:</b> A basic element used in linked data structures.</li>
+    </ul>
+
+    <h3>Elementary Data Organization</h3>
+
+    <p>
+        Data can be organized as individual items, records and collections.
+        Common data structures include arrays, linked lists, stacks, queues,
+        trees and graphs.
+    </p>
+
+    <h3>Built-in Data Types</h3>
+
+    <p>
+        Common built-in data types in C include
+        <b>int, char, float, double</b> and <b>void</b>.
+    </p>
+
+    <h3>Abstract Data Type (ADT)</h3>
+
+    <div class="box">
+        <b>Definition:</b>
+        An Abstract Data Type describes what operations can be performed
+        on data without specifying how those operations are implemented.
+    </div>
+
+    <p>
+        <b>Example:</b> A Stack ADT supports operations such as Push and Pop.
+        It can be implemented using an array or linked list.
+    </p>
+
+
+    <h2>2. Arrays</h2>
+
+    <div class="box">
+        <b>Definition:</b>
+        An array is a collection of elements of the same data type stored
+        in contiguous memory locations.
+    </div>
+
+    <h3>1D Array</h3>
+
+    <p>
+        A one-dimensional array stores elements in a single sequence.
+    </p>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+int marks[5] = {70, 80, 65, 90, 75};
+    </pre>
+
+    <h3>Index Formula for 1D Array</h3>
+
+    <p>
+        Address of A[i] =
+        Base Address + (i − Lower Bound) × Size of each element
+    </p>
+
+
+    <h3>2D Array</h3>
+
+    <p>
+        A two-dimensional array stores data in rows and columns.
+        It is commonly used for representing matrices and tables.
+    </p>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+int matrix[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+    </pre>
+
+    <h3>Index Formula for 2D Array</h3>
+
+    <p>
+        For row-major order:
+    </p>
+
+    <p>
+        Address of A[i][j] =
+        Base + [(i × Number of Columns) + j] × Size
+    </p>
+
+    <h3>3D and nD Arrays</h3>
+
+    <p>
+        Higher-dimensional arrays use additional index values.
+        The indices are converted into a memory offset to locate an element.
+    </p>
+
+    <h3>Applications of Arrays</h3>
+
+    <ul>
+        <li>Storing marks and scores</li>
+        <li>Storing tables</li>
+        <li>Representing matrices</li>
+        <li>Searching data</li>
+        <li>Sorting data</li>
+    </ul>
+
+
+    <h2>3. Singly Linked List</h2>
+
+    <div class="box">
+        <b>Definition:</b>
+        A singly linked list consists of nodes where each node contains
+        data and a pointer to the next node.
+    </div>
+
+    <h3>Node Structure</h3>
+
+    <pre>
+struct Node {
+    int data;
+    struct Node *next;
+};
+    </pre>
+
+    <h3>Basic Operations</h3>
+
+    <ul>
+        <li>Create</li>
+        <li>Traverse</li>
+        <li>Insert</li>
+        <li>Delete</li>
+    </ul>
+
+    <p>
+        Each node points to the next node. The last node points to NULL.
+    </p>
+
+
+    <h2>4. Doubly Linked List</h2>
+
+    <div class="box">
+        <b>Definition:</b>
+        A doubly linked list contains nodes with data, a pointer to the
+        previous node and a pointer to the next node.
+    </div>
+
+    <h3>Node Structure</h3>
+
+    <pre>
+struct Node {
+    int data;
+    struct Node *prev;
+    struct Node *next;
+};
+    </pre>
+
+    <h3>Singly vs Doubly Linked List</h3>
+
+    <table>
+
+        <tr>
+            <th>Singly Linked List</th>
+            <th>Doubly Linked List</th>
+        </tr>
+
+        <tr>
+            <td>Contains one link</td>
+            <td>Contains two links</td>
+        </tr>
+
+        <tr>
+            <td>Points to next node</td>
+            <td>Points to previous and next node</td>
+        </tr>
+
+        <tr>
+            <td>Forward traversal</td>
+            <td>Forward and backward traversal</td>
+        </tr>
+
+        <tr>
+            <td>Uses less memory</td>
+            <td>Uses more memory</td>
+        </tr>
+
+    </table>
+
+
+    <div class="revision">
+
+        <b>Quick Revision:</b>
+
+        <ul>
+            <li>Data structure = organization of data.</li>
+            <li>Array = contiguous memory locations.</li>
+            <li>ADT = defines operations, not implementation.</li>
+            <li>Singly linked list = data + next pointer.</li>
+            <li>Doubly linked list = data + previous + next pointers.</li>
+        </ul>
+
+    </div>
+
+
+    <h2>Exam / Viva Questions</h2>
+
+    <ol>
+        <li>What is a data structure?</li>
+        <li>What is an Abstract Data Type?</li>
+        <li>What are built-in data types?</li>
+        <li>What is an array?</li>
+        <li>Explain 1D and 2D arrays.</li>
+        <li>What is a singly linked list?</li>
+        <li>What is a doubly linked list?</li>
+        <li>Differentiate singly and doubly linked lists.</li>
+    </ol>
+
+</div>
+
+</body>
+</html>

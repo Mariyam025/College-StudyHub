@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DBMS - Unit 3</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0;line-height:1.6;color:#222}
+.container{max-width:1000px;margin:30px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px #ddd}
+h1{text-align:center;color:#4f46e5}h2{color:#3730a3;border-bottom:2px solid #eee;padding-bottom:6px}
+h3{color:#4f46e5}.box{background:#f8f9ff;padding:15px;border-left:4px solid #4f46e5;margin:15px 0}
+pre{background:#f1f3f5;padding:15px;border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px}th{background:#eef0ff}
+.revision{background:#f0fdf4;padding:15px;border-left:4px solid green}
+.back{background:#4f46e5;color:white;padding:9px 15px;text-decoration:none;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+<h1>Database Management System</h1>
+<h2>Unit 3 - Relational Model and SQL</h2>
+
+<h2>1. Relational Data Model</h2>
+<div class="box">
+The relational model represents data using tables consisting of rows
+and columns.
+</div>
+
+<ul>
+<li><b>Relation:</b> Table</li>
+<li><b>Tuple:</b> Row</li>
+<li><b>Attribute:</b> Column</li>
+<li><b>Domain:</b> Set of allowed values</li>
+</ul>
+
+<h2>2. Integrity Constraints</h2>
+<ul>
+<li><b>Entity Integrity:</b> Primary key cannot contain NULL values.</li>
+<li><b>Referential Integrity:</b> Foreign key should refer to a valid record.</li>
+<li><b>Key Constraint:</b> Keys identify records uniquely.</li>
+<li><b>Domain Constraint:</b> Values must belong to the specified domain.</li>
+</ul>
+
+<h2>3. Relational Algebra</h2>
+<p>
+Relational algebra is a procedural query language used to perform
+operations on relations.
+</p>
+
+<p><b>Common operations:</b> Selection, Projection, Union, Intersection,
+Difference and Join.</p>
+
+<h2>4. Relational Calculus</h2>
+<p>
+Relational calculus is a non-procedural query language that describes
+what data is required rather than how to obtain it.
+</p>
+
+<h3>Tuple Calculus</h3>
+<p>Uses tuple variables to describe required records.</p>
+
+<h3>Domain Calculus</h3>
+<p>Uses domain variables to describe required attribute values.</p>
+
+<h2>5. SQL</h2>
+<div class="box">
+<b>Definition:</b> SQL (Structured Query Language) is used to create,
+manage and retrieve data from relational databases.
+</div>
+
+<h3>Types of SQL Commands</h3>
+<table>
+<tr><th>Type</th><th>Purpose</th><th>Example</th></tr>
+<tr><td>DDL</td><td>Structure</td><td>CREATE, ALTER, DROP</td></tr>
+<tr><td>DML</td><td>Data manipulation</td><td>INSERT, UPDATE, DELETE</td></tr>
+<tr><td>DCL</td><td>Access control</td><td>GRANT, REVOKE</td></tr>
+<tr><td>TCL</td><td>Transactions</td><td>COMMIT, ROLLBACK</td></tr>
+</table>
+
+<h2>6. SQL Examples</h2>
+
+<pre>
+CREATE TABLE Student(
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    marks INT
+);
+
+INSERT INTO Student VALUES(1,'Rahul',85);
+
+SELECT * FROM Student;
+
+UPDATE Student
+SET marks=90
+WHERE id=1;
+
+DELETE FROM Student
+WHERE id=1;
+</pre>
+
+<h2>7. SQL Data Types and Literals</h2>
+<ul>
+<li>INT</li>
+<li>VARCHAR</li>
+<li>CHAR</li>
+<li>DATE</li>
+<li>DECIMAL</li>
+</ul>
+
+<h2>8. SQL Operators</h2>
+<p>Arithmetic, comparison, logical and other operators can be used in SQL queries.</p>
+
+<h2>9. Tables, Views and Indexes</h2>
+<p><b>Table:</b> Stores actual data.</p>
+<p><b>View:</b> Virtual table based on a query.</p>
+<p><b>Index:</b> Helps improve data retrieval performance.</p>
+
+<h2>10. Queries and Subqueries</h2>
+
+<pre>
+SELECT name
+FROM Student
+WHERE marks &gt; 80;
+
+SELECT name
+FROM Student
+WHERE marks &gt;
+(SELECT AVG(marks) FROM Student);
+</pre>
+
+<h2>11. Aggregate Functions</h2>
+<ul>
+<li>COUNT()</li>
+<li>SUM()</li>
+<li>AVG()</li>
+<li>MAX()</li>
+<li>MIN()</li>
+</ul>
+
+<h2>12. Joins</h2>
+<p>
+Joins combine data from two or more tables based on related columns.
+</p>
+
+<p><b>Types:</b> INNER JOIN, LEFT JOIN, RIGHT JOIN.</p>
+
+<h2>13. Union, Intersection and Minus</h2>
+<p>
+These operations are used to combine or compare results of compatible
+queries.
+</p>
+
+<h2>14. Cursors</h2>
+<p>
+A cursor allows processing of query results row by row.
+</p>
+
+<h2>15. Triggers</h2>
+<p>
+A trigger is automatically executed when a specified database event
+occurs.
+</p>
+
+<div class="revision">
+<b>Quick Revision:</b>
+<ul>
+<li>Relation = table.</li>
+<li>Tuple = row.</li>
+<li>Attribute = column.</li>
+<li>DDL manages structure.</li>
+<li>DML manages data.</li>
+<li>TCL manages transactions.</li>
+<li>DCL controls access.</li>
+<li>SQL is used to interact with relational databases.</li>
+</ul>
+</div>
+
+<h2>Exam / Viva</h2>
+<ol>
+<li>What is relational model?</li>
+<li>What is entity integrity?</li>
+<li>What is referential integrity?</li>
+<li>What is SQL?</li>
+<li>Differentiate DDL and DML.</li>
+<li>What are aggregate functions?</li>
+<li>What is a join?</li>
+<li>What is a subquery?</li>
+<li>What is a trigger?</li>
+</ol>
+
+</div>
+</body>
+</html>

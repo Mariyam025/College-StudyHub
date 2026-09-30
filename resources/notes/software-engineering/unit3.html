@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Engineering - Unit 3</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
+}
+header{
+    background:#3949ab;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:25px auto;
+}
+.back{
+    display:inline-block;
+    background:#3949ab;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+    margin-bottom:20px;
+}
+.topic{
+    background:white;
+    padding:22px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+h2{color:#3949ab;}
+h3{color:#5c6bc0;}
+.important{
+    background:#e8eaf6;
+    border-left:5px solid #3949ab;
+    padding:12px;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th,td{
+    border:1px solid #999;
+    padding:10px;
+    text-align:left;
+}
+th{
+    background:#3949ab;
+    color:white;
+}
+footer{
+    background:#3949ab;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Software Engineering</h1>
+<p>Unit 3 – Software Design</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. Software Design</h2>
+<p>
+Software design is the process of defining the architecture,
+components, interfaces and data of a software system.
+</p>
+
+<div class="important">
+Design describes how the software will be built before actual coding.
+</div>
+</div>
+
+<div class="topic">
+<h2>2. Objectives of Software Design</h2>
+<ul>
+<li>Convert requirements into a software structure.</li>
+<li>Provide a clear system architecture.</li>
+<li>Reduce complexity.</li>
+<li>Improve software quality.</li>
+<li>Make software easier to maintain.</li>
+<li>Support testing and implementation.</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>3. Design Principles</h2>
+<ul>
+<li>Abstraction</li>
+<li>Modularity</li>
+<li>Information Hiding</li>
+<li>Low Coupling</li>
+<li>High Cohesion</li>
+<li>Separation of Concerns</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>4. Abstraction</h2>
+<p>
+Abstraction means representing only the important features of a system
+while hiding unnecessary implementation details.
+</p>
+
+<p><b>Example:</b> A user can use an ATM without knowing its internal
+software implementation.</p>
+</div>
+
+<div class="topic">
+<h2>5. Modularity</h2>
+<p>
+Modularity means dividing a large software system into smaller,
+manageable modules.
+</p>
+
+<h3>Benefits:</h3>
+<ul>
+<li>Easy development</li>
+<li>Easy testing</li>
+<li>Easy maintenance</li>
+<li>Better organization</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. Coupling</h2>
+<p>
+Coupling represents the degree of dependency between software modules.
+</p>
+
+<p>
+Lower coupling generally makes a system easier to modify and maintain.
+</p>
+
+<h3>Types:</h3>
+<ul>
+<li>Data Coupling</li>
+<li>Stamp Coupling</li>
+<li>Control Coupling</li>
+<li>Common Coupling</li>
+<li>Content Coupling</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>7. Cohesion</h2>
+<p>
+Cohesion represents how closely related the responsibilities of a
+module are.
+</p>
+
+<p>
+High cohesion is generally desirable because a module focuses on
+closely related tasks.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Coupling vs Cohesion</h2>
+
+<table>
+<tr>
+<th>Coupling</th>
+<th>Cohesion</th>
+</tr>
+<tr>
+<td>Relationship between modules.</td>
+<td>Relationship among elements inside a module.</td>
+</tr>
+<tr>
+<td>Lower coupling is generally preferred.</td>
+<td>Higher cohesion is generally preferred.</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>9. Software Architecture</h2>
+<p>
+Software architecture describes the high-level organization of a
+software system and the relationships between its major components.
+</p>
+
+<h3>Examples:</h3>
+<ul>
+<li>Layered Architecture</li>
+<li>Client-Server Architecture</li>
+<li>Three-Tier Architecture</li>
+<li>Microservices Architecture</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. User Interface Design</h2>
+<p>
+User Interface Design deals with designing the way users interact
+with software.
+</p>
+
+<h3>Good UI should be:</h3>
+<ul>
+<li>Simple</li>
+<li>Consistent</li>
+<li>Easy to understand</li>
+<li>Responsive</li>
+<li>Accessible</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>11. Database Design</h2>
+<p>
+Database design defines how data is organized, stored and related
+within a database system.
+</p>
+
+<h3>Important concepts:</h3>
+<ul>
+<li>Tables</li>
+<li>Fields</li>
+<li>Primary Keys</li>
+<li>Foreign Keys</li>
+<li>Relationships</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>12. Design Documentation</h2>
+<p>
+Design documentation records the technical design decisions and
+structure of a software system.
+</p>
+
+<ul>
+<li>Architecture diagrams</li>
+<li>Data design</li>
+<li>Interface design</li>
+<li>Module descriptions</li>
+<li>Database design</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>13. Important Exam Questions</h2>
+<ol>
+<li>What is software design?</li>
+<li>Explain software design principles.</li>
+<li>What is abstraction?</li>
+<li>What is modularity?</li>
+<li>Explain coupling and its types.</li>
+<li>Explain cohesion.</li>
+<li>Differentiate coupling and cohesion.</li>
+<li>What is software architecture?</li>
+<li>Explain user interface design.</li>
+<li>What is database design?</li>
+</ol>
+</div>
+
+</div>
+
+<footer>
+<p>College StudyHub | Software Engineering – Unit 3</p>
+</footer>
+
+</body>
+</html>

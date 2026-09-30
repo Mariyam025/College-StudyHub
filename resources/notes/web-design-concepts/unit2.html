@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design Concepts - Unit 2</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Web Design Concepts - Unit 2</h1>
+
+<div class="topic">
+<h2>1. Introduction to HTML</h2>
+
+<p>
+HTML stands for <b>HyperText Markup Language</b>.
+It is used to create the structure of web pages.
+</p>
+
+<p>
+HTML uses elements and tags to define the content of a webpage.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. Basic HTML Structure</h2>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. HTML Headings</h2>
+
+<p>
+HTML provides six heading levels from h1 to h6.
+</p>
+
+<pre>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;h3&gt;Another Heading&lt;/h3&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Paragraph and Text Formatting</h2>
+
+<pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;b&gt;Bold&lt;/b&gt;
+&lt;i&gt;Italic&lt;/i&gt;
+&lt;u&gt;Underline&lt;/u&gt;
+&lt;strong&gt;Important&lt;/strong&gt;
+&lt;em&gt;Emphasized&lt;/em&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Lists</h2>
+
+<h3>Unordered List</h3>
+
+<pre>
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3>Ordered List</h3>
+
+<pre>
+&lt;ol&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. Hyperlinks</h2>
+
+<p>
+The anchor tag is used to create links.
+</p>
+
+<pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Images</h2>
+
+<pre>
+&lt;img src="photo.jpg"
+     alt="Student Photo"
+     width="300"&gt;
+</pre>
+
+<p>
+The <b>alt</b> attribute provides alternative text for the image.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Tables</h2>
+
+<pre>
+&lt;table border="1"&gt;
+
+&lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Course&lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+    &lt;td&gt;Rahul&lt;/td&gt;
+    &lt;td&gt;BCA&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. HTML Forms</h2>
+
+<p>
+Forms are used to collect information from users.
+</p>
+
+<pre>
+&lt;form&gt;
+
+    &lt;label&gt;Name:&lt;/label&gt;
+
+    &lt;input type="text"
+           name="name"&gt;
+
+    &lt;input type="submit"
+           value="Submit"&gt;
+
+&lt;/form&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. Form Controls</h2>
+
+<ul>
+<li>Text box</li>
+<li>Password field</li>
+<li>Radio button</li>
+<li>Checkbox</li>
+<li>Dropdown</li>
+<li>Textarea</li>
+<li>Submit button</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>11. HTML5 Semantic Elements</h2>
+
+<ul>
+<li>&lt;header&gt;</li>
+<li>&lt;nav&gt;</li>
+<li>&lt;main&gt;</li>
+<li>&lt;section&gt;</li>
+<li>&lt;article&gt;</li>
+<li>&lt;aside&gt;</li>
+<li>&lt;footer&gt;</li>
+</ul>
+
+<p>
+Semantic elements make the structure of a webpage clearer.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

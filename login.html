@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | College StudyHub</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
+
+    <nav class="login-nav">
+
+        <a href="index.html" class="brand">
+            🎓 <span>StudyHub</span>
+        </a>
+
+        <a href="index.html" class="home-btn">
+            🏠 Home
+        </a>
+
+    </nav>
+
+
+    <main class="auth-wrapper">
+
+        <div class="auth-card">
+
+            <div class="auth-icon">🔐</div>
+
+            <div class="welcome-text">
+                <span>✨ Welcome Back</span>
+
+                <h1>Login to StudyHub</h1>
+
+                <p>
+                    Continue your learning journey with College StudyHub.
+                </p>
+            </div>
+
+
+            <!-- IMPORTANT: LOGIN FORM -->
+
+            <form
+                action="/CollegeStudyHub/login-process.jsp"
+                method="POST">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        📧 Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        🔐 Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="main-btn">
+
+                    🔐 Login to StudyHub
+
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <div class="create-account">
+
+                <p>
+                    Don't have an account?
+                </p>
+
+                <a
+                    href="register.html"
+                    class="register-btn">
+
+                    🚀 Create New Account
+
+                </a>
+
+            </div>
+
+
+            <a
+                href="admin-login.html"
+                class="admin-link">
+
+                🛠️ Admin Login
+
+            </a>
+
+
+            <div class="auth-footer">
+
+                <a href="index.html">
+                    ← Back to StudyHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

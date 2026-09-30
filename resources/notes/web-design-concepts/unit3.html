@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design Concepts - Unit 3</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Web Design Concepts - Unit 3</h1>
+
+<div class="topic">
+<h2>1. Introduction to CSS</h2>
+
+<p>
+CSS stands for <b>Cascading Style Sheets</b>.
+It is used to control the appearance and layout of HTML elements.
+</p>
+
+<p>CSS can control:</p>
+
+<ul>
+<li>Colors</li>
+<li>Fonts</li>
+<li>Spacing</li>
+<li>Borders</li>
+<li>Layout</li>
+<li>Responsive design</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. CSS Syntax</h2>
+
+<pre>
+selector {
+    property: value;
+}
+</pre>
+
+<p>Example:</p>
+
+<pre>
+p {
+    color: blue;
+    font-size: 18px;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Types of CSS</h2>
+
+<h3>Inline CSS</h3>
+
+<pre>
+&lt;p style="color:red;"&gt;
+Hello
+&lt;/p&gt;
+</pre>
+
+<h3>Internal CSS</h3>
+
+<pre>
+&lt;style&gt;
+
+p {
+    color: red;
+}
+
+&lt;/style&gt;
+</pre>
+
+<h3>External CSS</h3>
+
+<pre>
+&lt;link rel="stylesheet"
+      href="style.css"&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. CSS Selectors</h2>
+
+<h3>Element Selector</h3>
+
+<pre>
+p {
+    color: red;
+}
+</pre>
+
+<h3>Class Selector</h3>
+
+<pre>
+.card {
+    padding: 20px;
+}
+</pre>
+
+<h3>ID Selector</h3>
+
+<pre>
+#header {
+    background: white;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Colors and Background</h2>
+
+<pre>
+body {
+    background-color: #f4fafa;
+}
+
+h1 {
+    color: #00838f;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. CSS Fonts and Text</h2>
+
+<pre>
+p {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. CSS Box Model</h2>
+
+<p>
+Every HTML element can be understood using the CSS box model.
+</p>
+
+<pre>
+Content
+   ↓
+Padding
+   ↓
+Border
+   ↓
+Margin
+</pre>
+
+<ul>
+<li><b>Content:</b> Actual content</li>
+<li><b>Padding:</b> Space inside the border</li>
+<li><b>Border:</b> Boundary around the element</li>
+<li><b>Margin:</b> Space outside the border</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>8. Width and Height</h2>
+
+<pre>
+.card {
+    width: 300px;
+    height: 200px;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. Display Property</h2>
+
+<p>Common values:</p>
+
+<ul>
+<li>block</li>
+<li>inline</li>
+<li>inline-block</li>
+<li>none</li>
+</ul>
+
+<pre>
+.menu {
+    display: flex;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. Flexbox</h2>
+
+<p>
+Flexbox is a CSS layout system used to arrange elements in rows or columns.
+</p>
+
+<pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. Responsive Web Design</h2>
+
+<p>
+Responsive design makes a website adapt to different screen sizes
+such as mobile, tablet and desktop.
+</p>
+
+<pre>
+@media (max-width: 600px) {
+
+    .container {
+        width: 100%;
+    }
+
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>12. CSS Pseudo Classes</h2>
+
+<p>
+Pseudo-classes define a special state of an element.
+</p>
+
+<pre>
+button:hover {
+    background: black;
+}
+</pre>
+
+<p>Examples:</p>
+
+<ul>
+<li>:hover</li>
+<li>:focus</li>
+<li>:active</li>
+<li>:first-child</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

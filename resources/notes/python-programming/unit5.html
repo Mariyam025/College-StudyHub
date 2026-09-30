@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Programming - Unit 5</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fb;line-height:1.6}
+header,footer{background:#00838f;color:white;text-align:center;padding:22px}
+.container{width:90%;max-width:1000px;margin:25px auto}
+.back{display:inline-block;background:#00838f;color:white;padding:10px 18px;text-decoration:none;border-radius:6px;margin-bottom:20px}
+.topic{background:white;padding:20px;margin-bottom:18px;border-radius:10px;box-shadow:0 2px 8px #ddd}
+h2{color:#00838f}h3{color:#0097a7}
+pre{background:#222;color:white;padding:15px;border-radius:8px;overflow:auto}
+</style>
+</head>
+<body>
+
+<header><h1>Python Programming</h1><p>Unit 5 – Object Oriented Programming and Modules</p></header>
+
+<div class="container">
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<div class="topic">
+<h2>1. Object-Oriented Programming</h2>
+<p>Object-Oriented Programming is a programming approach based on classes and objects.</p>
+
+<ul>
+<li>Class</li>
+<li>Object</li>
+<li>Encapsulation</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+<li>Abstraction</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Class</h2>
+<p>A class is a blueprint for creating objects.</p>
+<pre>
+class Student:
+    name = "Riya"
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Object</h2>
+<p>An object is an instance of a class.</p>
+<pre>
+class Student:
+    name = "Riya"
+
+s1 = Student()
+print(s1.name)
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Constructor</h2>
+<p>In Python, <b>__init__()</b> is commonly used to initialize an object's attributes.</p>
+<pre>
+class Student:
+    def __init__(self,name):
+        self.name = name
+
+s = Student("Riya")
+print(s.name)
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. self</h2>
+<p>The <b>self</b> parameter refers to the current object of the class.</p>
+</div>
+
+<div class="topic">
+<h2>6. Inheritance</h2>
+<p>Inheritance allows one class to acquire properties and methods of another class.</p>
+<pre>
+class Animal:
+    def sound(self):
+        print("Animal sound")
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+d.sound()
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Polymorphism</h2>
+<p>Polymorphism means the same interface or method name can behave differently for different objects.</p>
+<pre>
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+for animal in [Dog(), Cat()]:
+    animal.sound()
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. Encapsulation</h2>
+<p>Encapsulation means combining data and methods within a class and controlling access to internal details.</p>
+</div>
+
+<div class="topic">
+<h2>9. Modules</h2>
+<p>A module is a Python file containing functions, classes or variables that can be reused.</p>
+<pre>
+import math
+
+print(math.sqrt(25))
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. Packages</h2>
+<p>A package is a collection of related Python modules organized in a directory.</p>
+</div>
+
+<div class="topic">
+<h2>11. Useful Built-in Modules</h2>
+<ul>
+<li>math</li>
+<li>random</li>
+<li>datetime</li>
+<li>os</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>12. Importing a Module</h2>
+<pre>
+import math
+
+print(math.pi)
+</pre>
+</div>
+
+<div class="topic">
+<h2>13. Advantages of OOP</h2>
+<ul>
+<li>Code reusability</li>
+<li>Easy maintenance</li>
+<li>Modularity</li>
+<li>Data organization</li>
+<li>Supports inheritance and polymorphism</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>Important Questions</h2>
+<ol>
+<li>What is OOP?</li>
+<li>What is a class?</li>
+<li>What is an object?</li>
+<li>Explain constructor in Python.</li>
+<li>What is inheritance?</li>
+<li>Explain polymorphism.</li>
+<li>What is encapsulation?</li>
+<li>What is a module?</li>
+<li>What is a package?</li>
+<li>Explain advantages of OOP.</li>
+</ol>
+</div>
+
+</div>
+
+<footer>College StudyHub | Python Programming – Unit 5</footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Java - Unit 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4fafa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #00838f;
+            text-align: center;
+        }
+
+        .topic {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        h2 {
+            color: #00838f;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+        }
+
+        pre {
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #00838f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Advanced Java Technology - Unit 1</h1>
+
+<div class="topic">
+<h2>1. Introduction to Advanced Java</h2>
+
+<p>
+Advanced Java is used for developing database-based, web-based and enterprise applications.
+It provides technologies such as JDBC, Servlets, JSP and JavaBeans.
+</p>
+
+<p><b>Core Java:</b> Mainly used for basic Java programming and desktop applications.</p>
+
+<p><b>Advanced Java:</b> Mainly used for database connectivity and web/enterprise applications.</p>
+</div>
+
+<div class="topic">
+<h2>2. J2EE / Java Enterprise Platform</h2>
+
+<p>
+Enterprise Java technologies provide tools for developing large and distributed applications.
+Important technologies include Servlets, JSP, JDBC, JavaBeans and other enterprise APIs.
+</p>
+
+<h3>Application Architecture</h3>
+
+<ul>
+<li>Two-Tier Architecture</li>
+<li>Three-Tier Architecture</li>
+<li>N-Tier Architecture</li>
+</ul>
+
+<p>
+In a three-tier application, presentation, business logic and database layers are separated.
+</p>
+</div>
+
+<div class="topic">
+<h2>3. JDBC</h2>
+
+<p>
+JDBC stands for <b>Java Database Connectivity</b>.
+It allows a Java program to communicate with a database.
+</p>
+
+<h3>Uses of JDBC</h3>
+
+<ul>
+<li>Connect Java application with database</li>
+<li>Insert data</li>
+<li>Update data</li>
+<li>Delete data</li>
+<li>Retrieve data</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>4. JDBC Architecture</h2>
+
+<p>
+The main components of JDBC are:
+</p>
+
+<ul>
+<li>Java Application</li>
+<li>JDBC API</li>
+<li>JDBC Driver Manager</li>
+<li>JDBC Driver</li>
+<li>Database</li>
+</ul>
+
+<p>Basic flow:</p>
+
+<pre>
+Java Application
+       ↓
+    JDBC API
+       ↓
+Driver Manager
+       ↓
+  JDBC Driver
+       ↓
+   Database
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Types of JDBC Drivers</h2>
+
+<ol>
+<li>Type 1 - JDBC-ODBC Bridge Driver</li>
+<li>Type 2 - Native API Driver</li>
+<li>Type 3 - Network Protocol Driver</li>
+<li>Type 4 - Thin Driver</li>
+</ol>
+
+<p>
+Type 4 drivers are commonly used because they communicate directly with the database.
+</p>
+</div>
+
+<div class="topic">
+<h2>6. Steps of JDBC</h2>
+
+<ol>
+<li>Load/Register the driver</li>
+<li>Create database connection</li>
+<li>Create Statement or PreparedStatement</li>
+<li>Execute SQL query</li>
+<li>Process ResultSet</li>
+<li>Close connection</li>
+</ol>
+
+<pre>
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/studentdb",
+    "root",
+    "password"
+);
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Statement</h2>
+
+<p>
+Statement is used to execute SQL statements.
+</p>
+
+<pre>
+Statement st = con.createStatement();
+
+ResultSet rs = st.executeQuery(
+    "SELECT * FROM students"
+);
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. PreparedStatement</h2>
+
+<p>
+PreparedStatement is used for parameterized SQL queries.
+It is generally preferred when values are supplied dynamically.
+</p>
+
+<pre>
+PreparedStatement ps =
+    con.prepareStatement(
+        "INSERT INTO students VALUES (?, ?)"
+    );
+
+ps.setInt(1, 101);
+ps.setString(2, "Rahul");
+
+ps.executeUpdate();
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. CallableStatement</h2>
+
+<p>
+CallableStatement is used to call stored procedures from Java.
+</p>
+
+<pre>
+CallableStatement cs =
+    con.prepareCall("{call getStudents()}");
+
+cs.execute();
+</pre>
+</div>
+
+<div class="topic">
+<h2>10. ResultSet</h2>
+
+<p>
+ResultSet stores the data returned by a SELECT query.
+</p>
+
+<pre>
+ResultSet rs = st.executeQuery(
+    "SELECT * FROM students"
+);
+
+while(rs.next()) {
+    System.out.println(rs.getString("name"));
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. JDBC CRUD Operations</h2>
+
+<ul>
+<li><b>Create:</b> INSERT</li>
+<li><b>Read:</b> SELECT</li>
+<li><b>Update:</b> UPDATE</li>
+<li><b>Delete:</b> DELETE</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

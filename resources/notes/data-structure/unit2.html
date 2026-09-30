@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Structure - Unit 2</title>
+<style>
+body{font-family:Arial;background:#f5f7fb;margin:0;color:#222;line-height:1.6}
+.container{max-width:1000px;margin:30px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px #ddd}
+h1{text-align:center;color:#4f46e5}h2{color:#3730a3;border-bottom:2px solid #eee;padding-bottom:6px}
+h3{color:#4f46e5}.box{background:#f8f9ff;padding:15px;border-left:4px solid #4f46e5;margin:15px 0}
+pre{background:#f1f3f5;padding:15px;border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px}th{background:#eef0ff}
+.revision{background:#f0fdf4;padding:15px;border-left:4px solid green}
+.back{background:#4f46e5;color:white;padding:9px 15px;text-decoration:none;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="../../../subjects.html" class="back">← Back to Subjects</a>
+
+<h1>Data Structure - Unit 2</h1>
+
+<h2>1. Stack</h2>
+<div class="box">
+<b>Definition:</b> Stack is a linear data structure that follows LIFO
+(Last In First Out).
+</div>
+
+<h3>Basic Operations</h3>
+<ul>
+<li><b>Push:</b> Adds an element to the stack.</li>
+<li><b>Pop:</b> Removes the top element.</li>
+</ul>
+
+<h3>Array Implementation of Stack in C</h3>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+#define MAX 5
+
+int stack[MAX];
+int top = -1;
+
+void push(int value)
+{
+    if(top == MAX-1)
+        printf("Stack Overflow");
+    else
+        stack[++top] = value;
+}
+
+void pop()
+{
+    if(top == -1)
+        printf("Stack Underflow");
+    else
+        printf("Popped: %d", stack[top--]);
+}
+
+int main()
+{
+    push(10);
+    push(20);
+    pop();
+
+    return 0;
+}
+</pre>
+
+<p><b>Output:</b> Popped: 20</p>
+
+<h2>2. Applications of Stack</h2>
+<ul>
+<li>Expression conversion</li>
+<li>Expression evaluation</li>
+<li>Function calls</li>
+<li>Undo operations</li>
+</ul>
+
+<h2>3. Prefix and Postfix Expressions</h2>
+
+<p><b>Prefix:</b> Operator comes before operands.</p>
+<p>Example: <b>+AB</b></p>
+
+<p><b>Postfix:</b> Operator comes after operands.</p>
+<p>Example: <b>AB+</b></p>
+
+<p><b>Infix:</b> A + B</p>
+<p><b>Postfix:</b> AB+</p>
+<p><b>Prefix:</b> +AB</p>
+
+<h2>4. Evaluation of Postfix Expression</h2>
+
+<p>
+Postfix expression is evaluated using a stack. Operands are pushed into
+the stack and operators perform operations on the top elements.
+</p>
+
+<div class="box">
+<b>Example:</b> 23+5* <br>
+(2 + 3) × 5 = <b>25</b>
+</div>
+
+<h2>5. Queue</h2>
+
+<div class="box">
+<b>Definition:</b> Queue is a linear data structure that follows FIFO
+(First In First Out).
+</div>
+
+<h3>Basic Operations</h3>
+<ul>
+<li><b>Create:</b> Creates a queue.</li>
+<li><b>Add:</b> Inserts an element.</li>
+<li><b>Delete:</b> Removes an element.</li>
+</ul>
+
+<h2>6. Circular Queue</h2>
+
+<p>
+A circular queue connects the last position with the first position.
+It helps in reusing empty spaces.
+</p>
+
+<h3>Array Implementation of Queue in C</h3>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+#define MAX 5
+
+int queue[MAX];
+int front = 0;
+int rear = -1;
+
+void add(int value)
+{
+    if(rear == MAX-1)
+        printf("Queue Full");
+    else
+        queue[++rear] = value;
+}
+
+void delete()
+{
+    if(front > rear)
+        printf("Queue Empty");
+    else
+        printf("Deleted: %d", queue[front++]);
+}
+
+int main()
+{
+    add(10);
+    add(20);
+    delete();
+
+    return 0;
+}
+</pre>
+
+<p><b>Output:</b> Deleted: 10</p>
+
+<div class="revision">
+<b>Quick Revision:</b>
+<ul>
+<li>Stack → LIFO</li>
+<li>Push → Insert into stack</li>
+<li>Pop → Delete from stack</li>
+<li>Queue → FIFO</li>
+<li>Add → Insert into queue</li>
+<li>Delete → Remove from queue</li>
+<li>Circular queue → Reuses empty positions</li>
+</ul>
+</div>
+
+<h2>Exam / Viva Questions</h2>
+<ol>
+<li>What is a stack?</li>
+<li>Explain Push and Pop.</li>
+<li>What is LIFO?</li>
+<li>What are prefix and postfix expressions?</li>
+<li>How is postfix expression evaluated?</li>
+<li>What is a queue?</li>
+<li>What is FIFO?</li>
+<li>Explain circular queue.</li>
+</ol>
+
+</div>
+</body>
+</html>

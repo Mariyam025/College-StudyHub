@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing - Unit 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #374151;
+        }
+
+        .definition {
+            background: #eef4ff;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            padding: 15px;
+            border-left: 5px solid #16a34a;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #fff7ed;
+            padding: 15px;
+            border-left: 5px solid #f97316;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e5edff;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Software Testing - Unit 1</h1>
+
+<h2>1. Introduction to Software Testing</h2>
+
+<div class="definition">
+    <b>Software Testing</b> is the process of evaluating and verifying a software
+    product to find defects and check whether it satisfies specified requirements.
+</div>
+
+<p>
+Testing is performed to improve software quality and increase confidence that
+the software behaves as expected.
+</p>
+
+<div class="example">
+    <b>Example:</b><br>
+    If a login page requires a valid username and password, testing checks whether
+    the system accepts valid credentials and correctly rejects invalid credentials.
+</div>
+
+<h2>2. Why is Software Testing Needed?</h2>
+
+<ul>
+    <li>To find defects before software is delivered.</li>
+    <li>To verify that requirements are satisfied.</li>
+    <li>To improve software quality.</li>
+    <li>To reduce the risk of software failure.</li>
+    <li>To improve reliability and security.</li>
+    <li>To increase customer satisfaction.</li>
+    <li>To reduce the cost of fixing defects after release.</li>
+</ul>
+
+<h2>3. Goals of Software Testing</h2>
+
+<ul>
+    <li>Find errors and defects.</li>
+    <li>Verify software requirements.</li>
+    <li>Validate user expectations.</li>
+    <li>Identify missing functionality.</li>
+    <li>Check software reliability.</li>
+    <li>Provide information about software quality.</li>
+    <li>Reduce the possibility of failures in production.</li>
+</ul>
+
+<h2>4. Testing and Debugging</h2>
+
+<p>
+Testing and debugging are related but they are not the same.
+</p>
+
+<table>
+<tr>
+    <th>Testing</th>
+    <th>Debugging</th>
+</tr>
+<tr>
+    <td>Finds defects or failures.</td>
+    <td>Finds and fixes the cause of a defect.</td>
+</tr>
+<tr>
+    <td>Usually performed by testers and developers.</td>
+    <td>Mainly performed by developers.</td>
+</tr>
+<tr>
+    <td>Shows that a problem exists.</td>
+    <td>Attempts to locate and correct the problem.</td>
+</tr>
+</table>
+
+<h2>5. Principles of Software Testing</h2>
+
+<h3>1. Testing Shows Presence of Defects</h3>
+<p>
+Testing can show that defects exist, but successful testing cannot prove that
+software contains absolutely no defects.
+</p>
+
+<h3>2. Exhaustive Testing is Impossible</h3>
+<p>
+It is generally impossible to test every possible input and situation.
+Therefore, suitable test cases are selected.
+</p>
+
+<h3>3. Early Testing</h3>
+<p>
+Testing activities should begin as early as possible in the software development
+life cycle.
+</p>
+
+<h3>4. Defect Clustering</h3>
+<p>
+A relatively small number of modules may contain a large number of defects.
+</p>
+
+<h3>5. Pesticide Paradox</h3>
+<p>
+If the same test cases are repeatedly executed, they may stop finding new defects.
+Therefore, test cases should be reviewed and improved.
+</p>
+
+<h3>6. Testing is Context Dependent</h3>
+<p>
+Testing methods depend on the type of software, risk, requirements and environment.
+</p>
+
+<h3>7. Absence-of-Errors Fallacy</h3>
+<p>
+Even if a system has very few known defects, it may still fail to meet the
+user's actual needs.
+</p>
+
+<h2>6. Error</h2>
+
+<div class="definition">
+    <b>Error</b> is a human mistake made while designing, coding, understanding
+    requirements or performing another software activity.
+</div>
+
+<div class="example">
+    Example: A programmer writes <b>+</b> instead of <b>-</b> in a calculation.
+</div>
+
+<h2>7. Fault / Bug / Defect</h2>
+
+<div class="definition">
+    A <b>fault</b> or <b>bug</b> is an incorrect part of a software product
+    that can cause incorrect behaviour.
+</div>
+
+<div class="example">
+    Example: The programmer writes the wrong condition:
+    <br><br>
+    <b>if(age &gt; 18)</b>
+    <br><br>
+    when the requirement actually says that age 18 should also be accepted.
+</div>
+
+<h2>8. Failure</h2>
+
+<div class="definition">
+    <b>Failure</b> occurs when the software executes and produces an incorrect
+    or unexpected result.
+</div>
+
+<div class="example">
+    Example: A user enters valid login details but the system displays
+    "Invalid username or password."
+</div>
+
+<h2>9. Incident</h2>
+
+<p>
+An <b>incident</b> is an observed situation or event that requires investigation.
+It may indicate a defect or unexpected behaviour.
+</p>
+
+<h2>10. Error, Fault and Failure</h2>
+
+<table>
+<tr>
+    <th>Term</th>
+    <th>Meaning</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>Error</td>
+    <td>Human mistake</td>
+    <td>Developer writes incorrect formula</td>
+</tr>
+
+<tr>
+    <td>Fault/Bug</td>
+    <td>Defect in software</td>
+    <td>Wrong formula exists in code</td>
+</tr>
+
+<tr>
+    <td>Failure</td>
+    <td>Incorrect behaviour during execution</td>
+    <td>Wrong answer displayed</td>
+</tr>
+
+<tr>
+    <td>Incident</td>
+    <td>Observed event requiring investigation</td>
+    <td>Unexpected application behaviour reported</td>
+</tr>
+</table>
+
+<h2>11. Test Case</h2>
+
+<div class="definition">
+    A <b>Test Case</b> is a set of conditions, inputs, steps and expected results
+    used to verify a particular software function.
+</div>
+
+<h3>Common Test Case Fields</h3>
+
+<ul>
+    <li>Test Case ID</li>
+    <li>Test Case Description</li>
+    <li>Precondition</li>
+    <li>Input Data</li>
+    <li>Test Steps</li>
+    <li>Expected Result</li>
+    <li>Actual Result</li>
+    <li>Status - Pass/Fail</li>
+</ul>
+
+<table>
+<tr>
+    <th>Test Case ID</th>
+    <th>Input</th>
+    <th>Expected Result</th>
+</tr>
+
+<tr>
+    <td>TC01</td>
+    <td>Valid username and password</td>
+    <td>Login successful</td>
+</tr>
+
+<tr>
+    <td>TC02</td>
+    <td>Wrong password</td>
+    <td>Error message displayed</td>
+</tr>
+</table>
+
+<h2>12. Test Scenario</h2>
+
+<p>
+A <b>test scenario</b> describes what functionality needs to be tested at a
+high level.
+</p>
+
+<div class="example">
+    <b>Scenario:</b> Test the login functionality.
+    <br><br>
+    Test cases can then check valid login, invalid login, empty fields,
+    password length, etc.
+</div>
+
+<h2>13. Test Suite</h2>
+
+<div class="definition">
+    A <b>Test Suite</b> is a collection of related test cases grouped together
+    for testing a particular feature or system.
+</div>
+
+<div class="example">
+    Example: A Login Test Suite may contain 20 test cases.
+</div>
+
+<h2>14. Test Data</h2>
+
+<p>
+Test data is the input data used during testing.
+</p>
+
+<p><b>Examples:</b></p>
+
+<ul>
+    <li>Valid username</li>
+    <li>Invalid username</li>
+    <li>Valid password</li>
+    <li>Empty password</li>
+    <li>Special characters</li>
+    <li>Boundary values</li>
+</ul>
+
+<h2>15. Testware</h2>
+
+<div class="definition">
+    <b>Testware</b> refers to all documents, scripts, data and other items
+    created or used during software testing.
+</div>
+
+<p>Examples include:</p>
+
+<ul>
+    <li>Test plans</li>
+    <li>Test cases</li>
+    <li>Test scripts</li>
+    <li>Test data</li>
+    <li>Test reports</li>
+    <li>Defect reports</li>
+</ul>
+
+<h2>16. Software Testing Life Cycle - STLC</h2>
+
+<p>
+The Software Testing Life Cycle is a sequence of activities performed during
+the testing process.
+</p>
+
+<h3>1. Requirement Analysis</h3>
+<p>
+Testers study requirements and identify what needs to be tested.
+</p>
+
+<h3>2. Test Planning</h3>
+<p>
+Testing objectives, resources, schedule, tools and strategy are planned.
+</p>
+
+<h3>3. Test Case Development</h3>
+<p>
+Test cases and test data are prepared.
+</p>
+
+<h3>4. Test Environment Setup</h3>
+<p>
+Hardware, software, database and other required environments are prepared.
+</p>
+
+<h3>5. Test Execution</h3>
+<p>
+Test cases are executed and actual results are compared with expected results.
+</p>
+
+<h3>6. Defect Reporting</h3>
+<p>
+Detected defects are recorded and communicated to the development team.
+</p>
+
+<h3>7. Test Closure</h3>
+<p>
+Testing results, reports and lessons learned are documented after completion.
+</p>
+
+<div class="important">
+    Requirement Analysis → Test Planning → Test Case Development →
+    Environment Setup → Test Execution → Defect Reporting → Test Closure
+</div>
+
+<h2>17. Verification</h2>
+
+<div class="definition">
+    <b>Verification</b> checks whether software work products are being created
+    correctly according to specified requirements and design.
+</div>
+
+<div class="example">
+    <b>Simple question:</b> "Are we building the product right?"
+</div>
+
+<h2>18. Validation</h2>
+
+<div class="definition">
+    <b>Validation</b> checks whether the developed software satisfies the
+    intended user needs and requirements.
+</div>
+
+<div class="example">
+    <b>Simple question:</b> "Are we building the right product?"
+</div>
+
+<h2>19. Verification vs Validation</h2>
+
+<table>
+<tr>
+    <th>Verification</th>
+    <th>Validation</th>
+</tr>
+
+<tr>
+    <td>Checks work products.</td>
+    <td>Checks the final software behaviour.</td>
+</tr>
+
+<tr>
+    <td>Mostly static activities.</td>
+    <td>Usually involves execution/testing.</td>
+</tr>
+
+<tr>
+    <td>Are we building the product right?</td>
+    <td>Are we building the right product?</td>
+</tr>
+</table>
+
+<h2>20. Static Testing</h2>
+
+<p>
+Static testing examines software documents or code without executing the program.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+    <li>Requirement review</li>
+    <li>Code review</li>
+    <li>Inspection</li>
+    <li>Walkthrough</li>
+    <li>Static analysis</li>
+</ul>
+
+<h2>21. Inspection</h2>
+
+<p>
+Inspection is a formal review process in which work products are examined
+systematically to identify defects.
+</p>
+
+<h2>22. Walkthrough</h2>
+
+<p>
+A walkthrough is a review in which the author explains the work product to
+other team members and receives feedback.
+</p>
+
+<h2>23. Technical Review</h2>
+
+<p>
+A technical review examines technical aspects of a software work product
+to identify problems and improve quality.
+</p>
+
+<h2>24. Dynamic Testing</h2>
+
+<p>
+Dynamic testing involves executing the software and observing its behaviour.
+</p>
+
+<div class="example">
+    Example: Running a login application with different usernames and passwords.
+</div>
+
+<h2>25. Limitations of Testing</h2>
+
+<ul>
+    <li>Exhaustive testing is generally impossible.</li>
+    <li>Testing cannot guarantee zero defects.</li>
+    <li>Testing can require significant time and resources.</li>
+    <li>Some defects may remain undiscovered.</li>
+    <li>Testing depends on the quality of test cases.</li>
+    <li>Changing requirements can affect testing.</li>
+</ul>
+
+<h2>26. Quick Revision</h2>
+
+<ul>
+    <li>Testing finds defects and checks software behaviour.</li>
+    <li>Error = human mistake.</li>
+    <li>Fault/Bug = defect in software.</li>
+    <li>Failure = incorrect behaviour during execution.</li>
+    <li>Test case contains inputs, steps and expected results.</li>
+    <li>STLC describes major testing activities.</li>
+    <li>Verification = Are we building the product right?</li>
+    <li>Validation = Are we building the right product?</li>
+    <li>Static testing does not execute the software.</li>
+    <li>Dynamic testing executes the software.</li>
+</ul>
+
+<h2>Important Exam Questions</h2>
+
+<ol>
+    <li>Define software testing and explain its importance.</li>
+    <li>Explain the goals and principles of software testing.</li>
+    <li>Differentiate error, fault, failure and incident.</li>
+    <li>What is a test case? Explain its components.</li>
+    <li>Explain Software Testing Life Cycle.</li>
+    <li>Differentiate verification and validation.</li>
+    <li>Explain static and dynamic testing.</li>
+    <li>What is testware?</li>
+    <li>Explain inspection and walkthrough.</li>
+    <li>Explain the limitations of software testing.</li>
+</ol>
+
+</div>
+
+</body>
+</html>

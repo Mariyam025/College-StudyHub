@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #4b6584;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #f0ad4e;
+            margin: 10px 0;
+        }
+
+        .example {
+            background: #eaf7ea;
+            padding: 15px;
+            border-left: 5px solid #28a745;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e9ecef;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mathematics - Unit 2</h1>
+
+    <div class="box">
+        <strong>Topics:</strong>
+        <ul>
+            <li>Successive Differentiation</li>
+            <li>Partial Derivatives</li>
+            <li>Euler's Theorem for Homogeneous Functions</li>
+            <li>Total Derivatives</li>
+            <li>Taylor's Theorem</li>
+            <li>Maclaurin's Theorem</li>
+            <li>Expansion of Function of Several Variables</li>
+            <li>Definite Integration</li>
+            <li>Indefinite Integration</li>
+        </ul>
+    </div>
+
+
+    <h2>1. Successive Differentiation</h2>
+
+    <p>
+        Successive differentiation means differentiating a function
+        repeatedly.
+    </p>
+
+    <div class="formula">
+        First derivative = dy/dx<br>
+        Second derivative = d²y/dx²<br>
+        Third derivative = d³y/dx³
+    </div>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        y = x³<br><br>
+
+        First derivative:<br>
+        dy/dx = 3x²<br><br>
+
+        Second derivative:<br>
+        d²y/dx² = 6x<br><br>
+
+        Third derivative:<br>
+        d³y/dx³ = 6
+    </div>
+
+
+    <h2>2. Partial Derivatives</h2>
+
+    <p>
+        When a function contains two or more independent variables,
+        differentiation with respect to one variable while keeping
+        other variables constant is called partial differentiation.
+    </p>
+
+    <div class="formula">
+        Partial derivative with respect to x:
+        ∂f/∂x
+        <br><br>
+        Partial derivative with respect to y:
+        ∂f/∂y
+    </div>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        z = x² + 3xy + y²<br><br>
+
+        ∂z/∂x = 2x + 3y<br><br>
+
+        ∂z/∂y = 3x + 2y
+    </div>
+
+
+    <h2>3. Second Order Partial Derivatives</h2>
+
+    <p>
+        Partial differentiation can also be performed more than once.
+    </p>
+
+    <div class="formula">
+        ∂²z/∂x²,
+        ∂²z/∂y²,
+        ∂²z/∂x∂y
+    </div>
+
+    <div class="example">
+        For:
+        <br><br>
+        z = x²y + y³
+        <br><br>
+
+        ∂z/∂x = 2xy
+        <br><br>
+
+        ∂²z/∂x² = 2y
+    </div>
+
+
+    <h2>4. Homogeneous Function</h2>
+
+    <p>
+        A function is called homogeneous if all its terms have the
+        same total degree.
+    </p>
+
+    <div class="example">
+        Example:
+        <br><br>
+        f(x,y) = x² + 2xy + y²
+        <br><br>
+        Each term has degree 2.
+        Therefore, it is a homogeneous function of degree 2.
+    </div>
+
+
+    <h2>5. Euler's Theorem for Homogeneous Functions</h2>
+
+    <p>
+        If f(x,y) is a homogeneous function of degree n, then:
+    </p>
+
+    <div class="formula">
+        x(∂f/∂x) + y(∂f/∂y) = nf
+    </div>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        f(x,y) = x² + y²
+        <br><br>
+
+        Degree = 2
+        <br><br>
+
+        ∂f/∂x = 2x<br>
+        ∂f/∂y = 2y
+        <br><br>
+
+        x(2x) + y(2y)
+        = 2x² + 2y²
+        = 2f
+        <br><br>
+
+        Hence Euler's theorem is verified.
+    </div>
+
+
+    <h2>6. Total Derivative</h2>
+
+    <p>
+        Total derivative is used when a dependent variable depends
+        on more than one variable and those variables themselves
+        depend on another variable.
+    </p>
+
+    <div class="formula">
+        If z = f(x,y), x = x(t), y = y(t), then
+        <br><br>
+        dz/dt = (∂z/∂x)(dx/dt) + (∂z/∂y)(dy/dt)
+    </div>
+
+    <div class="example">
+        Example:
+        <br><br>
+        z = x² + y²
+        <br>
+        x = t, y = t²
+        <br><br>
+
+        dz/dt =
+        2x(dx/dt) + 2y(dy/dt)
+    </div>
+
+
+    <h2>7. Taylor's Theorem</h2>
+
+    <p>
+        Taylor's theorem is used to express a function as an infinite
+        series around a particular point.
+    </p>
+
+    <div class="formula">
+        f(x) = f(a)
+        + (x-a)f'(a)
+        + ((x-a)²/2!)f''(a)
+        + ...
+    </div>
+
+    <div class="example">
+        Taylor expansion is useful for approximating functions near
+        a particular value.
+    </div>
+
+
+    <h2>8. Maclaurin's Theorem</h2>
+
+    <p>
+        Maclaurin's theorem is a special case of Taylor's theorem
+        where a = 0.
+    </p>
+
+    <div class="formula">
+        f(x) = f(0)
+        + xf'(0)
+        + (x²/2!)f''(0)
+        + (x³/3!)f'''(0)
+        + ...
+    </div>
+
+    <h3>Important Maclaurin Expansions</h3>
+
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>Expansion</th>
+        </tr>
+
+        <tr>
+            <td>eˣ</td>
+            <td>1 + x + x²/2! + x³/3! + ...</td>
+        </tr>
+
+        <tr>
+            <td>sin x</td>
+            <td>x - x³/3! + x⁵/5! - ...</td>
+        </tr>
+
+        <tr>
+            <td>cos x</td>
+            <td>1 - x²/2! + x⁴/4! - ...</td>
+        </tr>
+
+        <tr>
+            <td>log(1+x)</td>
+            <td>x - x²/2 + x³/3 - ...</td>
+        </tr>
+    </table>
+
+
+    <h2>9. Expansion of Function of Several Variables</h2>
+
+    <p>
+        Taylor's theorem can also be used for functions containing
+        more than one variable.
+    </p>
+
+    <div class="formula">
+        f(x,y) can be expanded using partial derivatives
+        around a specified point.
+    </div>
+
+    <div class="example">
+        For a function f(x,y), expansion involves terms such as:
+        <br><br>
+
+        f(a,b),<br>
+        (x-a)f<sub>x</sub>,<br>
+        (y-b)f<sub>y</sub>,<br>
+        second order partial derivatives, etc.
+    </div>
+
+
+    <h2>10. Indefinite Integration</h2>
+
+    <p>
+        Indefinite integration is the reverse process of differentiation.
+    </p>
+
+    <div class="formula">
+        ∫ f(x) dx = F(x) + C
+    </div>
+
+    <p>
+        Here C is the constant of integration.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        ∫ x² dx
+        <br><br>
+        = x³/3 + C
+    </div>
+
+
+    <h3>Basic Integration Formulas</h3>
+
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>Integral</th>
+        </tr>
+
+        <tr>
+            <td>xⁿ</td>
+            <td>xⁿ⁺¹/(n+1) + C</td>
+        </tr>
+
+        <tr>
+            <td>1/x</td>
+            <td>log|x| + C</td>
+        </tr>
+
+        <tr>
+            <td>eˣ</td>
+            <td>eˣ + C</td>
+        </tr>
+
+        <tr>
+            <td>sin x</td>
+            <td>-cos x + C</td>
+        </tr>
+
+        <tr>
+            <td>cos x</td>
+            <td>sin x + C</td>
+        </tr>
+    </table>
+
+
+    <h2>11. Definite Integration</h2>
+
+    <p>
+        Definite integration has fixed lower and upper limits.
+    </p>
+
+    <div class="formula">
+        ∫<sub>a</sub><sup>b</sup> f(x) dx
+    </div>
+
+    <p>
+        The result of a definite integral is a constant value.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        ∫<sub>0</sub><sup>2</sup> x dx
+        <br><br>
+
+        = [x²/2]<sub>0</sub><sup>2</sup>
+        <br><br>
+
+        = 2
+    </div>
+
+
+    <h2>Quick Revision</h2>
+
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Important Point</th>
+        </tr>
+
+        <tr>
+            <td>Successive Differentiation</td>
+            <td>Repeated differentiation</td>
+        </tr>
+
+        <tr>
+            <td>Partial Derivative</td>
+            <td>Differentiation with respect to one variable</td>
+        </tr>
+
+        <tr>
+            <td>Euler's Theorem</td>
+            <td>xfx + yfy = nf</td>
+        </tr>
+
+        <tr>
+            <td>Total Derivative</td>
+            <td>Used when variables depend on another variable</td>
+        </tr>
+
+        <tr>
+            <td>Taylor's Theorem</td>
+            <td>Expansion around a particular point</td>
+        </tr>
+
+        <tr>
+            <td>Maclaurin's Theorem</td>
+            <td>Taylor's theorem at x = 0</td>
+        </tr>
+
+        <tr>
+            <td>Indefinite Integration</td>
+            <td>Integral with constant C</td>
+        </tr>
+
+        <tr>
+            <td>Definite Integration</td>
+            <td>Integral with fixed limits</td>
+        </tr>
+    </table>
+
+
+    <h2>Important Exam Questions</h2>
+
+    <div class="question">
+        1. Explain successive differentiation with an example.
+    </div>
+
+    <div class="question">
+        2. Define partial derivatives and find first and second order partial derivatives.
+    </div>
+
+    <div class="question">
+        3. State and verify Euler's theorem for homogeneous functions.
+    </div>
+
+    <div class="question">
+        4. Explain total differentiation.
+    </div>
+
+    <div class="question">
+        5. State Taylor's theorem.
+    </div>
+
+    <div class="question">
+        6. Explain Maclaurin's theorem and write important expansions.
+    </div>
+
+    <div class="question">
+        7. Solve definite and indefinite integration problems.
+    </div>
+
+
+    <h2>Viva Questions</h2>
+
+    <div class="question">
+        <strong>Q1.</strong> What is successive differentiation?<br>
+        <strong>Ans:</strong> Repeated differentiation of a function.
+    </div>
+
+    <div class="question">
+        <strong>Q2.</strong> What is a partial derivative?<br>
+        <strong>Ans:</strong> Differentiation of a multivariable function with respect to one variable while keeping other variables constant.
+    </div>
+
+    <div class="question">
+        <strong>Q3.</strong> What is Euler's theorem?<br>
+        <strong>Ans:</strong> For a homogeneous function of degree n, xfx + yfy = nf.
+    </div>
+
+    <div class="question">
+        <strong>Q4.</strong> What is Maclaurin's theorem?<br>
+        <strong>Ans:</strong> It is Taylor's theorem about the point x = 0.
+    </div>
+
+    <div class="question">
+        <strong>Q5.</strong> What is indefinite integration?<br>
+        <strong>Ans:</strong> Integration without fixed limits, including a constant of integration C.
+    </div>
+
+</div>
+
+</body>
+</html>

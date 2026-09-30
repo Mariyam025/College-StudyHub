@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Software Engineering - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back {
+            display: inline-block;
+            background: #3949ab;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .topic {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #3949ab;
+        }
+
+        h3 {
+            color: #5c6bc0;
+        }
+
+        .important {
+            background: #e8eaf6;
+            border-left: 5px solid #3949ab;
+            padding: 12px;
+            margin-top: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #3949ab;
+            color: white;
+        }
+
+        pre {
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Software Engineering</h1>
+    <p>Unit 2 – Software Process Models</p>
+</header>
+
+<div class="container">
+
+    <a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+    <div class="topic">
+        <h2>1. Software Process Model</h2>
+
+        <p>
+            A software process model is a structured representation of
+            the activities involved in software development.
+        </p>
+
+        <p>
+            It defines how different phases of software development
+            are organized and performed.
+        </p>
+
+        <div class="important">
+            <b>Simple Definition:</b>
+            A process model tells us how software development activities
+            should be carried out.
+        </div>
+    </div>
+
+    <div class="topic">
+        <h2>2. Types of Software Process Models</h2>
+
+        <ul>
+            <li>Waterfall Model</li>
+            <li>Prototype Model</li>
+            <li>Incremental Model</li>
+            <li>Spiral Model</li>
+            <li>V-Model</li>
+            <li>Agile Model</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>3. Waterfall Model</h2>
+
+        <p>
+            The Waterfall Model is a sequential software development model
+            in which development proceeds through clearly defined phases.
+        </p>
+
+        <h3>Phases:</h3>
+
+        <ol>
+            <li>Requirement Analysis</li>
+            <li>System Design</li>
+            <li>Implementation</li>
+            <li>Testing</li>
+            <li>Deployment</li>
+            <li>Maintenance</li>
+        </ol>
+
+        <div class="important">
+            Each phase is generally completed before the next phase begins.
+        </div>
+    </div>
+
+    <div class="topic">
+        <h2>4. Advantages of Waterfall Model</h2>
+
+        <ul>
+            <li>Simple and easy to understand.</li>
+            <li>Easy to manage.</li>
+            <li>Clear phases and milestones.</li>
+            <li>Good documentation.</li>
+            <li>Suitable when requirements are stable.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>5. Disadvantages of Waterfall Model</h2>
+
+        <ul>
+            <li>Changes are difficult after a phase is completed.</li>
+            <li>Testing occurs relatively late.</li>
+            <li>Working software is delivered late.</li>
+            <li>Not suitable when requirements change frequently.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>6. Prototype Model</h2>
+
+        <p>
+            In the Prototype Model, an early version of the software
+            is created to understand and validate user requirements.
+        </p>
+
+        <h3>Basic process:</h3>
+
+        <ol>
+            <li>Collect initial requirements.</li>
+            <li>Develop a prototype.</li>
+            <li>Get user feedback.</li>
+            <li>Refine requirements.</li>
+            <li>Develop the final system.</li>
+        </ol>
+    </div>
+
+    <div class="topic">
+        <h2>7. Advantages of Prototype Model</h2>
+
+        <ul>
+            <li>Helps understand unclear requirements.</li>
+            <li>Provides early user feedback.</li>
+            <li>Reduces misunderstanding of requirements.</li>
+            <li>Improves communication with users.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>8. Disadvantages of Prototype Model</h2>
+
+        <ul>
+            <li>Prototype development can require extra time.</li>
+            <li>Users may mistake the prototype for the final system.</li>
+            <li>Frequent changes can increase cost.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>9. Incremental Model</h2>
+
+        <p>
+            The Incremental Model develops and delivers software in
+            multiple smaller increments.
+        </p>
+
+        <p>
+            Each increment adds additional functionality to the system.
+        </p>
+
+        <h3>Example:</h3>
+
+        <p>
+            A shopping website may first provide login and product
+            browsing, then add cart, payment and order tracking in
+            later increments.
+        </p>
+    </div>
+
+    <div class="topic">
+        <h2>10. Advantages of Incremental Model</h2>
+
+        <ul>
+            <li>Working software is delivered early.</li>
+            <li>Easy to accommodate some changes.</li>
+            <li>Problems can be identified earlier.</li>
+            <li>Lower risk per increment.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>11. Disadvantages of Incremental Model</h2>
+
+        <ul>
+            <li>Requires good planning.</li>
+            <li>System architecture should support incremental development.</li>
+            <li>Integration can become complex.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>12. Spiral Model</h2>
+
+        <p>
+            The Spiral Model combines iterative development with
+            systematic risk analysis.
+        </p>
+
+        <h3>Main activities:</h3>
+
+        <ol>
+            <li>Planning</li>
+            <li>Risk Analysis</li>
+            <li>Engineering / Development</li>
+            <li>Evaluation</li>
+        </ol>
+
+        <div class="important">
+            The main feature of the Spiral Model is its strong focus
+            on risk identification and management.
+        </div>
+    </div>
+
+    <div class="topic">
+        <h2>13. Advantages of Spiral Model</h2>
+
+        <ul>
+            <li>Strong risk management.</li>
+            <li>Suitable for large and complex projects.</li>
+            <li>Supports iterative development.</li>
+            <li>Allows user feedback.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>14. Disadvantages of Spiral Model</h2>
+
+        <ul>
+            <li>Can be expensive.</li>
+            <li>Requires risk analysis expertise.</li>
+            <li>Complex to manage.</li>
+            <li>Not suitable for very small projects.</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>15. V-Model</h2>
+
+        <p>
+            The V-Model is a development model in which development
+            activities are closely associated with corresponding
+            testing activities.
+        </p>
+
+        <table>
+            <tr>
+                <th>Development Activity</th>
+                <th>Testing Activity</th>
+            </tr>
+
+            <tr>
+                <td>Requirement Analysis</td>
+                <td>Acceptance Testing</td>
+            </tr>
+
+            <tr>
+                <td>System Design</td>
+                <td>System Testing</td>
+            </tr>
+
+            <tr>
+                <td>Architecture Design</td>
+                <td>Integration Testing</td>
+            </tr>
+
+            <tr>
+                <td>Module Design</td>
+                <td>Unit Testing</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic">
+        <h2>16. Agile Model</h2>
+
+        <p>
+            Agile is an iterative and incremental approach to software
+            development that emphasizes frequent delivery, collaboration
+            and responding to changing requirements.
+        </p>
+
+        <h3>Important features:</h3>
+
+        <ul>
+            <li>Continuous customer involvement</li>
+            <li>Frequent delivery</li>
+            <li>Team collaboration</li>
+            <li>Quick response to change</li>
+            <li>Continuous improvement</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>17. Agile Development</h2>
+
+        <p>
+            In Agile development, the project is divided into small
+            iterations or cycles. A working part of the software is
+            developed and reviewed during each cycle.
+        </p>
+
+        <h3>Common Agile activities:</h3>
+
+        <ul>
+            <li>Planning</li>
+            <li>Development</li>
+            <li>Testing</li>
+            <li>Review</li>
+            <li>Improvement</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>18. Comparison of Process Models</h2>
+
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Main Feature</th>
+            </tr>
+
+            <tr>
+                <td>Waterfall</td>
+                <td>Sequential development</td>
+            </tr>
+
+            <tr>
+                <td>Prototype</td>
+                <td>Early prototype and feedback</td>
+            </tr>
+
+            <tr>
+                <td>Incremental</td>
+                <td>Development in increments</td>
+            </tr>
+
+            <tr>
+                <td>Spiral</td>
+                <td>Risk-focused iterative development</td>
+            </tr>
+
+            <tr>
+                <td>V-Model</td>
+                <td>Development linked with testing</td>
+            </tr>
+
+            <tr>
+                <td>Agile</td>
+                <td>Iterative development and adaptability</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic">
+        <h2>19. Factors for Selecting a Process Model</h2>
+
+        <ul>
+            <li>Project size</li>
+            <li>Project complexity</li>
+            <li>Requirement stability</li>
+            <li>Risk level</li>
+            <li>Customer involvement</li>
+            <li>Available resources</li>
+            <li>Project deadline</li>
+            <li>Team experience</li>
+        </ul>
+    </div>
+
+    <div class="topic">
+        <h2>20. Important Exam Questions</h2>
+
+        <ol>
+            <li>What is a software process model?</li>
+            <li>Explain the Waterfall Model.</li>
+            <li>Write advantages and disadvantages of Waterfall Model.</li>
+            <li>Explain Prototype Model.</li>
+            <li>What is Incremental Model?</li>
+            <li>Explain Spiral Model.</li>
+            <li>What is V-Model?</li>
+            <li>Explain Agile Model.</li>
+            <li>Compare different software process models.</li>
+            <li>What factors should be considered while selecting a process model?</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>College StudyHub | Software Engineering – Unit 2</p>
+</footer>
+
+</body>
+</html>

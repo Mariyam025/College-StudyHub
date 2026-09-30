@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals of Computer - Unit 4</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .unit {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .box {
+            background: #f8f9fa;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        .important {
+            background: #fff8dc;
+            padding: 15px;
+            border-left: 5px solid #f0b400;
+            margin-top: 20px;
+        }
+
+        .question {
+            background: #f1f5ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            padding: 10px 16px;
+            background: #333;
+            color: white;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="../../../notes.html" class="back">← Back to Notes</a>
+
+    <h1>Fundamentals of Computer</h1>
+    <p class="unit"><strong>Unit IV – Computer Software & Programming Languages</strong></p>
+
+
+    <h2>1. Computer Software</h2>
+
+    <p>
+        Software is a collection of programs and instructions that tells
+        a computer what to do.
+    </p>
+
+    <div class="box">
+        <strong>Example:</strong> Windows, MS Word, Chrome and VLC are examples
+        of software.
+    </div>
+
+
+    <h2>2. System Software</h2>
+
+    <p>
+        System software controls and manages computer hardware and provides
+        a platform for running application software.
+    </p>
+
+    <h3>Examples</h3>
+
+    <ul>
+        <li>Operating System</li>
+        <li>Device Drivers</li>
+        <li>Utility Programs</li>
+    </ul>
+
+
+    <h2>3. Application Software</h2>
+
+    <p>
+        Application software is designed to perform specific tasks for the
+        user.
+    </p>
+
+    <div class="box">
+        <strong>Examples:</strong> MS Word for document preparation,
+        MS Excel for calculations and Chrome for web browsing.
+    </div>
+
+
+    <h3>System Software vs Application Software</h3>
+
+    <table>
+        <tr>
+            <th>System Software</th>
+            <th>Application Software</th>
+        </tr>
+        <tr>
+            <td>Manages computer system</td>
+            <td>Performs user-specific tasks</td>
+        </tr>
+        <tr>
+            <td>Works mainly in background</td>
+            <td>Used directly by users</td>
+        </tr>
+        <tr>
+            <td>Example: Operating System</td>
+            <td>Example: MS Word</td>
+        </tr>
+    </table>
+
+
+    <h2>4. Operating System</h2>
+
+    <p>
+        An Operating System (OS) is system software that manages computer
+        hardware, software resources and provides an interface between
+        the user and computer.
+    </p>
+
+    <h3>Examples</h3>
+
+    <ul>
+        <li>Windows</li>
+        <li>Linux</li>
+        <li>macOS</li>
+        <li>Android</li>
+    </ul>
+
+    <h3>Main Functions of Operating System</h3>
+
+    <ul>
+        <li>Process management</li>
+        <li>Memory management</li>
+        <li>File management</li>
+        <li>Device management</li>
+        <li>Security</li>
+        <li>User interface</li>
+    </ul>
+
+
+    <h2>5. Algorithm</h2>
+
+    <p>
+        An algorithm is a step-by-step procedure used to solve a problem
+        or perform a task.
+    </p>
+
+    <div class="box">
+        <strong>Example: Algorithm to add two numbers</strong>
+
+        <ol>
+            <li>Start</li>
+            <li>Input two numbers A and B</li>
+            <li>Add A and B</li>
+            <li>Display the result</li>
+            <li>Stop</li>
+        </ol>
+    </div>
+
+
+    <h2>6. Flowchart</h2>
+
+    <p>
+        A flowchart is a graphical representation of an algorithm.
+        It uses different symbols to represent different steps.
+    </p>
+
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>Oval</td>
+            <td>Start / Stop</td>
+        </tr>
+        <tr>
+            <td>Rectangle</td>
+            <td>Process</td>
+        </tr>
+        <tr>
+            <td>Parallelogram</td>
+            <td>Input / Output</td>
+        </tr>
+        <tr>
+            <td>Diamond</td>
+            <td>Decision</td>
+        </tr>
+        <tr>
+            <td>Arrow</td>
+            <td>Flow direction</td>
+        </tr>
+    </table>
+
+
+    <h2>7. Types of Computer Languages</h2>
+
+    <p>
+        Computer languages are used to communicate instructions to a computer.
+    </p>
+
+    <h3>1. Machine Language</h3>
+
+    <p>
+        Machine language consists of binary instructions using 0 and 1.
+        It is directly understood by the computer.
+    </p>
+
+    <div class="box">
+        <strong>Example:</strong> 10110100
+    </div>
+
+
+    <h3>2. Assembly Language</h3>
+
+    <p>
+        Assembly language uses symbolic instructions or mnemonics instead
+        of binary codes.
+    </p>
+
+    <div class="box">
+        <strong>Example:</strong> ADD, MOV, SUB
+    </div>
+
+
+    <h3>3. High-Level Language</h3>
+
+    <p>
+        High-level languages use instructions that are easier for humans
+        to read and understand.
+    </p>
+
+    <div class="box">
+        <strong>Examples:</strong> C, C++, Java, Python
+    </div>
+
+
+    <h2>8. Assembler</h2>
+
+    <p>
+        An assembler is a system program that converts an assembly language
+        program into machine language.
+    </p>
+
+    <div class="box">
+        <strong>Assembly Language → Assembler → Machine Language</strong>
+    </div>
+
+
+    <h2>9. Compiler</h2>
+
+    <p>
+        A compiler translates a high-level language program into machine
+        language or equivalent machine-level code.
+    </p>
+
+    <div class="box">
+        <strong>Example:</strong> A C compiler converts C source code
+        into machine-level/object code.
+    </div>
+
+
+    <h2>10. Interpreter</h2>
+
+    <p>
+        An interpreter translates and executes a program statement by
+        statement.
+    </p>
+
+    <div class="box">
+        <strong>Example:</strong> Python commonly uses an interpreter-based
+        execution approach.
+    </div>
+
+
+    <h3>Compiler vs Interpreter</h3>
+
+    <table>
+        <tr>
+            <th>Compiler</th>
+            <th>Interpreter</th>
+        </tr>
+        <tr>
+            <td>Translates the program as a whole</td>
+            <td>Translates statement by statement</td>
+        </tr>
+        <tr>
+            <td>Produces object/executable code</td>
+            <td>Usually executes during translation</td>
+        </tr>
+        <tr>
+            <td>Compilation is done before execution</td>
+            <td>Translation and execution occur together</td>
+        </tr>
+    </table>
+
+
+    <h2>11. Linker</h2>
+
+    <p>
+        A linker combines object files and required library files to create
+        a final executable program.
+    </p>
+
+    <div class="box">
+        <strong>Object Files + Libraries → Linker → Executable File</strong>
+    </div>
+
+
+    <h2>12. Loader</h2>
+
+    <p>
+        A loader loads the executable program into the main memory so that
+        the CPU can execute it.
+    </p>
+
+    <div class="box">
+        <strong>Executable Program → Loader → Main Memory → Execution</strong>
+    </div>
+
+
+    <h2>Quick Revision</h2>
+
+    <ul>
+        <li>Software = collection of programs and instructions.</li>
+        <li>System software manages computer resources.</li>
+        <li>Application software performs specific user tasks.</li>
+        <li>Operating System manages hardware and software resources.</li>
+        <li>Algorithm = step-by-step solution.</li>
+        <li>Flowchart = graphical representation of an algorithm.</li>
+        <li>Assembler converts assembly language into machine language.</li>
+        <li>Compiler translates high-level language program.</li>
+        <li>Interpreter translates and executes statement by statement.</li>
+        <li>Linker combines object files and libraries.</li>
+        <li>Loader loads the executable program into memory.</li>
+    </ul>
+
+
+    <h2>Important Exam Questions</h2>
+
+    <div class="question">
+        1. Define computer software.
+    </div>
+
+    <div class="question">
+        2. Explain system software and application software.
+    </div>
+
+    <div class="question">
+        3. What is an Operating System? Explain its functions.
+    </div>
+
+    <div class="question">
+        4. Define algorithm with an example.
+    </div>
+
+    <div class="question">
+        5. What is a flowchart? Explain its symbols.
+    </div>
+
+    <div class="question">
+        6. Explain different types of computer languages.
+    </div>
+
+    <div class="question">
+        7. What is an assembler?
+    </div>
+
+    <div class="question">
+        8. Explain compiler and interpreter.
+    </div>
+
+    <div class="question">
+        9. Differentiate between compiler and interpreter.
+    </div>
+
+    <div class="question">
+        10. Explain linker and loader.
+    </div>
+
+
+    <h2>Viva Questions</h2>
+
+    <div class="question">
+        <strong>Q:</strong> What is software?<br>
+        <strong>A:</strong> A collection of programs and instructions.
+    </div>
+
+    <div class="question">
+        <strong>Q:</strong> Give one example of system software.<br>
+        <strong>A:</strong> Operating System.
+    </div>
+
+    <div class="question">
+        <strong>Q:</strong> What is an algorithm?<br>
+        <strong>A:</strong> A step-by-step procedure for solving a problem.
+    </div>
+
+    <div class="question">
+        <strong>Q:</strong> What converts assembly language into machine language?<br>
+        <strong>A:</strong> Assembler.
+    </div>
+
+    <div class="question">
+        <strong>Q:</strong> What does a loader do?<br>
+        <strong>A:</strong> It loads an executable program into main memory.
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | College StudyHub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+
+            background:
+                radial-gradient(circle at top left, #312e81, transparent 35%),
+                radial-gradient(circle at bottom right, #831843, transparent 35%),
+                #080b18;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 450px;
+            padding: 40px;
+
+            text-align: center;
+
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 25px;
+
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #a855f7,
+                #ec4899,
+                #38bdf8
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.07);
+            color: white;
+
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #94a3b8;
+        }
+
+        input:focus {
+            border-color: #a855f7;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: linear-gradient(
+                90deg,
+                #8b5cf6,
+                #ec4899
+            );
+
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+
+            color: #c4b5fd;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="icon">🛠️</div>
+
+        <h1>Admin Login</h1>
+
+        <p>
+            Manage College StudyHub from the Admin Panel
+        </p>
+
+        <form
+            action="admin-login.jsp"
+            method="post">
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Admin Username"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Admin Password"
+                required>
+
+            <button type="submit">
+                🔐 Login as Admin
+            </button>
+
+        </form>
+
+        <a
+            href="login.html"
+            class="back">
+
+            ← Back to Student Login
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Java - Unit 2</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Advanced Java Technology - Unit 2</h1>
+
+<div class="topic">
+<h2>1. Introduction to Servlet</h2>
+
+<p>
+A Servlet is a Java program that runs on a web server and handles client requests.
+Servlets are commonly used for creating dynamic web applications.
+</p>
+
+<p>
+Apache Tomcat is commonly used as a Servlet/JSP container.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. Servlet Architecture</h2>
+
+<pre>
+Client / Browser
+       ↓
+HTTP Request
+       ↓
+Web Server / Tomcat
+       ↓
+Servlet
+       ↓
+Business Logic
+       ↓
+Database
+       ↓
+HTTP Response
+       ↓
+Browser
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Servlet Life Cycle</h2>
+
+<p>The main lifecycle methods are:</p>
+
+<ul>
+<li><b>init()</b> - called when servlet is initialized</li>
+<li><b>service()</b> - processes requests</li>
+<li><b>destroy()</b> - called before servlet is removed</li>
+</ul>
+
+<pre>
+init()
+  ↓
+service()
+  ↓
+destroy()
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. HttpServlet</h2>
+
+<p>
+HttpServlet is used for handling HTTP requests.
+Common methods are:
+</p>
+
+<ul>
+<li>doGet()</li>
+<li>doPost()</li>
+</ul>
+
+<pre>
+protected void doGet(
+    HttpServletRequest request,
+    HttpServletResponse response)
+{
+    // code
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. GET and POST</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>GET</th>
+<th>POST</th>
+</tr>
+
+<tr>
+<td>Data is generally sent in URL</td>
+<td>Data is sent in request body</td>
+</tr>
+
+<tr>
+<td>Suitable for retrieving data</td>
+<td>Suitable for submitting data</td>
+</tr>
+
+<tr>
+<td>Less suitable for sensitive form data</td>
+<td>Better suited for form submission</td>
+</tr>
+</table>
+</div>
+
+<div class="topic">
+<h2>6. Request and Response</h2>
+
+<p>
+<b>HttpServletRequest</b> is used to read information sent by the client.
+</p>
+
+<p>
+<b>HttpServletResponse</b> is used to send information back to the client.
+</p>
+
+<pre>
+String name = request.getParameter("name");
+
+response.setContentType("text/html");
+
+PrintWriter out = response.getWriter();
+
+out.println("Hello " + name);
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. ServletConfig</h2>
+
+<p>
+ServletConfig stores configuration information specific to a servlet.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. ServletContext</h2>
+
+<p>
+ServletContext provides information shared across the web application.
+</p>
+
+<p>
+It can be used to share application-level data.
+</p>
+</div>
+
+<div class="topic">
+<h2>9. Session Tracking</h2>
+
+<p>
+HTTP is stateless, so session tracking is used to remember users between requests.
+</p>
+
+<ul>
+<li>Cookies</li>
+<li>URL Rewriting</li>
+<li>Hidden Form Fields</li>
+<li>HttpSession</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. Cookies</h2>
+
+<p>
+A cookie is a small piece of information stored by the browser.
+</p>
+
+<pre>
+Cookie c = new Cookie("username", "Rahul");
+
+response.addCookie(c);
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. HttpSession</h2>
+
+<pre>
+HttpSession session =
+    request.getSession();
+
+session.setAttribute(
+    "username", "Rahul"
+);
+</pre>
+
+<p>
+Session is commonly used for login systems and user-specific information.
+</p>
+</div>
+
+<div class="topic">
+<h2>12. Servlet with JDBC</h2>
+
+<p>
+A servlet can receive form data, use JDBC to communicate with a database,
+and send the result back to the browser.
+</p>
+
+<pre>
+HTML Form
+    ↓
+Servlet
+    ↓
+JDBC
+    ↓
+MySQL
+    ↓
+Servlet
+    ↓
+Browser
+</pre>
+</div>
+
+</div>
+
+</body>
+</html>

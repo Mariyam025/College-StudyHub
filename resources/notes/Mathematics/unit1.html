@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics - Unit 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #4b6584;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #f0ad4e;
+            margin: 10px 0;
+        }
+
+        .example {
+            background: #eaf7ea;
+            padding: 15px;
+            border-left: 5px solid #28a745;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e9ecef;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mathematics - Unit 1</h1>
+
+    <div class="box">
+        <strong>Topics:</strong>
+        <ul>
+            <li>Types of Matrices</li>
+            <li>Inverse of Matrix by Elementary Transformations</li>
+            <li>Rank of a Matrix</li>
+            <li>Consistency of Linear System of Equations</li>
+            <li>Characteristic Equation</li>
+            <li>Eigen Values and Eigen Vectors</li>
+            <li>Cayley-Hamilton Theorem</li>
+        </ul>
+    </div>
+
+
+    <h2>1. Matrix</h2>
+
+    <p>
+        A matrix is a rectangular arrangement of numbers or elements
+        in rows and columns. Matrices are generally represented by
+        capital letters such as A, B and C.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+        A = [ [1, 2], [3, 4] ]
+        <br><br>
+        This is a 2 × 2 matrix.
+    </div>
+
+
+    <h2>2. Types of Matrices</h2>
+
+    <h3>Row Matrix</h3>
+    <p>
+        A matrix having only one row is called a row matrix.
+    </p>
+
+    <div class="example">
+        [ 2  4  6 ]
+    </div>
+
+
+    <h3>Column Matrix</h3>
+    <p>
+        A matrix having only one column is called a column matrix.
+    </p>
+
+    <div class="example">
+        [ 2 ]<br>
+        [ 4 ]<br>
+        [ 6 ]
+    </div>
+
+
+    <h3>Square Matrix</h3>
+    <p>
+        A matrix having equal number of rows and columns is called
+        a square matrix.
+    </p>
+
+    <div class="example">
+        [ 1  2 ]<br>
+        [ 3  4 ]
+    </div>
+
+
+    <h3>Zero Matrix</h3>
+    <p>
+        A matrix in which all elements are zero is called a zero matrix.
+    </p>
+
+    <div class="example">
+        [ 0  0 ]<br>
+        [ 0  0 ]
+    </div>
+
+
+    <h3>Diagonal Matrix</h3>
+    <p>
+        A square matrix in which all non-diagonal elements are zero
+        is called a diagonal matrix.
+    </p>
+
+    <div class="example">
+        [ 2  0 ]<br>
+        [ 0  5 ]
+    </div>
+
+
+    <h3>Identity Matrix</h3>
+    <p>
+        A square matrix having 1 on the main diagonal and 0 elsewhere
+        is called an identity matrix.
+    </p>
+
+    <div class="example">
+        [ 1  0 ]<br>
+        [ 0  1 ]
+    </div>
+
+    <div class="formula">
+        Identity matrix is represented by <strong>I</strong>.
+    </div>
+
+
+    <h3>Symmetric Matrix</h3>
+    <p>
+        A square matrix is symmetric if its transpose is equal to
+        the original matrix.
+    </p>
+
+    <div class="formula">
+        A<sup>T</sup> = A
+    </div>
+
+
+    <h3>Upper Triangular Matrix</h3>
+    <p>
+        A square matrix in which all elements below the main diagonal
+        are zero is called an upper triangular matrix.
+    </p>
+
+
+    <h3>Lower Triangular Matrix</h3>
+    <p>
+        A square matrix in which all elements above the main diagonal
+        are zero is called a lower triangular matrix.
+    </p>
+
+
+    <h2>3. Inverse of a Matrix</h2>
+
+    <p>
+        The inverse of a square matrix A is a matrix A<sup>-1</sup>
+        such that:
+    </p>
+
+    <div class="formula">
+        A × A<sup>-1</sup> = I
+    </div>
+
+    <p>
+        The inverse can be found using elementary transformations.
+    </p>
+
+    <h3>Elementary Row Transformations</h3>
+
+    <ul>
+        <li>Interchange two rows.</li>
+        <li>Multiply a row by a non-zero number.</li>
+        <li>Add or subtract a multiple of one row from another row.</li>
+    </ul>
+
+    <div class="example">
+        <strong>Basic Method:</strong><br><br>
+        Write the augmented matrix:
+        <br><br>
+        [ A | I ]
+        <br><br>
+        Apply elementary row operations until:
+        <br><br>
+        [ I | A<sup>-1</sup> ]
+    </div>
+
+
+    <h2>4. Rank of a Matrix</h2>
+
+    <p>
+        The rank of a matrix is the maximum number of linearly
+        independent rows or columns of the matrix.
+    </p>
+
+    <div class="formula">
+        Rank(A) = Number of non-zero rows in row echelon form.
+    </div>
+
+    <div class="example">
+        For a matrix:
+        <br><br>
+        [ 1  2 ]<br>
+        [ 2  4 ]
+        <br><br>
+        The second row is a multiple of the first row.
+        Therefore, Rank(A) = 1.
+    </div>
+
+
+    <h2>5. Linear System of Equations</h2>
+
+    <p>
+        A system of linear equations contains two or more linear
+        equations involving variables.
+    </p>
+
+    <div class="example">
+        x + y = 5<br>
+        x - y = 1
+    </div>
+
+    <h3>Consistency</h3>
+
+    <p>
+        A system is called consistent if it has at least one solution.
+        It is inconsistent if it has no solution.
+    </p>
+
+    <div class="formula">
+        For AX = B:
+        <br><br>
+        Consistent if Rank(A) = Rank([A|B])
+    </div>
+
+    <div class="box">
+        <strong>Cases:</strong>
+        <ul>
+            <li>Rank(A) = Rank([A|B]) = Number of unknowns → Unique solution</li>
+            <li>Rank(A) = Rank([A|B]) &lt; Number of unknowns → Infinite solutions</li>
+            <li>Rank(A) ≠ Rank([A|B]) → No solution</li>
+        </ul>
+    </div>
+
+
+    <h2>6. Characteristic Equation</h2>
+
+    <p>
+        The characteristic equation of a square matrix A is obtained
+        from:
+    </p>
+
+    <div class="formula">
+        |A - λI| = 0
+    </div>
+
+    <p>
+        Here, λ (lambda) represents the eigenvalue and I represents
+        the identity matrix.
+    </p>
+
+    <div class="example">
+        For a 2 × 2 matrix, calculate:
+        <br><br>
+        |A - λI| = 0
+        <br><br>
+        The resulting polynomial is called the characteristic equation.
+    </div>
+
+
+    <h2>7. Eigen Values</h2>
+
+    <p>
+        Eigenvalues are the values of λ for which:
+    </p>
+
+    <div class="formula">
+        |A - λI| = 0
+    </div>
+
+    <p>
+        The roots of the characteristic equation are the eigenvalues
+        of the matrix.
+    </p>
+
+
+    <h2>8. Eigen Vectors</h2>
+
+    <p>
+        For an eigenvalue λ, a non-zero vector X is called an
+        eigenvector if:
+    </p>
+
+    <div class="formula">
+        AX = λX
+    </div>
+
+    <p>
+        It can also be written as:
+    </p>
+
+    <div class="formula">
+        (A - λI)X = 0
+    </div>
+
+
+    <div class="example">
+        <strong>Steps to find Eigenvalues and Eigenvectors:</strong>
+
+        <ol>
+            <li>Write the matrix A.</li>
+            <li>Find |A - λI|.</li>
+            <li>Put |A - λI| = 0.</li>
+            <li>Solve the characteristic equation.</li>
+            <li>Find the eigenvalues.</li>
+            <li>Use (A - λI)X = 0 to find eigenvectors.</li>
+        </ol>
+    </div>
+
+
+    <h2>9. Cayley-Hamilton Theorem</h2>
+
+    <p>
+        Cayley-Hamilton theorem states that every square matrix
+        satisfies its own characteristic equation.
+    </p>
+
+    <div class="formula">
+        If the characteristic equation is:
+        <br><br>
+        p(λ) = 0
+        <br><br>
+        then:
+        <br><br>
+        p(A) = 0
+    </div>
+
+    <div class="example">
+        <strong>Use of Cayley-Hamilton Theorem:</strong>
+        <ul>
+            <li>It can be used to calculate higher powers of a matrix.</li>
+            <li>It can be used to find the inverse of a matrix.</li>
+        </ul>
+    </div>
+
+
+    <h2>Quick Revision</h2>
+
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Important Point</th>
+        </tr>
+
+        <tr>
+            <td>Matrix</td>
+            <td>Arrangement of elements in rows and columns</td>
+        </tr>
+
+        <tr>
+            <td>Inverse</td>
+            <td>A × A<sup>-1</sup> = I</td>
+        </tr>
+
+        <tr>
+            <td>Rank</td>
+            <td>Number of independent rows/columns</td>
+        </tr>
+
+        <tr>
+            <td>Characteristic Equation</td>
+            <td>|A - λI| = 0</td>
+        </tr>
+
+        <tr>
+            <td>Eigenvalue</td>
+            <td>Root of characteristic equation</td>
+        </tr>
+
+        <tr>
+            <td>Eigenvector</td>
+            <td>AX = λX</td>
+        </tr>
+
+        <tr>
+            <td>Cayley-Hamilton</td>
+            <td>Every square matrix satisfies its own characteristic equation</td>
+        </tr>
+    </table>
+
+
+    <h2>Important Exam Questions</h2>
+
+    <div class="question">
+        1. Define a matrix and explain its different types.
+    </div>
+
+    <div class="question">
+        2. Find the inverse of a matrix using elementary transformations.
+    </div>
+
+    <div class="question">
+        3. Define the rank of a matrix.
+    </div>
+
+    <div class="question">
+        4. Explain consistency of a system of linear equations.
+    </div>
+
+    <div class="question">
+        5. Find the characteristic equation of a matrix.
+    </div>
+
+    <div class="question">
+        6. Find eigenvalues and eigenvectors of a matrix.
+    </div>
+
+    <div class="question">
+        7. State and explain the Cayley-Hamilton theorem.
+    </div>
+
+
+    <h2>Viva Questions</h2>
+
+    <div class="question">
+        <strong>Q1.</strong> What is a matrix?<br>
+        <strong>Ans:</strong> A rectangular arrangement of elements in rows and columns.
+    </div>
+
+    <div class="question">
+        <strong>Q2.</strong> What is an identity matrix?<br>
+        <strong>Ans:</strong> A square matrix having 1 on the main diagonal and 0 elsewhere.
+    </div>
+
+    <div class="question">
+        <strong>Q3.</strong> What is rank?<br>
+        <strong>Ans:</strong> The maximum number of linearly independent rows or columns.
+    </div>
+
+    <div class="question">
+        <strong>Q4.</strong> What is an eigenvalue?<br>
+        <strong>Ans:</strong> A value of λ satisfying |A - λI| = 0.
+    </div>
+
+    <div class="question">
+        <strong>Q5.</strong> What does Cayley-Hamilton theorem state?<br>
+        <strong>Ans:</strong> Every square matrix satisfies its own characteristic equation.
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics - Unit 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #374151;
+        }
+
+        .definition {
+            background: #eef4ff;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            padding: 15px;
+            border-left: 5px solid #16a34a;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #fff7ed;
+            padding: 15px;
+            border-left: 5px solid #f97316;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e5edff;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Data Analytics - Unit 1</h1>
+
+<h2>1. Introduction to Data</h2>
+
+<div class="definition">
+    <b>Data:</b> Data is a collection of raw facts, figures, observations or values
+    that can be processed to obtain useful information.
+</div>
+
+<p>
+Examples of data include student marks, names, ages, sales records,
+temperature readings, images, videos and social media posts.
+</p>
+
+<div class="example">
+    <b>Example:</b><br>
+    75, 82, 68, 91, 80 are raw marks. After calculating their average,
+    we obtain useful information about the student's performance.
+</div>
+
+<h2>2. Data vs Information vs Knowledge</h2>
+
+<table>
+<tr>
+    <th>Term</th>
+    <th>Meaning</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>Data</td>
+    <td>Raw facts and values</td>
+    <td>80, 70, 90</td>
+</tr>
+
+<tr>
+    <td>Information</td>
+    <td>Processed and meaningful data</td>
+    <td>Average marks = 80</td>
+</tr>
+
+<tr>
+    <td>Knowledge</td>
+    <td>Understanding obtained from information</td>
+    <td>Student is performing well</td>
+</tr>
+</table>
+
+<h2>3. Sources of Data</h2>
+
+<p>Data can come from many different sources.</p>
+
+<h3>Internal Sources</h3>
+<ul>
+    <li>Company databases</li>
+    <li>Sales records</li>
+    <li>Employee records</li>
+    <li>Customer records</li>
+    <li>Transaction records</li>
+</ul>
+
+<h3>External Sources</h3>
+<ul>
+    <li>Government websites</li>
+    <li>Social media</li>
+    <li>Public datasets</li>
+    <li>Research reports</li>
+    <li>Websites</li>
+    <li>Third-party organizations</li>
+</ul>
+
+<h3>Primary Data</h3>
+<p>
+Primary data is collected directly by the researcher or organization for a
+specific purpose.
+</p>
+
+<div class="example">
+    <b>Example:</b> A college conducts a survey to know students' satisfaction
+    with online classes.
+</div>
+
+<h3>Secondary Data</h3>
+<p>
+Secondary data is data that has already been collected by someone else.
+</p>
+
+<div class="example">
+    <b>Example:</b> Using government population statistics for analysis.
+</div>
+
+<h2>4. Nature of Data</h2>
+
+<h3>Qualitative Data</h3>
+<p>
+Qualitative data describes qualities or categories and is generally non-numerical.
+</p>
+
+<p><b>Examples:</b> Gender, colour, city, type of product, feedback.</p>
+
+<h3>Quantitative Data</h3>
+<p>
+Quantitative data is numerical and can be measured or counted.
+</p>
+
+<p><b>Examples:</b> Age, salary, marks, height, weight.</p>
+
+<table>
+<tr>
+    <th>Qualitative</th>
+    <th>Quantitative</th>
+</tr>
+<tr>
+    <td>Colour</td>
+    <td>Height</td>
+</tr>
+<tr>
+    <td>Gender</td>
+    <td>Age</td>
+</tr>
+<tr>
+    <td>City</td>
+    <td>Salary</td>
+</tr>
+</table>
+
+<h2>5. Classification of Data by Structure</h2>
+
+<h3>Structured Data</h3>
+<p>
+Structured data is organized in a fixed format, usually rows and columns.
+</p>
+
+<div class="example">
+    <b>Example:</b> Student database containing Roll No, Name, Course and Marks.
+</div>
+
+<h3>Semi-Structured Data</h3>
+<p>
+Semi-structured data does not follow a strict table structure but contains
+some organizational elements such as tags or keys.
+</p>
+
+<p><b>Examples:</b> JSON, XML, HTML.</p>
+
+<h3>Unstructured Data</h3>
+<p>
+Unstructured data does not have a predefined tabular structure.
+</p>
+
+<p><b>Examples:</b> Images, videos, audio, emails and social media posts.</p>
+
+<h2>6. Cross-Sectional and Time-Series Data</h2>
+
+<h3>Cross-Sectional Data</h3>
+<p>
+Data collected from different subjects at one particular point of time.
+</p>
+
+<div class="example">
+    Example: Income of 100 employees in January 2026.
+</div>
+
+<h3>Time-Series Data</h3>
+<p>
+Data collected over different points of time.
+</p>
+
+<div class="example">
+    Example: Daily temperature recorded for one year.
+</div>
+
+<h2>7. Batch and Real-Time Data</h2>
+
+<h3>Batch Data</h3>
+<p>
+Data is collected and processed in groups at a particular time.
+</p>
+
+<p><b>Example:</b> Monthly electricity bill processing.</p>
+
+<h3>Real-Time Data</h3>
+<p>
+Data is processed almost immediately after it is generated.
+</p>
+
+<p><b>Example:</b> Live stock prices or online payment transactions.</p>
+
+<h2>8. What is Data Analytics?</h2>
+
+<div class="definition">
+    <b>Data Analytics</b> is the process of collecting, cleaning, transforming,
+    analyzing and interpreting data to discover useful information and support
+    decision-making.
+</div>
+
+<h2>9. Need for Data Analytics</h2>
+
+<ul>
+    <li>Helps organizations make better decisions.</li>
+    <li>Identifies trends and patterns.</li>
+    <li>Helps understand customers.</li>
+    <li>Improves business performance.</li>
+    <li>Helps detect fraud.</li>
+    <li>Reduces unnecessary costs.</li>
+    <li>Supports prediction and planning.</li>
+    <li>Helps solve real-world problems.</li>
+</ul>
+
+<h2>10. Types of Data Analytics</h2>
+
+<h3>1. Descriptive Analytics</h3>
+<p>
+Descriptive analytics answers:
+<b>"What happened?"</b>
+</p>
+
+<div class="example">
+    Example: A company sold 10,000 products last month.
+</div>
+
+<h3>2. Diagnostic Analytics</h3>
+<p>
+Diagnostic analytics answers:
+<b>"Why did it happen?"</b>
+</p>
+
+<div class="example">
+    Example: Sales decreased because the product price increased.
+</div>
+
+<h3>3. Predictive Analytics</h3>
+<p>
+Predictive analytics answers:
+<b>"What is likely to happen?"</b>
+</p>
+
+<div class="example">
+    Example: Predicting next month's sales.
+</div>
+
+<h3>4. Prescriptive Analytics</h3>
+<p>
+Prescriptive analytics answers:
+<b>"What should we do?"</b>
+</p>
+
+<div class="example">
+    Example: Suggesting the best discount to increase sales.
+</div>
+
+<table>
+<tr>
+    <th>Type</th>
+    <th>Main Question</th>
+</tr>
+<tr>
+    <td>Descriptive</td>
+    <td>What happened?</td>
+</tr>
+<tr>
+    <td>Diagnostic</td>
+    <td>Why did it happen?</td>
+</tr>
+<tr>
+    <td>Predictive</td>
+    <td>What may happen?</td>
+</tr>
+<tr>
+    <td>Prescriptive</td>
+    <td>What should we do?</td>
+</tr>
+</table>
+
+<h2>11. Data Analytics Lifecycle</h2>
+
+<p>
+The Data Analytics Lifecycle is a sequence of phases followed to complete
+a data analytics project.
+</p>
+
+<h3>Phase 1: Discovery</h3>
+<p>
+Understand the business problem, objectives, available resources and data.
+</p>
+
+<h3>Phase 2: Data Preparation</h3>
+<p>
+Collect, clean, integrate and prepare the required data.
+</p>
+
+<h3>Phase 3: Model Planning</h3>
+<p>
+Select suitable analytical methods, variables and techniques.
+</p>
+
+<h3>Phase 4: Model Building</h3>
+<p>
+Build and test analytical models using prepared data.
+</p>
+
+<h3>Phase 5: Communicating Results</h3>
+<p>
+Present findings using reports, charts, dashboards or presentations.
+</p>
+
+<h3>Phase 6: Operationalization</h3>
+<p>
+Put the analytical solution into practical use and monitor its performance.
+</p>
+
+<div class="important">
+    <b>Remember:</b><br>
+    Discovery → Data Preparation → Model Planning → Model Building →
+    Communicating Results → Operationalization
+</div>
+
+<h2>12. Applications of Data Analytics</h2>
+
+<h3>Healthcare</h3>
+<ul>
+    <li>Patient data analysis</li>
+    <li>Disease prediction</li>
+    <li>Hospital resource planning</li>
+</ul>
+
+<h3>Banking and Finance</h3>
+<ul>
+    <li>Fraud detection</li>
+    <li>Credit risk analysis</li>
+    <li>Customer analysis</li>
+</ul>
+
+<h3>Retail</h3>
+<ul>
+    <li>Customer behaviour analysis</li>
+    <li>Sales forecasting</li>
+    <li>Product recommendations</li>
+</ul>
+
+<h3>Education</h3>
+<ul>
+    <li>Student performance analysis</li>
+    <li>Attendance analysis</li>
+    <li>Personalized learning</li>
+</ul>
+
+<h3>Manufacturing</h3>
+<ul>
+    <li>Quality control</li>
+    <li>Predictive maintenance</li>
+    <li>Production optimization</li>
+</ul>
+
+<h2>13. Big Data</h2>
+
+<div class="definition">
+    <b>Big Data</b> refers to very large, complex and rapidly generated datasets
+    that require specialized technologies and methods for storage and analysis.
+</div>
+
+<h3>5 Vs of Big Data</h3>
+
+<ul>
+    <li><b>Volume:</b> Huge amount of data.</li>
+    <li><b>Velocity:</b> Speed at which data is generated.</li>
+    <li><b>Variety:</b> Different forms of data.</li>
+    <li><b>Veracity:</b> Reliability and quality of data.</li>
+    <li><b>Value:</b> Useful information obtained from data.</li>
+</ul>
+
+<h2>14. Data Analytics Tools</h2>
+
+<ul>
+    <li>Microsoft Excel</li>
+    <li>SQL</li>
+    <li>Python</li>
+    <li>R</li>
+    <li>Power BI</li>
+    <li>Tableau</li>
+    <li>Apache Spark</li>
+</ul>
+
+<h2>15. Quick Revision</h2>
+
+<ul>
+    <li>Data = raw facts.</li>
+    <li>Information = processed data.</li>
+    <li>Data Analytics = analysis of data for useful insights.</li>
+    <li>Four analytics types: Descriptive, Diagnostic, Predictive, Prescriptive.</li>
+    <li>Data can be structured, semi-structured or unstructured.</li>
+    <li>Data sources can be internal/external and primary/secondary.</li>
+    <li>Analytics lifecycle has six major phases.</li>
+    <li>Big Data is commonly explained using the 5 Vs.</li>
+</ul>
+
+<h2>Important Exam Questions</h2>
+
+<ol>
+    <li>Define Data Analytics.</li>
+    <li>Explain different types of data.</li>
+    <li>Differentiate structured, semi-structured and unstructured data.</li>
+    <li>Explain primary and secondary data with examples.</li>
+    <li>Explain the four types of Data Analytics.</li>
+    <li>Explain Data Analytics Lifecycle.</li>
+    <li>What is Big Data? Explain its 5 Vs.</li>
+    <li>Explain applications of Data Analytics.</li>
+    <li>Explain internal and external sources of data.</li>
+</ol>
+
+</div>
+
+</body>
+</html>

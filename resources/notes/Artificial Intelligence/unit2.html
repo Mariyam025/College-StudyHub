@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artificial Intelligence - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1f3c88;
+        }
+
+        h2 {
+            color: #274c77;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #356859;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #1769aa;
+            font-weight: bold;
+        }
+
+        .box {
+            background: #f0f5ff;
+            padding: 15px;
+            border-left: 5px solid #356859;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8eef8;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Artificial Intelligence - Unit 2</h1>
+
+<h2>1. Problem Solving in AI</h2>
+
+<p>
+Problem solving in AI involves finding a sequence of actions that transforms
+an initial state into a desired goal state.
+</p>
+
+<div class="box">
+<b>Example:</b> Finding a route from one city to another can be treated as
+an AI search problem.
+</div>
+
+<h2>2. State</h2>
+
+<p>
+A state represents a particular situation or configuration of a problem.
+</p>
+
+<h2>3. Initial State</h2>
+
+<p>
+The initial state is the starting point of a problem.
+</p>
+
+<h2>4. Goal State</h2>
+
+<p>
+The goal state represents the desired final condition.
+</p>
+
+<h2>5. Operators / Actions</h2>
+
+<p>
+Operators are actions that can change one state into another.
+</p>
+
+<h2>6. State Space</h2>
+
+<p>
+A state space is the collection of possible states that can be reached while
+solving a problem.
+</p>
+
+<h2>7. Search</h2>
+
+<p>
+Search is the process of exploring possible states and actions to find a
+solution to a problem.
+</p>
+
+<h2>8. Components of an AI Search Problem</h2>
+
+<ul>
+    <li>Initial state</li>
+    <li>Actions/operators</li>
+    <li>Transition model</li>
+    <li>Goal test</li>
+    <li>Path cost</li>
+</ul>
+
+<h2>9. Search Strategies</h2>
+
+<p>
+Search strategies determine the order in which possible states are explored.
+</p>
+
+<p>
+Major categories include:
+</p>
+
+<ul>
+    <li>Uninformed search</li>
+    <li>Informed search</li>
+</ul>
+
+<h2>10. Uninformed Search</h2>
+
+<p>
+Uninformed search methods do not use problem-specific heuristic information
+to estimate which state is closer to the goal.
+</p>
+
+<p>
+Important methods include:
+</p>
+
+<ul>
+    <li>Breadth First Search</li>
+    <li>Depth First Search</li>
+    <li>Uniform Cost Search</li>
+    <li>Depth Limited Search</li>
+    <li>Iterative Deepening Search</li>
+</ul>
+
+<h2>11. Breadth First Search</h2>
+
+<p>
+Breadth First Search (BFS) explores nodes level by level. It generally uses
+a queue data structure.
+</p>
+
+<h3>Working of BFS</h3>
+
+<ol>
+    <li>Start from the initial node.</li>
+    <li>Visit the node.</li>
+    <li>Add its unvisited successors to the queue.</li>
+    <li>Remove the next node from the queue.</li>
+    <li>Continue until the goal is found or the queue becomes empty.</li>
+</ol>
+
+<h3>Advantages of BFS</h3>
+
+<ul>
+    <li>Complete under standard finite-branching assumptions.</li>
+    <li>Finds a shallowest solution.</li>
+    <li>Useful when solution depth is small.</li>
+</ul>
+
+<h3>Disadvantages of BFS</h3>
+
+<ul>
+    <li>Can require a large amount of memory.</li>
+    <li>Can be slow when the solution is deep.</li>
+</ul>
+
+<h2>12. Depth First Search</h2>
+
+<p>
+Depth First Search (DFS) explores one branch as deeply as possible before
+backtracking.
+</p>
+
+<h3>Working of DFS</h3>
+
+<ol>
+    <li>Start from the initial node.</li>
+    <li>Move to an unvisited child.</li>
+    <li>Continue deeper.</li>
+    <li>Backtrack when no unvisited child remains.</li>
+</ol>
+
+<h3>Advantages of DFS</h3>
+
+<ul>
+    <li>Requires less memory than BFS in many cases.</li>
+    <li>Useful for deep search spaces.</li>
+    <li>Simple to implement.</li>
+</ul>
+
+<h3>Disadvantages of DFS</h3>
+
+<ul>
+    <li>May follow an unproductive deep path.</li>
+    <li>May not find the shallowest solution.</li>
+    <li>Basic DFS can get stuck in infinite-depth spaces without safeguards.</li>
+</ul>
+
+<h2>13. BFS vs DFS</h2>
+
+<table>
+<tr>
+    <th>Feature</th>
+    <th>BFS</th>
+    <th>DFS</th>
+</tr>
+
+<tr>
+    <td>Strategy</td>
+    <td>Level by level</td>
+    <td>Depth first</td>
+</tr>
+
+<tr>
+    <td>Data Structure</td>
+    <td>Queue</td>
+    <td>Stack / recursion</td>
+</tr>
+
+<tr>
+    <td>Memory</td>
+    <td>Usually higher</td>
+    <td>Usually lower</td>
+</tr>
+
+<tr>
+    <td>Shallowest solution</td>
+    <td>Finds it under standard conditions</td>
+    <td>Not guaranteed</td>
+</tr>
+</table>
+
+<h2>14. Uniform Cost Search</h2>
+
+<p>
+Uniform Cost Search expands the node with the lowest path cost.
+</p>
+
+<p>
+It is useful when different actions have different costs.
+</p>
+
+<h2>15. Depth Limited Search</h2>
+
+<p>
+Depth Limited Search is DFS with a specified depth limit.
+</p>
+
+<p>
+It prevents the search from going beyond the chosen depth.
+</p>
+
+<h2>16. Iterative Deepening Search</h2>
+
+<p>
+Iterative Deepening Search repeatedly performs depth-limited searches with
+increasing depth limits.
+</p>
+
+<p>
+For example:
+</p>
+
+<ul>
+    <li>Depth 0</li>
+    <li>Depth 1</li>
+    <li>Depth 2</li>
+    <li>Depth 3</li>
+    <li>Continue until the goal is found</li>
+</ul>
+
+<h2>17. Informed Search</h2>
+
+<p>
+Informed search uses additional problem-specific information called a
+heuristic to guide the search.
+</p>
+
+<h2>18. Heuristic Function</h2>
+
+<p>
+A heuristic function, commonly represented as <b>h(n)</b>, estimates the
+cost or distance from a node to the goal.
+</p>
+
+<div class="box">
+<b>Example:</b> In route finding, straight-line distance can be used as a
+heuristic for estimating distance to a destination.
+</div>
+
+<h2>19. Best First Search</h2>
+
+<p>
+Best First Search selects the most promising node according to an evaluation
+function.
+</p>
+
+<h2>20. Greedy Best First Search</h2>
+
+<p>
+Greedy Best First Search selects a node using the heuristic value:
+</p>
+
+<div class="box">
+<b>f(n) = h(n)</b>
+</div>
+
+<p>
+It focuses on estimated distance to the goal and does not directly include
+the path cost already travelled.
+</p>
+
+<h2>21. A* Search</h2>
+
+<p>
+A* Search combines the cost already travelled with the estimated cost to the
+goal.
+</p>
+
+<div class="box">
+<b>f(n) = g(n) + h(n)</b>
+</div>
+
+<ul>
+    <li><b>g(n):</b> Cost from the initial state to node n.</li>
+    <li><b>h(n):</b> Estimated cost from node n to the goal.</li>
+    <li><b>f(n):</b> Estimated total solution cost through node n.</li>
+</ul>
+
+<h2>22. Advantages of A*</h2>
+
+<ul>
+    <li>Uses both actual and estimated costs.</li>
+    <li>Can efficiently find good paths with a suitable heuristic.</li>
+    <li>With an appropriate admissible heuristic and standard conditions,
+        A* can find an optimal solution.</li>
+</ul>
+
+<h2>23. Greedy Best First vs A*</h2>
+
+<table>
+<tr>
+    <th>Feature</th>
+    <th>Greedy Best First</th>
+    <th>A*</th>
+</tr>
+
+<tr>
+    <td>Evaluation</td>
+    <td>f(n) = h(n)</td>
+    <td>f(n) = g(n) + h(n)</td>
+</tr>
+
+<tr>
+    <td>Uses path cost</td>
+    <td>No</td>
+    <td>Yes</td>
+</tr>
+
+<tr>
+    <td>Uses heuristic</td>
+    <td>Yes</td>
+    <td>Yes</td>
+</tr>
+</table>
+
+<h2>24. Game Playing in AI</h2>
+
+<p>
+Game-playing programs use search and evaluation techniques to select actions
+in competitive environments.
+</p>
+
+<p>
+Examples include chess, tic-tac-toe and other board games.
+</p>
+
+<h2>25. Game Tree</h2>
+
+<p>
+A game tree represents possible moves and resulting game states from the
+current position.
+</p>
+
+<h2>26. Minimax Algorithm</h2>
+
+<p>
+Minimax is a decision-making algorithm commonly used for two-player,
+zero-sum games.
+</p>
+
+<p>
+It assumes that one player tries to maximize the score while the opponent
+tries to minimize it.
+</p>
+
+<h3>Basic Steps</h3>
+
+<ol>
+    <li>Generate possible moves.</li>
+    <li>Build the game tree to a suitable depth.</li>
+    <li>Evaluate terminal or cutoff positions.</li>
+    <li>Choose maximum values for MAX nodes.</li>
+    <li>Choose minimum values for MIN nodes.</li>
+</ol>
+
+<h2>27. Alpha-Beta Pruning</h2>
+
+<p>
+Alpha-beta pruning improves minimax search by eliminating branches that
+cannot affect the final decision.
+</p>
+
+<h3>Alpha</h3>
+
+<p>
+Alpha represents the best value that MAX can guarantee so far.
+</p>
+
+<h3>Beta</h3>
+
+<p>
+Beta represents the best value that MIN can guarantee so far.
+</p>
+
+<div class="box">
+<b>Important:</b> Alpha-beta pruning does not change the minimax result;
+it reduces the amount of unnecessary search.
+</div>
+
+<h2>28. Knowledge in AI</h2>
+
+<p>
+Knowledge is information about objects, facts, relationships, rules and
+situations that an AI system can use for reasoning.
+</p>
+
+<h2>29. Knowledge Representation</h2>
+
+<p>
+Knowledge representation is the process of representing knowledge in a form
+that an AI system can use to reason and solve problems.
+</p>
+
+<h2>30. Types of Knowledge</h2>
+
+<ul>
+    <li><b>Factual knowledge:</b> Facts about objects or situations.</li>
+    <li><b>Procedural knowledge:</b> Knowledge of how to perform tasks.</li>
+    <li><b>Heuristic knowledge:</b> Experience-based rules or strategies.</li>
+    <li><b>Meta-knowledge:</b> Knowledge about knowledge.</li>
+</ul>
+
+<h2>31. Knowledge Representation Techniques</h2>
+
+<ul>
+    <li>Logical representation</li>
+    <li>Semantic networks</li>
+    <li>Frames</li>
+    <li>Production rules</li>
+</ul>
+
+<h2>32. Semantic Network</h2>
+
+<p>
+A semantic network represents knowledge using nodes and links.
+Nodes represent concepts or objects, while links represent relationships.
+</p>
+
+<div class="box">
+<b>Example:</b><br>
+Dog → is-a → Animal<br>
+Dog → has → Tail
+</div>
+
+<h2>33. Production Rules</h2>
+
+<p>
+Production rules represent knowledge using IF-THEN statements.
+</p>
+
+<div class="box">
+<b>Example:</b><br>
+IF temperature is high<br>
+THEN turn on cooling system.
+</div>
+
+<h2>34. Expert System</h2>
+
+<p>
+An expert system is an AI system designed to provide solutions or advice
+in a specific domain using a knowledge base and an inference mechanism.
+</p>
+
+<h2>35. Components of Expert System</h2>
+
+<ul>
+    <li>Knowledge base</li>
+    <li>Inference engine</li>
+    <li>User interface</li>
+    <li>Explanation facility</li>
+    <li>Knowledge acquisition component</li>
+</ul>
+
+<h2>36. Knowledge Base</h2>
+
+<p>
+The knowledge base stores facts, rules and domain-specific knowledge.
+</p>
+
+<h2>37. Inference Engine</h2>
+
+<p>
+The inference engine applies rules to known facts to derive conclusions.
+</p>
+
+<h2>38. Unit 2 Quick Revision</h2>
+
+<ul>
+    <li>AI problem solving uses states and actions.</li>
+    <li>BFS explores level by level.</li>
+    <li>DFS explores depth first.</li>
+    <li>Uniform Cost Search selects the lowest path cost.</li>
+    <li>Heuristic function is represented by h(n).</li>
+    <li>A* uses f(n) = g(n) + h(n).</li>
+    <li>Minimax is used for adversarial game decision-making.</li>
+    <li>Alpha-beta pruning reduces unnecessary minimax search.</li>
+    <li>Knowledge representation allows AI systems to store and use knowledge.</li>
+    <li>Expert systems use knowledge bases and inference engines.</li>
+</ul>
+
+<h2>39. Important Exam Questions</h2>
+
+<ol>
+    <li>Explain problem solving in Artificial Intelligence.</li>
+    <li>What is state space?</li>
+    <li>Explain Breadth First Search.</li>
+    <li>Explain Depth First Search.</li>
+    <li>Differentiate BFS and DFS.</li>
+    <li>Explain Uniform Cost Search.</li>
+    <li>What is heuristic search?</li>
+    <li>Explain A* algorithm and its formula.</li>
+    <li>Differentiate Greedy Best First Search and A*.</li>
+    <li>Explain Minimax algorithm.</li>
+    <li>What is alpha-beta pruning?</li>
+    <li>Explain knowledge representation.</li>
+    <li>Explain semantic networks and production rules.</li>
+    <li>What is an expert system?</li>
+    <li>Explain the components of an expert system.</li>
+</ol>
+
+</div>
+
+</body>
+</html>

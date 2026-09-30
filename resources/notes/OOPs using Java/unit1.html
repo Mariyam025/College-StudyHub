@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OOP Using Java - Unit 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4a148c;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back {
+            display: inline-block;
+            text-decoration: none;
+            background: #4a148c;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .topic {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #4a148c;
+        }
+
+        h3 {
+            color: #6a1b9a;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .important {
+            background: #f3e5f5;
+            padding: 12px;
+            border-left: 5px solid #4a148c;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #4a148c;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>OOP Using Java</h1>
+    <p>Unit 1 – Object Oriented Programming & Java Basics</p>
+</header>
+
+<div class="container">
+
+    <a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+    <!-- Introduction -->
+    <div class="topic">
+        <h2>1. Introduction to Object Oriented Programming</h2>
+
+        <p>
+            Object Oriented Programming (OOP) is a programming approach
+            in which a program is designed using <b>objects and classes</b>.
+        </p>
+
+        <p>
+            Java is an object-oriented programming language that strongly
+            supports OOP concepts.
+        </p>
+
+        <div class="important">
+            <b>Simple Definition:</b>
+            OOP is a programming method where data and functions are
+            combined together into objects.
+        </div>
+    </div>
+
+    <!-- Object -->
+    <div class="topic">
+        <h2>2. Object</h2>
+
+        <p>
+            An object is a real-world entity that has <b>state</b> and
+            <b>behavior</b>.
+        </p>
+
+        <h3>Examples:</h3>
+
+        <ul>
+            <li>Car</li>
+            <li>Student</li>
+            <li>Mobile Phone</li>
+            <li>Bank Account</li>
+            <li>Book</li>
+        </ul>
+
+        <h3>Example:</h3>
+
+        <p>
+            A Student object can have:
+        </p>
+
+        <ul>
+            <li>Name</li>
+            <li>Roll Number</li>
+            <li>Age</li>
+            <li>Marks</li>
+        </ul>
+
+        <p>
+            And its behaviors can be:
+        </p>
+
+        <ul>
+            <li>Study()</li>
+            <li>AttendClass()</li>
+            <li>GiveExam()</li>
+        </ul>
+    </div>
+
+    <!-- Class -->
+    <div class="topic">
+        <h2>3. Class</h2>
+
+        <p>
+            A class is a blueprint or template used to create objects.
+        </p>
+
+        <h3>Example:</h3>
+
+<pre>
+class Student {
+
+    String name;
+    int age;
+
+    void study() {
+        System.out.println("Student is studying");
+    }
+}
+</pre>
+
+        <p>
+            Here, <code>Student</code> is a class.
+        </p>
+    </div>
+
+    <!-- Object creation -->
+    <div class="topic">
+        <h2>4. Creating an Object in Java</h2>
+
+        <p>
+            Objects in Java are created using the <code>new</code> keyword.
+        </p>
+
+<pre>
+class Student {
+
+    String name;
+
+    void display() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.name = "Rahul";
+
+        s1.display();
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Rahul
+</pre>
+    </div>
+
+    <!-- OOP Features -->
+    <div class="topic">
+        <h2>5. Features of OOP</h2>
+
+        <p>
+            The major features of Object Oriented Programming are:
+        </p>
+
+        <ul>
+            <li>Encapsulation</li>
+            <li>Inheritance</li>
+            <li>Polymorphism</li>
+            <li>Abstraction</li>
+        </ul>
+    </div>
+
+    <!-- Encapsulation -->
+    <div class="topic">
+        <h2>6. Encapsulation</h2>
+
+        <p>
+            Encapsulation means wrapping data and methods into a single unit.
+        </p>
+
+        <p>
+            In Java, encapsulation can be achieved using a class and
+            access modifiers such as <code>private</code>.
+        </p>
+
+<pre>
+class Student {
+
+    private int marks;
+
+    public void setMarks(int m) {
+        marks = m;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+}
+</pre>
+
+        <div class="important">
+            <b>Remember:</b>
+            Encapsulation = Data hiding + Data binding
+        </div>
+    </div>
+
+    <!-- Inheritance -->
+    <div class="topic">
+        <h2>7. Inheritance</h2>
+
+        <p>
+            Inheritance is a mechanism in which one class acquires the
+            properties and methods of another class.
+        </p>
+
+        <p>
+            It helps in <b>code reusability</b>.
+        </p>
+
+<pre>
+class Animal {
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+</pre>
+
+        <p>
+            Here, <code>Dog</code> inherits the properties and methods
+            of <code>Animal</code>.
+        </p>
+    </div>
+
+    <!-- Polymorphism -->
+    <div class="topic">
+        <h2>8. Polymorphism</h2>
+
+        <p>
+            Polymorphism means <b>one name, many forms</b>.
+        </p>
+
+        <p>
+            Java supports two main types of polymorphism:
+        </p>
+
+        <ul>
+            <li>Compile-time Polymorphism</li>
+            <li>Run-time Polymorphism</li>
+        </ul>
+
+        <h3>Example – Method Overloading</h3>
+
+<pre>
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+</pre>
+    </div>
+
+    <!-- Abstraction -->
+    <div class="topic">
+        <h2>9. Abstraction</h2>
+
+        <p>
+            Abstraction means hiding unnecessary implementation details
+            and showing only important information to the user.
+        </p>
+
+        <p>
+            In Java, abstraction can be achieved using:
+        </p>
+
+        <ul>
+            <li>Abstract Classes</li>
+            <li>Interfaces</li>
+        </ul>
+    </div>
+
+    <!-- Advantages -->
+    <div class="topic">
+        <h2>10. Advantages of OOP</h2>
+
+        <ul>
+            <li>Code reusability</li>
+            <li>Data security</li>
+            <li>Easy maintenance</li>
+            <li>Easy debugging</li>
+            <li>Modularity</li>
+            <li>Flexibility</li>
+            <li>Better code organization</li>
+        </ul>
+    </div>
+
+    <!-- Java Introduction -->
+    <div class="topic">
+        <h2>11. Introduction to Java</h2>
+
+        <p>
+            Java is a high-level, object-oriented and platform-independent
+            programming language.
+        </p>
+
+        <p>
+            Java was developed by <b>Sun Microsystems</b>.
+            It was originally developed under the leadership of
+            <b>James Gosling</b>.
+        </p>
+    </div>
+
+    <!-- Java Features -->
+    <div class="topic">
+        <h2>12. Features of Java</h2>
+
+        <ul>
+            <li>Simple</li>
+            <li>Object-Oriented</li>
+            <li>Platform Independent</li>
+            <li>Secure</li>
+            <li>Robust</li>
+            <li>Portable</li>
+            <li>Multithreaded</li>
+            <li>Distributed</li>
+            <li>High Performance</li>
+            <li>Dynamic</li>
+        </ul>
+    </div>
+
+    <!-- JVM -->
+    <div class="topic">
+        <h2>13. JVM</h2>
+
+        <p>
+            JVM stands for <b>Java Virtual Machine</b>.
+        </p>
+
+        <p>
+            JVM executes Java bytecode and makes Java platform independent.
+        </p>
+
+        <div class="important">
+            Java source code → Compiler → Bytecode → JVM → Machine Code
+        </div>
+    </div>
+
+    <!-- JDK -->
+    <div class="topic">
+        <h2>14. JDK</h2>
+
+        <p>
+            JDK stands for <b>Java Development Kit</b>.
+        </p>
+
+        <p>
+            It provides tools required to develop and run Java programs.
+        </p>
+    </div>
+
+    <!-- JRE -->
+    <div class="topic">
+        <h2>15. JRE</h2>
+
+        <p>
+            JRE stands for <b>Java Runtime Environment</b>.
+        </p>
+
+        <p>
+            It provides the environment required to run Java applications.
+        </p>
+    </div>
+
+    <!-- Difference -->
+    <div class="topic">
+        <h2>16. JDK vs JRE vs JVM</h2>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <tr>
+                <th>JDK</th>
+                <th>JRE</th>
+                <th>JVM</th>
+            </tr>
+
+            <tr>
+                <td>Used for development</td>
+                <td>Used to run Java programs</td>
+                <td>Executes bytecode</td>
+            </tr>
+
+            <tr>
+                <td>Contains JRE</td>
+                <td>Contains JVM</td>
+                <td>Part of JRE</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- First Program -->
+    <div class="topic">
+        <h2>17. First Java Program</h2>
+
+<pre>
+class Hello {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World");
+
+    }
+}
+</pre>
+
+        <h3>Output:</h3>
+
+<pre>
+Hello World
+</pre>
+    </div>
+
+    <!-- Important Questions -->
+    <div class="topic">
+        <h2>18. Important Exam Questions</h2>
+
+        <ol>
+            <li>What is Object Oriented Programming?</li>
+            <li>What is an object?</li>
+            <li>What is a class?</li>
+            <li>Explain the features of OOP.</li>
+            <li>Explain Encapsulation with example.</li>
+            <li>Explain Inheritance with example.</li>
+            <li>What is Polymorphism?</li>
+            <li>What is Abstraction?</li>
+            <li>What is Java?</li>
+            <li>Explain the features of Java.</li>
+            <li>What is JVM?</li>
+            <li>Differentiate between JDK, JRE and JVM.</li>
+            <li>Write a Java program to print Hello World.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>College StudyHub | OOP Using Java – Unit 1</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics - Unit 4</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #4b6584;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #f0ad4e;
+            margin: 10px 0;
+        }
+
+        .example {
+            background: #eaf7ea;
+            padding: 15px;
+            border-left: 5px solid #28a745;
+            margin: 15px 0;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mathematics - Unit 4</h1>
+
+    <div class="box">
+        <strong>Partial Differential Equations</strong>
+
+        <ul>
+            <li>Origin of First Order Partial Differential Equations</li>
+            <li>First Order First Degree PDE</li>
+            <li>Lagrange's Solution</li>
+            <li>First Order PDE of Degree Greater Than One</li>
+            <li>Second Order Linear PDE with Constant Coefficients</li>
+        </ul>
+    </div>
+
+
+    <h2>1. Partial Differential Equation</h2>
+
+    <p>
+        A Partial Differential Equation (PDE) is an equation
+        containing partial derivatives of a dependent variable
+        with respect to two or more independent variables.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        ∂z/∂x + ∂z/∂y = 0
+        <br><br>
+
+        This is a PDE because z depends on more than one variable.
+    </div>
+
+
+    <h2>2. Origin of First Order PDE</h2>
+
+    <p>
+        First order PDEs contain partial derivatives of first order
+        only.
+    </p>
+
+    <div class="formula">
+        p = ∂z/∂x
+        <br><br>
+        q = ∂z/∂y
+    </div>
+
+    <p>
+        Therefore, a first-order PDE may be written in terms of
+        x, y, z, p and q.
+    </p>
+
+
+    <h2>3. First Order First Degree PDE</h2>
+
+    <p>
+        A PDE having first order and degree one is called a
+        first-order first-degree PDE.
+    </p>
+
+    <div class="example">
+        Example:
+        <br><br>
+
+        p + q = x + y
+        <br><br>
+
+        where
+        <br>
+        p = ∂z/∂x
+        <br>
+        q = ∂z/∂y
+    </div>
+
+
+    <h2>4. Lagrange's Linear PDE</h2>
+
+    <p>
+        Lagrange's linear partial differential equation is generally
+        written as:
+    </p>
+
+    <div class="formula">
+        Pp + Qq = R
+    </div>
+
+    <p>where:</p>
+
+    <ul>
+        <li>p = ∂z/∂x</li>
+        <li>q = ∂z/∂y</li>
+        <li>P, Q and R are functions of x, y and z.</li>
+    </ul>
+
+
+    <h2>5. Lagrange's Auxiliary Equations</h2>
+
+    <p>
+        For the equation:
+    </p>
+
+    <div class="formula">
+        Pp + Qq = R
+    </div>
+
+    <p>
+        The auxiliary equations are:
+    </p>
+
+    <div class="formula">
+        dx/P = dy/Q = dz/R
+    </div>
+
+    <p>
+        Two independent solutions are obtained from these
+        auxiliary equations.
+    </p>
+
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        p + q = 0
+        <br><br>
+
+        Here:
+        <br>
+        P = 1, Q = 1, R = 0
+        <br><br>
+
+        Auxiliary equations:
+        <br><br>
+
+        dx/1 = dy/1 = dz/0
+    </div>
+
+
+    <h2>6. PDE of First Order and Degree Greater Than One</h2>
+
+    <p>
+        A first-order PDE may have degree greater than one when
+        the highest-order partial derivative has a power greater
+        than one.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+
+        p² + q² = 1
+        <br><br>
+
+        Here the order is 1 and degree is 2.
+    </div>
+
+
+    <h2>7. Complete Integral</h2>
+
+    <p>
+        A complete integral is a solution of a first-order PDE
+        containing the required number of arbitrary constants.
+    </p>
+
+    <div class="example">
+        Example:
+        <br><br>
+
+        z = ax + by
+        <br><br>
+
+        where a and b are arbitrary constants.
+    </div>
+
+
+    <h2>8. Second Order Linear PDE</h2>
+
+    <p>
+        A second-order linear PDE contains second-order partial
+        derivatives and is linear in the dependent variable and
+        its derivatives.
+    </p>
+
+    <div class="formula">
+        A z<sub>xx</sub>
+        + B z<sub>xy</sub>
+        + C z<sub>yy</sub>
+        + D z<sub>x</sub>
+        + E z<sub>y</sub>
+        + Fz = G
+    </div>
+
+
+    <h2>9. Second Order PDE with Constant Coefficients</h2>
+
+    <p>
+        When the coefficients of the derivatives are constants,
+        it is called a second-order linear PDE with constant
+        coefficients.
+    </p>
+
+    <div class="formula">
+        (D² + 2DD' + D'²)z = 0
+    </div>
+
+    <p>
+        Here D and D' represent differentiation with respect to
+        x and y respectively.
+    </p>
+
+
+    <h2>10. Important Forms</h2>
+
+    <div class="formula">
+        D = ∂/∂x
+        <br><br>
+        D' = ∂/∂y
+    </div>
+
+    <div class="formula">
+        D² = ∂²/∂x²
+        <br><br>
+        D'² = ∂²/∂y²
+        <br><br>
+        DD' = ∂²/∂x∂y
+    </div>
+
+
+    <h2>Quick Revision</h2>
+
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Important Point</th>
+        </tr>
+
+        <tr>
+            <td>PDE</td>
+            <td>Contains partial derivatives</td>
+        </tr>
+
+        <tr>
+            <td>p</td>
+            <td>∂z/∂x</td>
+        </tr>
+
+        <tr>
+            <td>q</td>
+            <td>∂z/∂y</td>
+        </tr>
+
+        <tr>
+            <td>Lagrange PDE</td>
+            <td>Pp + Qq = R</td>
+        </tr>
+
+        <tr>
+            <td>Auxiliary Equations</td>
+            <td>dx/P = dy/Q = dz/R</td>
+        </tr>
+
+        <tr>
+            <td>Second Order PDE</td>
+            <td>Contains second-order partial derivatives</td>
+        </tr>
+
+        <tr>
+            <td>D</td>
+            <td>∂/∂x</td>
+        </tr>
+
+        <tr>
+            <td>D'</td>
+            <td>∂/∂y</td>
+        </tr>
+    </table>
+
+
+    <h2>Important Exam Questions</h2>
+
+    <div class="question">
+        1. Define partial differential equation with an example.
+    </div>
+
+    <div class="question">
+        2. Explain first-order first-degree PDE.
+    </div>
+
+    <div class="question">
+        3. Explain Lagrange's linear PDE.
+    </div>
+
+    <div class="question">
+        4. Write the auxiliary equations of Lagrange's PDE.
+    </div>
+
+    <div class="question">
+        5. Explain PDE of first order and degree greater than one.
+    </div>
+
+    <div class="question">
+        6. Explain second-order linear PDE with constant coefficients.
+    </div>
+
+
+    <h2>Viva Questions</h2>
+
+    <div class="question">
+        <strong>Q1.</strong> What is PDE?<br>
+        <strong>Ans:</strong> A differential equation containing partial derivatives.
+    </div>
+
+    <div class="question">
+        <strong>Q2.</strong> What is p?<br>
+        <strong>Ans:</strong> p = ∂z/∂x.
+    </div>
+
+    <div class="question">
+        <strong>Q3.</strong> What is q?<br>
+        <strong>Ans:</strong> q = ∂z/∂y.
+    </div>
+
+    <div class="question">
+        <strong>Q4.</strong> What is Lagrange's PDE?<br>
+        <strong>Ans:</strong> Pp + Qq = R.
+    </div>
+
+    <div class="question">
+        <strong>Q5.</strong> What are Lagrange's auxiliary equations?<br>
+        <strong>Ans:</strong> dx/P = dy/Q = dz/R.
+    </div>
+
+</div>
+
+</body>
+</html>

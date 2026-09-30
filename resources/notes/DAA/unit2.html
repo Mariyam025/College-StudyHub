@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAA - Unit 2</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Design and Analysis of Algorithm - Unit 2</h1>
+
+<div class="topic">
+<h2>1. Divide and Conquer</h2>
+
+<p>
+Divide and Conquer is an algorithm design technique in which a problem
+is divided into smaller subproblems.
+</p>
+
+<h3>Three Steps</h3>
+
+<ol>
+<li>Divide</li>
+<li>Conquer</li>
+<li>Combine</li>
+</ol>
+
+<p>Examples:</p>
+
+<ul>
+<li>Merge Sort</li>
+<li>Quick Sort</li>
+<li>Binary Search</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. Merge Sort</h2>
+
+<p>
+Merge Sort divides an array into smaller parts, sorts them and then
+merges the sorted parts.
+</p>
+
+<p><b>Time Complexity:</b> O(n log n)</p>
+
+<pre>
+MergeSort(array)
+
+if array has more than one element:
+
+    divide array into two halves
+
+    MergeSort(left half)
+    MergeSort(right half)
+
+    merge both sorted halves
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Quick Sort</h2>
+
+<p>
+Quick Sort selects an element called a pivot and divides the array
+around the pivot.
+</p>
+
+<p><b>Average Time Complexity:</b> O(n log n)</p>
+
+<p><b>Worst Time Complexity:</b> O(n²)</p>
+
+<pre>
+QuickSort(array)
+
+select pivot
+
+place smaller elements
+before pivot
+
+place larger elements
+after pivot
+
+repeat for both parts
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Binary Search</h2>
+
+<p>
+Binary Search repeatedly divides a sorted array into two parts.
+</p>
+
+<p><b>Time Complexity:</b> O(log n)</p>
+
+<pre>
+Search middle element
+
+if key == middle:
+    found
+
+if key < middle:
+    search left half
+
+else:
+    search right half
+</pre>
+</div>
+
+<div class="topic">
+<h2>5. Greedy Approach</h2>
+
+<p>
+A Greedy algorithm makes the best available choice at each step
+with the aim of obtaining an overall solution.
+</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>Activity Selection</li>
+<li>Huffman Coding</li>
+<li>Fractional Knapsack</li>
+<li>Minimum Spanning Tree algorithms</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. Fractional Knapsack</h2>
+
+<p>
+In Fractional Knapsack, an item can be divided into fractions.
+Items are generally selected according to their value-to-weight ratio.
+</p>
+
+<p><b>Approach:</b></p>
+
+<ol>
+<li>Calculate value/weight ratio.</li>
+<li>Sort items by ratio.</li>
+<li>Select highest ratio items first.</li>
+<li>Take a fraction if necessary.</li>
+</ol>
+</div>
+
+<div class="topic">
+<h2>7. Activity Selection Problem</h2>
+
+<p>
+The activity selection problem selects the maximum number of
+non-overlapping activities.
+</p>
+
+<p>
+A common greedy strategy is to select the activity that finishes earliest.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Huffman Coding</h2>
+
+<p>
+Huffman Coding is a greedy algorithm used for lossless data compression.
+</p>
+
+<p>Basic process:</p>
+
+<ol>
+<li>Find two nodes with lowest frequency.</li>
+<li>Combine them.</li>
+<li>Repeat until one tree remains.</li>
+<li>Assign binary codes to the characters.</li>
+</ol>
+</div>
+
+<div class="topic">
+<h2>9. Minimum Spanning Tree</h2>
+
+<p>
+A Minimum Spanning Tree connects all vertices of a weighted graph
+with minimum total edge weight and without cycles.
+</p>
+
+<p>Important algorithms:</p>
+
+<ul>
+<li>Kruskal's Algorithm</li>
+<li>Prim's Algorithm</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. Kruskal's Algorithm</h2>
+
+<p>
+Kruskal's algorithm sorts edges according to their weights and
+adds the smallest edge that does not create a cycle.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

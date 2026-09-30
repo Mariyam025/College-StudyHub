@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Java - Unit 4</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Advanced Java Technology - Unit 4</h1>
+
+<div class="topic">
+<h2>1. JavaBeans</h2>
+
+<p>
+JavaBean is a reusable Java class that follows certain conventions.
+It is commonly used to store and transfer data in Java web applications.
+</p>
+
+<h3>Main Features</h3>
+
+<ul>
+<li>Private properties</li>
+<li>Public getter and setter methods</li>
+<li>Usually has a no-argument constructor</li>
+<li>Reusable component</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>2. JavaBean Example</h2>
+
+<pre>
+public class Student {
+
+    private int id;
+    private String name;
+
+    public Student() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. MVC Architecture</h2>
+
+<p>
+MVC stands for <b>Model View Controller</b>.
+It separates an application into three parts.
+</p>
+
+<ul>
+<li><b>Model:</b> Handles data and business logic</li>
+<li><b>View:</b> Displays information to the user</li>
+<li><b>Controller:</b> Handles requests and controls application flow</li>
+</ul>
+
+<pre>
+User
+ ↓
+Controller
+ ↓
+Model
+ ↓
+Database
+ ↓
+Model
+ ↓
+Controller
+ ↓
+View
+ ↓
+User
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Filters</h2>
+
+<p>
+A Filter is used to process a request or response before or after it reaches a servlet.
+</p>
+
+<p>Common uses:</p>
+
+<ul>
+<li>Authentication</li>
+<li>Logging</li>
+<li>Security checks</li>
+<li>Request processing</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>5. Listeners</h2>
+
+<p>
+Listeners are used to respond to events occurring in a web application.
+</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>Application start/stop events</li>
+<li>Session creation/destruction</li>
+<li>Attribute changes</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>6. RequestDispatcher</h2>
+
+<p>
+RequestDispatcher is used to forward a request from one resource to another.
+</p>
+
+<pre>
+RequestDispatcher rd =
+    request.getRequestDispatcher(
+        "home.jsp"
+    );
+
+rd.forward(request, response);
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. sendRedirect()</h2>
+
+<p>
+sendRedirect() sends the client to another URL.
+</p>
+
+<pre>
+response.sendRedirect("login.jsp");
+</pre>
+
+<p>
+It is different from forward because redirect involves a new client request.
+</p>
+</div>
+
+<div class="topic">
+<h2>8. Session Management</h2>
+
+<p>
+Session management allows a web application to remember information about a user.
+</p>
+
+<ul>
+<li>Cookies</li>
+<li>HttpSession</li>
+<li>URL Rewriting</li>
+<li>Hidden Form Fields</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>9. Web Application Security Basics</h2>
+
+<ul>
+<li>Use authentication for protected pages.</li>
+<li>Validate user input.</li>
+<li>Use PreparedStatement for database queries.</li>
+<li>Do not store passwords as plain text.</li>
+<li>Manage sessions properly.</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. JSP Custom Tags</h2>
+
+<p>
+Custom tags allow developers to create reusable tags for JSP pages.
+They can reduce repeated presentation code.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

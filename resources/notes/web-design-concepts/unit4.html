@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design Concepts - Unit 4</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Web Design Concepts - Unit 4</h1>
+
+<div class="topic">
+<h2>1. Introduction to JavaScript</h2>
+
+<p>
+JavaScript is a programming language commonly used to add interactivity
+and dynamic behavior to web pages.
+</p>
+
+<p>
+It can respond to user actions and modify webpage content.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. Adding JavaScript to HTML</h2>
+
+<h3>Internal JavaScript</h3>
+
+<pre>
+&lt;script&gt;
+
+alert("Hello");
+
+&lt;/script&gt;
+</pre>
+
+<h3>External JavaScript</h3>
+
+<pre>
+&lt;script src="script.js"&gt;
+&lt;/script&gt;
+</pre>
+</div>
+
+<div class="topic">
+<h2>3. Variables</h2>
+
+<p>
+JavaScript commonly uses <b>let</b>, <b>const</b> and <b>var</b> for variables.
+</p>
+
+<pre>
+let name = "Rahul";
+
+const age = 20;
+
+var city = "Lucknow";
+</pre>
+</div>
+
+<div class="topic">
+<h2>4. Data Types</h2>
+
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>Undefined</li>
+<li>Null</li>
+<li>Object</li>
+<li>Array</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>5. Operators</h2>
+
+<ul>
+<li>Arithmetic operators</li>
+<li>Assignment operators</li>
+<li>Comparison operators</li>
+<li>Logical operators</li>
+<li>Increment and decrement operators</li>
+</ul>
+
+<pre>
+let a = 10;
+let b = 5;
+
+let sum = a + b;
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. Conditional Statements</h2>
+
+<pre>
+let age = 20;
+
+if(age >= 18) {
+    console.log("Adult");
+}
+else {
+    console.log("Minor");
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>7. Loops</h2>
+
+<h3>For Loop</h3>
+
+<pre>
+for(let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+</pre>
+
+<h3>While Loop</h3>
+
+<pre>
+let i = 1;
+
+while(i <= 5) {
+    console.log(i);
+    i++;
+}
+</pre>
+</div>
+
+<div class="topic">
+<h2>8. Functions</h2>
+
+<pre>
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 20);
+</pre>
+</div>
+
+<div class="topic">
+<h2>9. Arrays</h2>
+
+<pre>
+let students = [
+    "Rahul",
+    "Priya",
+    "Aman"
+];
+
+console.log(students[0]);
+</pre>
+
+<p>Common methods:</p>
+
+<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>forEach()</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. JavaScript Events</h2>
+
+<p>
+Events occur when the user or browser performs an action.
+</p>
+
+<ul>
+<li>click</li>
+<li>mouseover</li>
+<li>keydown</li>
+<li>submit</li>
+<li>change</li>
+<li>load</li>
+</ul>
+
+<pre>
+button.addEventListener(
+    "click",
+    function() {
+        alert("Button clicked");
+    }
+);
+</pre>
+</div>
+
+<div class="topic">
+<h2>11. DOM</h2>
+
+<p>
+DOM stands for <b>Document Object Model</b>.
+It represents an HTML document as a structure of objects.
+</p>
+
+<pre>
+document.getElementById("title");
+</pre>
+
+<p>
+JavaScript can use the DOM to read and modify HTML elements.
+</p>
+</div>
+
+<div class="topic">
+<h2>12. Form Validation</h2>
+
+<p>
+JavaScript can check user input before a form is submitted.
+</p>
+
+<pre>
+function validate() {
+
+    let name =
+        document.getElementById("name").value;
+
+    if(name == "") {
+        alert("Name is required");
+        return false;
+    }
+
+    return true;
+}
+</pre>
+</div>
+
+</div>
+
+</body>
+</html>

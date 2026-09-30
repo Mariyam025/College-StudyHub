@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming - Unit 5 Notes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #4f46e5;
+            color: white;
+            padding: 28px 8%;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: white;
+            color: #4f46e5;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #4f46e5;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            margin-top: 22px;
+        }
+
+        .highlight {
+            background: #eef2ff;
+            padding: 14px;
+            border-left: 5px solid #4f46e5;
+            border-radius: 6px;
+        }
+
+        .output {
+            background: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .exam {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #eef2ff;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Programming in C</h1>
+    <p>Unit 5 – Structure, Union, Enumeration, Pointers & Dynamic Memory</p>
+    <p>College StudyHub</p>
+</div>
+
+<div class="container">
+
+    <a href="../../../subjects.html" class="back-btn">
+        ← Back to Subjects
+    </a>
+
+
+    <!-- TOPICS -->
+
+    <div class="section">
+
+        <h2>📚 Unit 5 Topics</h2>
+
+        <ul>
+            <li>Structure</li>
+            <li>Union</li>
+            <li>Enumeration</li>
+            <li>Pointers</li>
+            <li>Array of Pointers</li>
+            <li>Preprocessor</li>
+            <li>Standard C Preprocessors</li>
+            <li>Macros</li>
+            <li>Dynamic Memory Allocation</li>
+            <li>malloc()</li>
+            <li>calloc()</li>
+            <li>realloc()</li>
+            <li>free()</li>
+        </ul>
+
+    </div>
+
+
+    <!-- STRUCTURE -->
+
+    <div class="section">
+
+        <h2>1. Structure</h2>
+
+        <p>
+            A structure is a user-defined data type that allows us to
+            store different types of data under one name.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+struct Student
+{
+    int roll;
+    char name[20];
+    float marks;
+};</pre>
+
+        <h3>Example Program</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+
+    s.roll = 101;
+    s.marks = 85.5;
+
+    printf("Roll = %d\n", s.roll);
+    printf("Marks = %.2f", s.marks);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Roll = 101<br>
+            Marks = 85.50
+        </div>
+
+    </div>
+
+
+    <!-- UNION -->
+
+    <div class="section">
+
+        <h2>2. Union</h2>
+
+        <p>
+            A union is a user-defined data type in which all members
+            share the same memory location.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+union Data
+{
+    int number;
+    float value;
+};</pre>
+
+        <div class="highlight">
+            <strong>Important:</strong>
+            In a union, only one member can hold a meaningful value
+            at a time because members share memory.
+        </div>
+
+    </div>
+
+
+    <!-- STRUCTURE VS UNION -->
+
+    <div class="section">
+
+        <h2>3. Structure vs Union</h2>
+
+        <table>
+
+            <tr>
+                <th>Structure</th>
+                <th>Union</th>
+            </tr>
+
+            <tr>
+                <td>Members have separate memory.</td>
+                <td>Members share the same memory.</td>
+            </tr>
+
+            <tr>
+                <td>Multiple members can contain values at the same time.</td>
+                <td>Normally one member is used at a time.</td>
+            </tr>
+
+            <tr>
+                <td>Generally requires more memory.</td>
+                <td>Generally requires less memory.</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- ENUMERATION -->
+
+    <div class="section">
+
+        <h2>4. Enumeration</h2>
+
+        <p>
+            Enumeration or <code>enum</code> is a user-defined data type
+            used to assign names to integral constants.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+enum Week
+{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday
+};</pre>
+
+        <p>
+            By default, the first value starts from 0.
+        </p>
+
+    </div>
+
+
+    <!-- POINTERS -->
+
+    <div class="section">
+
+        <h2>5. Pointers</h2>
+
+        <p>
+            A pointer is a variable that stores the memory address of
+            another variable.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int number = 10;
+    int *ptr;
+
+    ptr = &number;
+
+    printf("Value = %d\n", number);
+    printf("Value using pointer = %d", *ptr);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Value = 10<br>
+            Value using pointer = 10
+        </div>
+
+        <div class="highlight">
+            <strong>Remember:</strong><br>
+            <code>&amp;</code> → address of a variable<br>
+            <code>*</code> → value stored at an address
+        </div>
+
+    </div>
+
+
+    <!-- ARRAY OF POINTERS -->
+
+    <div class="section">
+
+        <h2>6. Array of Pointers</h2>
+
+        <p>
+            An array of pointers is an array whose elements are pointers.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    int c = 30;
+
+    int *ptr[3];
+
+    ptr[0] = &a;
+    ptr[1] = &b;
+    ptr[2] = &c;
+
+    printf("%d %d %d",
+           *ptr[0],
+           *ptr[1],
+           *ptr[2]);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            10 20 30
+        </div>
+
+    </div>
+
+
+    <!-- PREPROCESSOR -->
+
+    <div class="section">
+
+        <h2>7. Preprocessor</h2>
+
+        <p>
+            The preprocessor processes certain instructions before
+            the actual compilation of a C program.
+        </p>
+
+        <p>
+            Preprocessor directives begin with the <code>#</code>
+            symbol.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;</pre>
+
+        <p>
+            Here <code>#include</code> is a preprocessor directive.
+        </p>
+
+    </div>
+
+
+    <!-- STANDARD PREPROCESSORS -->
+
+    <div class="section">
+
+        <h2>8. Standard C Preprocessor Directives</h2>
+
+        <table>
+
+            <tr>
+                <th>Directive</th>
+                <th>Purpose</th>
+            </tr>
+
+            <tr>
+                <td>#include</td>
+                <td>Includes a header file.</td>
+            </tr>
+
+            <tr>
+                <td>#define</td>
+                <td>Defines a macro.</td>
+            </tr>
+
+            <tr>
+                <td>#ifdef</td>
+                <td>Checks whether a macro is defined.</td>
+            </tr>
+
+            <tr>
+                <td>#ifndef</td>
+                <td>Checks whether a macro is not defined.</td>
+            </tr>
+
+            <tr>
+                <td>#endif</td>
+                <td>Ends a conditional preprocessing section.</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- MACROS -->
+
+    <div class="section">
+
+        <h2>9. Macros</h2>
+
+        <p>
+            A macro is a name or expression defined using
+            <code>#define</code>.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+#define PI 3.14
+
+int main()
+{
+    printf("PI = %.2f", PI);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            PI = 3.14
+        </div>
+
+    </div>
+
+
+    <!-- DYNAMIC MEMORY -->
+
+    <div class="section">
+
+        <h2>10. Dynamic Memory Allocation</h2>
+
+        <p>
+            Dynamic memory allocation means allocating memory during
+            program execution.
+        </p>
+
+        <p>
+            C provides functions such as
+            <code>malloc()</code>, <code>calloc()</code>,
+            <code>realloc()</code> and <code>free()</code>.
+        </p>
+
+    </div>
+
+
+    <!-- MALLOC -->
+
+    <div class="section">
+
+        <h2>11. malloc()</h2>
+
+        <p>
+            <code>malloc()</code> allocates a block of memory of the
+            specified size.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    int *ptr;
+
+    ptr = (int*)malloc(sizeof(int));
+
+    *ptr = 50;
+
+    printf("Value = %d", *ptr);
+
+    free(ptr);
+
+    return 0;
+}</pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Value = 50
+        </div>
+
+    </div>
+
+
+    <!-- CALLOC -->
+
+    <div class="section">
+
+        <h2>12. calloc()</h2>
+
+        <p>
+            <code>calloc()</code> allocates memory for multiple elements
+            and initializes the allocated memory to zero.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+ptr = (type*)calloc(number, size);</pre>
+
+    </div>
+
+
+    <!-- REALLOC -->
+
+    <div class="section">
+
+        <h2>13. realloc()</h2>
+
+        <p>
+            <code>realloc()</code> is used to change the size of
+            previously allocated memory.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+ptr = realloc(ptr, new_size);</pre>
+
+    </div>
+
+
+    <!-- FREE -->
+
+    <div class="section">
+
+        <h2>14. free()</h2>
+
+        <p>
+            <code>free()</code> releases dynamically allocated memory.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+free(ptr);</pre>
+
+        <div class="highlight">
+            <strong>Important:</strong>
+            Memory allocated dynamically should be released when it
+            is no longer required.
+        </div>
+
+    </div>
+
+
+    <!-- QUICK REVISION -->
+
+    <div class="section">
+
+        <h2>⚡ Quick Revision</h2>
+
+        <ul>
+            <li><strong>Structure:</strong> Stores different data types together.</li>
+            <li><strong>Union:</strong> Members share the same memory.</li>
+            <li><strong>Enum:</strong> Names for integral constants.</li>
+            <li><strong>Pointer:</strong> Stores the address of another variable.</li>
+            <li><strong>Array of Pointers:</strong> Array containing pointer elements.</li>
+            <li><strong>Preprocessor:</strong> Processes directives before compilation.</li>
+            <li><strong>Macro:</strong> Defined using <code>#define</code>.</li>
+            <li><strong>malloc():</strong> Allocates memory.</li>
+            <li><strong>calloc():</strong> Allocates and initializes memory to zero.</li>
+            <li><strong>realloc():</strong> Changes allocated memory size.</li>
+            <li><strong>free():</strong> Releases allocated memory.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- EXAM QUESTIONS -->
+
+    <div class="section">
+
+        <h2>📝 Important Exam Questions</h2>
+
+        <div class="exam">
+
+            <h3>Short Questions</h3>
+
+            <ol>
+                <li>What is a structure?</li>
+                <li>What is a union?</li>
+                <li>What is enumeration?</li>
+                <li>What is a pointer?</li>
+                <li>What is an array of pointers?</li>
+                <li>What is a preprocessor?</li>
+                <li>What is a macro?</li>
+                <li>What is dynamic memory allocation?</li>
+            </ol>
+
+            <h3>Programming Questions</h3>
+
+            <ol>
+                <li>Write a program using structure.</li>
+                <li>Write a program to demonstrate pointers.</li>
+                <li>Explain an array of pointers with an example.</li>
+                <li>Explain macros with an example.</li>
+                <li>Explain malloc(), calloc(), realloc() and free().</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIVA -->
+
+    <div class="section">
+
+        <h2>🎤 Viva Questions</h2>
+
+        <ul>
+            <li>What is a structure?</li>
+            <li>What is the difference between structure and union?</li>
+            <li>What is a pointer?</li>
+            <li>What does &amp; operator do?</li>
+            <li>What does * operator do with a pointer?</li>
+            <li>What is a preprocessor directive?</li>
+            <li>What is the use of #define?</li>
+            <li>What is malloc()?</li>
+            <li>What is the difference between malloc() and calloc()?</li>
+            <li>Why is free() used?</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>College StudyHub | Programming in C | Unit 5</p>
+</div>
+
+</body>
+</html>

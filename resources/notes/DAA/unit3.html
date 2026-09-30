@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAA - Unit 3</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fafa;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+h1 {
+    color: #00838f;
+    text-align: center;
+}
+.topic {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+h2 {
+    color: #00838f;
+}
+pre {
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Design and Analysis of Algorithm - Unit 3</h1>
+
+<div class="topic">
+<h2>1. Dynamic Programming</h2>
+
+<p>
+Dynamic Programming is an algorithm design technique used to solve
+problems by breaking them into overlapping subproblems.
+</p>
+
+<p>
+The results of solved subproblems are stored so that they do not
+need to be calculated again.
+</p>
+</div>
+
+<div class="topic">
+<h2>2. Properties of Dynamic Programming</h2>
+
+<ul>
+<li>Overlapping subproblems</li>
+<li>Optimal substructure</li>
+<li>Storage of previously calculated results</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>3. Fibonacci Using Dynamic Programming</h2>
+
+<pre>
+fib[0] = 0
+fib[1] = 1
+
+for i = 2 to n:
+    fib[i] = fib[i-1] + fib[i-2]
+</pre>
+
+<p>
+This avoids repeatedly calculating the same Fibonacci values.
+</p>
+</div>
+
+<div class="topic">
+<h2>4. Matrix Chain Multiplication</h2>
+
+<p>
+Matrix Chain Multiplication finds the most efficient order in which
+a sequence of matrices should be multiplied.
+</p>
+
+<p>
+The goal is to minimize the number of scalar multiplications.
+</p>
+</div>
+
+<div class="topic">
+<h2>5. Longest Common Subsequence</h2>
+
+<p>
+Longest Common Subsequence (LCS) finds the longest sequence that
+appears in two sequences in the same order, but not necessarily
+continuously.
+</p>
+
+<p>Example:</p>
+
+<pre>
+String 1: ABCD
+String 2: ACBD
+
+One LCS: ABD
+</pre>
+</div>
+
+<div class="topic">
+<h2>6. 0/1 Knapsack Problem</h2>
+
+<p>
+In the 0/1 Knapsack problem, each item can either be selected
+completely or not selected.
+</p>
+
+<p>
+Unlike Fractional Knapsack, fractions of items are not allowed.
+</p>
+</div>
+
+<div class="topic">
+<h2>7. Shortest Path</h2>
+
+<p>
+Shortest path algorithms find the minimum-cost path between vertices
+in a graph.
+</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>Dijkstra's Algorithm</li>
+<li>Floyd-Warshall Algorithm</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>8. Dijkstra's Algorithm</h2>
+
+<p>
+Dijkstra's algorithm finds shortest paths from one source vertex
+to other vertices in a weighted graph with non-negative edge weights.
+</p>
+
+<h3>Basic Steps</h3>
+
+<ol>
+<li>Choose the source vertex.</li>
+<li>Set source distance to zero.</li>
+<li>Select the unvisited vertex with smallest distance.</li>
+<li>Update distances of neighboring vertices.</li>
+<li>Repeat until required vertices are processed.</li>
+</ol>
+</div>
+
+<div class="topic">
+<h2>9. Backtracking</h2>
+
+<p>
+Backtracking builds a solution step by step and goes back when
+the current choice cannot lead to a valid solution.
+</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>N-Queens Problem</li>
+<li>Graph Coloring</li>
+<li>Hamiltonian Cycle</li>
+<li>Subset Sum</li>
+</ul>
+</div>
+
+<div class="topic">
+<h2>10. N-Queens Problem</h2>
+
+<p>
+The N-Queens problem places N queens on an N × N chessboard so that
+no two queens attack each other.
+</p>
+
+<p>
+Backtracking is commonly used to solve this problem.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

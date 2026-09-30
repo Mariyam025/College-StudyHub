@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing - Unit 2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #374151;
+        }
+
+        .definition {
+            background: #eef4ff;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            border-radius: 5px;
+        }
+
+        .example {
+            background: #f0fdf4;
+            padding: 15px;
+            border-left: 5px solid #16a34a;
+            border-radius: 5px;
+        }
+
+        .important {
+            background: #fff7ed;
+            padding: 15px;
+            border-left: 5px solid #f97316;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e5edff;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .formula {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="../../../subjects.html">← Back to Subjects</a>
+
+<h1>Software Testing - Unit 2</h1>
+
+<h2>1. Dynamic Testing</h2>
+
+<div class="definition">
+    <b>Dynamic Testing</b> is testing performed by executing the software and
+    observing its actual behaviour.
+</div>
+
+<div class="example">
+    Example: Opening a website, entering a username and password, clicking
+    Login and checking the result.
+</div>
+
+<h2>2. Major Dynamic Testing Techniques</h2>
+
+<ul>
+    <li>Black Box Testing</li>
+    <li>White Box Testing</li>
+</ul>
+
+<h2>3. Black Box Testing</h2>
+
+<div class="definition">
+    <b>Black Box Testing</b> tests the external behaviour of software without
+    requiring knowledge of its internal source code.
+</div>
+
+<p>
+The tester focuses on inputs, outputs and requirements.
+</p>
+
+<div class="example">
+    <b>Example:</b><br>
+    A tester enters a username and password into a login page and checks
+    whether login succeeds or fails. The tester does not need to know the
+    internal JavaScript or Java code.
+</div>
+
+<h3>Advantages</h3>
+
+<ul>
+    <li>Does not require knowledge of internal code.</li>
+    <li>Focuses on user requirements.</li>
+    <li>Can be performed from the user's point of view.</li>
+    <li>Useful for functional testing.</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+    <li>Internal code paths may remain untested.</li>
+    <li>Complete coverage is difficult.</li>
+    <li>Good test cases require a clear understanding of requirements.</li>
+</ul>
+
+<h2>4. White Box Testing</h2>
+
+<div class="definition">
+    <b>White Box Testing</b> tests the internal structure, logic, code paths
+    and implementation of a program.
+</div>
+
+<div class="example">
+    Example: A developer examines whether every branch of an if-else statement
+    has been executed during testing.
+</div>
+
+<h3>Advantages</h3>
+
+<ul>
+    <li>Examines internal logic.</li>
+    <li>Helps identify coding errors.</li>
+    <li>Can measure code coverage.</li>
+    <li>Useful for detecting unreachable code.</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+    <li>Requires programming knowledge.</li>
+    <li>Can be time-consuming for large programs.</li>
+    <li>Cannot by itself verify whether requirements are correct.</li>
+</ul>
+
+<h2>5. Black Box vs White Box Testing</h2>
+
+<table>
+<tr>
+    <th>Black Box</th>
+    <th>White Box</th>
+</tr>
+
+<tr>
+    <td>Internal code is not required.</td>
+    <td>Internal code is examined.</td>
+</tr>
+
+<tr>
+    <td>Focuses on functionality.</td>
+    <td>Focuses on internal logic.</td>
+</tr>
+
+<tr>
+    <td>Based mainly on requirements.</td>
+    <td>Based mainly on code structure.</td>
+</tr>
+
+<tr>
+    <td>Tester may not need programming knowledge.</td>
+    <td>Programming knowledge is generally required.</td>
+</tr>
+</table>
+
+<h2>6. Equivalence Partitioning</h2>
+
+<div class="definition">
+    <b>Equivalence Partitioning</b> divides input data into groups or classes
+    where values are expected to behave similarly.
+</div>
+
+<p>
+Instead of testing every possible input, one or more representative values
+are selected from each class.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Suppose an application accepts age from <b>18 to 60</b>.
+</p>
+
+<table>
+<tr>
+    <th>Partition</th>
+    <th>Range</th>
+    <th>Example Test Value</th>
+</tr>
+
+<tr>
+    <td>Invalid</td>
+    <td>Below 18</td>
+    <td>15</td>
+</tr>
+
+<tr>
+    <td>Valid</td>
+    <td>18 to 60</td>
+    <td>30</td>
+</tr>
+
+<tr>
+    <td>Invalid</td>
+    <td>Above 60</td>
+    <td>70</td>
+</tr>
+</table>
+
+<p>
+This reduces the number of test cases while still testing representative
+input categories.
+</p>
+
+<h2>7. Boundary Value Analysis</h2>
+
+<div class="definition">
+    <b>Boundary Value Analysis (BVA)</b> focuses on values at and around the
+    boundaries of valid input ranges.
+</div>
+
+<p>
+Many errors occur near boundaries, so these values are important for testing.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Suppose valid age is <b>18 to 60</b>.
+</p>
+
+<p>Important test values include:</p>
+
+<ul>
+    <li>17 - just below minimum</li>
+    <li>18 - minimum</li>
+    <li>19 - just above minimum</li>
+    <li>59 - just below maximum</li>
+    <li>60 - maximum</li>
+    <li>61 - just above maximum</li>
+</ul>
+
+<div class="important">
+    <b>Easy Trick:</b><br>
+    For a range 18–60, think around both boundaries:
+    17, 18, 19 and 59, 60, 61.
+</div>
+
+<h2>8. Equivalence Partitioning vs Boundary Value Analysis</h2>
+
+<table>
+<tr>
+    <th>Equivalence Partitioning</th>
+    <th>Boundary Value Analysis</th>
+</tr>
+
+<tr>
+    <td>Divides input into classes.</td>
+    <td>Focuses on boundary values.</td>
+</tr>
+
+<tr>
+    <td>Tests representative values.</td>
+    <td>Tests values near limits.</td>
+</tr>
+
+<tr>
+    <td>Reduces test cases.</td>
+    <td>Helps find boundary-related defects.</td>
+</tr>
+</table>
+
+<h2>9. Decision Table Testing</h2>
+
+<div class="definition">
+    <b>Decision Table Testing</b> is a technique used when the output depends
+    on combinations of conditions.
+</div>
+
+<p>
+A decision table represents conditions and corresponding actions in tabular form.
+</p>
+
+<h3>Example: Login</h3>
+
+<table>
+<tr>
+    <th>Username Valid?</th>
+    <th>Password Valid?</th>
+    <th>Expected Action</th>
+</tr>
+
+<tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Allow Login</td>
+</tr>
+
+<tr>
+    <td>Yes</td>
+    <td>No</td>
+    <td>Show Password Error</td>
+</tr>
+
+<tr>
+    <td>No</td>
+    <td>Yes</td>
+    <td>Show Username Error</td>
+</tr>
+
+<tr>
+    <td>No</td>
+    <td>No</td>
+    <td>Show Login Error</td>
+</tr>
+</table>
+
+<h3>Advantages</h3>
+
+<ul>
+    <li>Handles combinations of conditions.</li>
+    <li>Provides systematic test coverage.</li>
+    <li>Easy to understand.</li>
+    <li>Useful for business rules.</li>
+</ul>
+
+<h2>10. State Transition Testing</h2>
+
+<div class="definition">
+    <b>State Transition Testing</b> checks how a system changes from one state
+    to another when events or inputs occur.
+</div>
+
+<div class="example">
+    Example: An ATM may have states such as:
+    <br><br>
+    Card Inserted → PIN Entered → Account Verified → Transaction → Card Removed
+</div>
+
+<h3>Uses</h3>
+
+<ul>
+    <li>Login systems</li>
+    <li>ATM systems</li>
+    <li>Order processing</li>
+    <li>Mobile applications</li>
+    <li>Workflow systems</li>
+</ul>
+
+<h2>11. Error Guessing</h2>
+
+<p>
+Error guessing is an experience-based technique where testers predict likely
+errors based on previous experience.
+</p>
+
+<div class="example">
+    Example:
+    <ul>
+        <li>Entering empty fields</li>
+        <li>Entering special characters</li>
+        <li>Entering very large values</li>
+        <li>Using incorrect formats</li>
+        <li>Submitting a form multiple times</li>
+    </ul>
+</div>
+
+<h2>12. White Box Testing Techniques</h2>
+
+<p>
+Important white box techniques include:
+</p>
+
+<ul>
+    <li>Statement Coverage</li>
+    <li>Branch Coverage</li>
+    <li>Condition Coverage</li>
+    <li>Path Testing</li>
+    <li>Data Flow Testing</li>
+</ul>
+
+<h2>13. Statement Coverage</h2>
+
+<div class="definition">
+    Statement coverage measures whether the executable statements of a program
+    have been executed by the test cases.
+</div>
+
+<div class="formula">
+    Statement Coverage =
+    (Number of Executed Statements / Total Statements) × 100
+</div>
+
+<div class="example">
+    If a program contains 20 executable statements and tests execute 18,
+    then coverage = (18/20) × 100 = 90%.
+</div>
+
+<h2>14. Branch Coverage</h2>
+
+<p>
+Branch coverage checks whether different decision outcomes have been executed.
+</p>
+
+<div class="example">
+    For:
+    <br><br>
+    if (age &gt;= 18)
+    <br><br>
+    both outcomes should be tested:
+    <br>
+    1. Condition True
+    <br>
+    2. Condition False
+</div>
+
+<h2>15. Condition Coverage</h2>
+
+<p>
+Condition coverage checks whether the individual conditions in decision
+expressions have evaluated to both true and false where applicable.
+</p>
+
+<h2>16. Path Testing</h2>
+
+<div class="definition">
+    <b>Path Testing</b> is a white box technique that identifies and tests
+    execution paths through a program.
+</div>
+
+<div class="example">
+    Example:
+    <br><br>
+    Start → Input → Condition → True/False → Output → End
+</div>
+
+<p>
+The objective is to execute important independent paths through the program.
+</p>
+
+<h2>17. Control Flow Graph</h2>
+
+<p>
+A <b>Control Flow Graph (CFG)</b> represents the flow of control in a program.
+</p>
+
+<p>
+It contains:
+</p>
+
+<ul>
+    <li><b>Nodes:</b> Statements or blocks of statements.</li>
+    <li><b>Edges:</b> Flow of control between nodes.</li>
+</ul>
+
+<h2>18. Cyclomatic Complexity</h2>
+
+<div class="definition">
+    Cyclomatic Complexity is a software metric used to measure the number of
+    linearly independent paths in a program's control flow graph.
+</div>
+
+<div class="formula">
+    V(G) = E - N + 2
+</div>
+
+<p>Where:</p>
+
+<ul>
+    <li>E = Number of edges</li>
+    <li>N = Number of nodes</li>
+</ul>
+
+<p>
+For a connected control flow graph, another common form is:
+</p>
+
+<div class="formula">
+    V(G) = Number of decision nodes + 1
+</div>
+
+<div class="example">
+    If a program contains 3 independent decision points,
+    cyclomatic complexity = 3 + 1 = 4.
+</div>
+
+<h2>19. Graph Matrix</h2>
+
+<p>
+A graph matrix represents relationships between nodes of a control flow graph
+using a matrix structure.
+</p>
+
+<p>
+It can help in analyzing connections and paths in a program.
+</p>
+
+<h2>20. Data Flow Testing</h2>
+
+<div class="definition">
+    <b>Data Flow Testing</b> focuses on how variables are defined, used and
+    modified during program execution.
+</div>
+
+<h3>Main Concepts</h3>
+
+<ul>
+    <li><b>Definition:</b> A value is assigned to a variable.</li>
+    <li><b>Use:</b> The value of a variable is used.</li>
+    <li><b>Redefinition:</b> A new value is assigned to the variable.</li>
+</ul>
+
+<div class="example">
+    Example:
+    <br><br>
+    <b>x = 10;</b> → Definition of x
+    <br>
+    <b>y = x + 5;</b> → Use of x
+</div>
+
+<h2>21. Structural Testing</h2>
+
+<p>
+Structural testing examines the internal structure of the software.
+White box testing is a major form of structural testing.
+</p>
+
+<h2>22. Functional Testing</h2>
+
+<p>
+Functional testing checks whether the software performs the functions specified
+in its requirements.
+</p>
+
+<div class="example">
+    Example: Testing whether an e-commerce website correctly adds a product
+    to the shopping cart.
+</div>
+
+<h2>23. Structural vs Functional Testing</h2>
+
+<table>
+<tr>
+    <th>Functional Testing</th>
+    <th>Structural Testing</th>
+</tr>
+
+<tr>
+    <td>Checks what the system does.</td>
+    <td>Checks how the system works internally.</td>
+</tr>
+
+<tr>
+    <td>Usually associated with black box techniques.</td>
+    <td>Usually associated with white box techniques.</td>
+</tr>
+
+<tr>
+    <td>Based on requirements.</td>
+    <td>Based on code and control structure.</td>
+</tr>
+</table>
+
+<h2>24. Quick Revision</h2>
+
+<ul>
+    <li>Black box testing focuses on external behaviour.</li>
+    <li>White box testing focuses on internal code and logic.</li>
+    <li>Equivalence partitioning divides inputs into classes.</li>
+    <li>Boundary Value Analysis focuses on boundaries.</li>
+    <li>Decision tables test combinations of conditions.</li>
+    <li>State transition testing tests changes between states.</li>
+    <li>Error guessing uses tester experience.</li>
+    <li>Statement coverage checks executed statements.</li>
+    <li>Branch coverage checks decision outcomes.</li>
+    <li>Path testing checks execution paths.</li>
+    <li>Cyclomatic complexity helps determine independent paths.</li>
+    <li>Data flow testing follows variable definitions and uses.</li>
+</ul>
+
+<h2>Important Exam Questions</h2>
+
+<ol>
+    <li>What is Black Box Testing? Explain its advantages and limitations.</li>
+    <li>What is White Box Testing? Explain its advantages and limitations.</li>
+    <li>Differentiate Black Box and White Box Testing.</li>
+    <li>Explain Equivalence Partitioning with an example.</li>
+    <li>Explain Boundary Value Analysis with an example.</li>
+    <li>Differentiate Equivalence Partitioning and Boundary Value Analysis.</li>
+    <li>Explain Decision Table Testing.</li>
+    <li>Explain State Transition Testing.</li>
+    <li>What is Error Guessing?</li>
+    <li>Explain Statement Coverage and Branch Coverage.</li>
+    <li>What is Path Testing?</li>
+    <li>Explain Cyclomatic Complexity and its formula.</li>
+    <li>What is Data Flow Testing?</li>
+    <li>Differentiate Functional and Structural Testing.</li>
+</ol>
+
+</div>
+
+</body>
+</html>
